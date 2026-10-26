@@ -36,6 +36,7 @@ class CallResult:
 
 class Provider(ABC):
     family: str = ""
+    key_var: str | None = None  # env var holding the API key, if any
     supports_temperature: bool = True
 
     def __init__(self, model: str, limits: Limits, timeout: float = 120.0,

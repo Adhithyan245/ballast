@@ -254,3 +254,21 @@ def test_runner_max_calls(tmp_path):
     s = run_provider(p, ITEMS, ["closed_default"], "pilot", runs=2, cache=Cache(tmp_path / "c"),
                      max_calls=3, log=lambda *_: None)
     assert s.done == 3 and s.stopped == "max_calls=3 reached"
+
+
+def test_study_entries_share_an_adapter(tmp_path):
+    from aisci.providers import adapter_class, make_provider, study_keys
+    from aisci.providers.openai_compat import VLLMProvider
+
+    f = tmp_path / "sm.json"
+    f.write_text(json.dumps({"models": {
+        "qwen_vllm": {"adapter": "vllm", "model": "Qwen/A", "limits": {}},
+        "mistral_vllm": {"adapter": "vllm", "model": "mistralai/B", "limits": {}},
+        "mistral": {"enabled": False, "model": "m", "limits": {}}}}))
+    assert study_keys(path=f) == ["qwen_vllm", "mistral_vllm"]
+    assert "mistral" in study_keys(enabled_only=False, path=f)
+    spec = json.loads(f.read_text())["models"]
+    a, b = make_provider("qwen_vllm", spec["qwen_vllm"]), make_provider("mistral_vllm", spec["mistral_vllm"])
+    assert isinstance(a, VLLMProvider) and isinstance(b, VLLMProvider)
+    assert a.study_id != b.study_id  # separate cache directories
+    assert adapter_class("mistral", spec["mistral"]) is MistralProvider

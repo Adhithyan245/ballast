@@ -36,9 +36,13 @@ See `study_models.json` for exact model names, providers, limits and the date ea
 |---|---|---|
 | Claude | Claude subscription via Claude Code headless mode (`claude -p`) | cannot be set (default only) |
 | Gemini | Google AI Studio free tier | default, and 0 if quota allows |
-| Open-weight | Groq free plan | default, and 0 if quota allows |
-| Mistral | Mistral free Experiment plan (data-training opt-in; public data only) | default, and 0 if quota allows |
-| Open-weight, self-hosted (Qwen3) | vLLM on a rented NVIDIA Brev GPU, paid with Brev credits; weights pinned by Hugging Face revision ([setup](docs/BREV_SETUP.md)) | default (model's generation config) and 0 |
+| gpt-oss (OpenAI open weights) | Groq free plan | default, and 0 if quota allows |
+| Mistral (open weights, self-hosted) | vLLM on a rented NVIDIA Brev GPU, paid with Brev credits; weights pinned by Hugging Face revision ([setup](docs/BREV_SETUP.md)) | default (model's generation config) and 0 |
+| Qwen (open weights, self-hosted) | same Brev GPU, served one model at a time | default (model's generation config) and 0 |
+
+The spec planned Mistral's free Experiment API plan. On 2026-10-26 the Mistral console showed API keys inactive on
+the Free plan, and no free API plan was offered, so Mistral is represented by a self-hosted open-weight model instead.
+Its results describe that open-weight model, not Mistral's hosted API.
 
 Conditions: **closed-book** (question only) and **with-context** (question + abstract, must quote verbatim
 supporting sentences). 5 runs per question × condition × model. Identical prompt text for every model

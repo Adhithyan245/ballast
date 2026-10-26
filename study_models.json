@@ -43,19 +43,32 @@
       "choice_reason": "Live Groq list (2026-10-26) has no Llama 3.3 70B; chat models are gpt-oss-120b/20b and qwen3.8-27b. Qwen is planned for self-hosting, so gpt-oss-120b gives a distinct (OpenAI open-weight) family."
     },
     "mistral": {
-      "enabled": true,
+      "enabled": false,
       "model": "TO_CHOOSE_FROM_LIVE_LIST",
       "provider": "Mistral La Plateforme, free Experiment plan (data-training opt-in)",
       "limits": {
         "rpm": 30
       },
-      "verified": null
+      "verified": null,
+      "disabled_reason": "2026-10-26: Mistral console showed the organization on the Free plan with API keys inactive ('Upgrade to activate your API keys'); the plan list offered Free (chat only), Pro, Team and Pay-as-you-go, with no free Experiment API plan. Replaced by a self-hosted Mistral open-weight model (mistral_vllm)."
     },
-    "vllm": {
+    "qwen_vllm": {
       "enabled": true,
       "model": "TO_CHOOSE_Qwen/<MODEL>",
       "provider": "Self-hosted with vLLM on an NVIDIA Brev GPU (Brev credits); see docs/BREV_SETUP.md",
       "hf_revision": null,
+      "workers": 16,
+      "limits": {},
+      "verified": null,
+      "adapter": "vllm"
+    },
+    "mistral_vllm": {
+      "enabled": true,
+      "adapter": "vllm",
+      "model": "TO_CHOOSE_mistralai/<MODEL>",
+      "provider": "Self-hosted with vLLM on an NVIDIA Brev GPU (Brev credits); see docs/BREV_SETUP.md",
+      "hf_revision": null,
+      "license": "TO_VERIFY (must be an open-weight license, e.g. Apache-2.0)",
       "workers": 16,
       "limits": {},
       "verified": null

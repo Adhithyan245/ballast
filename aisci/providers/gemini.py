@@ -37,13 +37,14 @@ def _retry_delay(resp: httpx.Response) -> float | None:
 
 class GeminiProvider(Provider):
     family = "gemini"
+    key_var = "GEMINI_API_KEY"
 
     def __init__(self, model, limits, **kw):
         super().__init__(model, limits, **kw)
         self.client = httpx.Client()
 
     def _headers(self) -> dict:
-        return {"x-goog-api-key": require_key("GEMINI_API_KEY")}
+        return {"x-goog-api-key": require_key(self.key_var)}
 
     def _call(self, prompt, temperature):
         body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}]}
