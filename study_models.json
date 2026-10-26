@@ -18,24 +18,29 @@
     },
     "gemini": {
       "enabled": true,
-      "model": "TO_CHOOSE_FROM_LIVE_LIST",
+      "model": "gemini-3.5-flash-lite",
       "provider": "Google AI Studio free tier",
       "limits": {
-        "rpm": 5,
-        "rpd": 20
+        "rpm": 15,
+        "tpm": 250000,
+        "rpd": 500
       },
-      "verified": null
+      "verified": "2026-10-26",
+      "limits_source": "Google AI Studio > Rate Limit page, Free tier, read 2026-10-26. Flash models (3.6/3.8 Flash): 5 RPM, 250K TPM, 20 RPD; Flash-Lite (3.5/3.1): 15 RPM, 250K TPM, 500 RPD.",
+      "choice_reason": "Flash models' 20 RPD would need 10+ days for the pilot alone; 3.5 Flash Lite is the newest non-preview text model with 500 RPD."
     },
     "groq": {
       "enabled": true,
-      "model": "TO_CHOOSE_FROM_LIVE_LIST",
+      "model": "openai/gpt-oss-120b",
       "provider": "Groq free plan",
       "limits": {
         "rpm": 30,
         "rpd": 1000,
         "tpm": 8000
       },
-      "verified": null
+      "verified": "2026-10-26",
+      "limits_source": "x-ratelimit-* headers on a live call 2026-10-26: limit-requests=1000 (per day), limit-tokens=8000 (per minute). Groq docs table also lists 200K tokens/day (not reported in headers; a per-day 429 stops the run cleanly).",
+      "choice_reason": "Live Groq list (2026-10-26) has no Llama 3.3 70B; chat models are gpt-oss-120b/20b and qwen3.8-27b. Qwen is planned for self-hosting, so gpt-oss-120b gives a distinct (OpenAI open-weight) family."
     },
     "mistral": {
       "enabled": true,

@@ -1,0 +1,58 @@
+{
+ "study_model": "groq:openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "qid": "9347843",
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 92,\n  \"quotes\": [\n    \"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\",\n    \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"\n  ]\n}",
+ "input_tokens": 581,
+ "output_tokens": 349,
+ "latency_s": 2.0320000000065193,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "999",
+   "x-ratelimit-remaining-tokens": "7107",
+   "x-ratelimit-reset-requests": "1m26.4s",
+   "x-ratelimit-reset-tokens": "6.697s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-5f2b8d88-c2b3-4824-8359-7952f346d2f5",
+  "object": "chat.completion",
+  "created": 1793049973,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 92,\n  \"quotes\": [\n    \"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\",\n    \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"\n  ]\n}",
+     "reasoning": "We need to interpret the abstract to answer whether abscesses, phlegmons, or recurrent disease are contraindications to successful laparoscopic-assisted ileocolic resection. The data shows conversion rates, morbidity, etc. The abstract suggests that laparoscopic-assisted resections were successfully performed even in those groups (I and II), with low morbidity and conversion rates (7-20%). Not absolute contraindication. So answer \"no\" (they are not contraindications). Confidence high, maybe 90. Provide quotes supporting: The results: \"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]). Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\" Also maybe \"Our goal was to determine whether the above factors are contraindications to a successful laparoscopic-assisted ileocolic resection.\" and the results show not contraindicated. Provide quote: \"Operative blood loss and time were greater in group IV than in groups I, II, and III...\" shows laparoscopic better even with abscess/phlegmon.\n\nLet's choose two sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 1.038643271,
+   "prompt_tokens": 581,
+   "prompt_time": 0.168080361,
+   "completion_tokens": 349,
+   "completion_time": 0.728021793,
+   "total_tokens": 930,
+   "total_time": 0.896102154,
+   "completion_tokens_details": {
+    "reasoning_tokens": 250
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_76082d2bd0",
+  "x_groq": {
+   "id": "req_01m5x1pjtnev7vtfh6923fdxw2",
+   "seed": 1794881769
+  },
+  "service_tier": "on_demand"
+ }
+}

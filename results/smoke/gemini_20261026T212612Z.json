@@ -1,0 +1,44 @@
+{
+ "study_model": "gemini:gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "qid": "9347843",
+ "text": "```json\n{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Our goal was to determine whether the above factors are contraindications to a successful laparoscopic-assisted ileocolic resection.\"\n  ]\n}\n```",
+ "input_tokens": 536,
+ "output_tokens": 61,
+ "latency_s": 0.8129999999655411,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Our goal was to determine whether the above factors are contraindications to a successful laparoscopic-assisted ileocolic resection.\"\n  ]\n}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TTkV2fGeBS072SnFH0hmm5Z/m6ecPkakQBU2gi8RHx2wincnNEC3VgAbYKaZ71FoqAxgg6RWKHruVNRED/paApNaVrZA8CP8C2zMPoBp9iI+YJTAeGJ+KeZQ="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 536,
+   "candidatesTokenCount": 61,
+   "totalTokenCount": 597,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 536
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "csXfapWdN_DS0_gP37e4-AY"
+ }
+}
