@@ -1,0 +1,34 @@
+{
+  "_note": "Exact model names and free-tier limits are confirmed at run time from each provider's live model list and limits page; 'verified' records when. Limits are applied at 80% (Limits.safety).",
+  "models": {
+    "claude": {
+      "enabled": true,
+      "model": "sonnet",
+      "provider": "Claude subscription via Claude Code headless mode (claude -p)",
+      "options": {"isolation": "safe"},
+      "limits": {"rpm": 2, "rpd": 300},
+      "verified": null
+    },
+    "gemini": {
+      "enabled": true,
+      "model": "TO_CHOOSE_FROM_LIVE_LIST",
+      "provider": "Google AI Studio free tier",
+      "limits": {"rpm": 5, "rpd": 20},
+      "verified": null
+    },
+    "groq": {
+      "enabled": true,
+      "model": "TO_CHOOSE_FROM_LIVE_LIST",
+      "provider": "Groq free plan",
+      "limits": {"rpm": 30, "rpd": 1000, "tpm": 8000},
+      "verified": null
+    },
+    "mistral": {
+      "enabled": true,
+      "model": "TO_CHOOSE_FROM_LIVE_LIST",
+      "provider": "Mistral La Plateforme, free Experiment plan (data-training opt-in)",
+      "limits": {"rpm": 30},
+      "verified": null
+    }
+  }
+}

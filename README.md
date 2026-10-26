@@ -1,0 +1,68 @@
+# Do AI scientists change their minds?
+
+Measuring answer consistency and evidence grounding of LLMs on expert-labeled
+biomedical questions (PubMedQA, PQA-L).
+
+> Status: setup (Step 1). No results yet. This is a research exercise on public
+> models and public data. It is not clinical advice or a medical evaluation.
+
+## Research questions
+
+1. **Consistency**: asked the same question 5 times, how often does a model's answer change (flip rate)?
+2. **Confident errors**: how often is it wrong while stating confidence ≥ 80?
+3. **Grounding**: given the abstract and asked to quote its evidence, do the quotes exist in the abstract?
+4. **Fix**: does an abstention gate (abstain on run disagreement or missing quotes) reduce wrong answers, and at what coverage?
+5. **Generality**: do the patterns hold across four model families?
+
+## Data
+
+- **Dataset**: PubMedQA expert-labeled subset (PQA-L, 1,000 questions; labels yes 552 / no 338 / maybe 110).
+- **Source**: official repository [pubmedqa/pubmedqa](https://github.com/pubmedqa/pubmedqa), file `data/ori_pqal.json`,
+  pinned to commit `1cbae8e92f72f20c8d3747cbb3bf5bc53554d997` (2023-04-18). The download is verified against the
+  file's git blob hash `38db7750761c78950ed32303e7545bdaa513390c`.
+- **License**: MIT (repository license).
+- **Citation**: Jin, Dhingra, Liu, Cohen, Lu. *PubMedQA: A Dataset for Biomedical Research Question Answering.* EMNLP-IJCNLP 2019.
+- Labels (`final_decision`) are used as-is and never modified. The abstract shown to models is the `CONTEXTS`
+  paragraphs with their section labels; `LONG_ANSWER` (the conclusion) is excluded because it usually states the answer.
+- **Samples** (label-stratified, largest-remainder allocation, Python `random.Random`):
+  pilot = 20 questions (seed 20261026; 11 yes / 7 no / 2 maybe), main = 100 questions drawn from the
+  remaining 980 (seed 20261027; 55 / 34 / 11). Ids are in `data/samples/`.
+
+## Models and conditions
+
+See `study_models.json` for exact model names, providers, limits and the date each was verified.
+
+| Family | Access | Temperature |
+|---|---|---|
+| Claude | Claude subscription via Claude Code headless mode (`claude -p`) | cannot be set (default only) |
+| Gemini | Google AI Studio free tier | default, and 0 if quota allows |
+| Open-weight | Groq free plan | default, and 0 if quota allows |
+| Mistral | Mistral free Experiment plan (data-training opt-in; public data only) | default, and 0 if quota allows |
+
+Conditions: **closed-book** (question only) and **with-context** (question + abstract, must quote verbatim
+supporting sentences). 5 runs per question × condition × model. Identical prompt text for every model
+(`aisci/prompts.py`), sent as a single user message with no system prompt.
+
+### Claude Code limitation
+
+Claude results come from Claude Code headless mode, not the raw API. Claude Code adds its own system context,
+temperature cannot be set, and calls share the subscription's usage limits with interactive use. Every call runs
+from an empty directory with all tools, MCP servers, slash commands and session persistence disabled, and the
+full JSON response is saved. The Claude Code docs state that `--bare` never reads subscription (OAuth)
+credentials, so `--bare` cannot be used without an API key; see `aisci/providers/claude_code.py` for the
+flags used instead.
+
+## Reproduce
+
+```bash
+python -m venv .venv && .venv/Scripts/pip install -r requirements.txt   # or .venv/bin/pip
+cp .env.example .env    # add your own keys; .env is git-ignored
+python -m aisci download && python -m aisci sample
+python -m aisci smoke                 # one test call per provider
+python -m aisci run pilot             # resumable; re-run to continue after a quota stop
+python -m aisci status pilot          # calls, missing and unparseable counts
+python -m pytest -q
+```
+
+Raw responses are cached under `results/cache/<model>/<condition>/<qid>/run<n>.json`; nothing cached is ever
+re-requested. Failed calls are logged to `logs/errors.jsonl` and counted as missing, never as answers.

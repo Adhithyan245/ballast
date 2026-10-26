@@ -1,0 +1,26 @@
+# Secrets: never commit
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Raw downloaded dataset (re-downloadable, pinned by commit + sha256)
+data/raw/
+
+# Run logs may contain provider error bodies; keep them local
+logs/
+
+# Empty working directory used for isolated `claude -p` calls
+.claude_sandbox/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
