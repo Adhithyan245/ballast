@@ -3,6 +3,7 @@
   download              fetch PubMedQA PQA-L at the pinned commit and verify it
   sample                write data/samples/{pilot,main}.json
   list-models FAMILY    print the provider's live model list
+  check [FAMILY ...]    readiness: login / key presence and live model lists (no quota used)
   smoke [FAMILY ...]    one test call per provider (saved under results/smoke/)
   run SAMPLE            run the study on a sample (resumable from cache)
   status [SAMPLE]       calls, missing and parse failures per model/condition
@@ -35,6 +36,48 @@ def cmd_list_models(a):
     p = make_provider(a.family)
     for m in p.list_models():
         print(m)
+
+
+def cmd_check(a):
+    """Readiness check that spends no quota: login/key presence (never values)
+    and each provider's live model list, saved under results/provider_checks/."""
+    import os
+    import subprocess
+
+    import shutil as _sh
+
+    out_dir = config.ROOT / "results" / "provider_checks"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    key_vars = {"gemini": "GEMINI_API_KEY", "groq": "GROQ_API_KEY",
+                "mistral": "MISTRAL_API_KEY", "vllm": "VLLM_API_KEY"}
+    for fam in a.families or list(FAMILIES):
+        if fam == "claude":
+            exe = _sh.which("claude") or "claude"
+            try:
+                st = json.loads(subprocess.run([exe, "auth", "status"], capture_output=True,
+                                               text=True, timeout=60).stdout)
+                ver = subprocess.run([exe, "--version"], capture_output=True, text=True,
+                                     timeout=60).stdout.strip()
+            except Exception as e:
+                print(f"claude   NOT READY  {type(e).__name__}: {e}")
+                continue
+            ready = st.get("loggedIn")
+            print(f"claude   {'READY' if ready else 'NOT READY'}  loggedIn={st.get('loggedIn')} "
+                  f"authMethod={st.get('authMethod')} cli={ver}")
+            continue
+        if not os.environ.get(key_vars[fam], "").strip():
+            print(f"{fam:8s} NOT READY  {key_vars[fam]} is empty in .env")
+            continue
+        try:
+            models = make_provider(fam, {"model": "check", "limits": {}}).list_models()
+        except Exception as e:
+            print(f"{fam:8s} NOT READY  {type(e).__name__}: {str(e)[:200]}")
+            continue
+        path = out_dir / f"{fam}_models_{day}.json"
+        path.write_text(json.dumps({"family": fam, "checked_utc": datetime.now(timezone.utc).isoformat(),
+                                    "models": models}, indent=1) + "\n", encoding="utf-8")
+        print(f"{fam:8s} READY  key works, {len(models)} models listed -> {path.relative_to(config.ROOT)}")
 
 
 def cmd_smoke(a):
@@ -112,7 +155,9 @@ def main(argv=None):
     sub.add_parser("sample").set_defaults(fn=cmd_sample)
     p = sub.add_parser("list-models"); p.add_argument("family", choices=list(FAMILIES))
     p.set_defaults(fn=cmd_list_models)
-    p = sub.add_parser("smoke"); p.add_argument("families", nargs="*", choices=list(FAMILIES))
+    p = sub.add_parser("check"); p.add_argument("families", nargs="*", help="any of: " + ", ".join(FAMILIES))
+    p.set_defaults(fn=cmd_check)
+    p = sub.add_parser("smoke"); p.add_argument("families", nargs="*", help="any of: " + ", ".join(FAMILIES))
     p.set_defaults(fn=cmd_smoke)
     p = sub.add_parser("run"); p.add_argument("sample", choices=["pilot", "main"])
     p.add_argument("--families", nargs="*", choices=list(FAMILIES))
@@ -124,6 +169,9 @@ def main(argv=None):
     p = sub.add_parser("status"); p.add_argument("sample", nargs="?")
     p.set_defaults(fn=cmd_status)
     a = ap.parse_args(argv)
+    bad = [f for f in getattr(a, "families", None) or [] if f not in FAMILIES]
+    if bad:
+        ap.error(f"unknown families {bad}; choose from {list(FAMILIES)}")
     a.fn(a)
 
 
