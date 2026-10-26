@@ -15,7 +15,10 @@ Flags follow the Claude Code CLI docs (checked 2026-10-26, CLI 2.1.283):
 and isolation mode "bare" (--bare) or "safe" (--safe-mode). The docs say bare
 mode never reads OAuth credentials, so it cannot use a subscription login;
 "safe" disables CLAUDE.md, skills, plugins, hooks, MCP and auto memory while
-keeping normal authentication. Every call runs from an empty directory.
+keeping normal authentication. --system-prompt replaces Claude Code's default
+system prompt so Claude sees (close to) what the API models see; check the
+input token count of a live call to confirm the replacement took effect.
+Every call runs from an empty directory.
 """
 from __future__ import annotations
 
@@ -30,10 +33,16 @@ from .base import CallResult, FatalError, Provider, ProviderUnavailable, QuotaEx
 ISOLATION_FLAGS = {"bare": ["--bare"], "safe": ["--safe-mode"]}
 
 
-def build_command(exe: str, model: str, isolation: str) -> list[str]:
-    return [exe, "-p", *ISOLATION_FLAGS[isolation], "--tools", "", "--strict-mcp-config",
-            "--disable-slash-commands", "--max-turns", "1", "--no-session-persistence",
-            "--output-format", "json", "--model", model]
+def build_command(exe: str, model: str, isolation: str,
+                  system_prompt: str | None = None) -> list[str]:
+    """system_prompt=None keeps Claude Code's default system prompt; a string
+    (possibly empty) replaces it entirely via --system-prompt."""
+    cmd = [exe, "-p", *ISOLATION_FLAGS[isolation], "--tools", "", "--strict-mcp-config",
+           "--disable-slash-commands", "--max-turns", "1", "--no-session-persistence",
+           "--output-format", "json", "--model", model]
+    if system_prompt is not None:
+        cmd += ["--system-prompt", system_prompt]
+    return cmd
 
 
 def classify(raw: dict) -> None:
@@ -55,11 +64,12 @@ class ClaudeCodeProvider(Provider):
     family = "claude"
     supports_temperature = False
 
-    def __init__(self, model, limits, isolation: str = "safe",
+    def __init__(self, model, limits, isolation: str = "safe", system_prompt: str | None = None,
                  sandbox: Path = config.CLAUDE_SANDBOX_DIR, **kw):
         kw.setdefault("timeout", 300.0)
         super().__init__(model, limits, **kw)
         self.isolation = isolation
+        self.system_prompt = system_prompt
         self.sandbox = sandbox
         self.exe = shutil.which("claude") or "claude"
 
@@ -70,7 +80,7 @@ class ClaudeCodeProvider(Provider):
 
     def _call(self, prompt, temperature):
         self._ensure_empty_sandbox()
-        cmd = build_command(self.exe, self.model, self.isolation)
+        cmd = build_command(self.exe, self.model, self.isolation, self.system_prompt)
         try:
             proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
                                   encoding="utf-8", cwd=self.sandbox, timeout=self.timeout)

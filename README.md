@@ -12,7 +12,7 @@ biomedical questions (PubMedQA, PQA-L).
 2. **Confident errors**: how often is it wrong while stating confidence ≥ 80?
 3. **Grounding**: given the abstract and asked to quote its evidence, do the quotes exist in the abstract?
 4. **Fix**: does an abstention gate (abstain on run disagreement or missing quotes) reduce wrong answers, and at what coverage?
-5. **Generality**: do the patterns hold across four model families?
+5. **Generality**: do the patterns hold across five model families?
 
 ## Data
 
@@ -38,6 +38,7 @@ See `study_models.json` for exact model names, providers, limits and the date ea
 | Gemini | Google AI Studio free tier | default, and 0 if quota allows |
 | Open-weight | Groq free plan | default, and 0 if quota allows |
 | Mistral | Mistral free Experiment plan (data-training opt-in; public data only) | default, and 0 if quota allows |
+| Open-weight, self-hosted (Qwen3) | vLLM on a rented NVIDIA Brev GPU, paid with Brev credits; weights pinned by Hugging Face revision ([setup](docs/BREV_SETUP.md)) | default (model's generation config) and 0 |
 
 Conditions: **closed-book** (question only) and **with-context** (question + abstract, must quote verbatim
 supporting sentences). 5 runs per question × condition × model. Identical prompt text for every model
@@ -49,8 +50,10 @@ Claude results come from Claude Code headless mode, not the raw API. Claude Code
 temperature cannot be set, and calls share the subscription's usage limits with interactive use. Every call runs
 from an empty directory with all tools, MCP servers, slash commands and session persistence disabled, and the
 full JSON response is saved. The Claude Code docs state that `--bare` never reads subscription (OAuth)
-credentials, so `--bare` cannot be used without an API key; see `aisci/providers/claude_code.py` for the
-flags used instead.
+credentials, so `--bare` cannot be used without an API key. Instead the calls use `--safe-mode` (no CLAUDE.md,
+skills, plugins, hooks, MCP or memory, but normal login) and `--system-prompt` to replace Claude Code's default
+system prompt. Whether the replacement took effect is checked from the input token count of the first live call
+and reported. See `aisci/providers/claude_code.py` for the exact flags.
 
 ## Reproduce
 

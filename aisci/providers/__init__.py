@@ -10,13 +10,14 @@ from ..ratelimit import Limits
 from .base import CallResult, FatalError, Provider, ProviderUnavailable, QuotaExhausted, RetryableError
 from .claude_code import ClaudeCodeProvider
 from .gemini import GeminiProvider
-from .openai_compat import GroqProvider, MistralProvider
+from .openai_compat import GroqProvider, MistralProvider, VLLMProvider
 
 FAMILIES = {
     "claude": ClaudeCodeProvider,
     "gemini": GeminiProvider,
     "groq": GroqProvider,
     "mistral": MistralProvider,
+    "vllm": VLLMProvider,
 }
 STUDY_MODELS_FILE = config.ROOT / "study_models.json"
 

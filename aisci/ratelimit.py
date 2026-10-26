@@ -3,6 +3,7 @@ budget persisted to disk so the budget survives restarts."""
 from __future__ import annotations
 
 import json
+import threading
 import time
 from collections import deque
 from dataclasses import dataclass
@@ -32,6 +33,7 @@ class RateLimiter:
         self.clock, self.sleep = clock, sleep
         self._last: float | None = None
         self._tokens: deque[tuple[float, int]] = deque()
+        self._lock = threading.Lock()
 
     # --- daily budget -------------------------------------------------
     def _day_file(self) -> Path:
@@ -60,6 +62,10 @@ class RateLimiter:
         return 60.0 / (self.limits.rpm * self.limits.safety)
 
     def acquire(self, est_tokens: int = 0) -> None:
+        with self._lock:
+            self._acquire(est_tokens)
+
+    def _acquire(self, est_tokens: int) -> None:
         budget = self.daily_budget()
         if budget is not None and self.used_today() >= budget:
             raise QuotaExhausted(f"{self.name}: client-side daily budget {budget} reached")
@@ -81,4 +87,5 @@ class RateLimiter:
 
     def record_tokens(self, n: int) -> None:
         if n:
-            self._tokens.append((self.clock(), n))
+            with self._lock:
+                self._tokens.append((self.clock(), n))

@@ -5,29 +5,54 @@
       "enabled": true,
       "model": "sonnet",
       "provider": "Claude subscription via Claude Code headless mode (claude -p)",
-      "options": {"isolation": "safe"},
-      "limits": {"rpm": 2, "rpd": 300},
-      "verified": null
+      "options": {
+        "isolation": "safe",
+        "system_prompt": ""
+      },
+      "limits": {
+        "rpm": 2,
+        "rpd": 300
+      },
+      "verified": null,
+      "_system_prompt_note": "'' replaces Claude Code's default system prompt; confirm via input token count on the first live call."
     },
     "gemini": {
       "enabled": true,
       "model": "TO_CHOOSE_FROM_LIVE_LIST",
       "provider": "Google AI Studio free tier",
-      "limits": {"rpm": 5, "rpd": 20},
+      "limits": {
+        "rpm": 5,
+        "rpd": 20
+      },
       "verified": null
     },
     "groq": {
       "enabled": true,
       "model": "TO_CHOOSE_FROM_LIVE_LIST",
       "provider": "Groq free plan",
-      "limits": {"rpm": 30, "rpd": 1000, "tpm": 8000},
+      "limits": {
+        "rpm": 30,
+        "rpd": 1000,
+        "tpm": 8000
+      },
       "verified": null
     },
     "mistral": {
       "enabled": true,
       "model": "TO_CHOOSE_FROM_LIVE_LIST",
       "provider": "Mistral La Plateforme, free Experiment plan (data-training opt-in)",
-      "limits": {"rpm": 30},
+      "limits": {
+        "rpm": 30
+      },
+      "verified": null
+    },
+    "vllm": {
+      "enabled": true,
+      "model": "TO_CHOOSE_Qwen/<MODEL>",
+      "provider": "Self-hosted with vLLM on an NVIDIA Brev GPU (Brev credits); see docs/BREV_SETUP.md",
+      "hf_revision": null,
+      "workers": 16,
+      "limits": {},
       "verified": null
     }
   }

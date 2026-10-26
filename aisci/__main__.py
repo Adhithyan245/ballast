@@ -89,7 +89,8 @@ def cmd_run(a):
             print(f"{fam}: unavailable ({e})")
             continue
         conds = a.conditions or conditions_for(p, include_t0=not a.no_t0)
-        s = run_provider(p, chosen, conds, a.sample, max_calls=a.max_calls)
+        workers = spec["models"][fam].get("workers", 1)
+        s = run_provider(p, chosen, conds, a.sample, max_calls=a.max_calls, workers=workers)
         print(f"{s.model}: new={s.done} cached={s.cached} failed={s.failed} "
               f"tokens in/out={s.input_tokens}/{s.output_tokens} {s.seconds/60:.1f} min"
               + (f"  STOPPED: {s.stopped}" if s.stopped else ""))

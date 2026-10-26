@@ -203,3 +203,54 @@ def test_runner_stops_cleanly_on_quota(tmp_path, monkeypatch):
     p = FakeProvider(['{"answer":"yes","confidence":1}', QuotaExhausted("daily")])
     s = run_provider(p, ITEMS, ["closed_default"], "pilot", runs=2, cache=cache, log=lambda *_: None)
     assert s.done == 1 and s.stopped.startswith("QuotaExhausted")
+
+
+def test_claude_system_prompt_override():
+    assert "--system-prompt" not in claude_code.build_command("claude", "m", "safe")
+    cmd = claude_code.build_command("claude", "m", "safe", system_prompt="")
+    assert cmd[cmd.index("--system-prompt") + 1] == ""
+
+
+def test_vllm_provider_url_key_and_reasoning(monkeypatch):
+    from aisci.providers.openai_compat import VLLMProvider
+
+    monkeypatch.setenv("VLLM_BASE_URL", "http://localhost:9999/v1/")
+    monkeypatch.setenv("VLLM_API_KEY", "local-secret")
+    seen = {}
+
+    def handler(req):
+        seen["url"], seen["auth"] = str(req.url), req.headers["authorization"]
+        seen["body"] = json.loads(req.content)
+        return httpx.Response(200, json={"model": "Qwen/Q", "choices": [{"message": {
+            "content": '{"answer":"no","confidence":60}', "reasoning_content": "hmm"}}],
+            "usage": {"prompt_tokens": 9, "completion_tokens": 3}})
+
+    p = VLLMProvider("Qwen/Q", Limits(), sleep=nosleep)
+    p.client = mock_client(handler)
+    r = p.call("x", temperature=0.0)
+    assert seen["url"] == "http://localhost:9999/v1/chat/completions"
+    assert seen["auth"] == "Bearer local-secret" and seen["body"]["temperature"] == 0.0
+    assert r.text == '{"answer":"no","confidence":60}' and r.meta["has_reasoning"]
+    # a 429 from our own server is never a daily quota
+    p.client = mock_client(lambda req: httpx.Response(429, text="too many requests per day"))
+    p.max_attempts = 1
+    with pytest.raises(RetryableError):
+        p.call("x")
+
+
+def test_runner_parallel_matches_sequential(tmp_path):
+    ok = '{"answer":"yes","confidence":90}'
+    cache = Cache(tmp_path / "cache")
+    p = FakeProvider([ok] * 8)
+    s = run_provider(p, ITEMS, ["closed_default", "context_default"], "pilot", runs=2,
+                     cache=cache, workers=4, log=lambda *_: None)
+    assert (s.done, s.failed, p.n) == (8, 0, 8)
+    keys = sorted((r["key"]["condition"], r["key"]["qid"], r["key"]["run"]) for r in cache.iter_records())
+    assert len(set(keys)) == 8
+
+
+def test_runner_max_calls(tmp_path):
+    p = FakeProvider(['{"answer":"yes","confidence":90}'] * 3)
+    s = run_provider(p, ITEMS, ["closed_default"], "pilot", runs=2, cache=Cache(tmp_path / "c"),
+                     max_calls=3, log=lambda *_: None)
+    assert s.done == 3 and s.stopped == "max_calls=3 reached"
