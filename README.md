@@ -38,7 +38,7 @@ See `study_models.json` for exact model names, providers, limits and the date ea
 | Gemini | Google AI Studio free tier | default, and 0 if quota allows |
 | gpt-oss (OpenAI open weights) | Groq free plan | default, and 0 if quota allows |
 | Qwen (open weights) | Groq free plan (`qwen/qwen3.8-27b`) | default, and 0 if quota allows |
-| Mistral | **not available**: see below | — |
+| Mistral | **not available**: see below | â€” |
 
 Deviations from the original plan, decided before any study call:
 - **Mistral**: the spec planned Mistral's free Experiment API plan. On 2026-10-26 the Mistral console showed API keys
