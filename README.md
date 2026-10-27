@@ -38,12 +38,13 @@ See `study_models.json` for exact model names, providers, limits and the date ea
 | Gemini | Google AI Studio free tier | default, and 0 if quota allows |
 | gpt-oss (OpenAI open weights) | Groq free plan | default, and 0 if quota allows |
 | Qwen (open weights) | Groq free plan (`qwen/qwen3.8-27b`) | default, and 0 if quota allows |
-| Mistral | NVIDIA API catalog, developer access (`mistralai/mistral-large-2-instruct`) | default, and 0 if quota allows |
+| Mistral | **not available**: see below | � |
 
 Deviations from the original plan, decided before any study call:
 - **Mistral**: the spec planned Mistral's free Experiment API plan. On 2026-10-26 the Mistral console showed API keys
-  inactive on the Free plan, and no free API plan was offered. Mistral is accessed through NVIDIA's hosted API catalog
-  instead, so its results describe that hosted model, not Mistral's own API.
+  inactive on the Free plan, and no free API plan was offered. NVIDIA's hosted API catalog was tried instead
+  (2026-10-27): the key listed 85 models, but every chat call, Mistral or not, returned 404 "Function not found for
+  account". No free route to a Mistral model was found.
 - **Self-hosting** on an NVIDIA Brev GPU was planned and implemented (`docs/BREV_SETUP.md`, entries `qwen_vllm` and
   `mistral_vllm`) but is disabled: no usable Brev credits were confirmed. Qwen runs on Groq instead.
 
@@ -53,14 +54,16 @@ supporting sentences). 5 runs per question × condition × model. Identical prom
 
 ### Claude Code limitation
 
-Claude results come from Claude Code headless mode, not the raw API. Claude Code adds its own system context,
+Claude results come from Claude Code headless mode, not the raw API. Claude Code adds its own context,
 temperature cannot be set, and calls share the subscription's usage limits with interactive use. Every call runs
 from an empty directory with all tools, MCP servers, slash commands and session persistence disabled, and the
 full JSON response is saved. The Claude Code docs state that `--bare` never reads subscription (OAuth)
 credentials, so `--bare` cannot be used without an API key. Instead the calls use `--safe-mode` (no CLAUDE.md,
 skills, plugins, hooks, MCP or memory, but normal login) and `--system-prompt` to replace Claude Code's default
-system prompt. Whether the replacement took effect is checked from the input token count of the first live call
-and reported. See `aisci/providers/claude_code.py` for the exact flags.
+system prompt. Measured on 2026-10-27 with the same prompt, Claude received 6,425 input tokens with Claude Code's
+default system prompt and 1,684 with `--system-prompt ""`, against 536 (Gemini) and 581 (Groq). So the override
+removes about 4,700 tokens, but about 1,100 tokens of CLI-added context remain and cannot be removed under subscription
+auth. Model: `claude-sonnet-5` (CLI 2.1.283). See `aisci/providers/claude_code.py` for the exact flags.
 
 ## Reproduce
 

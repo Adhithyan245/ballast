@@ -1,0 +1,110 @@
+{
+ "study_model": "claude:sonnet",
+ "model_reported": "claude-sonnet-5",
+ "qid": "9347843",
+ "text": "{\"answer\": \"no\", \"confidence\": 88, \"quotes\": [\"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\", \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"]}",
+ "input_tokens": 1684,
+ "output_tokens": 116,
+ "latency_s": 6.719000000040978,
+ "meta": {
+  "total_cost_usd_estimate": 0.007892,
+  "num_turns": 1
+ },
+ "raw": {
+  "duration_api_ms": 1534,
+  "stop_reason": "end_turn",
+  "session_id": "3fb7d13f-7503-4ec9-9d7d-ad5cdc34b120",
+  "total_cost_usd": 0.007892,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1682,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 116,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1682,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 116,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1682,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1682
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 116,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1682,
+    "webSearchRequests": 0,
+    "costUSD": 0.007892,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 88, \"quotes\": [\"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\", \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"]}",
+  "ttft_ms": 1701,
+  "type": "result",
+  "duration_ms": 3155,
+  "uuid": "2de41d23-526f-4bbd-ad73-9ae93cff8d24",
+  "ttft_stream_ms": 1020,
+  "time_to_request_ms": 236,
+  "first_content_frame_ms": 1021,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "date": "2026-10-27",
+ "cli": "2.1.283 (Claude Code)",
+ "model_reported": "claude-sonnet-5",
+ "prompt": "with-context smoke prompt (pilot qid 9347843); Gemini counted 536 input tokens, Groq gpt-oss 581",
+ "input_tokens_total": {
+  "system_prompt_empty_string": 1684,
+  "default_system_prompt": 6425
+ },
+ "system_prompt_single_space": "rejected: API Error 400 'system: text content blocks must contain non-whitespace text'",
+ "conclusion": "--system-prompt \"\" removes ~4,700 tokens of Claude Code context; ~1,100 tokens of CLI-added context remain and cannot be removed under subscription auth."
+}

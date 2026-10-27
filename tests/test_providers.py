@@ -301,3 +301,9 @@ def test_daily_budget_is_per_entry(tmp_path):
     a = make_provider("groq", {"model": "openai/gpt-oss-120b", "limits": {}})
     b = make_provider("qwen_groq", {"adapter": "groq", "model": "qwen/q", "limits": {}})
     assert (a.limiter.name, b.limiter.name) == ("groq", "qwen_groq")
+
+
+def test_claude_400_is_not_retried():
+    with pytest.raises(FatalError):
+        claude_code.classify({"is_error": True, "terminal_reason": "api_error", "api_error_status": 400,
+                              "result": "API Error: 400 system: text content blocks must contain non-whitespace text"})

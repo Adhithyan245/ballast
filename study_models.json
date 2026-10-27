@@ -3,7 +3,7 @@
   "models": {
     "claude": {
       "enabled": true,
-      "model": "sonnet",
+      "model": "claude-sonnet-5",
       "provider": "Claude subscription via Claude Code headless mode (claude -p)",
       "options": {
         "isolation": "safe",
@@ -13,8 +13,9 @@
         "rpm": 2,
         "rpd": 300
       },
-      "verified": null,
-      "_system_prompt_note": "'' replaces Claude Code's default system prompt; confirm via input token count on the first live call."
+      "verified": "2026-10-27",
+      "_system_prompt_note": "Measured 2026-10-27 on the same prompt: default system prompt 6,425 input tokens; --system-prompt '' 1,684; Gemini 536 / Groq 581. ~1,100 CLI-added tokens remain. A whitespace-only system prompt is rejected (400). See results/smoke/claude_system_prompt_comparison_2026-10-27.json.",
+      "choice_reason": "Alias 'sonnet' resolved to claude-sonnet-5 on CLI 2.1.283 (modelUsage of a live call, 2026-10-27); pinned to that full name. The CLI did not recognize claude-sonnet-5-5."
     },
     "gemini": {
       "enabled": true,
@@ -67,7 +68,7 @@
       "verified": "2026-10-27"
     },
     "mistral_nvidia": {
-      "enabled": true,
+      "enabled": false,
       "adapter": "nvidia",
       "model": "mistralai/mistral-large-2-instruct",
       "provider": "NVIDIA API catalog (build.nvidia.com), developer access",
@@ -76,7 +77,8 @@
       },
       "limits_source": "40 RPM per third-party guides and an NVIDIA forum thread; not in official docs. Confirm from headers / first calls.",
       "choice_reason": "Mistral's own API has no free plan (2026-10-26). Live NVIDIA model list (2026-10-27) has mistral-large-2-instruct, mixtral-8x22b-v0.1, mistral-7b-instruct-v0.3, mistral-nemo-12b-instruct; Large 2 is the most capable.",
-      "verified": null
+      "verified": null,
+      "disabled_reason": "2026-10-27: key accepted for the model list (85 models), but every chat call returned 404 'Function ... Not found for account' (mistral-large-2-instruct, mistral-large, mixtral-8x22b-v0.1, mistral-nemo-12b-instruct, mistral-7b-instruct-v0.3, and non-Mistral nemotron-3-super-120b-a12b, gemma-3-12b-it); some calls timed out. The account has no working inference access."
     },
     "qwen_vllm": {
       "enabled": false,
