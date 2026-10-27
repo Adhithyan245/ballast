@@ -307,3 +307,12 @@ def test_claude_400_is_not_retried():
     with pytest.raises(FatalError):
         claude_code.classify({"is_error": True, "terminal_reason": "api_error", "api_error_status": 400,
                               "result": "API Error: 400 system: text content blocks must contain non-whitespace text"})
+
+
+def test_long_retry_after_stops_cleanly(tmp_path):
+    p = GroqProvider("m", Limits(), sleep=nosleep)
+    p.client = mock_client(lambda r: httpx.Response(429, headers={"retry-after": "3600"},
+                                                    json={"error": {"message": "slow down"}}))
+    with pytest.raises(QuotaExhausted):
+        p.call("x")
+    assert "3600" in (tmp_path / "logs" / "retries.jsonl").read_text()

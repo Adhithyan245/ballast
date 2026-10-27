@@ -6,6 +6,7 @@ import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 
+from ..cache import log_retry
 from ..ratelimit import Limits, QuotaExhausted, RateLimiter
 
 
@@ -39,6 +40,8 @@ class Provider(ABC):
     key_var: str | None = None  # env var holding the API key, if any
     supports_temperature: bool = True
 
+    max_retry_wait: float = 300.0  # seconds; longer retry-after hints stop the provider
+
     def __init__(self, model: str, limits: Limits, timeout: float = 120.0,
                  max_attempts: int = 5, sleep=time.sleep):
         self.model = model
@@ -65,10 +68,16 @@ class Provider(ABC):
             try:
                 res = self._call(prompt, temperature)
             except RetryableError as e:
+                wait = max(min(120.0, 2.0 ** attempt + random.uniform(0, 1)), e.retry_after or 0.0)
+                log_retry({"provider": self.limiter.name, "model": self.model, "attempt": attempt,
+                           "error": str(e)[:300], "retry_after": e.retry_after, "wait_s": round(wait, 1)})
+                if e.retry_after and e.retry_after > self.max_retry_wait:
+                    # A provider asking us to wait this long is effectively out of quota:
+                    # stop cleanly and resume later instead of sleeping for hours.
+                    raise QuotaExhausted(f"retry-after {e.retry_after:.0f}s > {self.max_retry_wait:.0f}s: {e}") from None
                 if attempt == self.max_attempts:
                     raise
-                backoff = min(120.0, 2.0 ** attempt + random.uniform(0, 1))
-                self.sleep(max(backoff, e.retry_after or 0.0))
+                self.sleep(wait)
                 continue
             res.latency_s = time.monotonic() - t0
             self.limiter.record_tokens((res.input_tokens or 0) + (res.output_tokens or 0))

@@ -62,3 +62,12 @@ def log_error(entry: dict, log_dir: Path | None = None) -> None:
     entry = {"at": datetime.now(timezone.utc).isoformat(), **entry}
     with open(log_dir / "errors.jsonl", "a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
+
+def log_retry(entry: dict, log_dir: Path | None = None) -> None:
+    """Every retried attempt (rate limit, timeout, 5xx), so slow runs can be explained."""
+    log_dir = log_dir or config.LOG_DIR
+    log_dir.mkdir(parents=True, exist_ok=True)
+    entry = {"at": datetime.now(timezone.utc).isoformat(), **entry}
+    with open(log_dir / "retries.jsonl", "a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
