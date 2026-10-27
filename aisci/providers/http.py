@@ -42,6 +42,8 @@ def post_json(client: httpx.Client, url: str, headers: dict, body: dict, timeout
         raise RetryableError(f"429: {detail}", retry_after=retry_after(resp))
     if resp.status_code in (401, 403):
         raise ProviderUnavailable(f"{resp.status_code}: {detail}")
+    if resp.status_code == 402:  # payment required / credits used up
+        raise QuotaExhausted(f"402: {detail}")
     if resp.status_code >= 500 or resp.status_code == 408:
         raise RetryableError(f"{resp.status_code}: {detail}", retry_after=retry_after(resp))
     raise FatalError(f"{resp.status_code}: {detail}")

@@ -1,0 +1,54 @@
+{
+ "study_model": "groq:qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "qid": "9347843",
+ "text": "{\n\"answer\": \"no\",\n\"confidence\": 95,\n\"quotes\": [\n\"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\",\n\"Length of hospital stay was longest in group IV (7.9 versus 4.8, 3.9, and 4.5 days, respectively).\"\n]\n}",
+ "input_tokens": 572,
+ "output_tokens": 90,
+ "latency_s": 0.609000000054948,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "999",
+   "x-ratelimit-remaining-tokens": "7328",
+   "x-ratelimit-reset-requests": "1m26.4s",
+   "x-ratelimit-reset-tokens": "5.04s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-fd602457-4fe3-4c21-918b-b76bdabdd990",
+  "object": "chat.completion",
+  "created": 1793120492,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"no\",\n\"confidence\": 95,\n\"quotes\": [\n\"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\",\n\"Length of hospital stay was longest in group IV (7.9 versus 4.8, 3.9, and 4.5 days, respectively).\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.242578449,
+   "prompt_tokens": 572,
+   "prompt_time": 0.042033316,
+   "completion_tokens": 90,
+   "completion_time": 0.171466404,
+   "total_tokens": 662,
+   "total_time": 0.21349972
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c14f15bfae",
+  "x_groq": {
+   "id": "req_01m5z4yp20e41ae3hn7fbybmc6",
+   "seed": 1632385171
+  },
+  "service_tier": "on_demand"
+ }
+}

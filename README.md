@@ -37,12 +37,15 @@ See `study_models.json` for exact model names, providers, limits and the date ea
 | Claude | Claude subscription via Claude Code headless mode (`claude -p`) | cannot be set (default only) |
 | Gemini | Google AI Studio free tier | default, and 0 if quota allows |
 | gpt-oss (OpenAI open weights) | Groq free plan | default, and 0 if quota allows |
-| Mistral (open weights, self-hosted) | vLLM on a rented NVIDIA Brev GPU, paid with Brev credits; weights pinned by Hugging Face revision ([setup](docs/BREV_SETUP.md)) | default (model's generation config) and 0 |
-| Qwen (open weights, self-hosted) | same Brev GPU, served one model at a time | default (model's generation config) and 0 |
+| Qwen (open weights) | Groq free plan (`qwen/qwen3.8-27b`) | default, and 0 if quota allows |
+| Mistral | NVIDIA API catalog, developer access (`mistralai/mistral-large-2-instruct`) | default, and 0 if quota allows |
 
-The spec planned Mistral's free Experiment API plan. On 2026-10-26 the Mistral console showed API keys inactive on
-the Free plan, and no free API plan was offered, so Mistral is represented by a self-hosted open-weight model instead.
-Its results describe that open-weight model, not Mistral's hosted API.
+Deviations from the original plan, decided before any study call:
+- **Mistral**: the spec planned Mistral's free Experiment API plan. On 2026-10-26 the Mistral console showed API keys
+  inactive on the Free plan, and no free API plan was offered. Mistral is accessed through NVIDIA's hosted API catalog
+  instead, so its results describe that hosted model, not Mistral's own API.
+- **Self-hosting** on an NVIDIA Brev GPU was planned and implemented (`docs/BREV_SETUP.md`, entries `qwen_vllm` and
+  `mistral_vllm`) but is disabled: no usable Brev credits were confirmed. Qwen runs on Groq instead.
 
 Conditions: **closed-book** (question only) and **with-context** (question + abstract, must quote verbatim
 supporting sentences). 5 runs per question × condition × model. Identical prompt text for every model

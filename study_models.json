@@ -52,18 +52,45 @@
       "verified": null,
       "disabled_reason": "2026-10-26: Mistral console showed the organization on the Free plan with API keys inactive ('Upgrade to activate your API keys'); the plan list offered Free (chat only), Pro, Team and Pay-as-you-go, with no free Experiment API plan. Replaced by a self-hosted Mistral open-weight model (mistral_vllm)."
     },
-    "qwen_vllm": {
+    "qwen_groq": {
       "enabled": true,
+      "adapter": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "provider": "Groq free plan",
+      "limits": {
+        "rpm": 30,
+        "rpd": 1000,
+        "tpm": 8000
+      },
+      "limits_source": "x-ratelimit-* headers on a live call 2026-10-27: limit-requests=1000 (per day), limit-tokens=8000 (per minute). Groq docs table also lists 200K tokens/day.",
+      "choice_reason": "Only Qwen model in the live Groq list (2026-10-26); Groq limits are per model.",
+      "verified": "2026-10-27"
+    },
+    "mistral_nvidia": {
+      "enabled": true,
+      "adapter": "nvidia",
+      "model": "mistralai/mistral-large-2-instruct",
+      "provider": "NVIDIA API catalog (build.nvidia.com), developer access",
+      "limits": {
+        "rpm": 40
+      },
+      "limits_source": "40 RPM per third-party guides and an NVIDIA forum thread; not in official docs. Confirm from headers / first calls.",
+      "choice_reason": "Mistral's own API has no free plan (2026-10-26). Live NVIDIA model list (2026-10-27) has mistral-large-2-instruct, mixtral-8x22b-v0.1, mistral-7b-instruct-v0.3, mistral-nemo-12b-instruct; Large 2 is the most capable.",
+      "verified": null
+    },
+    "qwen_vllm": {
+      "enabled": false,
       "model": "TO_CHOOSE_Qwen/<MODEL>",
       "provider": "Self-hosted with vLLM on an NVIDIA Brev GPU (Brev credits); see docs/BREV_SETUP.md",
       "hf_revision": null,
       "workers": 16,
       "limits": {},
       "verified": null,
-      "adapter": "vllm"
+      "adapter": "vllm",
+      "disabled_reason": "2026-10-27: Brev credit code lost and no credits confirmed in the Brev console, so no GPU to self-host on. Kept for reproducibility if credits become available."
     },
     "mistral_vllm": {
-      "enabled": true,
+      "enabled": false,
       "adapter": "vllm",
       "model": "TO_CHOOSE_mistralai/<MODEL>",
       "provider": "Self-hosted with vLLM on an NVIDIA Brev GPU (Brev credits); see docs/BREV_SETUP.md",
@@ -71,7 +98,8 @@
       "license": "TO_VERIFY (must be an open-weight license, e.g. Apache-2.0)",
       "workers": 16,
       "limits": {},
-      "verified": null
+      "verified": null,
+      "disabled_reason": "2026-10-27: Brev credit code lost and no credits confirmed in the Brev console, so no GPU to self-host on. Kept for reproducibility if credits become available."
     }
   }
 }

@@ -272,3 +272,32 @@ def test_study_entries_share_an_adapter(tmp_path):
     assert isinstance(a, VLLMProvider) and isinstance(b, VLLMProvider)
     assert a.study_id != b.study_id  # separate cache directories
     assert adapter_class("mistral", spec["mistral"]) is MistralProvider
+
+
+def test_nvidia_provider_and_402_stops():
+    from aisci.providers.openai_compat import NvidiaProvider
+
+    seen = {}
+
+    def handler(req):
+        seen["url"] = str(req.url)
+        return httpx.Response(200, json={"model": "mistralai/m", "choices": [{"message": {"content": "{}"}}]})
+
+    import os
+    os.environ["NVIDIA_API_KEY"] = "test-key"
+    p = NvidiaProvider("mistralai/m", Limits(), sleep=nosleep)
+    p.client = mock_client(handler)
+    assert p.call("x").model_reported == "mistralai/m"
+    assert seen["url"] == "https://integrate.api.nvidia.com/v1/chat/completions"
+    p.client = mock_client(lambda r: httpx.Response(402, text="credits exhausted"))
+    with pytest.raises(QuotaExhausted):
+        p.call("x")
+    del os.environ["NVIDIA_API_KEY"]
+
+
+def test_daily_budget_is_per_entry(tmp_path):
+    from aisci.providers import make_provider
+
+    a = make_provider("groq", {"model": "openai/gpt-oss-120b", "limits": {}})
+    b = make_provider("qwen_groq", {"adapter": "groq", "model": "qwen/q", "limits": {}})
+    assert (a.limiter.name, b.limiter.name) == ("groq", "qwen_groq")

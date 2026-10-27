@@ -72,6 +72,13 @@ class MistralProvider(ChatCompletionsProvider):
     key_var = "MISTRAL_API_KEY"
 
 
+class NvidiaProvider(ChatCompletionsProvider):
+    """NVIDIA's hosted API catalog (build.nvidia.com), developer access."""
+    family = "nvidia"
+    base_url = "https://integrate.api.nvidia.com/v1"
+    key_var = "NVIDIA_API_KEY"
+
+
 class VLLMProvider(ChatCompletionsProvider):
     """Open-weight model we host ourselves with vLLM on a rented NVIDIA Brev GPU
     (see docs/BREV_SETUP.md). The server URL and its --api-key come from .env;

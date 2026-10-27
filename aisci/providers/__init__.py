@@ -10,13 +10,14 @@ from ..ratelimit import Limits
 from .base import CallResult, FatalError, Provider, ProviderUnavailable, QuotaExhausted, RetryableError
 from .claude_code import ClaudeCodeProvider
 from .gemini import GeminiProvider
-from .openai_compat import GroqProvider, MistralProvider, VLLMProvider
+from .openai_compat import GroqProvider, MistralProvider, NvidiaProvider, VLLMProvider
 
 FAMILIES = {
     "claude": ClaudeCodeProvider,
     "gemini": GeminiProvider,
     "groq": GroqProvider,
     "mistral": MistralProvider,
+    "nvidia": NvidiaProvider,
     "vllm": VLLMProvider,
 }
 STUDY_MODELS_FILE = config.ROOT / "study_models.json"
@@ -44,7 +45,9 @@ def make_provider(key: str, spec: dict | None = None) -> Provider:
     spec = spec or load_study_models()["models"][key]
     limits = Limits(**spec.get("limits", {}))
     extra = spec.get("options", {})
-    return adapter_class(key, spec)(spec["model"], limits, **extra)
+    p = adapter_class(key, spec)(spec["model"], limits, **extra)
+    p.limiter.name = key  # daily budget per study entry (Groq limits are per model)
+    return p
 
 
 __all__ = ["CallResult", "FAMILIES", "FatalError", "Provider", "ProviderUnavailable",
