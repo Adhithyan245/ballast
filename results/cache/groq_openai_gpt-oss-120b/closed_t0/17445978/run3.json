@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "17445978",
+  "run": 3
+ },
+ "cached_at": "2026-10-27T18:14:28.509917+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "b429b10683dffcfc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 167,
+ "output_tokens": 141,
+ "latency_s": 0.562,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "778",
+   "x-ratelimit-remaining-tokens": "7465",
+   "x-ratelimit-reset-requests": "5h19m40.8s",
+   "x-ratelimit-reset-tokens": "4.012s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-2b5a5c9e-c574-4bbd-9dfc-dff15002180e",
+  "object": "chat.completion",
+  "created": 1793124868,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer whether renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy is possible. The question: \"Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\" Likely yes, it can happen, but guidelines recommend limiting warm ischemia to <30 minutes to preserve renal function. However, some studies have reported longer warm ischemia times, especially in complex tumors. So answer: maybe? The question asks if it's possible. It is possible, though not ideal. So answer \"yes\". Confidence maybe 85."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.177969845,
+   "prompt_tokens": 167,
+   "prompt_time": 0.025910308,
+   "completion_tokens": 141,
+   "completion_time": 0.301186261,
+   "total_tokens": 308,
+   "total_time": 0.327096569,
+   "completion_tokens_details": {
+    "reasoning_tokens": 117
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_87b3c396db",
+  "x_groq": {
+   "id": "req_01m5z947kqers9w9921ym1y8fp",
+   "seed": 515777561
+  },
+  "service_tier": "on_demand"
+ }
+}

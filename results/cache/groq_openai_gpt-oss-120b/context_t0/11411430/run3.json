@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "11411430",
+  "run": 3
+ },
+ "cached_at": "2026-10-27T18:19:50.382802+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "0599cf6647ca3f95",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: The purpose of this study is to determine if baseline antral follicle assessment may serve as additional information in predicting in vitro fertilization outcome.\n\nMETHODS: Prospective, descriptive preliminary study of in vitro fertilization outcome. From July 1998 to July 1999, 224 patients underwent antral follicle assessment (follicle 2-6 mm in diameter) on baseline of the planned, stimulated in vitro fertilization cycle. The outcomes were analyzed with respect to antral follicle assessment (<or = 6 or>6), basal cycle day 3 follicle stimulated hormone (<or = 10 or>10 IU/L) and maternal age (<or = 35 or>35 years).\n\nRESULTS: The clinical pregnancy rate was significantly higher in the group with baseline antral follicle>6 compared to that in the group with antral follicle<or = 6 (51% vs. 19%, respectively). Controlling for patient age, and basal follicle stimulated hormone, the pregnancy rate was significantly higher in the group with antral follicle>6 compared to that in the group with antral follicle<or = 6. The cancellation rate was significantly increased with advancing maternal age, elevated basal follicle stimulated hormone levels, and baseline antral follicle<or = 6. The cancellation rate was significantly higher in the group with antral follicle<or = 6 compared to that in the group with antral follicle>or = 6 (33% vs. 1%, respectively).\n\"\"\"\n\nQuestion: Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"Controlling for patient age, and basal follicle stimulated hormone, the pregnancy rate was significantly higher in the group with antral follicle>6 compared to that in the group with antral follicle<or = 6.\",\n    \"The cancellation rate was significantly higher in the group with antral follicle<or = 6 compared to that in the group with antral follicle>or = 6 (33% vs. 1%, respectively).\"\n  ]\n}",
+ "input_tokens": 529,
+ "output_tokens": 461,
+ "latency_s": 1.375,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "703",
+   "x-ratelimit-remaining-tokens": "7072",
+   "x-ratelimit-reset-requests": "7h7m40.8s",
+   "x-ratelimit-reset-tokens": "6.96s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-932c8c4f-d59f-4739-80cc-945c625d61ae",
+  "object": "chat.completion",
+  "created": 1793125190,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"Controlling for patient age, and basal follicle stimulated hormone, the pregnancy rate was significantly higher in the group with antral follicle>6 compared to that in the group with antral follicle<or = 6.\",\n    \"The cancellation rate was significantly higher in the group with antral follicle<or = 6 compared to that in the group with antral follicle>or = 6 (33% vs. 1%, respectively).\"\n  ]\n}",
+     "reasoning": "We need to answer whether antral follicle assessment is a better predictor than age and FSH. The abstract says: \"Controlling for patient age, and basal follicle stimulated hormone, the pregnancy rate was significantly higher in the group with antral follicle>6 compared to that in the group with antral follicle<or = 6.\" This suggests antral follicle is predictive independent of age and FSH. Also cancellation rate higher with age, FSH, and low antral follicle. But does it say it's better? It says it's significant after controlling for age and FSH, implying it's a strong predictor, perhaps better. The question: \"Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\" The abstract suggests it adds predictive value beyond age and FSH, but not necessarily \"better\". However the phrase \"significantly higher ... controlling for age and FSH\" suggests it is at least as good, maybe better. I'd answer \"maybe\" because the abstract shows it's predictive independent, but doesn't directly compare predictive power. So answer maybe with confidence maybe 70. Provide quotes: \"Controlling for patient age, and basal follicle stimulated hormone, the pregnancy rate was significantly higher in the group with antral follicle>6 compared to that in the group with antral follicle<or = 6.\" Also \"The cancellation rate was significantly higher in the group with antral follicle<or = 6 compared to that in the group with antral follicle>or = 6 (33% vs. 1%, respectively).\""
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.19732723,
+   "prompt_tokens": 529,
+   "prompt_time": 0.028368435,
+   "completion_tokens": 461,
+   "completion_time": 0.978097694,
+   "total_tokens": 990,
+   "total_time": 1.006466129,
+   "completion_tokens_details": {
+    "reasoning_tokens": 333
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4de1d6a1ee",
+  "x_groq": {
+   "id": "req_01m5z9e177e8rtttfajbekp81q",
+   "seed": 151105245
+  },
+  "service_tier": "on_demand"
+ }
+}

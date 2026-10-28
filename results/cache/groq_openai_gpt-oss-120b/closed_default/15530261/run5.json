@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "15530261",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T17:27:59.002055+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "c142d5c035a288e6",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does screening or surveillance for primary hepatocellular carcinoma with ultrasonography improve the prognosis of patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 92}",
+ "input_tokens": 169,
+ "output_tokens": 125,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "980",
+   "x-ratelimit-remaining-tokens": "7589",
+   "x-ratelimit-reset-requests": "28m48s",
+   "x-ratelimit-reset-tokens": "3.082s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e354f3c6-4eb2-4662-adef-a68aa816f919",
+  "object": "chat.completion",
+  "created": 1793122078,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92}",
+     "reasoning": "We need to answer the question: \"Does screening or surveillance for primary hepatocellular carcinoma with ultrasonography improve the prognosis of patients?\" Provide answer yes/no/maybe with confidence. Need to consider evidence. Current guidelines: For high-risk patients (cirrhosis, HBV), surveillance with ultrasound every 6 months is recommended, improves early detection, leading to curative treatment and improved survival. Studies show survival benefit vs no surveillance. So answer yes. Confidence high, maybe 90+. Provide JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.190638642,
+   "prompt_tokens": 169,
+   "prompt_time": 0.05697602,
+   "completion_tokens": 125,
+   "completion_time": 0.263687451,
+   "total_tokens": 294,
+   "total_time": 0.320663471,
+   "completion_tokens_details": {
+    "reasoning_tokens": 104
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_87b3c396db",
+  "x_groq": {
+   "id": "req_01m5z6f3k5erprmyyvrbv7dn4q",
+   "seed": 13467372
+  },
+  "service_tier": "on_demand"
+ }
+}

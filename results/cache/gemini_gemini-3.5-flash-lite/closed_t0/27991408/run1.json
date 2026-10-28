@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "27991408",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T18:23:57.532488+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "3be8de3222bf3ab4",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do dermatomyositis and polymyositis affect similar thigh muscles?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 102,
+ "output_tokens": 13,
+ "latency_s": 0.657,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+       "thoughtSignature": "EmAKXgFpFH0TKJym2ShCNMcwMvsfKKefUyReaZyVFA3PCuRT5NCdrHej+Ew+H/pgBi0hC11oBBxjrZBY+WcXLspujOQcHHeTx8pQacr/exIO66PfM9qNck4imo5T1TWEjEk="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 102,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 115,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 102
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "POzgaviKK5PMytMPps39oAc"
+ }
+}

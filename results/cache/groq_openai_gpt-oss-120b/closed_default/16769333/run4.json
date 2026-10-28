@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "16769333",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T17:28:09.064612+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "519ff3eb34347892",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Preoperative tracheobronchoscopy in newborns with esophageal atresia: does it matter?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 171,
+ "output_tokens": 87,
+ "latency_s": 0.625,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "976",
+   "x-ratelimit-remaining-tokens": "7587",
+   "x-ratelimit-reset-requests": "34m33.6s",
+   "x-ratelimit-reset-tokens": "3.097s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-2e359e15-0347-467a-addb-8c39edc152af",
+  "object": "chat.completion",
+  "created": 1793122088,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer yes/no/maybe about whether preoperative tracheobronchoscopy in newborns with esophageal atresia matters. Likely evidence suggests it matters (helps detect TEF, airway anomalies). Some studies show routine bronchoscopy changes management. So answer \"yes\". Provide confidence maybe 85."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.297437685,
+   "prompt_tokens": 171,
+   "prompt_time": 0.04748786,
+   "completion_tokens": 87,
+   "completion_time": 0.182415718,
+   "total_tokens": 258,
+   "total_time": 0.229903578,
+   "completion_tokens_details": {
+    "reasoning_tokens": 66
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4a7bb72c24",
+  "x_groq": {
+   "id": "req_01m5z6fdd1ebs92gqzgc4wakba",
+   "seed": 803053607
+  },
+  "service_tier": "on_demand"
+ }
+}

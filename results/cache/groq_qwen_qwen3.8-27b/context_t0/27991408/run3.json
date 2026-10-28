@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "27991408",
+  "run": 3
+ },
+ "cached_at": "2026-10-27T18:21:53.125971+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "59cc60486ef38c9c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Dermatomyositis (DM) and polymyositis (PM) commonly cause weakness of the thigh muscles. However, it is debated whether DM and PM affect similar thigh muscles. Muscle oedema on fat-suppressed MRI sequences is thought to represent active inflammation. In this study, we aimed to assess which thigh muscle groups are preferentially inflamed in DM and PM, respectively, using short-tau inversion-recovery MRI sequences.\n\nMETHODS: We analysed 71 patients from 2 Rheumatology centres, 31 with DM and 40 with PM diagnosed according to the Bohan and Peter criteria. MRI oedema (1=present, 0=absent) was assessed bilaterally on fat-suppressed sequences in 17 pelvic floor and thigh muscles. An MRI oedema score (range 0-17) was calculated by adding the separate scores bilaterally and dividing them by two. Inter-rater variability was assessed by intraclass correlation coefficient. Fisher's exact test was used to compare binomial data.\n\nRESULTS: Age and gender ratio were similar in patients with DM and PM. Disease duration (months, mean±SD) was shorter (20±31) in DM than in PM (53±69) (p=0.02). The intraclass correlation coefficient between the radiologists involved was 0.78. Muscle oedema was more common in DM than in PM except in the posterior thigh muscles. In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\n\"\"\"\n\nQuestion: Do dermatomyositis and polymyositis affect similar thigh muscles?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\n\"answer\": \"no\",\n\"confidence\": 90,\n\"quotes\": [\n\"Muscle oedema was more common in DM than in PM except in the posterior thigh muscles.\",\n\"In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\"\n]\n}",
+ "input_tokens": 503,
+ "output_tokens": 86,
+ "latency_s": 1.156,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "618",
+   "x-ratelimit-remaining-tokens": "6868",
+   "x-ratelimit-reset-requests": "9h10m4.8s",
+   "x-ratelimit-reset-tokens": "24.66s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-fe82ab6d-2a20-47d9-a3e6-76f311e1d085",
+  "object": "chat.completion",
+  "created": 1793125312,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"no\",\n\"confidence\": 90,\n\"quotes\": [\n\"Muscle oedema was more common in DM than in PM except in the posterior thigh muscles.\",\n\"In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.593464534,
+   "prompt_tokens": 503,
+   "prompt_time": 0.090963934,
+   "completion_tokens": 86,
+   "completion_time": 0.382789515,
+   "total_tokens": 589,
+   "total_time": 0.473753449
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m5z9hs83e1ytqd5es8frbysh",
+   "seed": 248750810
+  },
+  "service_tier": "on_demand"
+ }
+}

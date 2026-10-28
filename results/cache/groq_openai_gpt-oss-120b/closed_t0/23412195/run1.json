@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "23412195",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T18:15:42.618280+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "6286e6e3c6398645",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Should displaced midshaft clavicular fractures be treated surgically?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 161,
+ "output_tokens": 207,
+ "latency_s": 0.719,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "755",
+   "x-ratelimit-remaining-tokens": "7318",
+   "x-ratelimit-reset-requests": "5h52m48s",
+   "x-ratelimit-reset-tokens": "5.115s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-d963ed33-4f99-4648-abaa-c1e4d49777d1",
+  "object": "chat.completion",
+  "created": 1793124942,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer the question: Should displaced midshaft clavicular fractures be treated surgically? Provide answer yes/no/maybe and confidence.\n\nWe need to consider current evidence. Historically, many midshaft clavicle fractures were treated nonoperatively, but displaced fractures have higher nonunion rates. Recent guidelines suggest surgical fixation for displaced (>2 cm) or comminuted midshaft fractures, especially in active patients, to reduce nonunion and improve functional outcomes. However, some still treat nonoperatively if acceptable alignment. So answer maybe? The question: \"Should displaced midshaft clavicular fractures be treated surgically?\" The evidence: Many guidelines (e.g., AO, NICE) recommend surgery for displaced >2 cm, open fracture, neurovascular compromise, or floating shoulder. So generally yes, surgical fixation is recommended for displaced midshaft clavicle fractures. So answer \"yes\". Confidence maybe 85.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.17796112,
+   "prompt_tokens": 161,
+   "prompt_time": 0.032265603,
+   "completion_tokens": 207,
+   "completion_time": 0.43611819,
+   "total_tokens": 368,
+   "total_time": 0.468383793,
+   "completion_tokens_details": {
+    "reasoning_tokens": 186
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_87b3c396db",
+  "x_groq": {
+   "id": "req_01m5z96ftverrbte7agv6vr1n7",
+   "seed": 44273024
+  },
+  "service_tier": "on_demand"
+ }
+}

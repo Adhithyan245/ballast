@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "9347843",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T17:26:53.064051+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "9adee70f580ba79d",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Laparoscopic-assisted ileocolic resections in patients with Crohn's disease: are abscesses, phlegmons, or recurrent disease contraindications?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"no\", \"confidence\": 95}",
+ "input_tokens": 118,
+ "output_tokens": 13,
+ "latency_s": 0.656,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"no\", \"confidence\": 95}",
+       "thoughtSignature": "EmAKXgFpFH0TIRjZb1eISZ+PYN6eRGsJCYkcgcyV1Fghjq00ZvO8RxnaJM7Xoao+vOK/mUSbhbxGjRered8nde9LBBNz9aM9/FIxTJ5z8ZRJSynNMXKAAaChS0Gxgx2706s="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 118,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 131,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 118
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "3N7gar3IHo27xdIP9YvAkAU"
+ }
+}

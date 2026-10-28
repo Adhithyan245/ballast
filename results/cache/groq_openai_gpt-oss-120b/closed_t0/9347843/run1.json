@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "9347843",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T18:12:21.776838+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "9adee70f580ba79d",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Laparoscopic-assisted ileocolic resections in patients with Crohn's disease: are abscesses, phlegmons, or recurrent disease contraindications?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 181,
+ "output_tokens": 180,
+ "latency_s": 1.422,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "815",
+   "x-ratelimit-remaining-tokens": "7096",
+   "x-ratelimit-reset-requests": "4h26m24s",
+   "x-ratelimit-reset-tokens": "6.78s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-77b13989-c2b3-427c-9b52-191aae2c7de9",
+  "object": "chat.completion",
+  "created": 1793124741,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer the question: \"Laparoscopic-assisted ileocolic resections in patients with Crohn's disease: are abscesses, phlegmons, or recurrent disease contraindications?\" So the question asks: are abscesses, phlegmons, or recurrent disease contraindications for laparoscopic-assisted ileocolic resections in Crohn's disease? The answer likely is \"maybe\" because these conditions may be relative contraindications but not absolute. In literature, laparoscopic approach is feasible even with abscesses/phlegmons if adequately managed (drainage) but may be more challenging. Recurrent disease may also be a relative contraindication but many surgeons still perform laparoscopic resections. So answer likely \"maybe\". Confidence maybe 70.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.903639142,
+   "prompt_tokens": 181,
+   "prompt_time": 0.065106262,
+   "completion_tokens": 180,
+   "completion_time": 0.383145525,
+   "total_tokens": 361,
+   "total_time": 0.448251787,
+   "completion_tokens_details": {
+    "reasoning_tokens": 159
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "x_groq": {
+   "id": "req_01m5z90b08e968pypjg14gr59g",
+   "seed": 2144188705
+  },
+  "service_tier": "on_demand"
+ }
+}

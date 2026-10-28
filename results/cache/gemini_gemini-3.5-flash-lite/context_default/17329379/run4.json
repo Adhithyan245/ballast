@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "17329379",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:08:13.547734+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "59f42636f294c409",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To evaluate feasibility of the guidelines of the Groupe Francophone de Réanimation et Urgence Pédiatriques (French-speaking group of paediatric intensive and emergency care; GFRUP) for limitation of treatments in the paediatric intensive care unit (PICU).\n\nDESIGN: A 2-year prospective survey.\n\nSETTING: A 12-bed PICU at the Hôpital Jeanne de Flandre, Lille, France.\n\nPATIENTS: Were included when limitation of treatments was expected.\n\nRESULTS: Of 967 children admitted, 55 were included with a 2-day median delay. They were younger than others (24 v 60 months), had a higher paediatric risk of mortality (PRISM) score (14 v 4), and a higher paediatric overall performance category (POPC) score at admission (2 v 1); all p<0.002. 34 (50% of total deaths) children died. A limitation decision was made without meeting for 7 children who died: 6 received do-not-resuscitate orders (DNROs) and 1 received withholding decision. Decision-making meetings were organised for 31 children, and the following decisions were made: 12 DNROs (6 deaths and 6 survivals), 4 withholding (1 death and 3 survivals), with 14 withdrawing (14 deaths) and 1 continuing treatment (survival). After limitation, 21 (31% of total deaths) children died and 10 survived (POPC score 4). 13 procedures were interrupted because of death and 11 because of clinical improvement (POPC score 4). Parents' opinions were obtained after 4 family conferences (for a total of 110 min), 3 days after inclusion. The first meeting was planned for 6 days after inclusion and held on the 7th day after inclusion; 80% of parents were immediately informed of the decision, which was implemented after half a day.\n\"\"\"\n\nQuestion: Are the GFRUP's recommendations for withholding or withdrawing treatments in critically ill children applicable?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"OBJECTIVE: To evaluate feasibility of the guidelines of the Groupe Francophone de Réanimation et Urgence Pédiatriques (French-speaking group of paediatric intensive and emergency care; GFRUP) for limitation of treatments in the paediatric intensive care unit (PICU).\"]}",
+ "input_tokens": 579,
+ "output_tokens": 72,
+ "latency_s": 0.672,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"OBJECTIVE: To evaluate feasibility of the guidelines of the Groupe Francophone de Réanimation et Urgence Pédiatriques (French-speaking group of paediatric intensive and emergency care; GFRUP) for limitation of treatments in the paediatric intensive care unit (PICU).\"]}",
+       "thoughtSignature": "EmAKXgFpFH0Tsu6lD8d4mCuzE6WbjrZ1dpfpaxhOkRk06X4kqwnQFwwQT+Hf0N2eYxMqA30SVMEhRSrBSuS75P2Cb2Rep4H8KIHKdMdw23J/CjRwWUpqPcwSLq6w09lgvxs="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 579,
+   "candidatesTokenCount": 72,
+   "totalTokenCount": 651,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 579
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "jOjgaqKFLuWEytMPy7-vkQg"
+ }
+}

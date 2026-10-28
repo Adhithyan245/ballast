@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "23412195",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T18:28:08.011035+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "4b75af78e3d559a1",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: This study was designed to compare clinical effectiveness of operative with nonoperative treatment for displaced midshaft clavicular fractures (DMCF).\n\nMETHODS: We systematically searched electronic databases (MEDILINE, EMBASE, CLINICAL, OVID, BIOSIS and Cochrane registry of controlled clinical trials) to identify randomized controlled trials (RCTs) in which operative treatment was compared with nonoperative treatment for DMCF from 1980 to 2012. The methodologic quality of trials was assessed. Data from chosen studies were pooled with using of fixed-effects and random-effects models with mean differences and risk ratios for continuous and dichotomous variables, respectively.\n\nRESULTS: Four RCTs with a total of 321 patients were screened for the present study. Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001]. Subgroup analyses of complications revealed that significant differences were existed in the incidence of neurologic symptoms [95 % CI (0.20, 0.74), P = 0.004] and dissatisfaction with appearance [95 % CI (0.19, 0.65), P = 0.001]. Lack of consistent and standardized assessment data, insufficiency analysis that carried out showed improved functional outcomes (P < 0.05) in operative treatment.\n\"\"\"\n\nQuestion: Should displaced midshaft clavicular fractures be treated surgically?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001].\", \"Lack of consistent and standardized assessment data, insufficiency analysis that carried out showed improved functional outcomes (P < 0.05) in operative treatment.\"]}",
+ "input_tokens": 556,
+ "output_tokens": 306,
+ "latency_s": 0.953,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "651",
+   "x-ratelimit-remaining-tokens": "6514",
+   "x-ratelimit-reset-requests": "8h22m33.6s",
+   "x-ratelimit-reset-tokens": "11.145s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-da06067b-6bc1-4c8a-baa0-0550ec1958f7",
+  "object": "chat.completion",
+  "created": 1793125687,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001].\", \"Lack of consistent and standardized assessment data, insufficiency analysis that carried out showed improved functional outcomes (P < 0.05) in operative treatment.\"]}",
+     "reasoning": "We need to answer based on abstract. The abstract says operative treatment was superior regarding nonunion, malunion, overall complication, and functional outcomes improved. So recommendation: yes, surgical treatment is better. Provide confidence maybe high, like 90. Provide quotes: e.g., \"Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion ...\", \"Subgroup analyses of complications revealed that significant differences were existed in the incidence of neurologic symptoms ...\", \"Lack of consistent and standardized assessment data, insufficiency analysis that carried out showed improved functional outcomes (P < 0.05) in operative treatment.\"\n\nWe need 1-3 sentences. Provide maybe two. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.199239909,
+   "prompt_tokens": 556,
+   "prompt_time": 0.025530884,
+   "completion_tokens": 306,
+   "completion_time": 0.648812728,
+   "total_tokens": 862,
+   "total_time": 0.674343612,
+   "completion_tokens_details": {
+    "reasoning_tokens": 146
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_a4be3b0989",
+  "x_groq": {
+   "id": "req_01m5z9x7g2edwsfqe6ddyzpxd4",
+   "seed": 633829480
+  },
+  "service_tier": "on_demand"
+ }
+}

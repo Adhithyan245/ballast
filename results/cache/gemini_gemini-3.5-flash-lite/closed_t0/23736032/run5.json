@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "23736032",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T18:21:35.347848+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "79cccef840d760a1",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 105,
+ "output_tokens": 18,
+ "latency_s": 5.984,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TaknOEYJV3SGJiGtX8Kbfzl7RytYh+1w7BAzAdWKuTZzADUP6ClG0rUADTnPlhjB9uKua9bCfcVYUom5wD+1CXkhzNnRBHH1GN8/gUBAo7dV17UxWky0ONgc="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 105,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 123,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 105
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "qevgavHkC_PnytMPj73LgAU"
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "23736032",
+  "run": 3
+ },
+ "cached_at": "2026-10-27T18:29:57.918581+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "6931cf7a0258f278",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: A multidisciplinary team (MDT) approach to breast cancer management is the gold standard. The aim is to evaluate MDT decision making in a modern breast unit.\n\nMETHODS: All referrals to the breast MDT where breast cancer was diagnosed from 1 July 2009 to 30 June 2011 were included. Multidisciplinary team decisions were compared with subsequent patient management and classified as concordant or discordant.\n\nRESULTS: Over the study period, there were 3230 MDT decisions relating to 705 patients. Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision. Of 146 discordant decisions, 26 (17.8%) were considered 'unjustifiable' as there was no additional information available after the MDT to account for the change in management. The remaining 120 discordant MDT decisions were considered 'justifiable', as management was altered due to patient choice (n=61), additional information available after MDT (n=54) or MDT error (n=5).\n\"\"\"\n\nQuestion: Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision.\"]}\n```",
+ "input_tokens": 428,
+ "output_tokens": 91,
+ "latency_s": 0.954,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TcqCyvs/Ggo/09KdY/8JaPlRm50cGNKIsV89PSAB+P9Geoo1j+ASbhPqMIsoUPblKG5TdlBdG1ZJpnTDprUdiA6Z4RQwO5lb6gxMgO+aXIYd3oTphs7fc4W0="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 428,
+   "candidatesTokenCount": 91,
+   "totalTokenCount": 519,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 428
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "pO3gat_BMYndytMP8rb94AU"
+ }
+}

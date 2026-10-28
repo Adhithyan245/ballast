@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "9347843",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:18:33.827526+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "ed7335d965d685ac",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Because of the inflammatory nature of Crohn's disease, ileocolic resections are often difficult to perform, especially if an abscess, phlegmon, or recurrent disease at a previous ileocolic anastomosis is present. Our goal was to determine whether the above factors are contraindications to a successful laparoscopic-assisted ileocolic resection.\n\nMETHODS: Between 1992 and 1996, 46 laparoscopic-assisted ileocolic resections were attempted. Fourteen patients had an abscess or phlegmon treated with bowel rest before operation (group I), 10 patients had recurrent Crohn's disease at the previous ileocolic anastomosis (group II), and 22 patients had no previous operation and no phlegmon or abscess associated with their disease (group III). These groups were compared with each other and with 70 consecutive open ileocolic resections for Crohn's disease during the same time period (group IV).\n\nRESULTS: Operative blood loss and time were greater in group IV than in groups I, II, and III (245 versus 151, 131, and 195 ml, respectively, and 202 versus 152, 144, and 139 minutes, respectively). Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]). Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively). Only one patient died (group IV, 1%). Length of hospital stay was longest in group IV (7.9 versus 4.8, 3.9, and 4.5 days, respectively).\n\"\"\"\n\nQuestion: Laparoscopic-assisted ileocolic resections in patients with Crohn's disease: are abscesses, phlegmons, or recurrent disease contraindications?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\", \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"]}",
+ "input_tokens": 581,
+ "output_tokens": 338,
+ "latency_s": 1.343,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "712",
+   "x-ratelimit-remaining-tokens": "6974",
+   "x-ratelimit-reset-requests": "6h54m43.199s",
+   "x-ratelimit-reset-tokens": "7.695s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-09159227-6116-4723-bf50-73b42569ca59",
+  "object": "chat.completion",
+  "created": 1793125113,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\", \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"]}",
+     "reasoning": "We need to answer whether abscesses, phlegmons, or recurrent disease are contraindications to successful laparoscopic-assisted ileocolic resection. The abstract compares groups with those conditions (group I abscess/phlegmon, group II recurrent disease) to others and to open surgery. Conversion rates are low (7% and 20% for groups I and II). Morbidity 0% for group I, 10% for group II, similar to group III (10%). So they are not contraindications. So answer \"no\". Confidence high, maybe 90. Provide quotes: e.g., \"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\" and \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\" Also maybe \"Our goal was to determine whether the above factors are contraindications to a successful laparoscopic-assisted ileocolic resection.\" But need supporting sentences showing they were not contraindications. The results show low conversion and morbidity, indicating not contraindications. Provide two quotes.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.255699985,
+   "prompt_tokens": 581,
+   "prompt_time": 0.205407741,
+   "completion_tokens": 338,
+   "completion_time": 0.711994588,
+   "total_tokens": 919,
+   "total_time": 0.917402329,
+   "completion_tokens_details": {
+    "reasoning_tokens": 248
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_a655021f7d",
+  "x_groq": {
+   "id": "req_01m5z9bpgte7wt1p61g7j5f124",
+   "seed": 147233115
+  },
+  "service_tier": "on_demand"
+ }
+}

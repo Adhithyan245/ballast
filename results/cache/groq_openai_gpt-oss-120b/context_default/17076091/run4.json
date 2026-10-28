@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "17076091",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T17:46:48.560895+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "969cbedd9df380c4",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: We sought to determine whether patients with obstructive sleep apnea (OSA) had an objective change in aerobic fitness during cycle ergometry compared to a normal population. The most accurate test of aerobic fitness is measurement of maximum oxygen consumption (VO2max) with cycle ergometry.\n\nMETHODS: We performed a retrospective cohort analysis (247 patients with OSA) of VO2max from annual cycle ergometry tests compared to a large control group (normative data from 1.4 million US Air Force tests) in a tertiary care setting.\n\nRESULTS: Overall, individuals with OSA had increased VO2max when compared to the normalized US Air Force data (p<.001). Patients with an apnea-hypopnea index of greater than 20 demonstrated a decreased VO2max as compared to normalized values (p<.001). No differences in VO2max were observed after either medical or surgical therapy for OSA.\n\"\"\"\n\nQuestion: Does obstructive sleep apnea affect aerobic fitness?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"Overall, individuals with OSA had increased VO2max when compared to the normalized US Air Force data (p<.001).\", \"Patients with an apnea-hypopnea index of greater than 20 demonstrated a decreased VO2max as compared to normalized values (p<.001).\"]}",
+ "input_tokens": 386,
+ "output_tokens": 324,
+ "latency_s": 1.047,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "877",
+   "x-ratelimit-remaining-tokens": "7411",
+   "x-ratelimit-reset-requests": "2h57m7.2s",
+   "x-ratelimit-reset-tokens": "4.417s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-d3b0b604-fbb5-4a1d-8443-6b632d2c04bb",
+  "object": "chat.completion",
+  "created": 1793123208,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"Overall, individuals with OSA had increased VO2max when compared to the normalized US Air Force data (p<.001).\", \"Patients with an apnea-hypopnea index of greater than 20 demonstrated a decreased VO2max as compared to normalized values (p<.001).\"]}",
+     "reasoning": "We need to answer whether obstructive sleep apnea affects aerobic fitness. The abstract says overall individuals with OSA had increased VO2max compared to controls, but those with AHI>20 had decreased VO2max. So there is effect, but direction varies. So answer maybe \"maybe\" because mixed results. But overall they say OSA patients had increased VO2max, which suggests OSA does affect aerobic fitness (increase). However also note that severity >20 decreased VO2max. The question: \"Does obstructive sleep apnea affect aerobic fitness?\" The abstract shows OSA is associated with differences in VO2max, both increased overall and decreased in severe cases, indicating it does affect aerobic fitness. So answer \"yes\". Confidence high maybe 85. Provide quotes: \"Overall, individuals with OSA had increased VO2max when compared to the normalized US Air Force data (p<.001).\" and \"Patients with an apnea-hypopnea index of greater than 20 demonstrated a decreased VO2max as compared to normalized values (p<.001).\" Provide up to three quotes.\n\nThus JSON: {\"answer\":\"yes\",\"confidence\":85,\"quotes\":[...]}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.229604219,
+   "prompt_tokens": 386,
+   "prompt_time": 0.01773317,
+   "completion_tokens": 324,
+   "completion_time": 0.670740524,
+   "total_tokens": 710,
+   "total_time": 0.688473694,
+   "completion_tokens_details": {
+    "reasoning_tokens": 238
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_27194a498a",
+  "x_groq": {
+   "id": "req_01m5z7hj6ye219z6ph2v7yp4b5",
+   "seed": 2145154983
+  },
+  "service_tier": "on_demand"
+ }
+}

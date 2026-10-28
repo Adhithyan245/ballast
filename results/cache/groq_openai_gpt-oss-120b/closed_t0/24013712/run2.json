@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "24013712",
+  "run": 2
+ },
+ "cached_at": "2026-10-27T18:16:28.388446+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "20c825196bed90b7",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Preoperative platelet count in esophageal squamous cell carcinoma: is it a prognostic factor?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 82}",
+ "input_tokens": 168,
+ "output_tokens": 141,
+ "latency_s": 0.5,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "744",
+   "x-ratelimit-remaining-tokens": "7642",
+   "x-ratelimit-reset-requests": "6h8m38.4s",
+   "x-ratelimit-reset-tokens": "2.685s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-a72b9fc6-35c1-488d-999d-6d4468e4a72d",
+  "object": "chat.completion",
+  "created": 1793124988,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 82}",
+     "reasoning": "We need to answer whether preoperative platelet count in esophageal squamous cell carcinoma is a prognostic factor. Need to answer yes/no/maybe with confidence.\n\nWe need to consider literature. I recall that thrombocytosis (high platelet count) has been associated with poor prognosis in many cancers, including esophageal cancer. Some studies have shown that elevated preoperative platelet count is an independent prognostic factor for overall survival in esophageal squamous cell carcinoma. However, there may be conflicting evidence. Overall, likely yes, it's a prognostic factor. Confidence maybe 80.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.049388147,
+   "prompt_tokens": 168,
+   "prompt_time": 0.040486498,
+   "completion_tokens": 141,
+   "completion_time": 0.298256106,
+   "total_tokens": 309,
+   "total_time": 0.338742604,
+   "completion_tokens_details": {
+    "reasoning_tokens": 120
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_60e4b492db",
+  "x_groq": {
+   "id": "req_01m5z97wspe9685ehyr15eaf6s",
+   "seed": 371671161
+  },
+  "service_tier": "on_demand"
+ }
+}

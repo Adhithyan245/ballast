@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "23736032",
+  "run": 2
+ },
+ "cached_at": "2026-10-27T18:28:18.134928+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "6931cf7a0258f278",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: A multidisciplinary team (MDT) approach to breast cancer management is the gold standard. The aim is to evaluate MDT decision making in a modern breast unit.\n\nMETHODS: All referrals to the breast MDT where breast cancer was diagnosed from 1 July 2009 to 30 June 2011 were included. Multidisciplinary team decisions were compared with subsequent patient management and classified as concordant or discordant.\n\nRESULTS: Over the study period, there were 3230 MDT decisions relating to 705 patients. Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision. Of 146 discordant decisions, 26 (17.8%) were considered 'unjustifiable' as there was no additional information available after the MDT to account for the change in management. The remaining 120 discordant MDT decisions were considered 'justifiable', as management was altered due to patient choice (n=61), additional information available after MDT (n=54) or MDT error (n=5).\n\"\"\"\n\nQuestion: Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision.\", \"Multidisciplinary team decisions were compared with subsequent patient management and classified as concordant or discordant.\"]}",
+ "input_tokens": 451,
+ "output_tokens": 394,
+ "latency_s": 1.031,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "649",
+   "x-ratelimit-remaining-tokens": "6098",
+   "x-ratelimit-reset-requests": "8h25m26.399s",
+   "x-ratelimit-reset-tokens": "14.264s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e23347a2-fd5f-4c99-a953-f7ad162b7acd",
+  "object": "chat.completion",
+  "created": 1793125697,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision.\", \"Multidisciplinary team decisions were compared with subsequent patient management and classified as concordant or discordant.\"]}",
+     "reasoning": "We need to answer the question: \"Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?\" Based on abstract, they compared MDT decisions with subsequent patient management and classified as concordant or discordant. 91.5% concordant, meaning patient management matched MDT recommendation. So answer: yes, most patients receive what team recommended. But there is some discordance. The question likely expects \"maybe\" because not all patients receive it, but majority do. However the question phrasing: \"does the patient receive what the team has recommended?\" Could be answered yes (since majority) but there is a proportion that does not. The abstract says 91.5% concordant, 4.5% discordant, 4% no decision. So overall, yes, most patients receive what recommended. I'd answer \"maybe\" if we consider not always. But typical answer: \"yes\" with high confidence that the abstract indicates most patients receive recommended care. The question likely expects \"yes\" because they are asking if patients receive what team recommended, and the data shows 91.5% concordance. So answer yes, confidence maybe 90.\n\nProvide quotes: \"Overall, 91.5% (2956 out of 3230) of decisions were concordant\" and \"Multidisciplinary team decisions were compared with subsequent patient management and classified as concordant or discordant.\"\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.074622842,
+   "prompt_tokens": 451,
+   "prompt_time": 0.023381446,
+   "completion_tokens": 394,
+   "completion_time": 0.829054057,
+   "total_tokens": 845,
+   "total_time": 0.852435503,
+   "completion_tokens_details": {
+    "reasoning_tokens": 291
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01m5z9xhb9ed888nm82bd7msdz",
+   "seed": 1914942671
+  },
+  "service_tier": "on_demand"
+ }
+}

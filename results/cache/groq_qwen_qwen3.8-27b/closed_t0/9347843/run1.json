@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "9347843",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T18:06:34.007531+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "9adee70f580ba79d",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Laparoscopic-assisted ileocolic resections in patients with Crohn's disease: are abscesses, phlegmons, or recurrent disease contraindications?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"no\", \"confidence\": 85}",
+ "input_tokens": 133,
+ "output_tokens": 14,
+ "latency_s": 0.234,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "815",
+   "x-ratelimit-remaining-tokens": "6797",
+   "x-ratelimit-reset-requests": "4h26m24s",
+   "x-ratelimit-reset-tokens": "33.12s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-a5f18bcd-73d8-4a55-80ac-0db93beca65f",
+  "object": "chat.completion",
+  "created": 1793124393,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 85}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.095034068,
+   "prompt_tokens": 133,
+   "prompt_time": 0.010781155,
+   "completion_tokens": 14,
+   "completion_time": 0.027669685,
+   "total_tokens": 147,
+   "total_time": 0.03845084
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_57c7e760a9",
+  "x_groq": {
+   "id": "req_01m5z8nrjmev6a66c4xayq705v",
+   "seed": 740552693
+  },
+  "service_tier": "on_demand"
+ }
+}

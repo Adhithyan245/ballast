@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "21569408",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:19:48.276264+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "5de95acd72d4c487",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does context matter for the relationship between deprivation and all-cause mortality?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 99}",
+ "input_tokens": 101,
+ "output_tokens": 13,
+ "latency_s": 1.0,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 99}",
+       "thoughtSignature": "EmAKXgFpFH0TzlJBHPDL1fokivxAA9X6o5DoZY8iWlnIT/PjzUkaGM/0X9MqsoeNC+OE50isOKaUlMxTt3/QTHVH2XxNbO+NuaDXqvnHsnhp1a72v5GDKukqGFGNfyrMVcA="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 101,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 114,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 101
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Q-vgaqzqBcqeuMYPhY7jkAE"
+ }
+}

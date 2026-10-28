@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "22186742",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:20:18.214560+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d130e601d91293e1",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does a colonoscopy after acute diverticulitis affect its management?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 100,
+ "output_tokens": 13,
+ "latency_s": 4.703,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+       "thoughtSignature": "EmAKXgFpFH0TUqEvOnz9XSrgy5eXyq5Oll026QXTnUaQQbw7cr101dZYpI5toKat/4gcYnNQtFx13Texy/kbviv7hGI83il4JcJNgSo0OVhMvO683aIfBOpZH1hw3ysQ2es="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 100,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 113,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 100
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Xevgao-gFauKytMPn_SsoQE"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "23412195",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:09:26.898230+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "6286e6e3c6398645",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Should displaced midshaft clavicular fractures be treated surgically?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"maybe\", \"confidence\": 85}",
+ "input_tokens": 110,
+ "output_tokens": 14,
+ "latency_s": 0.203,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "752",
+   "x-ratelimit-remaining-tokens": "7753",
+   "x-ratelimit-reset-requests": "5h57m7.2s",
+   "x-ratelimit-reset-tokens": "1.852s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-af9233fc-aff6-4900-99c9-4f02e5c199a0",
+  "object": "chat.completion",
+  "created": 1793124566,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 85}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.095794168,
+   "prompt_tokens": 110,
+   "prompt_time": 0.007590841,
+   "completion_tokens": 14,
+   "completion_time": 0.026787855,
+   "total_tokens": 124,
+   "total_time": 0.034378696
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c14f15bfae",
+  "x_groq": {
+   "id": "req_01m5z8v1ejek4rtb1q03dz45k1",
+   "seed": 1368972273
+  },
+  "service_tier": "on_demand"
+ }
+}

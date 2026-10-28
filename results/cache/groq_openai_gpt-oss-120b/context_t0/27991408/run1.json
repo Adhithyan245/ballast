@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "27991408",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T20:14:59.860487+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "59cc60486ef38c9c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Dermatomyositis (DM) and polymyositis (PM) commonly cause weakness of the thigh muscles. However, it is debated whether DM and PM affect similar thigh muscles. Muscle oedema on fat-suppressed MRI sequences is thought to represent active inflammation. In this study, we aimed to assess which thigh muscle groups are preferentially inflamed in DM and PM, respectively, using short-tau inversion-recovery MRI sequences.\n\nMETHODS: We analysed 71 patients from 2 Rheumatology centres, 31 with DM and 40 with PM diagnosed according to the Bohan and Peter criteria. MRI oedema (1=present, 0=absent) was assessed bilaterally on fat-suppressed sequences in 17 pelvic floor and thigh muscles. An MRI oedema score (range 0-17) was calculated by adding the separate scores bilaterally and dividing them by two. Inter-rater variability was assessed by intraclass correlation coefficient. Fisher's exact test was used to compare binomial data.\n\nRESULTS: Age and gender ratio were similar in patients with DM and PM. Disease duration (months, mean±SD) was shorter (20±31) in DM than in PM (53±69) (p=0.02). The intraclass correlation coefficient between the radiologists involved was 0.78. Muscle oedema was more common in DM than in PM except in the posterior thigh muscles. In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\n\"\"\"\n\nQuestion: Do dermatomyositis and polymyositis affect similar thigh muscles?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 92,\n  \"quotes\": [\n    \"Muscle oedema was more common in DM than in PM except in the posterior thigh muscles.\",\n    \"In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\"\n  ]\n}",
+ "input_tokens": 531,
+ "output_tokens": 206,
+ "latency_s": 0.922,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "691",
+   "x-ratelimit-remaining-tokens": "7210",
+   "x-ratelimit-reset-requests": "7h24m57.6s",
+   "x-ratelimit-reset-tokens": "5.925s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-f1fabfa5-36ae-419e-bfcd-cd0b7789a892",
+  "object": "chat.completion",
+  "created": 1793132099,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 92,\n  \"quotes\": [\n    \"Muscle oedema was more common in DM than in PM except in the posterior thigh muscles.\",\n    \"In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\"\n  ]\n}",
+     "reasoning": "We need to answer whether dermatomyositis and polymyositis affect similar thigh muscles. The abstract says: \"Muscle oedema was more common in DM than in PM except in the posterior thigh muscles.\" Also \"In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\" This suggests they do not affect similar thigh muscles; DM more often involves anterior thigh muscles, while posterior similar. So answer \"no\". Confidence high, maybe 90. Provide quotes."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.201656159,
+   "prompt_tokens": 531,
+   "prompt_time": 0.024915251,
+   "completion_tokens": 206,
+   "completion_time": 0.428807228,
+   "total_tokens": 737,
+   "total_time": 0.453722479,
+   "completion_tokens_details": {
+    "reasoning_tokens": 116
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5e2577217c",
+  "x_groq": {
+   "id": "req_01m5zg0wwce7yr8qhgknctge61",
+   "seed": 242557357
+  },
+  "service_tier": "on_demand"
+ }
+}

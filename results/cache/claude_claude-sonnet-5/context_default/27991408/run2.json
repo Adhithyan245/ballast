@@ -1,0 +1,122 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "27991408",
+  "run": 2
+ },
+ "cached_at": "2026-10-28T03:02:29.229527+00:00",
+ "sample": "pilot",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "59cc60486ef38c9c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Dermatomyositis (DM) and polymyositis (PM) commonly cause weakness of the thigh muscles. However, it is debated whether DM and PM affect similar thigh muscles. Muscle oedema on fat-suppressed MRI sequences is thought to represent active inflammation. In this study, we aimed to assess which thigh muscle groups are preferentially inflamed in DM and PM, respectively, using short-tau inversion-recovery MRI sequences.\n\nMETHODS: We analysed 71 patients from 2 Rheumatology centres, 31 with DM and 40 with PM diagnosed according to the Bohan and Peter criteria. MRI oedema (1=present, 0=absent) was assessed bilaterally on fat-suppressed sequences in 17 pelvic floor and thigh muscles. An MRI oedema score (range 0-17) was calculated by adding the separate scores bilaterally and dividing them by two. Inter-rater variability was assessed by intraclass correlation coefficient. Fisher's exact test was used to compare binomial data.\n\nRESULTS: Age and gender ratio were similar in patients with DM and PM. Disease duration (months, mean±SD) was shorter (20±31) in DM than in PM (53±69) (p=0.02). The intraclass correlation coefficient between the radiologists involved was 0.78. Muscle oedema was more common in DM than in PM except in the posterior thigh muscles. In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\n\"\"\"\n\nQuestion: Do dermatomyositis and polymyositis affect similar thigh muscles?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"no\", \"confidence\": 88, \"quotes\": [\"Muscle oedema was more common in DM than in PM except in the posterior thigh muscles.\", \"In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\"]}",
+ "input_tokens": 1654,
+ "output_tokens": 108,
+ "latency_s": 5.734,
+ "meta": {
+  "total_cost_usd_estimate": 0.007692,
+  "num_turns": 1
+ },
+ "raw": {
+  "duration_api_ms": 2153,
+  "stop_reason": "end_turn",
+  "session_id": "d9d4880b-dec6-419f-8e9e-6512df7085df",
+  "total_cost_usd": 0.007692,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1652,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 108,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1652,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 108,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1652,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1652
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 108,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1652,
+    "webSearchRequests": 0,
+    "costUSD": 0.007692,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 88, \"quotes\": [\"Muscle oedema was more common in DM than in PM except in the posterior thigh muscles.\", \"In particular, 68% of patients with DM had involvement of at least one anterior thigh muscle versus 38% of patients with PM (p=0.02).\"]}",
+  "ttft_ms": 2214,
+  "type": "result",
+  "duration_ms": 3640,
+  "uuid": "31e456af-16e6-4667-9d64-e92dd5ad8101",
+  "ttft_stream_ms": 1491,
+  "time_to_request_ms": 145,
+  "first_content_frame_ms": 1492,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "17076091",
+  "run": 2
+ },
+ "cached_at": "2026-10-27T18:26:32.590235+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "969cbedd9df380c4",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: We sought to determine whether patients with obstructive sleep apnea (OSA) had an objective change in aerobic fitness during cycle ergometry compared to a normal population. The most accurate test of aerobic fitness is measurement of maximum oxygen consumption (VO2max) with cycle ergometry.\n\nMETHODS: We performed a retrospective cohort analysis (247 patients with OSA) of VO2max from annual cycle ergometry tests compared to a large control group (normative data from 1.4 million US Air Force tests) in a tertiary care setting.\n\nRESULTS: Overall, individuals with OSA had increased VO2max when compared to the normalized US Air Force data (p<.001). Patients with an apnea-hypopnea index of greater than 20 demonstrated a decreased VO2max as compared to normalized values (p<.001). No differences in VO2max were observed after either medical or surgical therapy for OSA.\n\"\"\"\n\nQuestion: Does obstructive sleep apnea affect aerobic fitness?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Overall, individuals with OSA had increased VO2max when compared to the normalized US Air Force data (p<.001).\", \"Patients with an apnea-hypopnea index of greater than 20 demonstrated a decreased VO2max as compared to normalized values (p<.001).\"]}\n```",
+ "input_tokens": 328,
+ "output_tokens": 85,
+ "latency_s": 0.671,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Overall, individuals with OSA had increased VO2max when compared to the normalized US Air Force data (p<.001).\", \"Patients with an apnea-hypopnea index of greater than 20 demonstrated a decreased VO2max as compared to normalized values (p<.001).\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TBWFipnWSTSko/+1z/KfCENIwybMTfbKJ0/KT0NqwibEy/esvq6UM2bnsHeDum2dRNUpaK20pMuocU1b4JYo5I6N6C+HQjqUEqcdyxVtFOqR/JvoNUkBhB8s="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 57,
+       "endIndex": 291,
+       "uri": "https://pubmed.ncbi.nlm.nih.gov/17076091/",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 328,
+   "candidatesTokenCount": 85,
+   "totalTokenCount": 413,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 328
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "1-zgavvELNmLytMP87nzyAE"
+ }
+}

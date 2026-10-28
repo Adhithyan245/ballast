@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "24013712",
+  "run": 2
+ },
+ "cached_at": "2026-10-27T18:09:46.849596+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "20c825196bed90b7",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Preoperative platelet count in esophageal squamous cell carcinoma: is it a prognostic factor?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 120,
+ "output_tokens": 14,
+ "latency_s": 0.141,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "744",
+   "x-ratelimit-remaining-tokens": "7866",
+   "x-ratelimit-reset-requests": "6h8m38.4s",
+   "x-ratelimit-reset-tokens": "1.005s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-817a421c-65ae-4d55-b64f-44567312e6fb",
+  "object": "chat.completion",
+  "created": 1793124586,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.017859786,
+   "prompt_tokens": 120,
+   "prompt_time": 0.010462638,
+   "completion_tokens": 14,
+   "completion_time": 0.028651425,
+   "total_tokens": 134,
+   "total_time": 0.039114063
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m5z8vn07ea598xw14y23defn",
+   "seed": 3991428
+  },
+  "service_tier": "on_demand"
+ }
+}

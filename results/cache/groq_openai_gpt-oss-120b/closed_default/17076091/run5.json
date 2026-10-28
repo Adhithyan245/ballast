@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "17076091",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T17:28:24.388211+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "261119005900b993",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does obstructive sleep apnea affect aerobic fitness?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 158,
+ "output_tokens": 87,
+ "latency_s": 0.938,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "970",
+   "x-ratelimit-remaining-tokens": "7668",
+   "x-ratelimit-reset-requests": "43m12s",
+   "x-ratelimit-reset-tokens": "2.49s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-8daa16d0-ec6c-4183-af30-49b750fa833c",
+  "object": "chat.completion",
+  "created": 1793122104,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}",
+     "reasoning": "We need to answer biomedical question: Does obstructive sleep apnea affect aerobic fitness? The answer likely: Yes, OSA reduces aerobic fitness, due to intermittent hypoxia, sleep fragmentation, cardiovascular strain. Many studies show decreased VO2 max, exercise tolerance. So answer \"yes\". Confidence high maybe 95. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.68393836,
+   "prompt_tokens": 158,
+   "prompt_time": 0.00793082,
+   "completion_tokens": 87,
+   "completion_time": 0.180864892,
+   "total_tokens": 245,
+   "total_time": 0.188795712,
+   "completion_tokens_details": {
+    "reasoning_tokens": 66
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01m5z6fw14e8n8fvkz131hc7mf",
+   "seed": 1313674827
+  },
+  "service_tier": "on_demand"
+ }
+}

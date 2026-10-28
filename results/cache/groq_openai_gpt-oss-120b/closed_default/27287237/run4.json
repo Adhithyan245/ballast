@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "27287237",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T17:32:13.595675+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "72fc4528ae6baa22",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Assessment of appropriate antimicrobial prescribing: do experts agree?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62}",
+ "input_tokens": 159,
+ "output_tokens": 100,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "906",
+   "x-ratelimit-remaining-tokens": "7487",
+   "x-ratelimit-reset-requests": "2h15m21.6s",
+   "x-ratelimit-reset-tokens": "3.847s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c21177c2-0483-4913-abc8-11bdbd240f84",
+  "object": "chat.completion",
+  "created": 1793122333,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 62}",
+     "reasoning": "The user asks: \"Assessment of appropriate antimicrobial prescribing: do experts agree?\" This seems to refer to a specific study or systematic review about whether experts agree on assessing appropriate antimicrobial prescribing. Likely the answer: maybe. Need to infer if experts agree? There may be variability. Usually, there is moderate agreement but not perfect; thus answer maybe. Provide confidence maybe 60. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.241327727,
+   "prompt_tokens": 159,
+   "prompt_time": 0.064911495,
+   "completion_tokens": 100,
+   "completion_time": 0.212275907,
+   "total_tokens": 259,
+   "total_time": 0.277187402,
+   "completion_tokens_details": {
+    "reasoning_tokens": 79
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_a655021f7d",
+  "x_groq": {
+   "id": "req_01m5z6pw6heyrbhmnm42xgsych",
+   "seed": 88102779
+  },
+  "service_tier": "on_demand"
+ }
+}

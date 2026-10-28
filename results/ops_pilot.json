@@ -1,0 +1,108 @@
+[
+ {
+  "model": "claude:claude-sonnet-5",
+  "conditions": [
+   "closed_default",
+   "context_default"
+  ],
+  "planned_calls": 200,
+  "cached_responses": 200,
+  "not_yet_run_or_failed": 0,
+  "valid": 200,
+  "unparseable": 0,
+  "parse_failure_rate": 0.0,
+  "parse_modes": {
+   "strict": 200
+  },
+  "input_tokens": 264803,
+  "output_tokens": 13964,
+  "mean_tokens_per_call": 1393.8,
+  "median_latency_s": 5.47,
+  "first_call_utc": "2026-10-27T17:26:58.246608+00:00",
+  "last_call_utc": "2026-10-28T03:04:20.896274+00:00",
+  "active_minutes": 119.1,
+  "paused_minutes": 458.3,
+  "calls_per_active_minute": 1.67
+ },
+ {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "conditions": [
+   "closed_default",
+   "context_default",
+   "closed_t0",
+   "context_t0"
+  ],
+  "planned_calls": 400,
+  "cached_responses": 390,
+  "not_yet_run_or_failed": 10,
+  "valid": 390,
+  "unparseable": 0,
+  "parse_failure_rate": 0.0,
+  "parse_modes": {
+   "strict": 390
+  },
+  "input_tokens": 107245,
+  "output_tokens": 18410,
+  "mean_tokens_per_call": 322.2,
+  "median_latency_s": 0.88,
+  "first_call_utc": "2026-10-27T17:26:53.064051+00:00",
+  "last_call_utc": "2026-10-27T20:14:16.079530+00:00",
+  "active_minutes": 39.5,
+  "paused_minutes": 127.8,
+  "calls_per_active_minute": 9.84
+ },
+ {
+  "model": "groq:openai/gpt-oss-120b",
+  "conditions": [
+   "closed_default",
+   "context_default",
+   "closed_t0",
+   "context_t0"
+  ],
+  "planned_calls": 400,
+  "cached_responses": 400,
+  "not_yet_run_or_failed": 0,
+  "valid": 400,
+  "unparseable": 0,
+  "parse_failure_rate": 0.0,
+  "parse_modes": {
+   "strict": 400
+  },
+  "input_tokens": 135376,
+  "output_tokens": 89262,
+  "mean_tokens_per_call": 561.6,
+  "median_latency_s": 0.77,
+  "first_call_utc": "2026-10-27T17:26:53.411653+00:00",
+  "last_call_utc": "2026-10-27T20:15:11.006066+00:00",
+  "active_minutes": 40.9,
+  "paused_minutes": 127.4,
+  "calls_per_active_minute": 9.76
+ },
+ {
+  "model": "groq:qwen/qwen3.8-27b",
+  "conditions": [
+   "closed_default",
+   "context_default",
+   "closed_t0",
+   "context_t0"
+  ],
+  "planned_calls": 400,
+  "cached_responses": 400,
+  "not_yet_run_or_failed": 0,
+  "valid": 399,
+  "unparseable": 1,
+  "parse_failure_rate": 0.0025,
+  "parse_modes": {
+   "strict": 399
+  },
+  "input_tokens": 118950,
+  "output_tokens": 24193,
+  "mean_tokens_per_call": 357.9,
+  "median_latency_s": 0.38,
+  "first_call_utc": "2026-10-27T17:26:53.288251+00:00",
+  "last_call_utc": "2026-10-27T18:22:12.744944+00:00",
+  "active_minutes": 30.3,
+  "paused_minutes": 25.0,
+  "calls_per_active_minute": 13.18
+ }
+]

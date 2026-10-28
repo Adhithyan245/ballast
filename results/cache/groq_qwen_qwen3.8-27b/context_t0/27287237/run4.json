@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "27287237",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:21:19.254227+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "629a0b5bb959ad73",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Little is known about the validity and reliability of expert assessments of the quality of antimicrobial prescribing, despite their importance in antimicrobial stewardship. We investigated how infectious disease doctors' assessments compared with a reference standard (modal expert opinion) and with the assessments of their colleagues.\n\nMETHODS: Twenty-four doctors specialized in infectious diseases or clinical microbiology (16 specialists and 8 residents) from five hospitals were asked to assess the appropriateness of antimicrobial agents prescribed for a broad spectrum of indications in 56 paper cases. They were instructed how to handle guideline applicability and deviations. We created a reference standard of antimicrobial appropriateness using the modal assessment of 16 specialists. We calculated criterion validity and interrater and intrarater overall and specific agreement with an index expert (senior infectious disease physician) and analysed the influence of doctor characteristics on validity.\n\nRESULTS: Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively. This did not differ by clinical specialty, hospital or years of experience, and residents had similar results. Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\n\"\"\"\n\nQuestion: Assessment of appropriate antimicrobial prescribing: do experts agree?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\n\"answer\": \"maybe\",\n\"confidence\": 90,\n\"quotes\": [\n\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively.\",\n\"Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\"\n]\n}",
+ "input_tokens": 424,
+ "output_tokens": 101,
+ "latency_s": 0.375,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "622",
+   "x-ratelimit-remaining-tokens": "6466",
+   "x-ratelimit-reset-requests": "9h4m19.2s",
+   "x-ratelimit-reset-tokens": "36.48s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-afdb1f4c-d470-4e98-8bfa-423ea70aafe4",
+  "object": "chat.completion",
+  "created": 1793125278,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"maybe\",\n\"confidence\": 90,\n\"quotes\": [\n\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively.\",\n\"Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.031545956,
+   "prompt_tokens": 424,
+   "prompt_time": 0.044685935,
+   "completion_tokens": 101,
+   "completion_time": 0.210827045,
+   "total_tokens": 525,
+   "total_time": 0.25551298
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m5z9grxsee7tg1vzpb5ag9dy",
+   "seed": 461976467
+  },
+  "service_tier": "on_demand"
+ }
+}

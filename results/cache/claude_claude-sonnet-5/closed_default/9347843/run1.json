@@ -1,0 +1,122 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "closed_default",
+  "qid": "9347843",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T17:26:58.246608+00:00",
+ "sample": "pilot",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-sonnet-5",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "9adee70f580ba79d",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Laparoscopic-assisted ileocolic resections in patients with Crohn's disease: are abscesses, phlegmons, or recurrent disease contraindications?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"no\", \"confidence\": 78}",
+ "input_tokens": 1077,
+ "output_tokens": 18,
+ "latency_s": 6.453,
+ "meta": {
+  "total_cost_usd_estimate": 0.004484,
+  "num_turns": 1
+ },
+ "raw": {
+  "duration_api_ms": 1001,
+  "stop_reason": "end_turn",
+  "session_id": "d917b4e5-fd73-4845-9e10-97e5ba677e74",
+  "total_cost_usd": 0.004484,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1075,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 18,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1075,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 18,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1075,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1075
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1075,
+    "webSearchRequests": 0,
+    "costUSD": 0.004484,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 78}",
+  "ttft_ms": 1148,
+  "type": "result",
+  "duration_ms": 2555,
+  "uuid": "723455af-6b31-45cd-97cb-96644d9b306c",
+  "ttft_stream_ms": 826,
+  "time_to_request_ms": 214,
+  "first_content_frame_ms": 827,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

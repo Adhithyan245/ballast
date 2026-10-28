@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "25168472",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T17:32:03.600788+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "66d94901a5bb42e9",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can static foot posture measurements predict regional plantar surface area?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62}",
+ "input_tokens": 160,
+ "output_tokens": 136,
+ "latency_s": 0.594,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "910",
+   "x-ratelimit-remaining-tokens": "7642",
+   "x-ratelimit-reset-requests": "2h9m36s",
+   "x-ratelimit-reset-tokens": "2.685s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-154070b0-ffd9-4c28-8d89-296bdbfd6fb8",
+  "object": "chat.completion",
+  "created": 1793122323,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 62}",
+     "reasoning": "The user asks: \"Can static foot posture measurements predict regional plantar surface area?\" Need to answer \"yes\", \"no\", or \"maybe\" with confidence integer.\n\nWe need to evaluate: static foot posture measurements (like foot posture index, arch height, pronation) predicting regional plantar surface area (area of different foot regions). Is there evidence? Probably some correlation but not definitive. Some studies show foot posture index relates to plantar pressure distribution, but predicting actual surface area may be limited. So answer maybe \"maybe\". Provide confidence maybe 60.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.229701159,
+   "prompt_tokens": 160,
+   "prompt_time": 0.007963042,
+   "completion_tokens": 136,
+   "completion_time": 0.287383904,
+   "total_tokens": 296,
+   "total_time": 0.295346946,
+   "completion_tokens_details": {
+    "reasoning_tokens": 115
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_69334c0be3",
+  "x_groq": {
+   "id": "req_01m5z6pjdxe2ytfxg74tzkh31r",
+   "seed": 92105290
+  },
+  "service_tier": "on_demand"
+ }
+}

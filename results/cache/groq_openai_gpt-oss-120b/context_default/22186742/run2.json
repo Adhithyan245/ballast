@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "22186742",
+  "run": 2
+ },
+ "cached_at": "2026-10-27T18:05:14.424725+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "eb36f283bcdf0095",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nMETHODS: Medical records of 220 patients hospitalized for acute diverticulitis between June 1, 2002 and September 1, 2009 were reviewed. Acute diverticulitis was diagnosed by clinical criteria and characteristic CT findings. Fifteen patients were excluded either because of questionable CT or hematochezia. Mean age was 61.8±14.3 years (61% females). Clinical parameters, laboratory results, imaging, endoscopic and histopathological reports, and long-term patients' outcome were analyzed.\n\nRESULTS: One hundred patients (aged 61.8±13.3 y, 54.1% females), underwent an early (4 to 6 wk) colonoscopy after hospital discharge. There were no significant differences in patients' characteristics or survival between those with or without colonoscopy (4±1.9 vs. 4.2±2.1 y, P=0.62). No colonic malignancy was detected. However, in 32 patients (32%) at least 1 polyp was found. Only 1 was determined as an advanced adenoma. No new or different diagnosis was made after colonoscopy.\n\"\"\"\n\nQuestion: Does a colonoscopy after acute diverticulitis affect its management?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\":\"no\",\"confidence\":92,\"quotes\":[\"No new or different diagnosis was made after colonoscopy.\"]}",
+ "input_tokens": 438,
+ "output_tokens": 146,
+ "latency_s": 0.625,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "859",
+   "x-ratelimit-remaining-tokens": "6262",
+   "x-ratelimit-reset-requests": "3h23m2.4s",
+   "x-ratelimit-reset-tokens": "13.035s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-94809b6d-88af-49e6-8d28-99f5bbfbd9eb",
+  "object": "chat.completion",
+  "created": 1793124314,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\":\"no\",\"confidence\":92,\"quotes\":[\"No new or different diagnosis was made after colonoscopy.\"]}",
+     "reasoning": "We need to interpret: The study looked at early colonoscopy after acute diverticulitis. Result: No colonic malignancy detected; some polyps; no new or different diagnosis after colonoscopy. So colonoscopy did not affect management (since no new diagnosis). So answer \"no\". Confidence maybe high, like 90. Provide quotes: \"No new or different diagnosis was made after colonoscopy.\" Also maybe \"There were no significant differences in patients' characteristics or survival between those with or without colonoscopy\". Provide up to 3 sentences. JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.14475565,
+   "prompt_tokens": 438,
+   "prompt_time": 0.076576561,
+   "completion_tokens": 146,
+   "completion_time": 0.309123095,
+   "total_tokens": 584,
+   "total_time": 0.385699656,
+   "completion_tokens_details": {
+    "reasoning_tokens": 113
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_64b2f1c926",
+  "x_groq": {
+   "id": "req_01m5z8kag3epytn85dgwgydx0r",
+   "seed": 117615652
+  },
+  "service_tier": "on_demand"
+ }
+}

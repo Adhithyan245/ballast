@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "16769333",
+  "run": 3
+ },
+ "cached_at": "2026-10-27T18:26:12.629762+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "57eead0837feceb9",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: Despite surgical refinements, perioperative use of tracheobronchoscopy (TBS) as part of surgical approach to esophageal atresia (EA) is still controversial. The purpose of this study was to evaluate the influence of preoperative TBS in newborns with EA in preventing complications and improving diagnosis and surgical treatment.\n\nMETHODS: In the period ranging from 1997 to 2003, 62 patients with EA underwent preoperative TBS. The procedure was carried out with flexible bronchoscope maintaining spontaneous breathing. When a wide carinal fistula was found, this was mechanically occluded by Fogarty catheter and cannulated with rigid bronchoscopy. Type of EA, surgical procedure variations caused by TBS, and associated anomalies not easily detectable were recorded.\n\nRESULTS: Before TBS, the Gross classification of the 62 patients was as follows: type A, 9 patients; type B, none; type C, 51 patients. At TBS, however, 3 of 9 type A patients had an unsuspected proximal fistula (type B). These 3 patients, plus the 2 with H-type fistula, were repaired through a cervical approach. In 4 patients, previously undetected malformations of the respiratory tree (2 aberrant right upper bronchus and 2 hypoplastic bronchi) were found at TBS. Carinal fistulas in 14 type C patients were occluded by Fogarty catheter to improve ventilation during repair. No complications were observed. Overall, TBS was clinically useful in 28 (45.2%) of 62 patients, including 15 (24.2%) of 62 infants in whom it was crucial in modifying the surgical approach.\n\"\"\"\n\nQuestion: Preoperative tracheobronchoscopy in newborns with esophageal atresia: does it matter?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Overall, TBS was clinically useful in 28 (45.2%) of 62 patients, including 15 (24.2%) of 62 infants in whom it was crucial in modifying the surgical approach.\"\n  ]\n}\n```",
+ "input_tokens": 496,
+ "output_tokens": 86,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Overall, TBS was clinically useful in 28 (45.2%) of 62 patients, including 15 (24.2%) of 62 infants in whom it was crucial in modifying the surgical approach.\"\n  ]\n}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T8d4caBwWjAzw3WPcVdqsikonuGZuUDFeTq5x9FOZ5uQydr2Kf3ajbHb6nLnBCthvopWbC3wgg+vSPQG3oKiSXbnPsAMUilnF3z62osmZNMNMxtbQxP3Xabg="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 496,
+   "candidatesTokenCount": 86,
+   "totalTokenCount": 582,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 496
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "w-zgaomuLOWEytMPy7-vkQg"
+ }
+}

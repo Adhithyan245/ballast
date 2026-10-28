@@ -1,0 +1,122 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "27287237",
+  "run": 4
+ },
+ "cached_at": "2026-10-28T03:00:37.195079+00:00",
+ "sample": "pilot",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "629a0b5bb959ad73",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Little is known about the validity and reliability of expert assessments of the quality of antimicrobial prescribing, despite their importance in antimicrobial stewardship. We investigated how infectious disease doctors' assessments compared with a reference standard (modal expert opinion) and with the assessments of their colleagues.\n\nMETHODS: Twenty-four doctors specialized in infectious diseases or clinical microbiology (16 specialists and 8 residents) from five hospitals were asked to assess the appropriateness of antimicrobial agents prescribed for a broad spectrum of indications in 56 paper cases. They were instructed how to handle guideline applicability and deviations. We created a reference standard of antimicrobial appropriateness using the modal assessment of 16 specialists. We calculated criterion validity and interrater and intrarater overall and specific agreement with an index expert (senior infectious disease physician) and analysed the influence of doctor characteristics on validity.\n\nRESULTS: Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively. This did not differ by clinical specialty, hospital or years of experience, and residents had similar results. Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\n\"\"\"\n\nQuestion: Assessment of appropriate antimicrobial prescribing: do experts agree?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"maybe\", \"confidence\": 68, \"quotes\": [\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively.\", \"Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\"]}",
+ "input_tokens": 1569,
+ "output_tokens": 126,
+ "latency_s": 6.219,
+ "meta": {
+  "total_cost_usd_estimate": 0.0075320000000000005,
+  "num_turns": 1
+ },
+ "raw": {
+  "duration_api_ms": 2800,
+  "stop_reason": "end_turn",
+  "session_id": "deaa643d-1fed-4f6e-b136-efa8e82112a2",
+  "total_cost_usd": 0.0075320000000000005,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1567,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 126,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1567,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 126,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1567,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1567
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 126,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1567,
+    "webSearchRequests": 0,
+    "costUSD": 0.0075320000000000005,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"maybe\", \"confidence\": 68, \"quotes\": [\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively.\", \"Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\"]}",
+  "ttft_ms": 2852,
+  "type": "result",
+  "duration_ms": 3957,
+  "uuid": "c5526ccd-ef5a-414a-a90f-c086a6f27ac6",
+  "ttft_stream_ms": 2068,
+  "time_to_request_ms": 96,
+  "first_content_frame_ms": 2068,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

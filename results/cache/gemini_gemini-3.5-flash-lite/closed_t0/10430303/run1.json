@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "10430303",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T18:14:15.474326+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "f09bb56c5093caa3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does laparoscopic cholecystectomy influence peri-sinusoidal cell activity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"maybe\", \"confidence\": 50}",
+ "input_tokens": 102,
+ "output_tokens": 13,
+ "latency_s": 0.516,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"maybe\", \"confidence\": 50}",
+       "thoughtSignature": "EmAKXgFpFH0TvaBgRUaU3AIJ9s6sIpXuHHDI1rCDuKq6vzJRN8NaSOgIo5C7FiSP3ps73m1mjisSTkHGZ2F6rikaElIoQhfM5WNNEOXOgyihOr9a8EUARV7rkktknUGbMtM="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 102,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 115,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 102
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "9ungaq3FMdeuytMPmaqe6AU"
+ }
+}

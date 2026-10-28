@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "25168472",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T17:46:11.253885+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "66d94901a5bb42e9",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can static foot posture measurements predict regional plantar surface area?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 98,
+ "output_tokens": 13,
+ "latency_s": 0.406,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0TUa5ip+TrTch0CQo2sfsALIWzXIVVu6wybiTuT9YSRgk/FVnLW5KAD+S+O5AcXX+HYiUkPlXTqzvis1HvuTD+li5nBJ/IzO9Fk5m1r7METVjtF7fqbXJ5B3A="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 98,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 111,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 98
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "YuPgaozNLe-mxdIPid6ysAg"
+ }
+}

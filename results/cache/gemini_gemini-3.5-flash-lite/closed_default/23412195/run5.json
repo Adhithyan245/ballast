@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "23412195",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T17:34:13.556241+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "6286e6e3c6398645",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Should displaced midshaft clavicular fractures be treated surgically?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+ "input_tokens": 98,
+ "output_tokens": 13,
+ "latency_s": 8.344,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+       "thoughtSignature": "EmAKXgFpFH0TbzQl/CiShzwk63jY86Z3asTgJz2C8M3v1w1becQGI0Ko07jlKpswAxpYTNdejrUCG+IBgghVpmkiClSwdvjMvjCeHQFUnf494Dkds7PkSapdm0f9fo88I+E="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 98,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 111,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 98
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "jeDgaqv5C6DDxdIPlZKz8Q4"
+ }
+}

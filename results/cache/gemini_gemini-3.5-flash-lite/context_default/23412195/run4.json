@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "23412195",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:10:43.664988+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "4b75af78e3d559a1",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: This study was designed to compare clinical effectiveness of operative with nonoperative treatment for displaced midshaft clavicular fractures (DMCF).\n\nMETHODS: We systematically searched electronic databases (MEDILINE, EMBASE, CLINICAL, OVID, BIOSIS and Cochrane registry of controlled clinical trials) to identify randomized controlled trials (RCTs) in which operative treatment was compared with nonoperative treatment for DMCF from 1980 to 2012. The methodologic quality of trials was assessed. Data from chosen studies were pooled with using of fixed-effects and random-effects models with mean differences and risk ratios for continuous and dichotomous variables, respectively.\n\nRESULTS: Four RCTs with a total of 321 patients were screened for the present study. Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001]. Subgroup analyses of complications revealed that significant differences were existed in the incidence of neurologic symptoms [95 % CI (0.20, 0.74), P = 0.004] and dissatisfaction with appearance [95 % CI (0.19, 0.65), P = 0.001]. Lack of consistent and standardized assessment data, insufficiency analysis that carried out showed improved functional outcomes (P < 0.05) in operative treatment.\n\"\"\"\n\nQuestion: Should displaced midshaft clavicular fractures be treated surgically?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001].\"]}\n```",
+ "input_tokens": 541,
+ "output_tokens": 132,
+ "latency_s": 0.782,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001].\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T+cAqge5Qk3dXApxuABv9CkmBZcAfyk2mxpywN6H2Z80DTwai7F9ofde4a+bF32Cp+9gzSn0K2UdvsNaPWd6l2p5EEoxBFnqMbAgOREW2S/LsfuPSRRBbL/c="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 56,
+       "endIndex": 328,
+       "uri": "https://www.researchgate.net/profile/Bin_Yu39",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 541,
+   "candidatesTokenCount": 132,
+   "totalTokenCount": 673,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 541
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "IungapvvLKuKytMPn_SsoQE"
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "10430303",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T18:24:47.627641+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "e0e0928daf2795e3",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nAIMS: To investigate the influence of laparoscopic procedures on perisinusoidal cell function.\n\nMETHODOLOGY: In 31 patients who underwent laparoscopic cholecystectomy for symptomatic cholelithiasis, the serum levels of beta-N-acetyl hexosaminidase (beta-NAH) and hyaluronic acid (HA) were measured. Six female patients, who underwent other laparoscopic procedures, not involving the hepatobiliary system, served as controls.\n\nRESULTS: HA serum levels increased significantly in both study and control groups, while beta-NAH serum levels remained within normal values. Post-operative AST and ALT serum levels increased significantly only in the study group. No elevation of serum ALP was noted in any of our patients, and post-operative bilirubin levels did not increase in patients with normal pre-operative levels.\n\"\"\"\n\nQuestion: Does laparoscopic cholecystectomy influence peri-sinusoidal cell activity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"HA serum levels increased significantly in both study and control groups, while beta-NAH serum levels remained within normal values.\"\n  ]\n}\n```",
+ "input_tokens": 311,
+ "output_tokens": 62,
+ "latency_s": 0.75,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"HA serum levels increased significantly in both study and control groups, while beta-NAH serum levels remained within normal values.\"\n  ]\n}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TSIkkJp7lOUWSr44mUhOhiY+fQx0UXzQXdznXl8frdb84OogjNmWp8Af4GhioZbnbwsu7JdTqjJUGHuWP8hzP5dlklPAslKKXCtk+2RnTJOkrYJe3zMIyxSo="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 311,
+   "candidatesTokenCount": 62,
+   "totalTokenCount": 373,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 311
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "buzgatOmK5etuMYPuKOd6AU"
+ }
+}

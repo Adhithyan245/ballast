@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "25168472",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T18:10:25.836758+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "3444bb3762b9dab9",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The intent of this study was to determine if the use of a single or combination of static foot posture measurements can be used to predict rearfoot, midfoot, and forefoot plantar surface area in individuals with pronated or normal foot types.\n\nMETHODS: Twelve foot measurements were collected on 52 individuals (mean age 25.8 years) with the change in midfoot width used to place subjects in a pronated or normal foot mobility group. Dynamic plantar contact area was collected during walking with a pressure sensor platform. The 12 measures were entered into a stepwise regression analysis to determine the optimal set of measures associated with regional plantar surface area.\n\nRESULTS: A two variable model was found to describe the relationship between the foot measurements and forefoot plantar contact area (r(2)=0.79, p<0.0001). A four variable model was found to describe the relationship between the foot measurements and midfoot plantar contact area (r(2)=0.85, p<0.0001) in those individuals with a 1.26cm or greater change in midfoot width.\n\"\"\"\n\nQuestion: Can static foot posture measurements predict regional plantar surface area?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"A two variable model was found to describe the relationship between the foot measurements and forefoot plantar contact area (r(2)=0.79, p<0.0001).\",\n    \"A four variable model was found to describe the relationship between the foot measurements and midfoot plantar contact area (r(2)=0.85, p<0.0001) in those individuals with a 1.26cm or greater change in midfoot width.\"\n  ]\n}",
+ "input_tokens": 425,
+ "output_tokens": 274,
+ "latency_s": 0.843,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "826",
+   "x-ratelimit-remaining-tokens": "5593",
+   "x-ratelimit-reset-requests": "4h10m33.599s",
+   "x-ratelimit-reset-tokens": "18.052s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-74daebea-40b0-43da-b7e4-4d8f9de07a88",
+  "object": "chat.completion",
+  "created": 1793124625,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"A two variable model was found to describe the relationship between the foot measurements and forefoot plantar contact area (r(2)=0.79, p<0.0001).\",\n    \"A four variable model was found to describe the relationship between the foot measurements and midfoot plantar contact area (r(2)=0.85, p<0.0001) in those individuals with a 1.26cm or greater change in midfoot width.\"\n  ]\n}",
+     "reasoning": "We need to answer whether static foot posture measurements can predict regional plantar surface area. The abstract says they used static measurements and stepwise regression found models with high r^2 for forefoot and midfoot areas. So answer \"yes\". Provide confidence perhaps high, e.g., 95. Provide quotes: \"A two variable model was found to describe the relationship between the foot measurements and forefoot plantar contact area (r(2)=0.79, p<0.0001).\" and \"A four variable model was found to describe the relationship between the foot measurements and midfoot plantar contact area (r(2)=0.85, p<0.0001)...\" Provide up to three sentences. Provide JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.138427787,
+   "prompt_tokens": 425,
+   "prompt_time": 0.022877265,
+   "completion_tokens": 274,
+   "completion_time": 0.580101652,
+   "total_tokens": 699,
+   "total_time": 0.602978917,
+   "completion_tokens_details": {
+    "reasoning_tokens": 147
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01m5z8wtd0erq8vb4zjes4xqft",
+   "seed": 1658024059
+  },
+  "service_tier": "on_demand"
+ }
+}

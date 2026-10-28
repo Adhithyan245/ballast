@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "15530261",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T17:27:30.503277+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "c142d5c035a288e6",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does screening or surveillance for primary hepatocellular carcinoma with ultrasonography improve the prognosis of patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 92}",
+ "input_tokens": 169,
+ "output_tokens": 98,
+ "latency_s": 0.375,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "984",
+   "x-ratelimit-remaining-tokens": "7593",
+   "x-ratelimit-reset-requests": "23m2.4s",
+   "x-ratelimit-reset-tokens": "3.052s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-6f29484e-1fc8-4ab6-abdd-a3dfc6f63cdc",
+  "object": "chat.completion",
+  "created": 1793122050,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92}",
+     "reasoning": "We need to answer: Does screening or surveillance for primary hepatocellular carcinoma with ultrasonography improve the prognosis of patients? Likely evidence: screening high-risk patients (cirrhosis, hepatitis B) with ultrasound +/- AFP leads to earlier detection, better survival. Meta-analyses suggest surveillance improves overall survival. So answer \"yes\". Confidence high, maybe 90."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082906686,
+   "prompt_tokens": 169,
+   "prompt_time": 0.007200167,
+   "completion_tokens": 98,
+   "completion_time": 0.209045099,
+   "total_tokens": 267,
+   "total_time": 0.216245266,
+   "completion_tokens_details": {
+    "reasoning_tokens": 77
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8655ddce88",
+  "x_groq": {
+   "id": "req_01m5z6e7z7e55b1gnhmrdzxk32",
+   "seed": 90650015
+  },
+  "service_tier": "on_demand"
+ }
+}

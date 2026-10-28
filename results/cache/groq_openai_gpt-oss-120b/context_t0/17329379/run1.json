@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "17329379",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T18:22:55.547854+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "59f42636f294c409",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To evaluate feasibility of the guidelines of the Groupe Francophone de Réanimation et Urgence Pédiatriques (French-speaking group of paediatric intensive and emergency care; GFRUP) for limitation of treatments in the paediatric intensive care unit (PICU).\n\nDESIGN: A 2-year prospective survey.\n\nSETTING: A 12-bed PICU at the Hôpital Jeanne de Flandre, Lille, France.\n\nPATIENTS: Were included when limitation of treatments was expected.\n\nRESULTS: Of 967 children admitted, 55 were included with a 2-day median delay. They were younger than others (24 v 60 months), had a higher paediatric risk of mortality (PRISM) score (14 v 4), and a higher paediatric overall performance category (POPC) score at admission (2 v 1); all p<0.002. 34 (50% of total deaths) children died. A limitation decision was made without meeting for 7 children who died: 6 received do-not-resuscitate orders (DNROs) and 1 received withholding decision. Decision-making meetings were organised for 31 children, and the following decisions were made: 12 DNROs (6 deaths and 6 survivals), 4 withholding (1 death and 3 survivals), with 14 withdrawing (14 deaths) and 1 continuing treatment (survival). After limitation, 21 (31% of total deaths) children died and 10 survived (POPC score 4). 13 procedures were interrupted because of death and 11 because of clinical improvement (POPC score 4). Parents' opinions were obtained after 4 family conferences (for a total of 110 min), 3 days after inclusion. The first meeting was planned for 6 days after inclusion and held on the 7th day after inclusion; 80% of parents were immediately informed of the decision, which was implemented after half a day.\n\"\"\"\n\nQuestion: Are the GFRUP's recommendations for withholding or withdrawing treatments in critically ill children applicable?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 80,\n  \"quotes\": [\n    \"Decision-making meetings were organised for 31 children, and the following decisions were made: 12 DNROs (6 deaths and 6 survivals), 4 withholding (1 death and 3 survivals), with 14 withdrawing (14 deaths) and 1 continuing treatment (survival).\",\n    \"The first meeting was planned for 6 days after inclusion and held on the 7th day after inclusion; 80% of parents were immediately informed of the decision, which was implemented after half a day.\"\n  ]\n}",
+ "input_tokens": 608,
+ "output_tokens": 467,
+ "latency_s": 1.25,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "685",
+   "x-ratelimit-remaining-tokens": "6955",
+   "x-ratelimit-reset-requests": "7h33m36s",
+   "x-ratelimit-reset-tokens": "7.837s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-28ec3242-8f5b-4181-89ec-5eb5fddc6145",
+  "object": "chat.completion",
+  "created": 1793125375,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"yes\",\n  \"confidence\": 80,\n  \"quotes\": [\n    \"Decision-making meetings were organised for 31 children, and the following decisions were made: 12 DNROs (6 deaths and 6 survivals), 4 withholding (1 death and 3 survivals), with 14 withdrawing (14 deaths) and 1 continuing treatment (survival).\",\n    \"The first meeting was planned for 6 days after inclusion and held on the 7th day after inclusion; 80% of parents were immediately informed of the decision, which was implemented after half a day.\"\n  ]\n}",
+     "reasoning": "We need to interpret the question: \"Are the GFRUP's recommendations for withholding or withdrawing treatments in critically ill children applicable?\" The abstract describes a prospective survey evaluating feasibility of the guidelines. It reports that limitation decisions were made, meetings organized, etc. It seems they were able to apply the guidelines, but there were some limitations (e.g., some decisions made without meeting). Overall, they evaluated feasibility, and they were able to implement decisions, with meetings, etc. So applicability seems maybe yes, but the abstract doesn't explicitly state \"recommendations are applicable\". It shows they could be applied in practice, but also some delays. The question likely expects \"maybe\" because the study shows feasibility but limited data. However the abstract says \"to evaluate feasibility of the guidelines\". Results show they were able to implement decisions, but also some decisions without meeting. The question: \"Are the GFRUP's recommendations for withholding or withdrawing treatments in critically ill children applicable?\" Based on the abstract, they were applied in this PICU, so yes they are applicable (feasible). I'd answer \"yes\" with moderate confidence, maybe 80.\n\nProvide quotes: e.g., \"Decision-making meetings were organised for 31 children, and the following decisions were made: ...\" and \"After limitation, 21 (31% of total deaths) children died and 10 survived\". Also \"The first meeting was planned for 6 days after inclusion and held on the 7th day after inclusion; 80% of parents were immediately informed of the decision, which was implemented after half a day.\"\n\nPick one or two sentences.\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.03221204,
+   "prompt_tokens": 608,
+   "prompt_time": 0.030643657,
+   "completion_tokens": 467,
+   "completion_time": 0.990893675,
+   "total_tokens": 1075,
+   "total_time": 1.021537332,
+   "completion_tokens_details": {
+    "reasoning_tokens": 328
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4b2f03d631",
+  "x_groq": {
+   "id": "req_01m5z9kp61eq299wech3bey9bc",
+   "seed": 1103000625
+  },
+  "service_tier": "on_demand"
+ }
+}

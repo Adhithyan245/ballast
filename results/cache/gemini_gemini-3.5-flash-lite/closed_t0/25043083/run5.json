@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "25043083",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T18:23:02.445175+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d8c6b8bc3693e0ed",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are failures of anterior cruciate ligament reconstruction associated with steep posterior tibial slopes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+ "input_tokens": 101,
+ "output_tokens": 18,
+ "latency_s": 0.563,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TigB6l/m3GKqT1zF77gFzqbiyFvGR9XwZcxE0JQji59cBk6nEnvP6+AqiG+QSP2J523I8hzX3HtXcZY/g1wUDVd81cPSTuLXMH41iZGIPjpnRXCOjYxVnoVk="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 101,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 119,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 101
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "BezgaojmK9yuytMP2vvxmQE"
+ }
+}

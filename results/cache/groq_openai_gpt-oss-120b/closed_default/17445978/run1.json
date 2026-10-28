@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "17445978",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T17:28:39.117344+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "b429b10683dffcfc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 167,
+ "output_tokens": 146,
+ "latency_s": 0.641,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "964",
+   "x-ratelimit-remaining-tokens": "7653",
+   "x-ratelimit-reset-requests": "51m50.399s",
+   "x-ratelimit-reset-tokens": "2.602s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e2558345-99d0-4a64-9116-d9837898f09b",
+  "object": "chat.completion",
+  "created": 1793122118,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer whether renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible. Likely yes, it is possible but generally surgeons aim to keep warm ischemia <30 min to reduce renal damage. However there are reports of longer warm ischemia times (>30 min) being performed, especially in complex tumors. So answer maybe? The question: \"Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\" The answer: Yes, it is possible, though not ideal. So answer \"yes\". Confidence? I'm fairly confident about literature. Maybe 85."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.24375856,
+   "prompt_tokens": 167,
+   "prompt_time": 0.007420749,
+   "completion_tokens": 146,
+   "completion_time": 0.303083135,
+   "total_tokens": 313,
+   "total_time": 0.310503884,
+   "completion_tokens_details": {
+    "reasoning_tokens": 125
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01m5z6gapeed9adx4dpa8c4j40",
+   "seed": 1403000245
+  },
+  "service_tier": "on_demand"
+ }
+}

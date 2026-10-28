@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "11411430",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T17:27:25.618656+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4d405c5500308238",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"maybe\", \"confidence\": 85}",
+ "input_tokens": 124,
+ "output_tokens": 14,
+ "latency_s": 0.219,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "986",
+   "x-ratelimit-remaining-tokens": "7862",
+   "x-ratelimit-reset-requests": "20m9.6s",
+   "x-ratelimit-reset-tokens": "1.035s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-cc8fc851-055e-4d90-aef5-1b22a89e5674",
+  "object": "chat.completion",
+  "created": 1793122045,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 85}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.126914833,
+   "prompt_tokens": 124,
+   "prompt_time": 0.009986575,
+   "completion_tokens": 14,
+   "completion_time": 0.027658794,
+   "total_tokens": 138,
+   "total_time": 0.037645369
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_57c7e760a9",
+  "x_groq": {
+   "id": "req_01m5z6e3ape73skfahkp65r326",
+   "seed": 408683101
+  },
+  "service_tier": "on_demand"
+ }
+}

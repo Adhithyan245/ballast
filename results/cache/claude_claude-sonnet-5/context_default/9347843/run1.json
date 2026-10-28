@@ -1,0 +1,122 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "9347843",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T20:35:06.975287+00:00",
+ "sample": "pilot",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "ed7335d965d685ac",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Because of the inflammatory nature of Crohn's disease, ileocolic resections are often difficult to perform, especially if an abscess, phlegmon, or recurrent disease at a previous ileocolic anastomosis is present. Our goal was to determine whether the above factors are contraindications to a successful laparoscopic-assisted ileocolic resection.\n\nMETHODS: Between 1992 and 1996, 46 laparoscopic-assisted ileocolic resections were attempted. Fourteen patients had an abscess or phlegmon treated with bowel rest before operation (group I), 10 patients had recurrent Crohn's disease at the previous ileocolic anastomosis (group II), and 22 patients had no previous operation and no phlegmon or abscess associated with their disease (group III). These groups were compared with each other and with 70 consecutive open ileocolic resections for Crohn's disease during the same time period (group IV).\n\nRESULTS: Operative blood loss and time were greater in group IV than in groups I, II, and III (245 versus 151, 131, and 195 ml, respectively, and 202 versus 152, 144, and 139 minutes, respectively). Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]). Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively). Only one patient died (group IV, 1%). Length of hospital stay was longest in group IV (7.9 versus 4.8, 3.9, and 4.5 days, respectively).\n\"\"\"\n\nQuestion: Laparoscopic-assisted ileocolic resections in patients with Crohn's disease: are abscesses, phlegmons, or recurrent disease contraindications?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"no\", \"confidence\": 85, \"quotes\": [\"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\", \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"]}",
+ "input_tokens": 1681,
+ "output_tokens": 116,
+ "latency_s": 7.313,
+ "meta": {
+  "total_cost_usd_estimate": 0.00788,
+  "num_turns": 1
+ },
+ "raw": {
+  "duration_api_ms": 1838,
+  "stop_reason": "end_turn",
+  "session_id": "3c477113-63b9-464a-b0b7-e8cf3fd496d1",
+  "total_cost_usd": 0.00788,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1679,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 116,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1679,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 116,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1679,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1679
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 116,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1679,
+    "webSearchRequests": 0,
+    "costUSD": 0.00788,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 85, \"quotes\": [\"Conversion to open procedure occurred in 5 patients (group I, 1 [7%]; group II, 2 [20%]; group III, 2 [9%]).\", \"Morbidity was highest in group IV (21% versus 0%, 10%, and 10%, respectively).\"]}",
+  "ttft_ms": 2096,
+  "type": "result",
+  "duration_ms": 3548,
+  "uuid": "a9829b07-5632-405c-9470-e47b27eb6c59",
+  "ttft_stream_ms": 1442,
+  "time_to_request_ms": 410,
+  "first_content_frame_ms": 1443,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

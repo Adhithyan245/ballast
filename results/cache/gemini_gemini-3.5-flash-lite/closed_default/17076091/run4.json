@@ -1,0 +1,56 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "17076091",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T17:29:43.725888+00:00",
+ "sample": "pilot",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "261119005900b993",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does obstructive sleep apnea affect aerobic fitness?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 95,
+ "output_tokens": 13,
+ "latency_s": 0.453,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+       "thoughtSignature": "EmAKXgFpFH0TQW0GVLLu9XJkzodNUfaFwfnMXiwruFrx52frZoBNe+iznskdQnimFr25/+5Bu1OQV81nm93JrSg9WqadcFl3cUd3uo/UMbljFi3Yt1kJgvG6zcyp8nf/VC0="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 95,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 108,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 95
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "h9_gaoiADcDe0_gPs6zjwQI"
+ }
+}

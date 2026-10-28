@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "17445978",
+  "run": 2
+ },
+ "cached_at": "2026-10-27T17:28:55.268162+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "b429b10683dffcfc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 167,
+ "output_tokens": 238,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "963",
+   "x-ratelimit-remaining-tokens": "7591",
+   "x-ratelimit-reset-requests": "53m16.799s",
+   "x-ratelimit-reset-tokens": "3.067s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c0ea73b3-3310-4659-8647-6532b9d2600a",
+  "object": "chat.completion",
+  "created": 1793122135,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer whether renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy is possible. The question: \"Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\" In practice, warm ischemia time in partial nephrectomy is ideally <30 minutes to reduce renal damage. However, in some cases, especially complex tumors, the warm ischemia can exceed 30 minutes. Laparoscopic partial nephrectomy can have longer warm ischemia times compared to open? Many studies report average warm ischemia times around 20-30 minutes, but some exceed 30 minutes. So answer is \"maybe\" (i.e., it's possible but not typical). But the question asks \"Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\" The answer: Yes, it's possible (it can happen). So answer \"yes\". Confidence maybe 80.\n\nWe need to output JSON with answer \"yes\" or \"no\" or \"maybe\". Provide confidence integer. Let's set confidence 85."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082962621,
+   "prompt_tokens": 167,
+   "prompt_time": 0.009668638,
+   "completion_tokens": 238,
+   "completion_time": 0.499307213,
+   "total_tokens": 405,
+   "total_time": 0.508975851,
+   "completion_tokens_details": {
+    "reasoning_tokens": 217
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01m5z6gtepe3fr1b4pezf0cfy8",
+   "seed": 82559195
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "17329379",
+  "run": 2
+ },
+ "cached_at": "2026-10-27T17:46:56.388254+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "59f42636f294c409",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To evaluate feasibility of the guidelines of the Groupe Francophone de Réanimation et Urgence Pédiatriques (French-speaking group of paediatric intensive and emergency care; GFRUP) for limitation of treatments in the paediatric intensive care unit (PICU).\n\nDESIGN: A 2-year prospective survey.\n\nSETTING: A 12-bed PICU at the Hôpital Jeanne de Flandre, Lille, France.\n\nPATIENTS: Were included when limitation of treatments was expected.\n\nRESULTS: Of 967 children admitted, 55 were included with a 2-day median delay. They were younger than others (24 v 60 months), had a higher paediatric risk of mortality (PRISM) score (14 v 4), and a higher paediatric overall performance category (POPC) score at admission (2 v 1); all p<0.002. 34 (50% of total deaths) children died. A limitation decision was made without meeting for 7 children who died: 6 received do-not-resuscitate orders (DNROs) and 1 received withholding decision. Decision-making meetings were organised for 31 children, and the following decisions were made: 12 DNROs (6 deaths and 6 survivals), 4 withholding (1 death and 3 survivals), with 14 withdrawing (14 deaths) and 1 continuing treatment (survival). After limitation, 21 (31% of total deaths) children died and 10 survived (POPC score 4). 13 procedures were interrupted because of death and 11 because of clinical improvement (POPC score 4). Parents' opinions were obtained after 4 family conferences (for a total of 110 min), 3 days after inclusion. The first meeting was planned for 6 days after inclusion and held on the 7th day after inclusion; 80% of parents were immediately informed of the decision, which was implemented after half a day.\n\"\"\"\n\nQuestion: Are the GFRUP's recommendations for withholding or withdrawing treatments in critically ill children applicable?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 80,\n  \"quotes\": [\n    \"Decision-making meetings were organised for 31 children, and the following decisions were made: 12 DNROs (6 deaths and 6 survivals), 4 withholding (1 death and 3 survivals), with 14 withdrawing (14 deaths) and 1 continuing treatment (survival).\",\n    \"80% of parents were immediately informed of the decision, which was implemented after half a day.\"\n  ]\n}",
+ "input_tokens": 608,
+ "output_tokens": 316,
+ "latency_s": 0.891,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "874",
+   "x-ratelimit-remaining-tokens": "5837",
+   "x-ratelimit-reset-requests": "3h1m26.4s",
+   "x-ratelimit-reset-tokens": "16.222s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-1651fa5e-a280-4987-913a-03b17027de9f",
+  "object": "chat.completion",
+  "created": 1793123216,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"yes\",\n  \"confidence\": 80,\n  \"quotes\": [\n    \"Decision-making meetings were organised for 31 children, and the following decisions were made: 12 DNROs (6 deaths and 6 survivals), 4 withholding (1 death and 3 survivals), with 14 withdrawing (14 deaths) and 1 continuing treatment (survival).\",\n    \"80% of parents were immediately informed of the decision, which was implemented after half a day.\"\n  ]\n}",
+     "reasoning": "We need to interpret question: \"Are the GFRUP's recommendations for withholding or withdrawing treatments in critically ill children applicable?\" Based on abstract, they evaluated feasibility of guidelines. They included 55 children where limitation expected. They had meetings, decisions etc. So they found that guidelines could be applied? The abstract doesn't directly state applicability conclusion, but they report that decisions were made, meetings organized, etc. It seems feasible, so maybe \"yes\". Confidence moderate-high. Provide quotes showing implementation and that decisions were made according to guidelines. Sentences: \"Decision-making meetings were organised for 31 children, and the following decisions were made: ...\" and \"80% of parents were immediately informed of the decision, which was implemented after half a day.\" Also \"A limitation decision was made without meeting for 7 children who died: 6 received do-not-resuscitate orders (DNROs) and 1 received withholding decision.\" Those show applicability. Provide answer.\n\nConfidence maybe 80."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.094346819,
+   "prompt_tokens": 608,
+   "prompt_time": 0.061507744,
+   "completion_tokens": 316,
+   "completion_time": 0.666832893,
+   "total_tokens": 924,
+   "total_time": 0.728340637,
+   "completion_tokens_details": {
+    "reasoning_tokens": 200
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_47082602e2",
+  "x_groq": {
+   "id": "req_01m5z7hsz1echs4q5x9a3khk4y",
+   "seed": 2057098735
+  },
+  "service_tier": "on_demand"
+ }
+}

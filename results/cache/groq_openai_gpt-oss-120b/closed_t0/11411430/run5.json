@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "11411430",
+  "run": 5
+ },
+ "cached_at": "2026-10-27T18:12:55.953290+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "4d405c5500308238",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 174,
+ "output_tokens": 134,
+ "latency_s": 0.625,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "801",
+   "x-ratelimit-remaining-tokens": "6995",
+   "x-ratelimit-reset-requests": "4h46m33.6s",
+   "x-ratelimit-reset-tokens": "7.537s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e8bb905c-feca-40db-bf18-fc56e51d5361",
+  "object": "chat.completion",
+  "created": 1793124775,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer the question: \"Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\" Provide yes/no/maybe and confidence.\n\nWe need to know literature: Antral follicle count (AFC) is considered a strong predictor of ovarian reserve and IVF outcome, often better than age and basal FSH. Many studies suggest AFC is more predictive of response to stimulation and pregnancy rates than age or FSH. So answer likely \"yes\". Confidence maybe 85.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243464956,
+   "prompt_tokens": 174,
+   "prompt_time": 0.010871979,
+   "completion_tokens": 134,
+   "completion_time": 0.282067437,
+   "total_tokens": 308,
+   "total_time": 0.292939416,
+   "completion_tokens_details": {
+    "reasoning_tokens": 113
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_a655021f7d",
+  "x_groq": {
+   "id": "req_01m5z91d6ke3csa3y7k3jjfwka",
+   "seed": 1001752774
+  },
+  "service_tier": "on_demand"
+ }
+}

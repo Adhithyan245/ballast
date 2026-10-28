@@ -1,0 +1,66 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "27287237",
+  "run": 1
+ },
+ "cached_at": "2026-10-27T17:30:41.822112+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "72fc4528ae6baa22",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Assessment of appropriate antimicrobial prescribing: do experts agree?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "text": "{\"answer\": \"no\", \"confidence\": 85}",
+ "input_tokens": 109,
+ "output_tokens": 14,
+ "latency_s": 0.813,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "909",
+   "x-ratelimit-remaining-tokens": "7877",
+   "x-ratelimit-reset-requests": "2h11m2.4s",
+   "x-ratelimit-reset-tokens": "922ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-7b102607-149a-470f-afc2-376fe8fbd324",
+  "object": "chat.completion",
+  "created": 1793122241,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 85}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.70317657,
+   "prompt_tokens": 109,
+   "prompt_time": 0.009353456,
+   "completion_tokens": 14,
+   "completion_time": 0.031356755,
+   "total_tokens": 123,
+   "total_time": 0.040710211
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m5z6m2bve7k8nsptaryp5xxd",
+   "seed": 2143394591
+  },
+  "service_tier": "on_demand"
+ }
+}

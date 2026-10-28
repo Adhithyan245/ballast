@@ -1,0 +1,70 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "27287237",
+  "run": 4
+ },
+ "cached_at": "2026-10-27T18:11:19.907390+00:00",
+ "sample": "pilot",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "629a0b5bb959ad73",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Little is known about the validity and reliability of expert assessments of the quality of antimicrobial prescribing, despite their importance in antimicrobial stewardship. We investigated how infectious disease doctors' assessments compared with a reference standard (modal expert opinion) and with the assessments of their colleagues.\n\nMETHODS: Twenty-four doctors specialized in infectious diseases or clinical microbiology (16 specialists and 8 residents) from five hospitals were asked to assess the appropriateness of antimicrobial agents prescribed for a broad spectrum of indications in 56 paper cases. They were instructed how to handle guideline applicability and deviations. We created a reference standard of antimicrobial appropriateness using the modal assessment of 16 specialists. We calculated criterion validity and interrater and intrarater overall and specific agreement with an index expert (senior infectious disease physician) and analysed the influence of doctor characteristics on validity.\n\nRESULTS: Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively. This did not differ by clinical specialty, hospital or years of experience, and residents had similar results. Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\n\"\"\"\n\nQuestion: Assessment of appropriate antimicrobial prescribing: do experts agree?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "text": "{\"answer\": \"yes\", \"confidence\": 80, \"quotes\": [\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%).\", \"Specialists agreed with the index expert in 76% of cases.\"]}",
+ "input_tokens": 452,
+ "output_tokens": 327,
+ "latency_s": 1.016,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "822",
+   "x-ratelimit-remaining-tokens": "6885",
+   "x-ratelimit-reset-requests": "4h16m19.199s",
+   "x-ratelimit-reset-tokens": "8.362s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-99e1d6af-b31c-4334-af48-7e6b4fe03d5f",
+  "object": "chat.completion",
+  "created": 1793124679,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 80, \"quotes\": [\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%).\", \"Specialists agreed with the index expert in 76% of cases.\"]}",
+     "reasoning": "We need to answer whether experts agree on appropriate antimicrobial prescribing. Based on abstract: specialists agreed with reference standard in 80% of cases; agreement with index expert 76%; index expert agreement with his previous assessments 71%. So there is substantial but not perfect agreement. The question: \"Assessment of appropriate antimicrobial prescribing: do experts agree?\" The answer likely \"maybe\" because agreement is moderate (70-80%). The question is ambiguous: do experts agree? Yes, they agree in majority of cases (80%). But perhaps the answer expects yes because they do agree reasonably. However \"do experts agree?\" Could be yes, they have substantial agreement. The abstract says they agreed with reference standard in 80% of cases. That's fairly high agreement. I'd answer \"yes\" with confidence maybe 75. But the nuance: not perfect, but they do agree overall. The question likely expects a simple yes/no based on whether there is agreement. The data shows 80% agreement, which indicates they generally agree. So answer \"yes\". Confidence maybe 80.\n\nProvide quotes: \"Specialists agreed with the reference standard in 80% of cases (range 75%-86%)\" and \"Specialists agreed with the index expert in 76% of cases\". Use one or two sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.203748389,
+   "prompt_tokens": 452,
+   "prompt_time": 0.019040611,
+   "completion_tokens": 327,
+   "completion_time": 0.697185415,
+   "total_tokens": 779,
+   "total_time": 0.716226026,
+   "completion_tokens_details": {
+    "reasoning_tokens": 264
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_d577f40f11",
+  "x_groq": {
+   "id": "req_01m5z8yf18ev88ndyk80r4vppt",
+   "seed": 1083317951
+  },
+  "service_tier": "on_demand"
+ }
+}
