@@ -1,0 +1,124 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "closed_pushinit",
+  "qid": "21569408",
+  "run": 1
+ },
+ "cached_at": "2026-10-29T19:21:45.774701+00:00",
+ "sample": "pilot",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-sonnet-5",
+ "condition": "closed_pushinit",
+ "temperature": null,
+ "prompt_hash": "5de95acd72d4c487",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does context matter for the relationship between deprivation and all-cause mortality?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 68}",
+ "input_tokens": 1042,
+ "output_tokens": 19,
+ "latency_s": 6.39,
+ "meta": {
+  "total_cost_usd_estimate": 0.004353999999999999,
+  "num_turns": 1,
+  "session_id": "807b9858-bf07-4322-b680-5303be527c19"
+ },
+ "raw": {
+  "duration_api_ms": 1770,
+  "stop_reason": "end_turn",
+  "session_id": "807b9858-bf07-4322-b680-5303be527c19",
+  "total_cost_usd": 0.004353999999999999,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1040,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 19,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1040,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 19,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1040,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1040
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1040,
+    "webSearchRequests": 0,
+    "costUSD": 0.004353999999999999,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"yes\", \"confidence\": 68}",
+  "ttft_ms": 2293,
+  "type": "result",
+  "duration_ms": 3452,
+  "uuid": "85eee8a5-c798-48bb-a1e7-319eaf7884e1",
+  "ttft_stream_ms": 1837,
+  "time_to_request_ms": 682,
+  "first_content_frame_ms": 1838,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

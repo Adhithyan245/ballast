@@ -1,0 +1,124 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_pushinit",
+  "qid": "23736032",
+  "run": 1
+ },
+ "cached_at": "2026-10-29T19:36:07.311775+00:00",
+ "sample": "pilot",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-sonnet-5",
+ "condition": "context_pushinit",
+ "temperature": null,
+ "prompt_hash": "6931cf7a0258f278",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: A multidisciplinary team (MDT) approach to breast cancer management is the gold standard. The aim is to evaluate MDT decision making in a modern breast unit.\n\nMETHODS: All referrals to the breast MDT where breast cancer was diagnosed from 1 July 2009 to 30 June 2011 were included. Multidisciplinary team decisions were compared with subsequent patient management and classified as concordant or discordant.\n\nRESULTS: Over the study period, there were 3230 MDT decisions relating to 705 patients. Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision. Of 146 discordant decisions, 26 (17.8%) were considered 'unjustifiable' as there was no additional information available after the MDT to account for the change in management. The remaining 120 discordant MDT decisions were considered 'justifiable', as management was altered due to patient choice (n=61), additional information available after MDT (n=54) or MDT error (n=5).\n\"\"\"\n\nQuestion: Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision.\"]}",
+ "input_tokens": 1492,
+ "output_tokens": 95,
+ "latency_s": 5.391,
+ "meta": {
+  "total_cost_usd_estimate": 0.006914,
+  "num_turns": 1,
+  "session_id": "f2374dad-9ce4-4354-ac1e-7811bbf4daae"
+ },
+ "raw": {
+  "duration_api_ms": 1475,
+  "stop_reason": "end_turn",
+  "session_id": "f2374dad-9ce4-4354-ac1e-7811bbf4daae",
+  "total_cost_usd": 0.006914,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1490,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 95,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1490,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 95,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1490,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1490
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 95,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1490,
+    "webSearchRequests": 0,
+    "costUSD": 0.006914,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Overall, 91.5% (2956 out of 3230) of decisions were concordant, 4.5% (146 out of 3230), were discordant and 4% (128 out of 3230) had no MDT decision.\"]}",
+  "ttft_ms": 1853,
+  "type": "result",
+  "duration_ms": 3054,
+  "uuid": "bcbee4bc-f683-46af-8055-9deabe671c6f",
+  "ttft_stream_ms": 1173,
+  "time_to_request_ms": 445,
+  "first_content_frame_ms": 1173,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

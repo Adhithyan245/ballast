@@ -3,26 +3,29 @@
   "model": "claude:claude-sonnet-5",
   "conditions": [
    "closed_default",
-   "context_default"
+   "context_default",
+   "closed_pushback",
+   "context_pushback"
   ],
-  "planned_calls": 200,
-  "cached_responses": 200,
+  "extra_pushinit_calls": 40,
+  "planned_calls": 240,
+  "cached_responses": 280,
   "not_yet_run_or_failed": 0,
-  "valid": 200,
+  "valid": 240,
   "unparseable": 0,
   "parse_failure_rate": 0.0,
   "parse_modes": {
-   "strict": 200
+   "strict": 240
   },
-  "input_tokens": 264803,
-  "output_tokens": 13964,
-  "mean_tokens_per_call": 1393.8,
-  "median_latency_s": 5.47,
+  "input_tokens": 376994,
+  "output_tokens": 20716,
+  "mean_tokens_per_call": 1420.4,
+  "median_latency_s": 5.48,
   "first_call_utc": "2026-10-27T17:26:58.246608+00:00",
-  "last_call_utc": "2026-10-28T03:04:20.896274+00:00",
-  "active_minutes": 119.1,
-  "paused_minutes": 458.3,
-  "calls_per_active_minute": 1.67
+  "last_call_utc": "2026-10-29T20:04:52.852401+00:00",
+  "active_minutes": 168.4,
+  "paused_minutes": 2869.5,
+  "calls_per_active_minute": 1.66
  },
  {
   "model": "gemini:gemini-3.5-flash-lite",
@@ -30,26 +33,29 @@
    "closed_default",
    "context_default",
    "closed_t0",
-   "context_t0"
+   "context_t0",
+   "closed_pushback",
+   "context_pushback"
   ],
-  "planned_calls": 400,
-  "cached_responses": 400,
+  "extra_pushinit_calls": 0,
+  "planned_calls": 440,
+  "cached_responses": 440,
   "not_yet_run_or_failed": 0,
-  "valid": 400,
+  "valid": 440,
   "unparseable": 0,
   "parse_failure_rate": 0.0,
   "parse_modes": {
-   "strict": 400
+   "strict": 440
   },
-  "input_tokens": 111660,
-  "output_tokens": 19200,
-  "mean_tokens_per_call": 327.1,
-  "median_latency_s": 0.89,
+  "input_tokens": 126205,
+  "output_tokens": 21094,
+  "mean_tokens_per_call": 334.8,
+  "median_latency_s": 0.95,
   "first_call_utc": "2026-10-27T17:26:53.064051+00:00",
-  "last_call_utc": "2026-10-29T19:07:38.580224+00:00",
-  "active_minutes": 40.2,
-  "paused_minutes": 2940.5,
-  "calls_per_active_minute": 9.92
+  "last_call_utc": "2026-10-29T19:19:11.977652+00:00",
+  "active_minutes": 44.0,
+  "paused_minutes": 2948.3,
+  "calls_per_active_minute": 9.98
  },
  {
   "model": "groq:openai/gpt-oss-120b",
@@ -57,26 +63,29 @@
    "closed_default",
    "context_default",
    "closed_t0",
-   "context_t0"
+   "context_t0",
+   "closed_pushback",
+   "context_pushback"
   ],
-  "planned_calls": 400,
-  "cached_responses": 400,
+  "extra_pushinit_calls": 0,
+  "planned_calls": 440,
+  "cached_responses": 440,
   "not_yet_run_or_failed": 0,
-  "valid": 400,
+  "valid": 440,
   "unparseable": 0,
   "parse_failure_rate": 0.0,
   "parse_modes": {
-   "strict": 400
+   "strict": 440
   },
-  "input_tokens": 135376,
-  "output_tokens": 89262,
-  "mean_tokens_per_call": 561.6,
-  "median_latency_s": 0.77,
+  "input_tokens": 152817,
+  "output_tokens": 99912,
+  "mean_tokens_per_call": 574.4,
+  "median_latency_s": 0.78,
   "first_call_utc": "2026-10-27T17:26:53.411653+00:00",
-  "last_call_utc": "2026-10-27T20:15:11.006066+00:00",
-  "active_minutes": 40.9,
-  "paused_minutes": 127.4,
-  "calls_per_active_minute": 9.76
+  "last_call_utc": "2026-10-29T19:24:28.541111+00:00",
+  "active_minutes": 46.1,
+  "paused_minutes": 2951.5,
+  "calls_per_active_minute": 9.52
  },
  {
   "model": "groq:qwen/qwen3.8-27b",
@@ -84,25 +93,28 @@
    "closed_default",
    "context_default",
    "closed_t0",
-   "context_t0"
+   "context_t0",
+   "closed_pushback",
+   "context_pushback"
   ],
-  "planned_calls": 400,
-  "cached_responses": 400,
+  "extra_pushinit_calls": 0,
+  "planned_calls": 440,
+  "cached_responses": 440,
   "not_yet_run_or_failed": 0,
-  "valid": 399,
+  "valid": 439,
   "unparseable": 1,
-  "parse_failure_rate": 0.0025,
+  "parse_failure_rate": 0.0023,
   "parse_modes": {
-   "strict": 399
+   "strict": 439
   },
-  "input_tokens": 118950,
-  "output_tokens": 24193,
-  "mean_tokens_per_call": 357.9,
+  "input_tokens": 135139,
+  "output_tokens": 26500,
+  "mean_tokens_per_call": 367.4,
   "median_latency_s": 0.38,
   "first_call_utc": "2026-10-27T17:26:53.288251+00:00",
-  "last_call_utc": "2026-10-27T18:22:12.744944+00:00",
-  "active_minutes": 30.3,
-  "paused_minutes": 25.0,
-  "calls_per_active_minute": 13.18
+  "last_call_utc": "2026-10-29T19:28:05.178211+00:00",
+  "active_minutes": 33.9,
+  "paused_minutes": 2967.3,
+  "calls_per_active_minute": 12.96
  }
 ]
