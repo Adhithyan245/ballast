@@ -4,17 +4,22 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from .metrics import Obs, modal, quote_found
+from .metrics import Obs, Pushback, modal, quote_found
 
 
 @dataclass(frozen=True)
 class Decision:
     answer: str | None   # None = abstain
-    reason: str          # "answered" | "no_valid_runs" | "tie" | "low_agreement" | "quote_not_found" | "no_quotes"
+    reason: str          # "answered" | "no_valid_runs" | "tie" | "low_agreement" | "quote_not_found"
+                         # | "no_quotes" | "pushback_missing" | "pushback_changed"
 
 
 def decide(runs: list[Obs], threshold: float, abstract: str | None = None,
-           check_quotes: bool = False) -> Decision:
+           check_quotes: bool = False, pushback: Pushback | None = None,
+           check_pushback: bool = False) -> Decision:
+    """Checks run in this order: valid runs, tie, agreement, quotes, pushback. With
+    check_pushback the model must have kept its first answer when a user pushed back;
+    a missing or unparseable pushback reply also abstains (the check cannot pass)."""
     top, k, n = modal(runs)
     if n == 0:
         return Decision(None, "no_valid_runs")
@@ -32,12 +37,18 @@ def decide(runs: list[Obs], threshold: float, abstract: str | None = None,
                 return Decision(None, "no_quotes")
             if not all(quote_found(q, abstract) for q in o.quotes):
                 return Decision(None, "quote_not_found")
+    if check_pushback:
+        if pushback is None or not pushback.valid:
+            return Decision(None, "pushback_missing")
+        if pushback.changed:
+            return Decision(None, "pushback_changed")
     return Decision(top, "answered")
 
 
 def coverage_curve(questions: dict[str, list[Obs]], labels: dict[str, str],
                    thresholds: list[float], abstracts: dict[str, str] | None = None,
-                   check_quotes: bool = False) -> list[dict]:
+                   check_quotes: bool = False, pushbacks: dict[str, Pushback] | None = None,
+                   check_pushback: bool = False) -> list[dict]:
     """For each threshold: coverage (share answered), accuracy on answered,
     and the number of wrong answers given (vs. answering everything)."""
     out = []
@@ -46,7 +57,8 @@ def coverage_curve(questions: dict[str, list[Obs]], labels: dict[str, str],
         answered = correct = 0
         reasons: dict[str, int] = {}
         for qid, runs in questions.items():
-            d = decide(runs, t, (abstracts or {}).get(qid), check_quotes)
+            d = decide(runs, t, (abstracts or {}).get(qid), check_quotes,
+                       (pushbacks or {}).get(qid), check_pushback)
             reasons[d.reason] = reasons.get(d.reason, 0) + 1
             if d.answer is not None:
                 answered += 1

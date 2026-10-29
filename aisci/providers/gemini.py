@@ -46,8 +46,13 @@ class GeminiProvider(Provider):
     def _headers(self) -> dict:
         return {"x-goog-api-key": require_key(self.key_var)}
 
-    def _call(self, prompt, temperature):
-        body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}]}
+    def _call(self, prompt, temperature, history=None, session=None):
+        contents = []
+        for turn in history or []:
+            contents += [{"role": "user", "parts": [{"text": turn["user"]}]},
+                         {"role": "model", "parts": [{"text": turn["assistant"]}]}]
+        contents.append({"role": "user", "parts": [{"text": prompt}]})
+        body = {"contents": contents}
         if temperature is not None:
             body["generationConfig"] = {"temperature": temperature}
         raw, _ = post_json(self.client, f"{BASE}/models/{self.model}:generateContent",

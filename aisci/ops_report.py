@@ -28,9 +28,11 @@ def ops_summary(sample: str, planned_conditions: dict[str, list[str]],
     rows = []
     for model, conds in planned_conditions.items():
         recs = by_model.get(model, [])
-        planned = n_q * config.RUNS_PER_ITEM * len(conds)
+        planned = sum(n_q * (1 if c.endswith("_pushback") else config.RUNS_PER_ITEM) for c in conds)
         status, modes = Counter(), Counter()
         for r in recs:
+            if r["condition"].endswith("_pushinit"):
+                continue
             try:
                 p = parse_response(r.get("text"), require_quotes=r["condition"].startswith("context"))
                 status["valid"] += 1
@@ -46,9 +48,10 @@ def ops_summary(sample: str, planned_conditions: dict[str, list[str]],
         rows.append({
             "model": model,
             "conditions": conds,
+            "extra_pushinit_calls": sum(r["condition"].endswith("_pushinit") for r in recs),
             "planned_calls": planned,
             "cached_responses": len(recs),
-            "not_yet_run_or_failed": planned - len(recs),
+            "not_yet_run_or_failed": planned - sum(not r["condition"].endswith("_pushinit") for r in recs),
             "valid": status["valid"],
             "unparseable": status["unparseable"],
             "parse_failure_rate": round(status["unparseable"] / len(recs), 4) if recs else None,

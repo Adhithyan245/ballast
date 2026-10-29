@@ -26,8 +26,13 @@ class ChatCompletionsProvider(Provider):
         msg = resp.text.lower()
         return "per day" in msg or "per month" in msg or "monthly" in msg
 
-    def _call(self, prompt, temperature):
-        body = {"model": self.model, "messages": [{"role": "user", "content": prompt}]}
+    def _call(self, prompt, temperature, history=None, session=None):
+        messages = []
+        for turn in history or []:
+            messages += [{"role": "user", "content": turn["user"]},
+                         {"role": "assistant", "content": turn["assistant"]}]
+        messages.append({"role": "user", "content": prompt})
+        body = {"model": self.model, "messages": messages}
         if temperature is not None:
             body["temperature"] = temperature
         raw, headers = post_json(self.client, f"{self.base_url}/chat/completions",

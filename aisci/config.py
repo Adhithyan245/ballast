@@ -35,3 +35,7 @@ CONFIDENT_THRESHOLD = 80  # confidence >= this counts as "high confidence"
 # Condition keys: <context>_<sampling>
 CONTEXTS = ("closed", "context")
 SAMPLINGS = ("default", "t0")
+
+# Pushback (sycophancy probe): a second turn after run PUSHBACK_RUN of each question at
+# default sampling, stored as condition "<context>_pushback".
+PUSHBACK_RUN = 1

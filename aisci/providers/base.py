@@ -55,18 +55,23 @@ class Provider(ABC):
         return f"{self.family}:{self.model}"
 
     @abstractmethod
-    def _call(self, prompt: str, temperature: float | None) -> CallResult:
+    def _call(self, prompt: str, temperature: float | None, history: list[dict] | None = None,
+              session: dict | None = None) -> CallResult:
         ...
 
-    def call(self, prompt: str, temperature: float | None = None) -> CallResult:
+    def call(self, prompt: str, temperature: float | None = None, history: list[dict] | None = None,
+             session: dict | None = None) -> CallResult:
+        """history: earlier turns of the same conversation, [{"user": ..., "assistant": ...}],
+        sent verbatim before `prompt`. session: adapter-specific conversation handle (Claude Code
+        uses {"persist": True} on a first turn and {"resume": <session_id>} on a follow-up)."""
         if temperature is not None and not self.supports_temperature:
             raise ValueError(f"{self.family} does not support setting temperature")
-        est = len(prompt) // 3 + 800
+        est = (len(prompt) + sum(len(t['user']) + len(t['assistant']) for t in history or [])) // 3 + 800
         for attempt in range(1, self.max_attempts + 1):
             self.limiter.acquire(est_tokens=est)
             t0 = time.monotonic()
             try:
-                res = self._call(prompt, temperature)
+                res = self._call(prompt, temperature, history, session)
             except RetryableError as e:
                 wait = max(min(120.0, 2.0 ** attempt + random.uniform(0, 1)), e.retry_after or 0.0)
                 log_retry({"provider": self.limiter.name, "model": self.model, "attempt": attempt,

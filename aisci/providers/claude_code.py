@@ -33,13 +33,21 @@ from .base import CallResult, FatalError, Provider, ProviderUnavailable, QuotaEx
 ISOLATION_FLAGS = {"bare": ["--bare"], "safe": ["--safe-mode"]}
 
 
-def build_command(exe: str, model: str, isolation: str,
-                  system_prompt: str | None = None) -> list[str]:
+def build_command(exe: str, model: str, isolation: str, system_prompt: str | None = None,
+                  persist: bool = False, resume: str | None = None) -> list[str]:
     """system_prompt=None keeps Claude Code's default system prompt; a string
-    (possibly empty) replaces it entirely via --system-prompt."""
+    (possibly empty) replaces it entirely via --system-prompt.
+
+    Sessions are not saved (--no-session-persistence) except when a later turn
+    must resume them: persist=True keeps a first turn's session, and
+    resume=<session_id> continues it. Neither changes what the model is sent."""
     cmd = [exe, "-p", *ISOLATION_FLAGS[isolation], "--tools", "", "--strict-mcp-config",
-           "--disable-slash-commands", "--max-turns", "1", "--no-session-persistence",
+           "--disable-slash-commands", "--max-turns", "1",
            "--output-format", "json", "--model", model]
+    if not persist and not resume:
+        cmd.append("--no-session-persistence")
+    if resume:
+        cmd += ["--resume", resume]
     if system_prompt is not None:
         cmd += ["--system-prompt", system_prompt]
     return cmd
@@ -80,9 +88,15 @@ class ClaudeCodeProvider(Provider):
         if any(self.sandbox.iterdir()):
             raise RuntimeError(f"Claude sandbox dir is not empty: {self.sandbox}")
 
-    def _call(self, prompt, temperature):
+    def _call(self, prompt, temperature, history=None, session=None):
+        # Claude Code keeps conversation state itself: a follow-up resumes the first turn's
+        # saved session instead of replaying `history` (which is kept only for the record).
+        session = session or {}
+        if history and not session.get("resume"):
+            raise ValueError("a Claude follow-up turn needs session={'resume': <session_id>}")
         self._ensure_empty_sandbox()
-        cmd = build_command(self.exe, self.model, self.isolation, self.system_prompt)
+        cmd = build_command(self.exe, self.model, self.isolation, self.system_prompt,
+                            persist=bool(session.get("persist")), resume=session.get("resume"))
         try:
             proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True,
                                   encoding="utf-8", cwd=self.sandbox, timeout=self.timeout)
@@ -107,5 +121,5 @@ class ClaudeCodeProvider(Provider):
             model_reported=",".join(models) or None,
             input_tokens=inp or None, output_tokens=usage.get("output_tokens"),
             meta={"total_cost_usd_estimate": raw.get("total_cost_usd"),
-                  "num_turns": raw.get("num_turns")},
+                  "num_turns": raw.get("num_turns"), "session_id": raw.get("session_id")},
         )

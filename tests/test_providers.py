@@ -161,7 +161,8 @@ def test_claude_rejects_temperature(tmp_path):
     p = claude_code.ClaudeCodeProvider("sonnet", Limits(), sandbox=tmp_path / "sb", sleep=nosleep)
     with pytest.raises(ValueError):
         p.call("x", temperature=0.0)
-    assert conditions_for(p, include_t0=True) == ["closed_default", "context_default"]
+    assert conditions_for(p, include_t0=True) == ["closed_default", "context_default",
+                                                  "closed_pushback", "context_pushback"]
 
 
 # --- runner ---------------------------------------------------------------
@@ -173,7 +174,7 @@ class FakeProvider(Provider):
         self.script = list(script)
         self.n = 0
 
-    def _call(self, prompt, temperature):
+    def _call(self, prompt, temperature, history=None, session=None):
         self.n += 1
         step = self.script.pop(0)
         if isinstance(step, Exception):
