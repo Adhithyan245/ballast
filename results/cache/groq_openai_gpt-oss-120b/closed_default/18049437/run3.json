@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "18049437",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T19:44:21.273372+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "49612740a8330d2f",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there any relationship between streptococcal infection and multiple sclerosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 164,
+ "output_tokens": 99,
+ "latency_s": 0.422,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "832",
+   "x-ratelimit-remaining-tokens": "7574",
+   "x-ratelimit-reset-requests": "4h1m55.2s",
+   "x-ratelimit-reset-tokens": "3.195s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-cbaaffb6-c134-4f89-9ea2-2cb58993bc27",
+  "object": "chat.completion",
+  "created": 1793389460,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer with JSON only, answer either yes/no/maybe and confidence.\n\nQuestion: relationship between streptococcal infection and multiple sclerosis. There is evidence suggesting possible association via molecular mimicry, some studies show increased risk after streptococcal infection, but evidence is not conclusive. So maybe.\n\nThus answer maybe with confidence around 70.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083384479,
+   "prompt_tokens": 164,
+   "prompt_time": 0.006572587,
+   "completion_tokens": 99,
+   "completion_time": 0.206951491,
+   "total_tokens": 263,
+   "total_time": 0.213524078,
+   "completion_tokens_details": {
+    "reasoning_tokens": 78
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c868cf1eaa",
+  "x_groq": {
+   "id": "req_01m675ez3re09vx11sp99we28n",
+   "seed": 554578830
+  },
+  "service_tier": "on_demand"
+ }
+}

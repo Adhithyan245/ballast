@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "19142546",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:46:11.334510+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "c9cb3b7faad0e011",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does quantitative left ventricular regional wall motion change after fibrous tissue resection in endomyocardial fibrosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 60}",
+ "input_tokens": 170,
+ "output_tokens": 182,
+ "latency_s": 0.813,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "798",
+   "x-ratelimit-remaining-tokens": "7529",
+   "x-ratelimit-reset-requests": "4h50m52.8s",
+   "x-ratelimit-reset-tokens": "3.532s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c6c810f4-5bbe-4653-92d8-dfafd4745ec4",
+  "object": "chat.completion",
+  "created": 1793389570,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 60}",
+     "reasoning": "We need to answer whether quantitative LV regional wall motion changes after fibrous tissue resection in endomyocardial fibrosis. This is a specific clinical research question. I need to recall literature. Endomyocardial fibrosis (EMF) is a restrictive cardiomyopathy with fibrous tissue in endocardium, often in ventricles. Surgical resection (endocardiectomy) aims to improve ventricular function. Studies have shown improvements in ventricular compliance, sometimes ejection fraction, but regional wall motion? I think quantitative regional wall motion (e.g., using echocardiography) may improve after resection. However, evidence may be limited; some studies show no significant change in wall motion but overall function improves. I'm not entirely sure.\n\nThus answer maybe \"maybe\". Provide confidence maybe 60."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.242812068,
+   "prompt_tokens": 170,
+   "prompt_time": 0.02787568,
+   "completion_tokens": 182,
+   "completion_time": 0.38415228,
+   "total_tokens": 352,
+   "total_time": 0.41202796,
+   "completion_tokens_details": {
+    "reasoning_tokens": 161
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_420c059a6a",
+  "x_groq": {
+   "id": "req_01m675ja71ea0svqr016qc907t",
+   "seed": 1657510032
+  },
+  "service_tier": "on_demand"
+ }
+}

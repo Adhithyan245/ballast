@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "19058191",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T19:45:17.631166+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "47f12e63deae94fa",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there a discrepancy between patient and physician quality of life assessment?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\":\"yes\",\"confidence\":85}",
+ "input_tokens": 162,
+ "output_tokens": 166,
+ "latency_s": 0.5,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "814",
+   "x-ratelimit-remaining-tokens": "7565",
+   "x-ratelimit-reset-requests": "4h27m50.4s",
+   "x-ratelimit-reset-tokens": "3.262s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-cf01fcc7-2069-4759-a71f-b779e265ba66",
+  "object": "chat.completion",
+  "created": 1793389517,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\":\"yes\",\"confidence\":85}",
+     "reasoning": "The user asks: \"Is there a discrepancy between patient and physician quality of life assessment? Answer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\"\n\nWe need to output a JSON object with answer and confidence.\n\nWe need to consider the question: \"Is there a discrepancy between patient and physician quality of life assessment?\" This is a general research question. In many studies, there is often a discrepancy: physicians tend to underestimate or overestimate patients' quality of life compared to patients' self-reports. So the answer likely \"yes\". Confidence moderate-high, maybe 85.\n\nThus output: {\"answer\":\"yes\",\"confidence\":85}\n\nMake sure format exactly."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083285867,
+   "prompt_tokens": 162,
+   "prompt_time": 0.006056391,
+   "completion_tokens": 166,
+   "completion_time": 0.345475282,
+   "total_tokens": 328,
+   "total_time": 0.351531673,
+   "completion_tokens_details": {
+    "reasoning_tokens": 148
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_bb691ea66b",
+  "x_groq": {
+   "id": "req_01m675gp2aeh5tj4y3e2rgfx1a",
+   "seed": 1410148913
+  },
+  "service_tier": "on_demand"
+ }
+}

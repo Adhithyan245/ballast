@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "20538207",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:44:50.907427+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "764338f9d5bc03ba",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Should temperature be monitorized during kidney allograft preservation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 109,
+ "output_tokens": 14,
+ "latency_s": 0.187,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "758",
+   "x-ratelimit-remaining-tokens": "7877",
+   "x-ratelimit-reset-requests": "5h48m28.8s",
+   "x-ratelimit-reset-tokens": "922ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-56a1d4d3-7bfd-4c76-b013-4009361774b3",
+  "object": "chat.completion",
+  "created": 1793389490,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096477723,
+   "prompt_tokens": 109,
+   "prompt_time": 0.008462156,
+   "completion_tokens": 14,
+   "completion_time": 0.027776353,
+   "total_tokens": 123,
+   "total_time": 0.036238509
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_57c7e760a9",
+  "x_groq": {
+   "id": "req_01m675fw8pep9avbcmx3q2vpta",
+   "seed": 1774707139
+  },
+  "service_tier": "on_demand"
+ }
+}

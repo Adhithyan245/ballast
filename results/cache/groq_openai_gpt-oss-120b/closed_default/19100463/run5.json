@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "19100463",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T19:45:46.906593+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "dde9571355742400",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is the affinity column-mediated immunoassay method suitable as an alternative to the microparticle enzyme immunoassay method as a blood tacrolimus assay?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 72}",
+ "input_tokens": 181,
+ "output_tokens": 90,
+ "latency_s": 0.437,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "805",
+   "x-ratelimit-remaining-tokens": "7484",
+   "x-ratelimit-reset-requests": "4h40m48s",
+   "x-ratelimit-reset-tokens": "3.87s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e711117f-3f96-4131-9006-c20d5a4e0d37",
+  "object": "chat.completion",
+  "created": 1793389546,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 72}",
+     "reasoning": "We need to answer about suitability of affinity column-mediated immunoassay vs microparticle enzyme immunoassay for blood tacrolimus assay. Likely some literature suggests that affinity column-mediated immunoassay (like AC-ELISA) can be alternative but maybe not fully validated. Probably \"maybe\". Provide confidence maybe 70."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.179883928,
+   "prompt_tokens": 181,
+   "prompt_time": 0.00882643,
+   "completion_tokens": 90,
+   "completion_time": 0.18742438,
+   "total_tokens": 271,
+   "total_time": 0.19625081,
+   "completion_tokens_details": {
+    "reasoning_tokens": 69
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01m675hjpteexv8wcxcj21jemp",
+   "seed": 860776916
+  },
+  "service_tier": "on_demand"
+ }
+}
