@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "21123461",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T23:10:49.208750+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "2472e08727348042",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Weight scales as height squared, which is an observation that forms the basis of body mass index (weight/height(2)). If, and how, circumferences, including waist circumference (WC) and hip circumference (HC), scale to height remains unclear, but this is an important consideration when developing normative ranges or applying WC/height and HC/height as risk indexes.\n\nOBJECTIVE: The study aim was to examine the scaling of weight, WC, and HC to height in NHANES (National Health and Nutrition Examination Survey) III participants.\n\nDESIGN: Subjects were adult non-Hispanic white, non-Hispanic black, and Mexican American men (n = 7422) and nonpregnant women (n = 7999) who had complete demographic and anthropometric data. In addition to height, allometric models were developed for each measure that controlled for age, race, and self-reported health status.\n\nRESULTS: After adjustment for age and race, weight scaled to height in men and women with mean (±SEE) powers of 2.29 ± 0.11 and 1.80 ± 0.07, respectively (both P<0.001). Although univariate circumference-height models were weak or nonsignificant, when adjusted for age and race WC and HC scaled to height with powers of 0.76 ± 0.08 and 0.45 ± 0.05, respectively, in men and 0.80 ± 0.05 and 0.53 ± 0.04, respectively, in women (all P<0.001). Age- and race-adjusted incremental increases in circumferences ranged from 0.2 to 0.5 cm per centimeter increase in height. Both WC/height and HC/height scaled negatively to height in men and women, and WC/HC scaled negatively to height in women only (all P<0.001). Health status-adjusted models were similar.\n\"\"\"\n\nQuestion: Are adult body circumferences associated with height?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n\"answer\": \"yes\",\n\"confidence\": 98,\n\"quotes\": [\n\"Although univariate circumference-height models were weak or nonsignificant, when adjusted for age and race WC and HC scaled to height with powers of 0.76 ± 0.08 and 0.45 ± 0.05, respectively, in men and 0.80 ± 0.05 and 0.53 ± 0.04, respectively, in women (all P<0.001).\",\n\"Age- and race-adjusted incremental increases in circumferences ranged from 0.2 to 0.5 cm per centimeter increase in height.\"\n]\n}",
+ "input_tokens": 576,
+ "output_tokens": 156,
+ "latency_s": 0.813,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "353",
+   "x-ratelimit-remaining-tokens": "6938",
+   "x-ratelimit-reset-requests": "15h31m40.8s",
+   "x-ratelimit-reset-tokens": "18.06s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-eabfb319-085a-4d11-9512-1e2a243a4e41",
+  "object": "chat.completion",
+  "created": 1793401848,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"yes\",\n\"confidence\": 98,\n\"quotes\": [\n\"Although univariate circumference-height models were weak or nonsignificant, when adjusted for age and race WC and HC scaled to height with powers of 0.76 ± 0.08 and 0.45 ± 0.05, respectively, in men and 0.80 ± 0.05 and 0.53 ± 0.04, respectively, in women (all P<0.001).\",\n\"Age- and race-adjusted incremental increases in circumferences ranged from 0.2 to 0.5 cm per centimeter increase in height.\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.373958276,
+   "prompt_tokens": 576,
+   "prompt_time": 0.051700707,
+   "completion_tokens": 156,
+   "completion_time": 0.306644479,
+   "total_tokens": 732,
+   "total_time": 0.358345186
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m67h900aeq58d3eft5tbh7gb",
+   "seed": 2039654784
+  },
+  "service_tier": "on_demand"
+ }
+}

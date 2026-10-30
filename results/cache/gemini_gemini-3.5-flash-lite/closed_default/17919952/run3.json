@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "17919952",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:34:13.144698+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "ceb31d50ff9058cc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are reports of mechanical dysfunction in chronic oro-facial pain related to somatisation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 104,
+ "output_tokens": 18,
+ "latency_s": 0.515,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TbOyxfllhFA2brjtmDGeThOvVbgo8UKhWrso+XlXfwbTM0j5x7DogI6S7GNMkjORtMsccZB+B+Df3faqIAbSeWFVZ9mwms7LA2cj3Q+xx+6G10i5rE6a5ddM="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 104,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 122,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 104
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "ZBvlaoiuCt7H0_gPsr7iqAk"
+ }
+}

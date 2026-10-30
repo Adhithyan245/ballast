@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "20538207",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:33:20.848552+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "764338f9d5bc03ba",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Should temperature be monitorized during kidney allograft preservation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 96}",
+ "input_tokens": 161,
+ "output_tokens": 97,
+ "latency_s": 0.422,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "873",
+   "x-ratelimit-remaining-tokens": "7684",
+   "x-ratelimit-reset-requests": "3h2m52.8s",
+   "x-ratelimit-reset-tokens": "2.37s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-82575511-8107-4217-b88e-87d4dec13c8e",
+  "object": "chat.completion",
+  "created": 1793399600,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 96}",
+     "reasoning": "The user asks: \"Should temperature be monitorized during kidney allograft preservation?\" They want answer yes/no/maybe and confidence.\n\nWe need to consider biomedical knowledge: Kidney transplantation requires preservation of organ after procurement. Temperature monitoring is critical to ensure proper cold storage (hypothermic preservation). So answer is \"yes\". Confidence high, maybe 95.\n\nReturn JSON exactly."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.291214496,
+   "prompt_tokens": 161,
+   "prompt_time": 0.006120525,
+   "completion_tokens": 97,
+   "completion_time": 0.200547258,
+   "total_tokens": 258,
+   "total_time": 0.206667783,
+   "completion_tokens_details": {
+    "reasoning_tokens": 76
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01m67f4cqqegftk6qf5wnxbjpx",
+   "seed": 917728596
+  },
+  "service_tier": "on_demand"
+ }
+}

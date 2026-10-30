@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "22504515",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:49:16.715090+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "8bbcd15f7e1b7d57",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Endovenous laser ablation in the treatment of small saphenous varicose veins: does site of access influence early outcomes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 111,
+ "output_tokens": 18,
+ "latency_s": 0.688,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Tn+tjs0cxZexr+s59N1AS0806KMFGTbGNwqrIu5s1nzVcrJSFpqVzxJ32EITy23MHmUzuGN3uuWN7nyUArPcKMGWvrci0QSdzFTjHTyX7c1gNdsat2ogvQCE="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 111,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 129,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 111
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "6x7lasn9IZGgo_UP8cT38Aw"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "21914194",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T22:36:50.673506+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4add97f9dc583259",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Health care for immigrants in Europe: is there still consensus among country experts about principles of good practice?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": 169,
+ "output_tokens": 215,
+ "latency_s": 0.812,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "810",
+   "x-ratelimit-remaining-tokens": "7536",
+   "x-ratelimit-reset-requests": "4h33m36s",
+   "x-ratelimit-reset-tokens": "3.48s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-16c2a005-8af6-49c6-af04-19c6f47d432b",
+  "object": "chat.completion",
+  "created": 1793399810,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 65}",
+     "reasoning": "We need to answer whether there is still consensus among country experts about principles of good practice for health care for immigrants in Europe. This is a specific research question. Need to answer \"yes\", \"no\", or \"maybe\". Provide confidence.\n\nWe need to know literature. I recall a paper: \"Health care for immigrants in Europe: is there still consensus among country experts about principles of good practice?\" Perhaps a survey of experts. The likely answer: maybe there is still consensus? I think the paper found that consensus is decreasing? Let’s think: The title suggests a question, maybe they found that consensus still exists? I vaguely recall that there is still consensus on certain principles like accessibility, cultural competence, etc., but differences in implementation. The question: \"is there still consensus among country experts about principles of good practice?\" Probably answer: \"maybe\", as there is some agreement but not full.\n\nConfidence? I'd give moderate, say 65.\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.24365743,
+   "prompt_tokens": 169,
+   "prompt_time": 0.007818103,
+   "completion_tokens": 215,
+   "completion_time": 0.44622056,
+   "total_tokens": 384,
+   "total_time": 0.454038663,
+   "completion_tokens_details": {
+    "reasoning_tokens": 194
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m67fas95e5ab5n3y5z3dabet",
+   "seed": 1438432396
+  },
+  "service_tier": "on_demand"
+ }
+}

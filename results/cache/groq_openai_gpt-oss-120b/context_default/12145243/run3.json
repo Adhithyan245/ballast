@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "12145243",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:59:38.808822+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "a938a704f6bded5f",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: Type 2 diabetes may be present for several years before diagnosis, by which time many patients have already developed diabetic complications. Earlier detection and treatment may reduce this burden, but evidence to support this approach is lacking.\n\nRESEARCH DESIGN AND METHODS: Glycemic control and clinical and surrogate outcomes were compared for 5,088 of 5,102 U.K. Diabetes Prospective Study participants according to whether they had low (<140 mg/dl [<7.8 mmol/l]), intermediate (140 to<180 mg/dl [7.8 to<10.0 mmol/l]), or high (>or =180 mg/dl [>or =10 mmol/l]) fasting plasma glucose (FPG) levels at diagnosis. Individuals who presented with and without diabetic symptoms were also compared.\n\nRESULTS: Fewer people with FPG in the lowest category had retinopathy, abnormal biothesiometer measurements, or reported erectile dysfunction. The rate of increase in FPG and HbA(1c) during the study was identical in all three groups, although absolute differences persisted. Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke, whereas those in the intermediate group had significantly reduced risk for each outcome except stroke and myocardial infarction. The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\n\"\"\"\n\nQuestion: Are lower fasting plasma glucose levels at diagnosis of type 2 diabetes associated with improved outcomes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\":\"yes\",\"confidence\":95,\"quotes\":[\"Fewer people with FPG in the lowest category had retinopathy, abnormal biothesiometer measurements, or reported erectile dysfunction.\",\"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke, whereas those in the intermediate group had significantly reduced risk for each outcome except stroke and myocardial infarction.\",\"The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\"]}",
+ "input_tokens": 498,
+ "output_tokens": 377,
+ "latency_s": 1.0,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "545",
+   "x-ratelimit-remaining-tokens": "6149",
+   "x-ratelimit-reset-requests": "10h55m12s",
+   "x-ratelimit-reset-tokens": "13.882s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-2b340fa9-c5d7-473c-867c-35830f55e668",
+  "object": "chat.completion",
+  "created": 1793401178,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\":\"yes\",\"confidence\":95,\"quotes\":[\"Fewer people with FPG in the lowest category had retinopathy, abnormal biothesiometer measurements, or reported erectile dysfunction.\",\"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke, whereas those in the intermediate group had significantly reduced risk for each outcome except stroke and myocardial infarction.\",\"The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\"]}",
+     "reasoning": "We need to answer whether lower fasting plasma glucose levels at diagnosis are associated with improved outcomes. The abstract says: \"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke ... The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\" Also earlier: \"Fewer people with FPG in the lowest category had retinopathy, abnormal biothesiometer measurements, or reported erectile dysfunction.\"\n\nThus answer is \"yes\". Provide confidence high, maybe 95. Provide quotes.\n\nSelect up to three sentences exactly as they appear. For example:\n\n1. \"Fewer people with FPG in the lowest category had retinopathy, abnormal biothesiometer measurements, or reported erectile dysfunction.\"\n\n2. \"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke, whereas those in the intermediate group had significantly reduced risk for each outcome except stroke and myocardial infarction.\"\n\n3. \"The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\"\n\nThese are from abstract.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082974999,
+   "prompt_tokens": 498,
+   "prompt_time": 0.019112985,
+   "completion_tokens": 377,
+   "completion_time": 0.773722731,
+   "total_tokens": 875,
+   "total_time": 0.792835716,
+   "completion_tokens_details": {
+    "reasoning_tokens": 255
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01m67gmh5jejxr3a2jc29f6b3b",
+   "seed": 1570062899
+  },
+  "service_tier": "on_demand"
+ }
+}

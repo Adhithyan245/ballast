@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "23361217",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:40:55.179322+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "50359d0b748747db",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": 167,
+ "output_tokens": 181,
+ "latency_s": 1.234,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "748",
+   "x-ratelimit-remaining-tokens": "7606",
+   "x-ratelimit-reset-requests": "6h2m52.8s",
+   "x-ratelimit-reset-tokens": "2.955s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-66ae1f70-6911-4362-8971-60c8b611f512",
+  "object": "chat.completion",
+  "created": 1793400053,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 65}",
+     "reasoning": "We need to answer the biomedical research question: \"Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\" Provide answer yes/no/maybe with confidence integer.\n\nWe need to consider knowledge. Unicompartmental knee replacement (UKR) tibial component design (e.g., fixed vs mobile bearing, all-polyethylene vs metal-backed, cemented vs uncemented) may influence postoperative mechanical alignment. Literature suggests that tibial component positioning is critical for alignment; type of component may affect ability to achieve alignment, but evidence may be mixed. Likely there is some effect, but not definitive. The question: \"Does the type of tibial component affect mechanical alignment?\" Might be answered maybe. Provide confidence moderate, maybe 65.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243207709,
+   "prompt_tokens": 167,
+   "prompt_time": 0.007024106,
+   "completion_tokens": 181,
+   "completion_time": 0.376433865,
+   "total_tokens": 348,
+   "total_time": 0.383457971,
+   "completion_tokens_details": {
+    "reasoning_tokens": 160
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_86dc843b12",
+  "x_groq": {
+   "id": "req_01m67fj7kvesd9vyd3gexsej3y",
+   "seed": 1009444813
+  },
+  "service_tier": "on_demand"
+ }
+}

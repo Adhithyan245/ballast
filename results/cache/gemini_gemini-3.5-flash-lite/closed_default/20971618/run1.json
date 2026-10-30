@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "20971618",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:42:56.712149+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "8f1ed92620ff593f",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are lifetime prevalence of impetigo, molluscum and herpes infection really increased in children having atopic dermatitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+ "input_tokens": 110,
+ "output_tokens": 18,
+ "latency_s": 0.547,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TsH8xMOUxwZ35mqQmv2iL2fH5XZMrgFbKKhhdY48LylKLkW6bbK5wwL2Go4J48aHeObMvuCMLAJQHXstDVmPgE8YdYxIhczLSV+eSBaZFweCQEilnibDAHgc="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 110,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 128,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 110
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "bx3lauDTK8mfuMYP9cOdmA4"
+ }
+}

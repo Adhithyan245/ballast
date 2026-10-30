@@ -1,0 +1,496 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "17445978",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:52:24.321454+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "b429b10683dffcfc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is renal warm ischemia over 30 minutes during laparoscopic partial nephrectomy possible?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsSince I cannot access external information sources, I'll need to answer based on general medical knowledge. In urological surgery, warm ischemia time (WIT) during partial nephrectomy is typically limited to protect renal function. While some studies suggest ischemia times under 30 minutes are generally safe, exceeding 30 minutes of warm ischemia during laparoscopic partial nephrectomy would be considered high-risk and potentially damaging to renal tissue. However, with careful surgical technique and in certain clinical circumstances, it might be possible but not recommended.\n\n{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 15.109,
+ "meta": {
+  "session_id": "766340d7-8228-4d4d-be79-35109dd779e5",
+  "credits": 0.213819,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "contextUsagePercentage": 6.938414096832275,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_hSruU9FQFayKA0LQLqQ11c",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "renal warm ischemia time 30 minutes laparoscopic partial nephrectomy possible"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_hSruU9FQFayKA0LQLqQ11c",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "renal warm ischemia time 30 minutes laparoscopic partial nephrectomy possible"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "contextUsagePercentage": 7.022561073303223,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_DzEmT4JlwmSjOv8cDnvNlJ",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "renal warm ischemia 30 minutes laparoscopic partial nephrectomy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_DzEmT4JlwmSjOv8cDnvNlJ",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "renal warm ischemia 30 minutes laparoscopic partial nephrectomy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Since I cannot access external information sources, I'll need"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " to answer based on"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " general medical knowledge. In urological surgery, warm"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " ischemia time (WIT) during partial nephrect"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "omy is typically limited to protect renal function. While"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " some studies suggest ischemia times under 30 minutes are"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " generally safe, exceeding 30 minutes of warm ischemia"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " during laparoscopic partial nephrectomy would be considered high"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "-risk and potentially damaging to renal tissue. However,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " with careful surgical technique and in certain clinical circumstances,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " it might be possible but not recommended.\n\n{\"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": \"maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "contextUsagePercentage": 7.134146213531494,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "contextUsagePercentage": 7.134146213531494,
+     "meteringUsage": [
+      {
+       "value": 0.07004588391376451,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07104440796019901,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07272853067993366,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 12846,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "766340d7-8228-4d4d-be79-35109dd779e5",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsSince I cannot access external information sources, I'll need to answer based on general medical knowledge. In urological surgery, warm ischemia time (WIT) during partial nephrectomy is typically limited to protect renal function. While some studies suggest ischemia times under 30 minutes are generally safe, exceeding 30 minutes of warm ischemia during laparoscopic partial nephrectomy would be considered high-risk and potentially damaging to renal tissue. However, with careful surgical technique and in certain clinical circumstances, it might be possible but not recommended.\n\n{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

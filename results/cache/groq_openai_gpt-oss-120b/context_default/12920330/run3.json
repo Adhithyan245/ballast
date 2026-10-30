@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "12920330",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T23:01:51.669718+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "d39d39e1ed617017",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Evidence suggests substantial comorbidity between symptoms of somatization and depression in clinical as well as nonclinical populations. However, as most existing research has been retrospective or cross-sectional in design, very little is known about the specific nature of this relationship. In particular, it is unclear whether somatic complaints may heighten the risk for the subsequent development of depressive symptoms.\n\nMETHODS: We report findings on the link between symptoms of somatization (assessed using the SCL-90-R) and depression 5 years later (assessed using the CES-D) in an initially healthy cohort of community adults, based on prospective data from the RENO Diet-Heart Study.\n\nRESULTS: Gender-stratified multiple regression analyses revealed that baseline CES-D scores were the best predictors of subsequent depressive symptoms for men and women. Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women. However, somatic complaints were a somewhat less powerful predictor than income and age.\n\"\"\"\n\nQuestion: Do somatic complaints predict subsequent symptoms of depression?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\"]}",
+ "input_tokens": 416,
+ "output_tokens": 238,
+ "latency_s": 1.469,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "530",
+   "x-ratelimit-remaining-tokens": "6782",
+   "x-ratelimit-reset-requests": "11h16m48s",
+   "x-ratelimit-reset-tokens": "9.135s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-9b647658-3f43-444c-87eb-117b417a8a86",
+  "object": "chat.completion",
+  "created": 1793401310,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\"]}",
+     "reasoning": "We need to answer based on abstract. The abstract says: \"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\" So answer: yes (for women). The question: \"Do somatic complaints predict subsequent symptoms of depression?\" Overall, yes, they do (though only in women). So answer \"yes\". Confidence maybe high, like 95. Provide quotes.\n\nSelect one to three sentences: \"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\" Also maybe \"Gender-stratified multiple regression analyses revealed that baseline CES-D scores were the best predictors...\" but that's about CES-D not somatic. So first sentence sufficient.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.46176351,
+   "prompt_tokens": 416,
+   "prompt_time": 0.161953509,
+   "completion_tokens": 238,
+   "completion_time": 0.492771004,
+   "total_tokens": 654,
+   "total_time": 0.654724513,
+   "completion_tokens_details": {
+    "reasoning_tokens": 177
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_a655021f7d",
+  "x_groq": {
+   "id": "req_01m67grjn9evt8yz58n80ftr9x",
+   "seed": 346474087
+  },
+  "service_tier": "on_demand"
+ }
+}

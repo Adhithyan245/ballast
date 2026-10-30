@@ -1,0 +1,127 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "11411430",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:46:19.402488+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4d405c5500308238",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.203,
+ "meta": {
+  "session_id": "d4248a87-2a20-4731-95a0-908af020161a",
+  "credits": 0.069318,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d4248a87-2a20-4731-95a0-908af020161a",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d4248a87-2a20-4731-95a0-908af020161a",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d4248a87-2a20-4731-95a0-908af020161a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d4248a87-2a20-4731-95a0-908af020161a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 70}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d4248a87-2a20-4731-95a0-908af020161a",
+     "contextUsagePercentage": 6.917683124542236,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d4248a87-2a20-4731-95a0-908af020161a",
+     "contextUsagePercentage": 6.917683124542236,
+     "meteringUsage": [
+      {
+       "value": 0.06931847761194031,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2013,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "d4248a87-2a20-4731-95a0-908af020161a",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

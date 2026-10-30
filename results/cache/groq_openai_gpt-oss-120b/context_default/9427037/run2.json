@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "9427037",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:51:20.180379+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "9673d9f9c573282d",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The most common primary brain tumors in children and adults are of astrocytic origin. Classic histologic grading schemes for astrocytomas have included evaluating the presence or absence of nuclear abnormalities, mitoses, vascular endothelial proliferation, and tumor necrosis.\n\nMATERIALS AND METHODS: We evaluated the vascular pattern of 17 astrocytoma surgical specimens (seven from children and 10 from adults), and four normal brains obtained at autopsy, utilizing antibody to glial fibrillary acidic protein (GFAP) and von Willebrand factor (vWF) utilizing confocal microscopy. A modified WHO classification was used.\n\nRESULTS: All tumor cases showed cells positive for GFAP. Control tissues showed a few, widely separated vessels. Pilocytic astrocytomas (four cases) showed lacy clusters of small-to-medium sized vessels, with intact vessel wall integrity. Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\n\"\"\"\n\nQuestion: Are endothelial cell patterns of astrocytomas indicative of grade?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\", \"Pilocytic astrocytomas (four cases) showed lacy clusters of small-to-medium sized vessels, with intact vessel wall integrity.\"]}",
+ "input_tokens": 476,
+ "output_tokens": 415,
+ "latency_s": 1.078,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "596",
+   "x-ratelimit-remaining-tokens": "7042",
+   "x-ratelimit-reset-requests": "9h41m45.6s",
+   "x-ratelimit-reset-tokens": "7.185s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-8d702293-b994-43be-aa89-4e3ed4b0dac9",
+  "object": "chat.completion",
+  "created": 1793400679,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\", \"Pilocytic astrocytomas (four cases) showed lacy clusters of small-to-medium sized vessels, with intact vessel wall integrity.\"]}",
+     "reasoning": "We need to answer whether endothelial cell patterns of astrocytomas are indicative of grade. Based on abstract: they observed that low grade diffuse astrocytoma had staining similar to control, while intermediate, anaplastic, GBM showed increased vessel density, glomeruloid clusters, intimal hyperplasia, loss of vessel wall integrity, numerous vWF-positive cells. This suggests endothelial pattern correlates with grade (higher grade shows more abnormal vessels). So answer \"yes\". Provide confidence maybe 90. Need to copy 1-3 sentences that support answer. For example: \"Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\" Also maybe earlier: \"Pilocytic astrocytomas (four cases) showed lacy clusters of small-to-medium sized vessels, with intact vessel wall integrity.\" But the key is correlation. Provide two quotes.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083188507,
+   "prompt_tokens": 476,
+   "prompt_time": 0.019739831,
+   "completion_tokens": 415,
+   "completion_time": 0.870215772,
+   "total_tokens": 891,
+   "total_time": 0.889955603,
+   "completion_tokens_details": {
+    "reasoning_tokens": 262
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c868cf1eaa",
+  "x_groq": {
+   "id": "req_01m67g5a43ezq88w3v0cwf9gwr",
+   "seed": 1456244028
+  },
+  "service_tier": "on_demand"
+ }
+}

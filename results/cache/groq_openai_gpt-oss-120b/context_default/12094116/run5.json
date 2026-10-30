@@ -1,0 +1,74 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "12094116",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:59:15.404889+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "5c2ea43d2bd43d6c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The purpose of this study was to identify the relationships between leg muscle power and sprinting speed with changes of direction.\n\nEXPERIMENTAL DESIGN: the study was designed to describe relationships between physical qualities and a component of sports performance.\n\nSETTING: testing was conducted in an indoor sports hall and a biomechanics laboratory.\n\nPARTICIPANTS: 15 male participants were required to be free of injury and have recent experience competing in sports involving sprints with changes of direction.\n\nMEASURES: subjects were timed in 8 m sprints in a straight line and with various changes of direction. They were also tested for bilateral and unilateral leg extensor muscle concentric power output by an isokinetic squat and reactive strength by a drop jump.\n\nRESULTS: The correlations between concentric power and straight sprinting speed were non-significant whereas the relationships between reactive strength and straight speed were statistically significant. Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength. The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\n\"\"\"\n\nQuestion: Is muscle power related to running speed with changes of direction?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\", \"The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\"]}",
+ "input_tokens": 445,
+ "output_tokens": 330,
+ "latency_s": 1.094,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "548",
+   "x-ratelimit-remaining-tokens": "7048",
+   "x-ratelimit-reset-requests": "10h50m52.8s",
+   "x-ratelimit-reset-tokens": "7.14s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-601b5598-d965-4172-9e5a-bba62968b6f7",
+  "object": "chat.completion",
+  "created": 1793401154,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\", \"The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\"]}",
+     "reasoning": "We need to answer whether muscle power is related to running speed with changes of direction. From abstract: \"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\" So muscle power (concentric) not related; reactive strength (a type of power?) some moderate significant. The question: \"muscle power related to running speed with changes of direction?\" Muscle power includes both concentric power and reactive strength? Usually reactive strength is a type of power. The abstract says generally low and non-significant for concentric leg power, but some moderate significant for reactive strength. So overall the relationship is weak/unclear. Likely answer \"maybe\". Provide confidence moderate, maybe 70. Provide quotes: \"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\" Also maybe \"The participants who turned faster to one side tended to have a reactive strength dominance...\" Provide two quotes.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082879534,
+   "prompt_tokens": 445,
+   "prompt_time": 0.033557341,
+   "completion_tokens": 330,
+   "completion_time": 0.767474586,
+   "total_tokens": 775,
+   "total_time": 0.801031927,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 237
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01m67gkt8bepbt7a2hb6q0cc71",
+   "seed": 2109240623
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "16769333",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:49:26.122837+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "519ff3eb34347892",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Preoperative tracheobronchoscopy in newborns with esophageal atresia: does it matter?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 75\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 3.969,
+ "meta": {
+  "session_id": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+  "credits": 0.069355,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "75\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "contextUsagePercentage": 6.916463375091553,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "contextUsagePercentage": 6.916463375091553,
+     "meteringUsage": [
+      {
+       "value": 0.06935466998341626,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1791,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "e60c7997-05fe-432c-9b07-0311d9c36f1a",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 75\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

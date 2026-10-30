@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "16991071",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:56:28.191328+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "79208ee6b84b4b95",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\n\nMETHODS: In a retrospective study, 760 open rotator cuff repairs were analysed and related to the profession and occupational load. Exclusion criteria were traumatic tears and sports injuries. All male persons were statistically analysed and the data compared with occupational patterns of the region, obtained from the Federal Statistical State Office.\n\nRESULTS: Rotator cuff repairs were performed in 472 males who had no evidence for a traumatic origin. After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\n\"\"\"\n\nQuestion: Rotator cuff tear--an occupational disease?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"maybe\",\n\"confidence\": 80,\n\"quotes\": [\n\"After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\",\n\"In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\"\n]\n}",
+ "input_tokens": 326,
+ "output_tokens": 114,
+ "latency_s": 0.516,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "482",
+   "x-ratelimit-remaining-tokens": "7001",
+   "x-ratelimit-reset-requests": "12h25m55.2s",
+   "x-ratelimit-reset-tokens": "20.22s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-52a49f3a-b02e-4331-9265-4f56a98dc520",
+  "object": "chat.completion",
+  "created": 1793400987,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"maybe\",\n\"confidence\": 80,\n\"quotes\": [\n\"After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\",\n\"In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096291371,
+   "prompt_tokens": 326,
+   "prompt_time": 0.023032102,
+   "completion_tokens": 114,
+   "completion_time": 0.217058528,
+   "total_tokens": 440,
+   "total_time": 0.24009063
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fea14bdc83",
+  "x_groq": {
+   "id": "req_01m67geqewe4t88tf6ja1xdqx6",
+   "seed": 997690641
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "23736032",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:56:38.575893+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "79cccef840d760a1",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Multidisciplinary decisions in breast cancer: does the patient receive what the team has recommended?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.922,
+ "meta": {
+  "session_id": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+  "credits": 0.06927,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 75}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+     "contextUsagePercentage": 6.912805080413818,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+     "contextUsagePercentage": 6.912805080413818,
+     "meteringUsage": [
+      {
+       "value": 0.0692697081260365,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2246,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "cddf1a39-56e8-4ebc-9ddb-a38824337c4a",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"maybe\", \"confidence\": 75}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

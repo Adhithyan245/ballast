@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "22758782",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:34:24.708396+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "64b310549864e825",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Regional anesthesia as compared with general anesthesia for surgery in geriatric patients with hip fracture: does it decrease morbidity, mortality, and health care costs?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 128,
+ "output_tokens": 14,
+ "latency_s": 1.438,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "777",
+   "x-ratelimit-remaining-tokens": "7856",
+   "x-ratelimit-reset-requests": "5h21m7.2s",
+   "x-ratelimit-reset-tokens": "1.079s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-d6d175df-fae2-4c43-bba4-8655098ae7ce",
+  "object": "chat.completion",
+  "created": 1793399664,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 1.313196531,
+   "prompt_tokens": 128,
+   "prompt_time": 0.011209167,
+   "completion_tokens": 14,
+   "completion_time": 0.027723802,
+   "total_tokens": 142,
+   "total_time": 0.038932969
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m67f6a3aews9p8t9f1whbqsm",
+   "seed": 605313056
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "25168472",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T23:00:35.007603+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "66d94901a5bb42e9",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can static foot posture measurements predict regional plantar surface area?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 70}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.829,
+ "meta": {
+  "session_id": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+  "credits": 0.069221,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"yes\", \"confidence\": 70"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "contextUsagePercentage": 6.907926559448242,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "contextUsagePercentage": 6.907926559448242,
+     "meteringUsage": [
+      {
+       "value": 0.06922093864013268,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1860,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "ef24f2ce-9df6-4e65-866a-9f28f396e39e",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"yes\", \"confidence\": 70}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

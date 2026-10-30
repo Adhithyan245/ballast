@@ -1,0 +1,387 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "23412195",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:13:49.217186+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "4b75af78e3d559a1",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: This study was designed to compare clinical effectiveness of operative with nonoperative treatment for displaced midshaft clavicular fractures (DMCF).\n\nMETHODS: We systematically searched electronic databases (MEDILINE, EMBASE, CLINICAL, OVID, BIOSIS and Cochrane registry of controlled clinical trials) to identify randomized controlled trials (RCTs) in which operative treatment was compared with nonoperative treatment for DMCF from 1980 to 2012. The methodologic quality of trials was assessed. Data from chosen studies were pooled with using of fixed-effects and random-effects models with mean differences and risk ratios for continuous and dichotomous variables, respectively.\n\nRESULTS: Four RCTs with a total of 321 patients were screened for the present study. Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001]. Subgroup analyses of complications revealed that significant differences were existed in the incidence of neurologic symptoms [95 % CI (0.20, 0.74), P = 0.004] and dissatisfaction with appearance [95 % CI (0.19, 0.65), P = 0.001]. Lack of consistent and standardized assessment data, insufficiency analysis that carried out showed improved functional outcomes (P < 0.05) in operative treatment.\n\"\"\"\n\nQuestion: Should displaced midshaft clavicular fractures be treated surgically?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\n    \"Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001].\",\n    \"Subgroup analyses of complications revealed that significant differences were existed in the incidence of neurologic symptoms [95 % CI (0.20, 0.74), P = 0.004] and dissatisfaction with appearance [95 % CI (0.19, 0.65), P = 0.001].\"\n  ]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 10.563,
+ "meta": {
+  "session_id": "03a07923-2673-4dce-ad12-8afdf10073ba",
+  "credits": 0.074794,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 85,\n  \"quotes\": [\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "    \"Results showed that the operative treatment was superior"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " to the nonoperative treatment regarding the rate of non"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "union [95 % confidence interval (CI) ("
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0.05, 0.43), P"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " = 0.0004], malunion ["
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "95 % CI (0.06, 0"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".34), P < 0.00001"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "] and overall complication [95 % CI (0"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".43-0.76"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "), P = 0.0001].\",\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "    \"Subgroup analyses of complications revealed that significant"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " differences"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " were"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " existed in the incidence of neurologic symptoms [95 % CI"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " (0.20, 0.74),"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " P = 0.004] and dissatisfaction with"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " appearance [95 % CI (0.19,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 0.65), P = 0."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "001].\"\n  ]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "contextUsagePercentage": 7.25487756729126,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "contextUsagePercentage": 7.25487756729126,
+     "meteringUsage": [
+      {
+       "value": 0.07479440464344943,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 8248,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "03a07923-2673-4dce-ad12-8afdf10073ba",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\n    \"Results showed that the operative treatment was superior to the nonoperative treatment regarding the rate of nonunion [95 % confidence interval (CI) (0.05, 0.43), P = 0.0004], malunion [95 % CI (0.06, 0.34), P < 0.00001] and overall complication [95 % CI (0.43-0.76), P = 0.0001].\",\n    \"Subgroup analyses of complications revealed that significant differences were existed in the incidence of neurologic symptoms [95 % CI (0.20, 0.74), P = 0.004] and dissatisfaction with appearance [95 % CI (0.19, 0.65), P = 0.001].\"\n  ]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

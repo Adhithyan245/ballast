@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "22825590",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:51:18.538857+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "609081eca2888102",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are behavioural risk factors to be blamed for the conversion from optimal blood pressure to hypertensive status in Black South Africans?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": 109,
+ "output_tokens": 13,
+ "latency_s": 0.532,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+       "thoughtSignature": "EmAKXgFpFH0TrQqmPcA+179XsZ6e0SVJYYm/vkHEJKUTYL/7SE3Rdbb/qz5UUcLr1ZUg+Z0wTGxh3AmF6lk+lwci4i7PtuX5UuMuDH/aIItj2bBVSVJJGu0L6IN9j5uG/Po="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 109,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 122,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 109
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "ZR_laoeBHuuSytMPz4rugAQ"
+ }
+}

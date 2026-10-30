@@ -1,0 +1,127 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "20156655",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:54:15.096693+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "0255d8bea1c00b4d",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Scrotal approach to both palpable and impalpable undescended testes: should it become our first choice?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.078,
+ "meta": {
+  "session_id": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+  "credits": 0.069306,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+     "contextUsagePercentage": 6.916463375091553,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+     "contextUsagePercentage": 6.916463375091553,
+     "meteringUsage": [
+      {
+       "value": 0.06930628524046435,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1954,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "f5c3adfc-e73d-45b3-94fb-ef6bcd416163",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

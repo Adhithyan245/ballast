@@ -1,0 +1,381 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "24666444",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:58:56.404060+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "b7cafb2388ad5812",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there any evidence of a \"July effect\" in patients undergoing major cancer surgery?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 14.39,
+ "meta": {
+  "session_id": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+  "credits": 0.212072,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "function"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "_c"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "alls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "contextUsagePercentage": 6.936584949493408,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_lt2bD2qVt1XSC6iBRyLxam",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "July effect cancer surgery evidence research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_lt2bD2qVt1XSC6iBRyLxam",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "July effect cancer surgery evidence research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "contextUsagePercentage": 7.026219367980957,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_P57HsGYbHJwW9DIfG9AsvK",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "July effect cancer surgery biomedical research evidence",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_P57HsGYbHJwW9DIfG9AsvK",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "July effect cancer surgery biomedical research evidence",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "contextUsagePercentage": 7.074999809265137,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "contextUsagePercentage": 7.074999809265137,
+     "meteringUsage": [
+      {
+       "value": 0.06995501824212273,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.0712261393034826,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.0708912935323383,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 11975,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "713e4703-9455-4ba1-989b-fbf944c9ee4f",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

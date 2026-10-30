@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "27288618",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:47:26.313205+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "b19c32e411885099",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is inhaled prophylactic heparin useful for prevention and Management of Pneumonia in ventilated ICU patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": 172,
+ "output_tokens": 187,
+ "latency_s": 0.703,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "633",
+   "x-ratelimit-remaining-tokens": "7565",
+   "x-ratelimit-reset-requests": "8h48m28.8s",
+   "x-ratelimit-reset-tokens": "3.262s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-a4e4adae-c934-4e38-a2cc-92b4aba14ebc",
+  "object": "chat.completion",
+  "created": 1793400445,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 65}",
+     "reasoning": "We need to answer whether inhaled prophylactic heparin is useful for prevention and management of pneumonia in ventilated ICU patients. We need to answer yes/no/maybe with confidence. We need to base on evidence.\n\nWe know inhaled heparin has been studied for preventing ventilator-associated pneumonia (VAP) due to anti-inflammatory and anti-microbial effects. Some RCTs: Henderson et al., 2009? Inhaled heparin reduces pulmonary coagulopathy, may reduce VAP. But evidence is mixed. A 2017 Cochrane review on nebulized heparin for VAP concluded insufficient evidence. Some meta-analyses suggest possible reduction in VAP incidence but not mortality. So answer maybe.\n\nThus likely answer \"maybe\" with moderate confidence ~65.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.366628059,
+   "prompt_tokens": 172,
+   "prompt_time": 0.054838517,
+   "completion_tokens": 187,
+   "completion_time": 0.38932378,
+   "total_tokens": 359,
+   "total_time": 0.444162297,
+   "completion_tokens_details": {
+    "reasoning_tokens": 166
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_b9a23305b9",
+  "x_groq": {
+   "id": "req_01m67fy62ve1z9fz8yy053gjn1",
+   "seed": 350311890
+  },
+  "service_tier": "on_demand"
+ }
+}

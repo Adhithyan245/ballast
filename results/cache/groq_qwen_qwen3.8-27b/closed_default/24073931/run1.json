@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "24073931",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:36:00.885538+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "90a7ea989ec8c585",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is the covering of the resection margin after distal pancreatectomy advantageous?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": 115,
+ "output_tokens": 14,
+ "latency_s": 0.078,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "738",
+   "x-ratelimit-remaining-tokens": "7871",
+   "x-ratelimit-reset-requests": "6h17m16.8s",
+   "x-ratelimit-reset-tokens": "967ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-115ea5f1-a52e-48a4-ae19-c8b5be71955c",
+  "object": "chat.completion",
+  "created": 1793399760,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 75}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.004075044,
+   "prompt_tokens": 115,
+   "prompt_time": 0.009640771,
+   "completion_tokens": 14,
+   "completion_time": 0.028016058,
+   "total_tokens": 129,
+   "total_time": 0.037656829
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m67f99abe47t30g5jenkz44q",
+   "seed": 462597217
+  },
+  "service_tier": "on_demand"
+ }
+}

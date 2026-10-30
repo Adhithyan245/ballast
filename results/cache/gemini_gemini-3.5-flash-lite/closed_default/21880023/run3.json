@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "21880023",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:47:16.293748+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "9f5d1a59b86cf0f3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does exercise during pregnancy prevent postnatal depression?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"maybe\", \"confidence\": 75}\n```",
+ "input_tokens": 95,
+ "output_tokens": 18,
+ "latency_s": 0.641,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"maybe\", \"confidence\": 75}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TzdW4UEPK4RR8ydb7LJbOInmwjJcU7dVW4xp+Dms4voSjcWitFaoZyZuJshINRxvxRB/KMy4Kb2EVeohZmqRX93eKauvskIesMz5QjFTRAmZLANmvfiFcCmg="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 95,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 113,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 95
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cx7lauO2DP6eo_UP2NOJuAQ"
+ }
+}

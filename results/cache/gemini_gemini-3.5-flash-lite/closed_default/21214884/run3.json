@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "21214884",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:44:32.846974+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4d482e8870f1fc49",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can 'high-risk' human papillomaviruses (HPVs) be detected in human breast milk?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 109,
+ "output_tokens": 13,
+ "latency_s": 0.593,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+       "thoughtSignature": "EmAKXgFpFH0TU2L8hImVWx04QZ+/bINtFB8QwRtMBEMrpbh5gxW6lHRdfXIrmYM3sKHn/jhhFUX9Q1hPcyhgFZT6/FLF7RYVuNcfn1DmRPd/MvrxNtyYecruNDxAiID1O4g="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 109,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 122,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 109
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "zx3lapibM6D1ytMPxNG9mAw"
+ }
+}

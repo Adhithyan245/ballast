@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "9427037",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:52:01.953334+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "9673d9f9c573282d",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The most common primary brain tumors in children and adults are of astrocytic origin. Classic histologic grading schemes for astrocytomas have included evaluating the presence or absence of nuclear abnormalities, mitoses, vascular endothelial proliferation, and tumor necrosis.\n\nMATERIALS AND METHODS: We evaluated the vascular pattern of 17 astrocytoma surgical specimens (seven from children and 10 from adults), and four normal brains obtained at autopsy, utilizing antibody to glial fibrillary acidic protein (GFAP) and von Willebrand factor (vWF) utilizing confocal microscopy. A modified WHO classification was used.\n\nRESULTS: All tumor cases showed cells positive for GFAP. Control tissues showed a few, widely separated vessels. Pilocytic astrocytomas (four cases) showed lacy clusters of small-to-medium sized vessels, with intact vessel wall integrity. Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\n\"\"\"\n\nQuestion: Are endothelial cell patterns of astrocytomas indicative of grade?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 92,\n  \"quotes\": [\n    \"Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\"\n  ]\n}",
+ "input_tokens": 476,
+ "output_tokens": 350,
+ "latency_s": 1.25,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "593",
+   "x-ratelimit-remaining-tokens": "7132",
+   "x-ratelimit-reset-requests": "9h46m4.799s",
+   "x-ratelimit-reset-tokens": "6.51s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-efdc02f9-fed0-42ad-aeb3-7de68cf3e4ce",
+  "object": "chat.completion",
+  "created": 1793400721,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"yes\",\n  \"confidence\": 92,\n  \"quotes\": [\n    \"Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\"\n  ]\n}",
+     "reasoning": "We need to answer: Are endothelial cell patterns of astrocytomas indicative of grade? From abstract, they evaluated vascular pattern, and found that low-grade astrocytoma similar to control, while higher grades show increased vessel density, glomeruloid clusters, intimal hyperplasia, loss of vessel wall integrity, etc. So endothelial (vascular) patterns correlate with grade. So answer \"yes\". Confidence high, maybe 90+. Provide quotes supporting: \"Diffuse, low grade astrocytoma (three cases) showed a staining pattern similar to control tissue; intermediate grade (one case), anaplastic astrocytoma (three cases) and gliobastoma multiforme (six cases) showed an increased vessel density with multiple small vessels (glomeruloid clusters), some with prominent intimal hyperplasia, loss of vessel wall integrity, and with numerous vWF-positive single cells/microvessels within the tumor substance.\"\n\nAlso maybe first sentence about pilocytic astrocytomas showing lacy clusters etc. Provide up to 3 quotes.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243803609,
+   "prompt_tokens": 476,
+   "prompt_time": 0.019463022,
+   "completion_tokens": 350,
+   "completion_time": 0.731940973,
+   "total_tokens": 826,
+   "total_time": 0.751403995,
+   "completion_tokens_details": {
+    "reasoning_tokens": 219
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_86dc843b12",
+  "x_groq": {
+   "id": "req_01m67g6jxxeenbt4fv6cek4rqn",
+   "seed": 1286376232
+  },
+  "service_tier": "on_demand"
+ }
+}

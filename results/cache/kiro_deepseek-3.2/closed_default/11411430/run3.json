@@ -1,0 +1,272 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "11411430",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:46:31.784228+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4d405c5500308238",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 9.078,
+ "meta": {
+  "session_id": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+  "credits": 0.140133,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "contextUsagePercentage": 6.94268274307251,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_NPo5UFkcgLyk51iPWVRR7q",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "antral follicle count IVF predictor better than age FSH"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_NPo5UFkcgLyk51iPWVRR7q",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "antral follicle count IVF predictor better than age FSH"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "contextUsagePercentage": 6.992682933807373,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "contextUsagePercentage": 6.992682933807373,
+     "meteringUsage": [
+      {
+       "value": 0.07006436484245439,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07006830845771145,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 7076,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "b6ab843a-dacf-49f1-a120-255bb4cceab5",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

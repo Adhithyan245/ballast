@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "24622801",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T22:37:10.874399+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "8c76cdc1fd410501",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does implant coating with antibacterial-loaded hydrogel reduce bacterial colonization and biofilm formation in vitro?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 117,
+ "output_tokens": 14,
+ "latency_s": 0.094,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "710",
+   "x-ratelimit-remaining-tokens": "7864",
+   "x-ratelimit-reset-requests": "6h57m36s",
+   "x-ratelimit-reset-tokens": "1.02s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-727b55f7-425c-4e6b-ba29-dcf5c3a46b57",
+  "object": "chat.completion",
+  "created": 1793399830,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.010280712,
+   "prompt_tokens": 117,
+   "prompt_time": 0.010494858,
+   "completion_tokens": 14,
+   "completion_time": 0.027790571,
+   "total_tokens": 131,
+   "total_time": 0.038285429
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m67fbdnxehttrfcsp9z5nfd1",
+   "seed": 681140078
+  },
+  "service_tier": "on_demand"
+ }
+}

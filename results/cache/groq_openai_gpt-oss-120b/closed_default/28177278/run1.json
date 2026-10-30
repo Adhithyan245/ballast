@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "28177278",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:48:13.370186+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4c70dfe6f57d4ee5",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does spontaneous remission occur in polyarteritis nodosa?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": 160,
+ "output_tokens": 194,
+ "latency_s": 1.094,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "622",
+   "x-ratelimit-remaining-tokens": "7575",
+   "x-ratelimit-reset-requests": "9h4m19.2s",
+   "x-ratelimit-reset-tokens": "3.187s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-6931685f-f6c7-4e68-8d69-e626c4ff15c1",
+  "object": "chat.completion",
+  "created": 1793400492,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 65}",
+     "reasoning": "We need to answer whether spontaneous remission occurs in polyarteritis nodosa (PAN). I recall that PAN is a systemic necrotizing vasculitis of medium-sized arteries; treatment often involves steroids and cyclophosphamide. Spontaneous remission is rare but may occur? Literature suggests that PAN can have a relapsing-remitting course, but spontaneous remission without therapy is uncommon. However, some cases may go into remission spontaneously, especially limited cutaneous forms. I think the answer likely \"maybe\" because there is some evidence but not common. But the question: \"Does spontaneous remission occur in polyarteritis nodosa?\" The answer likely \"yes\" because occasional spontaneous remission has been reported, but not typical. The safer answer is \"maybe\". The confidence? I'd say 65% that \"maybe\" is correct. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.244082083,
+   "prompt_tokens": 160,
+   "prompt_time": 0.0064166,
+   "completion_tokens": 194,
+   "completion_time": 0.403868029,
+   "total_tokens": 354,
+   "total_time": 0.410284629,
+   "completion_tokens_details": {
+    "reasoning_tokens": 170
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m67fzkmbe4vv7rwhhknxffv2",
+   "seed": 83921401
+  },
+  "service_tier": "on_demand"
+ }
+}

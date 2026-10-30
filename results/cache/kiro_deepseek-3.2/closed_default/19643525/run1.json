@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "19643525",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:53:09.581104+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "3866cdd4924a883a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can vaginal pH be measured from the wet mount slide?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.266,
+ "meta": {
+  "session_id": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+  "credits": 0.069312,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"maybe\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 65\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "contextUsagePercentage": 6.912194728851318,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "contextUsagePercentage": 6.912194728851318,
+     "meteringUsage": [
+      {
+       "value": 0.06931199668325042,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1966,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "068cf210-2833-4ad8-8547-f18f71e03e4f",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

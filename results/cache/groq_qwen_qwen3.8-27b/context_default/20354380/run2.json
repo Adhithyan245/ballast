@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "20354380",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T23:07:55.405940+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "5a185bf6450c9c2c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: To assess gender differences among residents regarding their plans to have children during residency and determine the most influential reasons for these differences.\n\nMETHOD: Using the Health Belief Model as a framework, the authors created an instrument to survey 424 residents from 11 residency programs at three academic medical institutions about their intentions to have children during residency. The authors developed a scale to assess the perceived career threats of having children during residency, evaluated its psychometric properties, and calculated the effect of the mediators.\n\nRESULTS: The response rate was 77% (328/424). Forty-one percent of men versus 27% of women planned to have children during residency (P = .01). The instrument measured four career threats-extended training, loss of fellowship positions, pregnancy complications, and interference with career plans-on a five-point Likert scale. The scale had a Cronbach alpha of 0.84 and an eigenvalue of 2.2. Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers. After adjusting for age, institution, postgraduate year, and knowledge of parental leave policies, women were less likely to plan to have children during residency (odds ratio 0.46 [95% confidence interval 0.25-0.84]). In mediation analysis, threats to career explained 67% of the gender variance.\n\"\"\"\n\nQuestion: Do women residents delay childbearing due to perceived career threats?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers.\",\n\"In mediation analysis, threats to career explained 67% of the gender variance.\"\n]\n}",
+ "input_tokens": 475,
+ "output_tokens": 93,
+ "latency_s": 0.515,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "377",
+   "x-ratelimit-remaining-tokens": "6538",
+   "x-ratelimit-reset-requests": "14h57m7.2s",
+   "x-ratelimit-reset-tokens": "25.8s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-fb34ab4c-261d-4444-878f-872956214315",
+  "object": "chat.completion",
+  "created": 1793401674,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers.\",\n\"In mediation analysis, threats to career explained 67% of the gender variance.\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.142729933,
+   "prompt_tokens": 475,
+   "prompt_time": 0.042625827,
+   "completion_tokens": 93,
+   "completion_time": 0.189506206,
+   "total_tokens": 568,
+   "total_time": 0.232132033
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m67h3ph2esvbzt1sah5mever",
+   "seed": 859444484
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "22491528",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:48:56.548553+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "87387adca9d448ab",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Combining process indicators to evaluate quality of care for surgical patients with colorectal cancer: are scores consistent with short-term outcome?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 111,
+ "output_tokens": 18,
+ "latency_s": 0.531,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TKkdkuXKgM2Y1dehNlOblDjaYxS49XVi6o9M+krOEqVEWB15KMmjQ8Jyvw5oQcoLXekd28i52wX/I0BkSVElx6+6a0KQeHrScgz2J7nvQeFD+PPmvggg54Sw="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 111,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 129,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 111
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "1x7lapbAIamH1sgPwLGxmAg"
+ }
+}

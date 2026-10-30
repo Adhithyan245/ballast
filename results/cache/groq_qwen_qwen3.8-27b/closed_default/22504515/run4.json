@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "22504515",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T22:33:51.341807+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "8bbcd15f7e1b7d57",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Endovenous laser ablation in the treatment of small saphenous varicose veins: does site of access influence early outcomes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 95}",
+ "input_tokens": 126,
+ "output_tokens": 14,
+ "latency_s": 0.563,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "790",
+   "x-ratelimit-remaining-tokens": "7618",
+   "x-ratelimit-reset-requests": "5h2m24s",
+   "x-ratelimit-reset-tokens": "2.865s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-3e5de404-d175-4d15-b7e6-894466614595",
+  "object": "chat.completion",
+  "created": 1793399630,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.433962651,
+   "prompt_tokens": 126,
+   "prompt_time": 0.01990051,
+   "completion_tokens": 14,
+   "completion_time": 0.064039725,
+   "total_tokens": 140,
+   "total_time": 0.083940235
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c14f15bfae",
+  "x_groq": {
+   "id": "req_01m67f5ac9e7sv5mtxtnke67kk",
+   "seed": 1538059215
+  },
+  "service_tier": "on_demand"
+ }
+}

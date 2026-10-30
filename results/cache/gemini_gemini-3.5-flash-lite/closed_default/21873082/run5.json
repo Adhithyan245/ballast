@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "21873082",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:47:05.601867+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "572aa6e73175ff7c",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is the h-index predictive of greater NIH funding success among academic radiologists?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 102,
+ "output_tokens": 13,
+ "latency_s": 18.297,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0TjJutLHzndt0e4L8U5SZUKaISGmreZbX37Iqz0Rl0Zy/1XW75AiS/k5ra4mXkBA5guPTMNE77+IIwSx5ONOzRYSi1xrtRe16dtMp45lMhF2wtDMaEkJKgZEI="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 102,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 115,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 102
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Vh7lao-XN9WRytMP8tnimQw"
+ }
+}

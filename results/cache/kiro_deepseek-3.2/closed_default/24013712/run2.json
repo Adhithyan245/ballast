@@ -1,0 +1,356 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "24013712",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:58:04.468440+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "20c825196bed90b7",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Preoperative platelet count in esophageal squamous cell carcinoma: is it a prognostic factor?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"yes\", \"confidence\": 80}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 10.453,
+ "meta": {
+  "session_id": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+  "credits": 0.21251,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "contextUsagePercentage": 6.937195301055908,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_9xu36GELBsm1l8G9kPHFDw",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "preoperative platelet count esophageal squamous cell carcinoma prognostic factor"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_9xu36GELBsm1l8G9kPHFDw",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "preoperative platelet count esophageal squamous cell carcinoma prognostic factor"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "contextUsagePercentage": 7.037805080413818,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_vSvj375Lb2rFOGKmzXGN2s",
+      "title": "Fetching web content",
+      "kind": "read",
+      "rawInput": {
+       "url": "https://pubmed.ncbi.nlm.nih.gov/",
+       "search_terms": "platelet count esophageal squamous cell carcinoma prognostic",
+       "mode": "selective"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_vSvj375Lb2rFOGKmzXGN2s",
+      "kind": "read",
+      "status": "failed",
+      "title": "web_fetch",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "url": "https://pubmed.ncbi.nlm.nih.gov/",
+       "search_terms": "platelet count esophageal squamous cell carcinoma prognostic",
+       "mode": "selective"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"yes\", \"confidence\": 80"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "contextUsagePercentage": 7.085975170135498,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "contextUsagePercentage": 7.085975170135498,
+     "meteringUsage": [
+      {
+       "value": 0.06999740298507465,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07151131343283583,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07100102487562189,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 8151,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "c5650ae1-b02c-4674-9abc-a7ce85fd7a14",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"yes\", \"confidence\": 80}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

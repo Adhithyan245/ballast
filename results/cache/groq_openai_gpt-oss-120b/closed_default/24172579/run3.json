@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "24172579",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:42:02.841089+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "859010050eb3b0a3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does sex influence the response to intravenous thrombolysis in ischemic stroke?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 164,
+ "output_tokens": 99,
+ "latency_s": 0.344,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "730",
+   "x-ratelimit-remaining-tokens": "7593",
+   "x-ratelimit-reset-requests": "6h28m48s",
+   "x-ratelimit-reset-tokens": "3.052s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-9842722e-0be7-49ed-98b6-df07b352dab9",
+  "object": "chat.completion",
+  "created": 1793400122,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer if sex influences response to IV thrombolysis in ischemic stroke. The literature: some studies show sex differences, but findings are mixed. Many meta-analyses suggest no major difference, but some indicate women may have slightly worse outcomes. Overall evidence is not definitive, so maybe. Provide confidence.\n\nThus answer \"maybe\" with moderate confidence, maybe 70."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083109523,
+   "prompt_tokens": 164,
+   "prompt_time": 0.006574486,
+   "completion_tokens": 99,
+   "completion_time": 0.207523225,
+   "total_tokens": 263,
+   "total_time": 0.214097711,
+   "completion_tokens_details": {
+    "reasoning_tokens": 78
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01m67fmaj2e04a4jnkbpz59cvb",
+   "seed": 470228131
+  },
+  "service_tier": "on_demand"
+ }
+}

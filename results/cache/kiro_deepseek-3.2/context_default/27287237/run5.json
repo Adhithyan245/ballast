@@ -1,0 +1,231 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "27287237",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:21:17.522537+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "629a0b5bb959ad73",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Little is known about the validity and reliability of expert assessments of the quality of antimicrobial prescribing, despite their importance in antimicrobial stewardship. We investigated how infectious disease doctors' assessments compared with a reference standard (modal expert opinion) and with the assessments of their colleagues.\n\nMETHODS: Twenty-four doctors specialized in infectious diseases or clinical microbiology (16 specialists and 8 residents) from five hospitals were asked to assess the appropriateness of antimicrobial agents prescribed for a broad spectrum of indications in 56 paper cases. They were instructed how to handle guideline applicability and deviations. We created a reference standard of antimicrobial appropriateness using the modal assessment of 16 specialists. We calculated criterion validity and interrater and intrarater overall and specific agreement with an index expert (senior infectious disease physician) and analysed the influence of doctor characteristics on validity.\n\nRESULTS: Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively. This did not differ by clinical specialty, hospital or years of experience, and residents had similar results. Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\n\"\"\"\n\nQuestion: Assessment of appropriate antimicrobial prescribing: do experts agree?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively.\", \"Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 13.515,
+ "meta": {
+  "session_id": "2f19c13a-ee53-4289-b102-f4417c963eda",
+  "credits": 0.07239,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 85,\n  \"quotes\": [\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Specialists agreed with the reference standard in 80"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "% of cases (range 75%-86%),"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " with a sensitivity and specificity of 75% and"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 84%, respectively.\", \"Specialists agreed with"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the index expert in 76% of cases and"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the index expert agreed with his previous assessments in"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 71% of cases.\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "contextUsagePercentage": 7.1329264640808105,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "contextUsagePercentage": 7.1329264640808105,
+     "meteringUsage": [
+      {
+       "value": 0.07238974129353234,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 11431,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "2f19c13a-ee53-4289-b102-f4417c963eda",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\"Specialists agreed with the reference standard in 80% of cases (range 75%-86%), with a sensitivity and specificity of 75% and 84%, respectively.\", \"Specialists agreed with the index expert in 76% of cases and the index expert agreed with his previous assessments in 71% of cases.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

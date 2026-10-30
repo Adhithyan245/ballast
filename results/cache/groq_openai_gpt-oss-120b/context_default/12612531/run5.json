@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "12612531",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:01:39.753379+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "62f60ef8eda136cd",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Primary eosinophilic esophagitis, a chronic inflammatory disorder of the esophagus, evokes recurrent dysphagia. Endoscopy is often unremarkable, and no consensus exists regarding management of resultant dysphagia. The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \"crêpe-paper\" mucosa is introduced.\n\nMETHODS: Five men underwent endoscopy because of dysphagia confirmed (clinically, endoscopically, and histologically) to be caused by primary eosinophilic esophagitis and were treated by bouginage.\n\nOBSERVATIONS: All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma. After the procedure, patients remained asymptomatic for 3 to 24 months.\n\"\"\"\n\nQuestion: Fragility of the esophageal mucosa: a pathognomonic endoscopic sign of primary eosinophilic esophagitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"cr\\u00eapes-paper\\\" mucosa is introduced.\", \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\"]}",
+ "input_tokens": 409,
+ "output_tokens": 236,
+ "latency_s": 0.969,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "533",
+   "x-ratelimit-remaining-tokens": "7209",
+   "x-ratelimit-reset-requests": "11h12m28.8s",
+   "x-ratelimit-reset-tokens": "5.932s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e5004b67-7b74-474a-976f-b77be6cfd535",
+  "object": "chat.completion",
+  "created": 1793401299,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"cr\\u00eapes-paper\\\" mucosa is introduced.\", \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\"]}",
+     "reasoning": "We need to answer whether fragility of the esophageal mucosa is a pathognomonic endoscopic sign of primary eosinophilic esophagitis. The abstract describes \"fragile esophageal mucosa\" possibly pathognomonic, term \"crêpe-paper\" mucosa introduced. So answer \"yes\". Confidence high, maybe 90. Provide quotes.\n\nSelect sentences: \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\" Also earlier: \"description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \"crêpe-paper\" mucosa is introduced.\" That line is in the background. Provide those as quotes.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.250945253,
+   "prompt_tokens": 409,
+   "prompt_time": 0.019278384,
+   "completion_tokens": 236,
+   "completion_time": 0.494358486,
+   "total_tokens": 645,
+   "total_time": 0.51363687,
+   "completion_tokens_details": {
+    "reasoning_tokens": 153
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_86dc843b12",
+  "x_groq": {
+   "id": "req_01m67gr7d5ehrv276bvfzzwbh3",
+   "seed": 1330431204
+  },
+  "service_tier": "on_demand"
+ }
+}

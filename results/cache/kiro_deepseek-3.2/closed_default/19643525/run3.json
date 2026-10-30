@@ -1,0 +1,355 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "19643525",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:53:40.996806+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "3866cdd4924a883a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can vaginal pH be measured from the wet mount slide?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"no\", \"confidence\": 85}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 19.344,
+ "meta": {
+  "session_id": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+  "credits": 0.212304,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "contextUsagePercentage": 6.95121955871582,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_DRH1r5paf2CjIyRsak2Ef4",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "vaginal pH measurement wet mount slide clinical laboratory",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_DRH1r5paf2CjIyRsak2Ef4",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "vaginal pH measurement wet mount slide clinical laboratory",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "contextUsagePercentage": 7.026219367980957,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_rcP9Osh7HuaiMGK77V6LeS",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "vaginal pH measured from wet mount slide clinical laboratory method"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_rcP9Osh7HuaiMGK77V6LeS",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "vaginal pH measured from wet mount slide clinical laboratory method"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": \"no\", \"confidence\": 85}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "contextUsagePercentage": 7.07621955871582,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "contextUsagePercentage": 7.07621955871582,
+     "meteringUsage": [
+      {
+       "value": 0.0705005008291874,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07089954228855722,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07090348590381426,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 16889,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "855cbd10-4186-4b6c-b9f4-3d1a9c436e95",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"no\", \"confidence\": 85}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

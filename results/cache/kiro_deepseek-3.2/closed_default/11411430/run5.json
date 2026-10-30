@@ -1,0 +1,394 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "11411430",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:48:09.667747+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4d405c5500308238",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Antral follicle assessment as a tool for predicting outcome in IVF--is it a better predictor than age and FSH?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 22.047,
+ "meta": {
+  "session_id": "dabd37a2-8a26-4873-be92-b257366fc595",
+  "credits": 0.212596,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "｜DSML｜"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "function"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "_c"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "alls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "contextUsagePercentage": 6.9603657722473145,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_0ee75Z53JV7Mjz9kRIZTEo",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "antral follicle count AFC IVF prediction age FSH comparison",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_0ee75Z53JV7Mjz9kRIZTEo",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "antral follicle count AFC IVF prediction age FSH comparison",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "contextUsagePercentage": 7.034756183624268,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_qInm407pzBuwPk8ZRL2Bhi",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "antral follicle count vs age FSH IVF outcome prediction"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_qInm407pzBuwPk8ZRL2Bhi",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "antral follicle count vs age FSH IVF outcome prediction"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "contextUsagePercentage": 7.0853657722473145,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "contextUsagePercentage": 7.0853657722473145,
+     "meteringUsage": [
+      {
+       "value": 0.070616135986733,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.0709848888888889,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07099492868988391,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 19899,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "dabd37a2-8a26-4873-be92-b257366fc595",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

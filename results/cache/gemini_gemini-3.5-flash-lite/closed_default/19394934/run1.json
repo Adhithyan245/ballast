@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "19394934",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T22:39:29.870180+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "d6eac0bbc8cd58e7",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Israeli hospital preparedness for terrorism-related multiple casualty incidents: can the surge capacity and injury severity distribution be better predicted?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 110,
+ "output_tokens": 18,
+ "latency_s": 0.985,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Tc8qGU4wNDleRw9xYbafIBURj0cvA5KUoIsC1la0NFvs2j12DFjhQLJmsRygifyR4ukiLSbhpdLdzUqkrgsFN1eiXbAgIczixna2bfaY/1yKyEfulp3U/UTg="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 110,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 128,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 110
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "oBzlapGrHKCNytMPha2HgA4"
+ }
+}

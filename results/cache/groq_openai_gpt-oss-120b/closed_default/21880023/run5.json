@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "21880023",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:36:29.602892+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "9f5d1a59b86cf0f3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does exercise during pregnancy prevent postnatal depression?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 159,
+ "output_tokens": 140,
+ "latency_s": 0.609,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "814",
+   "x-ratelimit-remaining-tokens": "7657",
+   "x-ratelimit-reset-requests": "4h27m50.4s",
+   "x-ratelimit-reset-tokens": "2.572s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-0cab9579-313d-4e88-be16-cbcc4901ff13",
+  "object": "chat.completion",
+  "created": 1793399788,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer biomedical research question: Does exercise during pregnancy prevent postnatal depression? Need to answer yes/no/maybe and give confidence. Need to consider evidence. Systematic reviews/meta-analyses show mixed evidence but generally suggests exercise during pregnancy can reduce risk of postpartum depression. Some RCTs show benefit. However evidence not unequivocal; many guidelines suggest exercise may help. So answer maybe? But the question: \"Does exercise during pregnancy prevent postnatal depression?\" The best answer: maybe, with moderate confidence. So output JSON with answer maybe, confidence maybe 70."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147715293,
+   "prompt_tokens": 159,
+   "prompt_time": 0.006830805,
+   "completion_tokens": 140,
+   "completion_time": 0.293340953,
+   "total_tokens": 299,
+   "total_time": 0.300171758,
+   "completion_tokens_details": {
+    "reasoning_tokens": 119
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4200b3f836",
+  "x_groq": {
+   "id": "req_01m67fa4vye1wvb2rejtmtgt9v",
+   "seed": 1221696368
+  },
+  "service_tier": "on_demand"
+ }
+}

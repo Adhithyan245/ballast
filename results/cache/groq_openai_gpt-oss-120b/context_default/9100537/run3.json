@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "9100537",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:50:37.959217+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "f914f6d0c73e336c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Cytologic criteria reported to be helpful in the distinction of proliferative breast disease without atypia (PBD) from nonproliferative breast disease (NPBD) have not been rigorously tested.\n\nMETHODS: Fifty-one air-dried, Diff-Quik-stained fine-needle aspirates (FNA) of palpable breast lesions with biopsy-proven diagnoses of NPBD (34 cases) or PBD (17 cases) were reviewed. The smears were evaluated for the cellularity, size, and architectural arrangement of the epithelial groups; the presence of single epithelial cells and myoepithelial cells; and nuclear characteristics.\n\nRESULTS: The only cytologic feature found to be significantly different between PBD and NPBD was a swirling pattern of epithelial cells. A swirling pattern was noted in 13 of 17 PBD cases (76%) and 12 of 34 NPBD cases (35%) (P = 0.008).\n\"\"\"\n\nQuestion: Can nonproliferative breast disease and proliferative breast disease without atypia be distinguished by fine-needle aspiration cytology?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"The only cytologic feature found to be significantly different between PBD and NPBD was a swirling pattern of epithelial cells.\",\n    \"A swirling pattern was noted in 13 of 17 PBD cases (76%) and 12 of 34 NPBD cases (35%) (P = 0.008).\"\n  ]\n}",
+ "input_tokens": 410,
+ "output_tokens": 236,
+ "latency_s": 0.844,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "600",
+   "x-ratelimit-remaining-tokens": "6722",
+   "x-ratelimit-reset-requests": "9h36m0s",
+   "x-ratelimit-reset-tokens": "9.585s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-7edc4ea7-1f6b-4453-bf14-4b2885e4338c",
+  "object": "chat.completion",
+  "created": 1793400637,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"The only cytologic feature found to be significantly different between PBD and NPBD was a swirling pattern of epithelial cells.\",\n    \"A swirling pattern was noted in 13 of 17 PBD cases (76%) and 12 of 34 NPBD cases (35%) (P = 0.008).\"\n  ]\n}",
+     "reasoning": "We need to answer based on abstract. The abstract says: \"The only cytologic feature found to be significantly different between PBD and NPBD was a swirling pattern of epithelial cells.\" So there is a distinguishing feature. Thus answer \"yes\". Confidence high maybe 95. Provide quotes: \"The only cytologic feature found to be significantly different between PBD and NPBD was a swirling pattern of epithelial cells.\" Also \"A swirling pattern was noted in 13 of 17 PBD cases (76%) and 12 of 34 NPBD cases (35%) (P = 0.008).\" Provide one to three sentences. We'll include those two sentences. JSON format."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147353241,
+   "prompt_tokens": 410,
+   "prompt_time": 0.016961209,
+   "completion_tokens": 236,
+   "completion_time": 0.491037047,
+   "total_tokens": 646,
+   "total_time": 0.507998256,
+   "completion_tokens_details": {
+    "reasoning_tokens": 138
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fe269835c7",
+  "x_groq": {
+   "id": "req_01m67g413re8gs6fmeytjych3t",
+   "seed": 1087784205
+  },
+  "service_tier": "on_demand"
+ }
+}

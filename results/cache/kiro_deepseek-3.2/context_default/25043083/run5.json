@@ -1,0 +1,439 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "25043083",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:16:51.942154+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "66362963bb250917",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Recently, increasing number of literature has identified the posterior tibial slope (PTS) as one of the risk factors of primary anterior cruciate ligament (ACL) injury. However, few studies concerning the association between failure of ACL reconstruction (ACLR) and PTS have been published. The objective of this study was to explore the association between the failure of ACLR and PTS at a minimum of two years follow-up.\n\nMETHODS: Two hundred and thirty eight eligible patients from June 2009 to October 2010 were identified from our database. A total of 20 failure cases of ACLR and 20 randomly selected controls were included in this retrospective study. The demographic data and the results of manual maximum side-to-side difference with KT-1000 arthrometer at 30° of knee flexion and pivot-shift test before the ACLR and at the final follow-up were collected. The medial and lateral PTSs were measured using the magnetic resonance imaging (MRI) scan, based on Hudek's measurement. A comparison of PTS between the two groups was performed.\n\nRESULTS: The overall failure rate of the present study was 8.4%. Of the 40 participants, the mean medial PTS was 4.1° ± 3.2° and the mean lateral PTS was 4.6° ± 2.6°. The medial PTS of the ACLR failure group was significantly steeper than the control group (3.5° ± 2.5° vs. 6.1° ± 2.1°, P = 0.000). Similarly, the lateral PTS of the ACLR failure group was significantly steeper than the control group (2.9° ± 2.1° vs. 5.5° ± 3.0°, P = 0.006). For medial PTS ≥ 5°, the odds ratio of ACLR failure was 6.8 (P = 0.007); for lateral PTS ≥5°, the odds ratio of ACLR failure was 10.8 (P = 0.000).\n\"\"\"\n\nQuestion: Are failures of anterior cruciate ligament reconstruction associated with steep posterior tibial slopes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\"The medial PTS of the ACLR failure group was significantly steeper than the control group (3.5° ± 2.5° vs. 6.1° ± 2.1°, P = 0.000).\", \"Similarly, the lateral PTS of the ACLR failure group was significantly steeper than the control group (2.9° ± 2.1° vs. 5.5° ± 3.0°, P = 0.006).\", \"For medial PTS ≥ 5°, the odds ratio of ACLR failure was 6.8 (P = 0.007); for lateral PTS ≥5°, the odds ratio of ACLR failure was 10.8 (P = 0.000).\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 14.359,
+ "meta": {
+  "session_id": "3a2d88d5-464e-4870-92af-f5d510e48672",
+  "credits": 0.075282,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "yes\",\n  \"confidence\": 95,\n "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"quotes\": [\"The medial PTS of"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the ACLR failure group was significantly steeper than"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the control group (3.5° ± "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "2.5° vs. 6.1"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "° ± 2.1°, P = "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0.000).\", \"Similarly, the lateral"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " PTS of the ACLR failure group was significantly"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " steeper than the control group (2.9"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "° ± 2.1° vs. "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "5.5° ± 3.0°,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " P = 0.006).\", \"For"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " medial PTS ≥ 5°, the odds ratio"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " of ACLR failure was 6.8 ("
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "P"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " ="
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "007"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "); for lateral P"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "TS ≥5°, the odds ratio of ACLR"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " failure was 10.8 (P = "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0.000).\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "contextUsagePercentage": 7.308536529541016,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "contextUsagePercentage": 7.308536529541016,
+     "meteringUsage": [
+      {
+       "value": 0.07528248424543948,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 12502,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "3a2d88d5-464e-4870-92af-f5d510e48672",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\"The medial PTS of the ACLR failure group was significantly steeper than the control group (3.5° ± 2.5° vs. 6.1° ± 2.1°, P = 0.000).\", \"Similarly, the lateral PTS of the ACLR failure group was significantly steeper than the control group (2.9° ± 2.1° vs. 5.5° ± 3.0°, P = 0.006).\", \"For medial PTS ≥ 5°, the odds ratio of ACLR failure was 6.8 (P = 0.007); for lateral PTS ≥5°, the odds ratio of ACLR failure was 10.8 (P = 0.000).\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

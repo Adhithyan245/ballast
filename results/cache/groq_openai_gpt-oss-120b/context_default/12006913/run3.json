@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "12006913",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:57:12.357930+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "a24ceb4b45aac070",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Studies on coronary risk factors in men and women are mainly based on mortality data and few compare results of both sexes with consistent study design and diagnostic criteria. This study assesses the major risk factors for coronary events in men and women from the Reykjavik Study.\n\nDESIGN: Within a prospective, population-based cohort study individuals without history of myocardial infarction were identified and the relative risk of baseline variables was assessed in relation to verified myocardial infarction or coronary death during follow-up.\n\nMETHODS: Of the 9681 women and 8888 men who attended risk assessment from 1967-1991, with follow-up period of up to 28 years, 706 women and 1700 men suffered a non-fatal myocardial infarction or coronary death.\n\nRESULTS: Serum cholesterol was a significant risk factor for both sexes, with hazard ratios (HR) decreasing with age. Systolic blood pressure was a stronger risk factor for women as was ECG-confirmed left ventricular hypertrophy (women HR 2.89, 95% confidence interval [CI] 1.67-5.01; men HR 1.11 [CI 0.86-1.43]). Fasting blood glucose>or =6.7 mmol/L identified significantly higher risk for women (HR 2.65) than men (HR 2.08) as did self-reported diabetes. Triglyceride risk was significantly higher for women and decreased significantly with age. Smoking increased risk two- to five-fold, increasing with dose, for women, which was significantly higher than the doubling in risk for men.\n\"\"\"\n\nQuestion: Do lipids, blood pressure, diabetes, and smoking confer equal risk of myocardial infarction in women as in men?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Systolic blood pressure was a stronger risk factor for women as was ECG-confirmed left ventricular hypertrophy (women HR 2.89, 95% confidence interval [CI] 1.67-5.01; men HR 1.11 [CI 0.86-1.43]).\",\n    \"Fasting blood glucose>or =6.7 mmol/L identified significantly higher risk for women (HR 2.65) than men (HR 2.08) as did self-reported diabetes.\",\n    \"Smoking increased risk two- to five-fold, increasing with dose, for women, which was significantly higher than the doubling in risk for men.\"\n  ]\n}",
+ "input_tokens": 537,
+ "output_tokens": 650,
+ "latency_s": 1.578,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "560",
+   "x-ratelimit-remaining-tokens": "6962",
+   "x-ratelimit-reset-requests": "10h33m36s",
+   "x-ratelimit-reset-tokens": "7.785s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-17264536-5518-4070-b6a9-88becb0c008c",
+  "object": "chat.completion",
+  "created": 1793401031,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Systolic blood pressure was a stronger risk factor for women as was ECG-confirmed left ventricular hypertrophy (women HR 2.89, 95% confidence interval [CI] 1.67-5.01; men HR 1.11 [CI 0.86-1.43]).\",\n    \"Fasting blood glucose>or =6.7 mmol/L identified significantly higher risk for women (HR 2.65) than men (HR 2.08) as did self-reported diabetes.\",\n    \"Smoking increased risk two- to five-fold, increasing with dose, for women, which was significantly higher than the doubling in risk for men.\"\n  ]\n}",
+     "reasoning": "We need to answer: Do lipids, blood pressure, diabetes, and smoking confer equal risk of myocardial infarction in women as in men? From abstract:\n\n- Serum cholesterol: significant risk factor for both sexes, HR decreasing with age. Not stated equal; just significant for both. No mention of difference; maybe similar? But could be not equal.\n\n- Systolic blood pressure: stronger risk factor for women. So not equal.\n\n- ECG LVH: HR 2.89 women vs 1.11 men => not equal.\n\n- Fasting glucose >=6.7 mmol/L: higher risk for women (HR 2.65) than men (HR 2.08). So not equal.\n\n- Self-reported diabetes similarly higher? Not specified numbers but says identified significantly higher risk for women than men.\n\n- Triglyceride risk higher for women.\n\n- Smoking: increased risk two- to five-fold for women, significantly higher than doubling for men. So not equal.\n\nThus answer \"no\". Confidence high, maybe 95.\n\nWe need quotes: we need 1-3 sentences that support answer. Choose sentences that state differences: \"Systolic blood pressure was a stronger risk factor for women...\", \"Fasting blood glucose>or =6.7 mmol/L identified significantly higher risk for women (HR 2.65) than men (HR 2.08)...\", \"Smoking increased risk two- to five-fold, increasing with dose, for women, which was significantly higher than the doubling in risk for men.\"\n\nWe must copy exactly as appears in abstract. Let's verify exact wording:\n\nFrom abstract:\n- \"Systolic blood pressure was a stronger risk factor for women as was ECG-confirmed left ventricular hypertrophy (women HR 2.89, 95% confidence interval [CI] 1.67-5.01; men HR 1.11 [CI 0.86-1.43]).\"\n- \"Fasting blood glucose>or =6.7 mmol/L identified significantly higher risk for women (HR 2.65) than men (HR 2.08) as did self-reported diabetes.\"\n- \"Smoking increased risk two- to five-fold, increasing with dose, for women, which was significantly higher than the doubling in risk for men.\"\n\nWe can include these three.\n\nNow produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.084609703,
+   "prompt_tokens": 537,
+   "prompt_time": 0.020746999,
+   "completion_tokens": 650,
+   "completion_time": 1.344765123,
+   "total_tokens": 1187,
+   "total_time": 1.365512122,
+   "completion_tokens_details": {
+    "reasoning_tokens": 479
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e1a78f200e",
+  "x_groq": {
+   "id": "req_01m67gg1k8eqz93dqh6y04v8wa",
+   "seed": 60368814
+  },
+  "service_tier": "on_demand"
+ }
+}

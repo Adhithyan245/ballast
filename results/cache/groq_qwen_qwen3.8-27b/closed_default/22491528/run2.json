@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "22491528",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:33:33.433835+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "87387adca9d448ab",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Combining process indicators to evaluate quality of care for surgical patients with colorectal cancer: are scores consistent with short-term outcome?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 15}",
+ "input_tokens": 123,
+ "output_tokens": 14,
+ "latency_s": 0.171,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "797",
+   "x-ratelimit-remaining-tokens": "7863",
+   "x-ratelimit-reset-requests": "4h52m19.2s",
+   "x-ratelimit-reset-tokens": "1.027s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-1e6367ce-5cf2-4d32-acf3-29a77f732b62",
+  "object": "chat.completion",
+  "created": 1793399612,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 15}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096673216,
+   "prompt_tokens": 123,
+   "prompt_time": 0.008164053,
+   "completion_tokens": 14,
+   "completion_time": 0.030472236,
+   "total_tokens": 137,
+   "total_time": 0.038636289
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fea14bdc83",
+  "x_groq": {
+   "id": "req_01m67f4s8aeczahqs0xhe9f6nf",
+   "seed": 1470167555
+  },
+  "service_tier": "on_demand"
+ }
+}

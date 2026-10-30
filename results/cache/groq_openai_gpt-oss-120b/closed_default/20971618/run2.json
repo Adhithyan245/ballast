@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "20971618",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:33:59.817271+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "8f1ed92620ff593f",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are lifetime prevalence of impetigo, molluscum and herpes infection really increased in children having atopic dermatitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 92}",
+ "input_tokens": 172,
+ "output_tokens": 135,
+ "latency_s": 0.625,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "862",
+   "x-ratelimit-remaining-tokens": "7661",
+   "x-ratelimit-reset-requests": "3h18m43.2s",
+   "x-ratelimit-reset-tokens": "2.542s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-f3eb7a32-7f5e-4858-9821-155485c682a4",
+  "object": "chat.completion",
+  "created": 1793399639,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92}",
+     "reasoning": "The user asks a biomedical research question: \"Are lifetime prevalence of impetigo, molluscum and herpes infection really increased in children having atopic dermatitis?\" Need answer yes, no, or maybe, plus confidence.\n\nWe need to decide based on knowledge. Atopic dermatitis (AD) is associated with increased risk of skin infections: impetigo (bacterial), molluscum contagiosum (viral), herpes simplex virus (eczema herpeticum). Many studies show increased prevalence. So answer \"yes\". Confidence maybe 90.\n\nReturn JSON only."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243506357,
+   "prompt_tokens": 172,
+   "prompt_time": 0.006989793,
+   "completion_tokens": 135,
+   "completion_time": 0.277708027,
+   "total_tokens": 307,
+   "total_time": 0.28469782,
+   "completion_tokens_details": {
+    "reasoning_tokens": 114
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_69334c0be3",
+  "x_groq": {
+   "id": "req_01m67f5jk6e86srsjj2d46vp2x",
+   "seed": 2026185580
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "19504993",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T23:05:54.067684+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "0fc9aff6b7133ed3",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\n\nOBJECTIVES: To assess the morbidity and mortality in the treatment of Fournier's gangrene in our experience.\n\nMETHODS: The medical records of 14 patients with Fournier's gangrene who presented at the University Hospital Center \"Mother Teresa\" from January 1997 to December 2006 were reviewed retrospectively to analyze the outcome and identify the risk factor and prognostic indicators of mortality.\n\nRESULTS: Of the 14 patients, 5 died and 9 survived. Mean age was 54 years (range from 41-61): it was 53 years in the group of survivors and 62 years in deceased group. There was a significant difference in leukocyte count between patients who survived (range 4900-17000/mm) and those died (range 20.300-31000/mm3). Mean hospital stay was about 19 days (range 2-57 days).\n\"\"\"\n\nQuestion: It's Fournier's gangrene still dangerous?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\",\n\"Of the 14 patients, 5 died and 9 survived.\"\n]\n}",
+ "input_tokens": 398,
+ "output_tokens": 75,
+ "latency_s": 0.297,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "395",
+   "x-ratelimit-remaining-tokens": "6461",
+   "x-ratelimit-reset-requests": "14h31m12s",
+   "x-ratelimit-reset-tokens": "24.479s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-3f91adaa-2856-4aa1-a08f-a24609cce473",
+  "object": "chat.completion",
+  "created": 1793401553,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\",\n\"Of the 14 patients, 5 died and 9 survived.\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.004050397,
+   "prompt_tokens": 398,
+   "prompt_time": 0.032897496,
+   "completion_tokens": 75,
+   "completion_time": 0.159618415,
+   "total_tokens": 473,
+   "total_time": 0.192515911
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m67h009de2btpjnga6bv7cvy",
+   "seed": 715012424
+  },
+  "service_tier": "on_demand"
+ }
+}

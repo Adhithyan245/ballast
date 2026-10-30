@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "19615731",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:40:29.836643+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "3086f08d5ef8f0a3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does higher body mass index contribute to worse asthma control in an urban population?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 102,
+ "output_tokens": 13,
+ "latency_s": 0.985,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+       "thoughtSignature": "EmAKXgFpFH0TV5VgbZwmqEpJ4nUNzPSjaPwIMtcmPS6O7jTc/BT5mjCnd0bvGik6LO6BE7VqZf6qlTsxa9cgcvicG7P8HQkUnMOmH+8H0sV3R8DRfRzRGGRz9LHGkVLSP/M="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 102,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 115,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 102
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "3BzlarjkKoD-ytMPornJ6AM"
+ }
+}

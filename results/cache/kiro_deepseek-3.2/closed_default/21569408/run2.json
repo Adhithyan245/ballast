@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "21569408",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T22:54:44.888372+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "5de95acd72d4c487",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does context matter for the relationship between deprivation and all-cause mortality?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 3.875,
+ "meta": {
+  "session_id": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+  "credits": 0.069306,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 85\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "contextUsagePercentage": 6.911585330963135,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "contextUsagePercentage": 6.911585330963135,
+     "meteringUsage": [
+      {
+       "value": 0.06930590049751245,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1927,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "f0e5bf00-1b7e-40c6-8448-349e7a473547",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

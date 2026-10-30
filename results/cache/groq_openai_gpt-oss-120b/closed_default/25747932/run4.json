@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "25747932",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T22:45:19.061093+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "e989697494597d45",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Living in an urban environment and non-communicable disease risk in Thailand: Does timing matter?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 169,
+ "output_tokens": 102,
+ "latency_s": 0.625,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "669",
+   "x-ratelimit-remaining-tokens": "7570",
+   "x-ratelimit-reset-requests": "7h56m38.4s",
+   "x-ratelimit-reset-tokens": "3.225s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-fe6f7161-a99e-4651-a406-f1ea8c2a3cea",
+  "object": "chat.completion",
+  "created": 1793400318,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "The user asks: \"Living in an urban environment and non-communicable disease risk in Thailand: Does timing matter?\" They want answer yes, no, or maybe, with confidence. Need to interpret question: likely about whether timing of urban exposure matters for NCD risk. Probably uncertain, maybe \"maybe\". Provide confidence. I'd choose maybe with moderate confidence, say 70."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243768869,
+   "prompt_tokens": 169,
+   "prompt_time": 0.010438424,
+   "completion_tokens": 102,
+   "completion_time": 0.212230057,
+   "total_tokens": 271,
+   "total_time": 0.222668481,
+   "completion_tokens_details": {
+    "reasoning_tokens": 78
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m67ft9yteg3t8a4y2ywbafep",
+   "seed": 1974328852
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "17403428",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:57:47.566283+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "b0ed85a3a5774a24",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: The purpose of this study was to determine whether there is an association between skewed X-inactivation and recurrent spontaneous abortion in a large, well-defined sample of women with recurrent loss.\n\nSTUDY DESIGN: X-chromosome inactivation patterns were compared in 5 groups of women. Group 1 (recurrent spontaneous abortion) consisted of 357 women with 2 or more spontaneous losses. In group 2 (infertility), there were 349 subjects from infertility practices recruited at the time of a positive serum beta-human chorionic gonadotropin. Group 3 (spontaneous abortion) women (n = 81) were recruited at the time of an ultrasound diagnosis of an embryonic demise or an anembryonic gestation. Groups 4 (primiparous) and 5 (multiparous) were healthy pregnant subjects previously enrolled in another study to determine the incidence and cause of pregnancy complications, such as preeclampsia and intrauterine growth restriction. The Primiparous group included 114 women in their first pregnancy, whereas the Multiparous group consisted of 79 women with 2 or more pregnancies but without pregnancy loss.\n\nRESULTS: The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01). The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05). When age and skewing of 90% or greater are compared, subjects with extreme skewing have a mean age of 2 years older than those without extreme skewing (P<.05).\n\"\"\"\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"yes\",\n\"confidence\": 90,\n\"quotes\": [\n\"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\",\n\"When age and skewing of 90% or greater are compared, subjects with extreme skewing have a mean age of 2 years older than those without extreme skewing (P<.05).\"\n]\n}",
+ "input_tokens": 558,
+ "output_tokens": 125,
+ "latency_s": 0.547,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "466",
+   "x-ratelimit-remaining-tokens": "6259",
+   "x-ratelimit-reset-requests": "12h48m57.6s",
+   "x-ratelimit-reset-tokens": "20.939s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-2a2c2209-7677-4348-ad89-8f2c47da2233",
+  "object": "chat.completion",
+  "created": 1793401066,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"yes\",\n\"confidence\": 90,\n\"quotes\": [\n\"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\",\n\"When age and skewing of 90% or greater are compared, subjects with extreme skewing have a mean age of 2 years older than those without extreme skewing (P<.05).\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.09625075,
+   "prompt_tokens": 558,
+   "prompt_time": 0.039506488,
+   "completion_tokens": 125,
+   "completion_time": 0.23778166,
+   "total_tokens": 683,
+   "total_time": 0.277288148
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fea14bdc83",
+  "x_groq": {
+   "id": "req_01m67gh4ztehjbkwa253ygeat7",
+   "seed": 1259067855
+  },
+  "service_tier": "on_demand"
+ }
+}

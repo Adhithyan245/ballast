@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "18570208",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:01:36.573686+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "863e869431d18c43",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To determine the association between fetal biometry in the first or early second trimester and severe macrosomia at delivery.\n\nMETHODS: This case-control study included 30 term severely macrosomic neonates; 90 appropriate-for-gestational age (AGA) neonates served as controls. All pregnancies underwent nuchal translucency (NT) screening at 11-14 weeks' gestation. Pregnancies were dated by accurate last menstrual period consistent with crown-rump length (CRL) measurements at the time of screening, early pregnancy CRL or date of fertilization. The association between birth weight and the difference between the measured and the expected CRL at the time of NT screening was analyzed.\n\nRESULTS: The difference between measured and expected CRL, expressed both in mm and in days of gestation, was statistically greater in the severely macrosomic neonates compared with controls (mean, 6.66 +/- 4.78 mm vs. 1.17 +/- 4.6 mm, P<0.0001 and 3 +/- 2.2 days vs. 0.5 +/- 2.3 days, P<0.0001, respectively). Furthermore, there were significant correlations between the extent of macrosomia and the discrepancy between expected and measured fetal size at the time of NT screening (r = 0.47, P<0.01 and r = 0.48, P<0.01, respectively).\n\"\"\"\n\nQuestion: Is severe macrosomia manifested at 11-14 weeks of gestation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"The difference between measured and expected CRL, expressed both in mm and in days of gestation, was statistically greater in the severely macrosomic neonates compared with controls (mean, 6.66 +/- 4.78 mm vs. 1.17 +/- 4.6 mm, P<0.0001 and 3 +/- 2.2 days vs. 0.5 +/- 2.3 days, P<0.0001, respectively).\",\n\"Furthermore, there were significant correlations between the extent of macrosomia and the discrepancy between expected and measured fetal size at the time of NT screening (r = 0.47, P<0.01 and r = 0.48, P<0.01, respectively).\"\n]\n}",
+ "input_tokens": 474,
+ "output_tokens": 193,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "434",
+   "x-ratelimit-remaining-tokens": "6344",
+   "x-ratelimit-reset-requests": "13h35m2.399s",
+   "x-ratelimit-reset-tokens": "49.199s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-b3494579-803d-45d4-a7e4-8aaaacc9393c",
+  "object": "chat.completion",
+  "created": 1793401295,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"The difference between measured and expected CRL, expressed both in mm and in days of gestation, was statistically greater in the severely macrosomic neonates compared with controls (mean, 6.66 +/- 4.78 mm vs. 1.17 +/- 4.6 mm, P<0.0001 and 3 +/- 2.2 days vs. 0.5 +/- 2.3 days, P<0.0001, respectively).\",\n\"Furthermore, there were significant correlations between the extent of macrosomia and the discrepancy between expected and measured fetal size at the time of NT screening (r = 0.47, P<0.01 and r = 0.48, P<0.01, respectively).\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096468505,
+   "prompt_tokens": 474,
+   "prompt_time": 0.038950861,
+   "completion_tokens": 193,
+   "completion_time": 0.393709729,
+   "total_tokens": 667,
+   "total_time": 0.43266059
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fea14bdc83",
+  "x_groq": {
+   "id": "req_01m67gr4eeejmvsswqdtfwf5na",
+   "seed": 88242982
+  },
+  "service_tier": "on_demand"
+ }
+}

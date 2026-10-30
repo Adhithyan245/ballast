@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "12970636",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T23:02:20.392894+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "a6c2680b41e9bed6",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To examine the impact of early discharge on newborn metabolic screening.\n\nSTUDY DESIGN: Metabolic screening results were obtained from the Alabama State Lab for all infants born at our hospital between 8/1/97, and 1/31/99, and were matched with an existing database of early discharge infants. An early newborn discharge was defined as a discharge between 24 and 47 hours of age. Metabolic screening tests included phenylketonuria (PKU), hypothyroidism, and congenital adrenal hyperplasia (CAH). Early discharge and traditional stay infants were compared to determine the percentage of newborns screened and the timing of the first adequate specimen.\n\nRESULTS: The state laboratory received specimens from 3860 infants; 1324 were on early discharge newborns and 2536 infants in the traditional stay group. At least one filter paper test (PKU, hypothyroidism, and CAH) was collected on 99.2% of early discharge infants and 96.0% of traditional stay infants (P<.0001). Early discharge infants had a higher rate of initial filter paper specimens being inadequate (22.9%) compared with traditional stay infants (14.3%, P<.0001) but had a higher rate of repeat specimens when the initial specimen was inadequate (85.0% early discharge vs 75.3% traditional stay, P=.002). The early discharge group was more likely to have an adequate specimen within the first 9 days of life (1001, 98.8% early discharge vs 2016, 96.7% traditional stay, P=.0005).\n\"\"\"\n\nQuestion: Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"Early discharge infants had a higher rate of initial filter paper specimens being inadequate (22.9%) compared with traditional stay infants (14.3%, P<.0001).\"]}",
+ "input_tokens": 540,
+ "output_tokens": 315,
+ "latency_s": 1.188,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "526",
+   "x-ratelimit-remaining-tokens": "6953",
+   "x-ratelimit-reset-requests": "11h22m33.6s",
+   "x-ratelimit-reset-tokens": "7.852s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c8143a63-1ce7-4214-95ac-89ba50c20d5d",
+  "object": "chat.completion",
+  "created": 1793401339,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"Early discharge infants had a higher rate of initial filter paper specimens being inadequate (22.9%) compared with traditional stay infants (14.3%, P<.0001).\"]}",
+     "reasoning": "We need to answer the question: \"Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?\" The abstract mentions early discharge (24-47 hrs) but does not mention nurse home visits. The question asks about early discharge with nurse home visits affecting adequacy. The abstract provides data about adequacy rates: early discharge infants had higher rate of inadequate initial specimens (22.9% vs 14.3%). It also had higher repeat specimen rates. So early discharge affects adequacy (worse initial adequacy). However the question includes \"with nurse home visits\". The abstract does not mention nurse home visits; thus we cannot determine effect of nurse home visits. So answer maybe? The abstract only addresses early discharge, not nurse home visits. Therefore we cannot answer definitively; answer \"maybe\". Provide confidence maybe 70? Provide quotes about adequacy differences. Provide quote: \"Early discharge infants had a higher rate of initial filter paper specimens being inadequate (22.9%) compared with traditional stay infants (14.3%, P<.0001)\". That supports effect of early discharge on adequacy, but not nurse home visits. So answer maybe.\n\nThus JSON: answer \"maybe\", confidence 70, quotes list one sentence.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243614214,
+   "prompt_tokens": 540,
+   "prompt_time": 0.023341671,
+   "completion_tokens": 315,
+   "completion_time": 0.651781593,
+   "total_tokens": 855,
+   "total_time": 0.675123264,
+   "completion_tokens_details": {
+    "reasoning_tokens": 253
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m67gsewke75atxgyh4cysnwf",
+   "seed": 2079468720
+  },
+  "service_tier": "on_demand"
+ }
+}

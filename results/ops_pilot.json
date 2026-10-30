@@ -116,5 +116,34 @@
   "active_minutes": 33.9,
   "paused_minutes": 2967.3,
   "calls_per_active_minute": 12.96
+ },
+ {
+  "model": "kiro:deepseek-3.2",
+  "conditions": [
+   "closed_default",
+   "context_default",
+   "closed_pushback",
+   "context_pushback"
+  ],
+  "extra_pushinit_calls": 0,
+  "planned_calls": 240,
+  "cached_responses": 240,
+  "not_yet_run_or_failed": 0,
+  "valid": 240,
+  "unparseable": 0,
+  "parse_failure_rate": 0.0,
+  "parse_modes": {
+   "strict": 216,
+   "embedded": 24
+  },
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "mean_tokens_per_call": 0.0,
+  "median_latency_s": 6.39,
+  "first_call_utc": "2026-10-30T22:43:31.525661+00:00",
+  "last_call_utc": "2026-10-30T23:27:56.078861+00:00",
+  "active_minutes": 44.4,
+  "paused_minutes": 0.0,
+  "calls_per_active_minute": 5.38
  }
 ]

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "22427593",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T22:37:23.454917+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "d38d9391fba17f74",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are normally sighted, visually impaired, and blind pedestrians accurate and reliable at making street crossing decisions?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 67}",
+ "input_tokens": 169,
+ "output_tokens": 115,
+ "latency_s": 0.594,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "799",
+   "x-ratelimit-remaining-tokens": "7622",
+   "x-ratelimit-reset-requests": "4h49m26.4s",
+   "x-ratelimit-reset-tokens": "2.835s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-26cc8229-66f2-4d6d-a7b7-3f2682666fb1",
+  "object": "chat.completion",
+  "created": 1793399842,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 67}",
+     "reasoning": "We need to answer the question: Are normally sighted, visually impaired, and blind pedestrians accurate and reliable at making street crossing decisions? Probably the literature suggests that sighted are generally accurate; visually impaired and blind rely on auditory cues and can be less accurate, but with training and aids they can be reliable. The question asks about accuracy and reliability of street crossing decisions across three groups. Likely answer: maybe, because data mixed. Provide confidence maybe 65."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243829492,
+   "prompt_tokens": 169,
+   "prompt_time": 0.006491858,
+   "completion_tokens": 115,
+   "completion_time": 0.238536839,
+   "total_tokens": 284,
+   "total_time": 0.245028697,
+   "completion_tokens_details": {
+    "reasoning_tokens": 94
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m67fbsf9eftrb1j2qx401djg",
+   "seed": 433312429
+  },
+  "service_tier": "on_demand"
+ }
+}

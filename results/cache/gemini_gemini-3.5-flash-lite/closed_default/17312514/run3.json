@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "17312514",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T22:32:28.939219+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "274d6b2dee24de0d",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does quilting suture prevent seroma in abdominoplasty?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+ "input_tokens": 97,
+ "output_tokens": 18,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TDSPL5QhmmZoNRk55FKrvBZ+pgcQipg3XzcuSTOH6+ONtjidCfrsTMg4EGHeMApY6H0OVjZUqXQSt+ivvhAold5Lg0EQCv1eqfKKJNAS71/wp8nlxylK3mEA="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 97,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 115,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 97
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "-xrlarP3N_DG0_gP0P6dkAk"
+ }
+}

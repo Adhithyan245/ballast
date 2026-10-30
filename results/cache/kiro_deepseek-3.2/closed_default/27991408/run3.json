@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "27991408",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T23:02:08.473802+00:00",
+ "sample": "pilot",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "3be8de3222bf3ab4",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do dermatomyositis and polymyositis affect similar thigh muscles?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.656,
+ "meta": {
+  "session_id": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+  "credits": 0.069251,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"yes\", \"confidence\": 85"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "contextUsagePercentage": 6.910975456237793,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "contextUsagePercentage": 6.910975456237793,
+     "meteringUsage": [
+      {
+       "value": 0.06925141956882255,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2106,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "db375fd8-c19e-4c5b-b3a1-77667a10b2a3",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}
