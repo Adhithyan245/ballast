@@ -10,12 +10,14 @@ from ..ratelimit import Limits
 from .base import CallResult, FatalError, Provider, ProviderUnavailable, QuotaExhausted, RetryableError
 from .claude_code import ClaudeCodeProvider
 from .gemini import GeminiProvider
+from .kiro import KiroProvider
 from .openai_compat import GroqProvider, MistralProvider, NvidiaProvider, VLLMProvider
 
 FAMILIES = {
     "claude": ClaudeCodeProvider,
     "gemini": GeminiProvider,
     "groq": GroqProvider,
+    "kiro": KiroProvider,
     "mistral": MistralProvider,
     "nvidia": NvidiaProvider,
     "vllm": VLLMProvider,

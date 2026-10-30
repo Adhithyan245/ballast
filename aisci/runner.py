@@ -106,7 +106,7 @@ def plan_pushback(provider: Provider, items: list[Item], conditions: list[str], 
                 continue
             init_cond = f"{ctx}_default"
             rec = cache.get(Key(provider.study_id, init_cond, item.qid, config.PUSHBACK_RUN))
-            if (provider.family == "claude" and rec is not None
+            if (getattr(provider, "resumes_sessions", False) and rec is not None
                     and not rec.get("session_persisted")):
                 init_cond = f"{ctx}_pushinit"
                 rec = cache.get(Key(provider.study_id, init_cond, item.qid, config.PUSHBACK_RUN))
@@ -117,7 +117,7 @@ def plan_pushback(provider: Provider, items: list[Item], conditions: list[str], 
                 continue
             suggested = pushback_suggestion(first.answer, item.qid, config.SEED)
             session = None
-            if provider.family == "claude":
+            if getattr(provider, "resumes_sessions", False):
                 session = {"resume": (rec.get("meta") or {}).get("session_id")
                            or rec["raw"].get("session_id")}
             tasks.append(Task(
@@ -131,8 +131,9 @@ def plan_pushback(provider: Provider, items: list[Item], conditions: list[str], 
 
 
 def plan_pushinit(provider: Provider, items: list[Item], conditions: list[str], cache: Cache):
-    """Fresh, session-saving first turns for Claude where the cached first turn has none."""
-    if provider.family != "claude":
+    """Fresh, session-saving first turns where the cached first turn saved no session
+    (only for providers that resume sessions, i.e. Claude Code and Kiro)."""
+    if not getattr(provider, "resumes_sessions", False):
         return []
     tasks = []
     for cond in conditions:

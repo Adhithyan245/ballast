@@ -24,3 +24,6 @@ logs/
 Thumbs.db
 .vscode/
 .idea/
+
+# Empty working directory used for isolated kiro-cli calls
+.kiro_sandbox/

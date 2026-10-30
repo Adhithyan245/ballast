@@ -65,7 +65,7 @@ def cmd_check(a):
             print(f"claude   {'READY' if ready else 'NOT READY'}  loggedIn={st.get('loggedIn')} "
                   f"authMethod={st.get('authMethod')} cli={ver}")
             continue
-        if not os.environ.get(cls.key_var, "").strip():
+        if cls.key_var and not os.environ.get(cls.key_var, "").strip():
             print(f"{fam:8s} NOT READY  {cls.key_var} is empty in .env")
             continue
         try:

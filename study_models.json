@@ -102,6 +102,19 @@
       "limits": {},
       "verified": null,
       "disabled_reason": "2026-10-27: Brev credit code lost and no credits confirmed in the Brev console, so no GPU to self-host on. Kept for reproducibility if credits become available."
+    },
+    "deepseek_kiro": {
+      "enabled": true,
+      "adapter": "kiro",
+      "model": "deepseek-3.2",
+      "provider": "Kiro CLI (kiro-cli chat --no-interactive), paid with Kiro credits",
+      "exploratory": true,
+      "limits": {
+        "rpm": 10
+      },
+      "limits_source": "No published rate limit for kiro-cli; paced client-side. Kiro listed deepseek-3.2 at 0.25x credits (2026-10-30); a live call metered 0.0745 credits.",
+      "choice_reason": "Added 2026-10-30, after the preregistration, as an exploratory fifth family (DEVIATIONS.md section B). DeepSeek is a family not otherwise in the study; Kiro labels it 'Experimental preview of DeepSeek V3.2'.",
+      "verified": "2026-10-30"
     }
   }
 }

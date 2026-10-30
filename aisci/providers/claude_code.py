@@ -73,6 +73,7 @@ def classify(raw: dict) -> None:
 class ClaudeCodeProvider(Provider):
     family = "claude"
     supports_temperature = False
+    resumes_sessions = True  # a follow-up turn continues the first turn's saved session
 
     def __init__(self, model, limits, isolation: str = "safe", system_prompt: str | None = None,
                  sandbox: Path = config.CLAUDE_SANDBOX_DIR, **kw):

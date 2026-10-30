@@ -21,4 +21,6 @@ checked.
 
 ## B. After the preregistration
 
-None yet.
+| Date | Preregistration said | Change | Reason and status |
+|---|---|---|---|
+| 2026-10-30 | 4 models: Claude, Gemini, gpt-oss, Qwen | **Added DeepSeek (`deepseek-3.2`) via the Kiro CLI as an exploratory fifth family.** It gets the same prompts, conditions (default sampling + pushback; temperature cannot be set), parser, metrics and gate as the others. | Decided by the study owner after the freeze, while the main study was running, because Kiro credits became available. It is **not** part of the 20 preregistered primary tests or the H5 generality rule; all its results are labelled exploratory. Same limitation as Claude: Kiro is an agent harness that adds its own context. Piloted on the 20 pilot questions before its main run. No main-study metric of any model had been computed when this was decided. |

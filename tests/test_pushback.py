@@ -92,6 +92,7 @@ class Scripted(Provider):
 
     def __init__(self, family, first, reply):
         self.family = family
+        self.resumes_sessions = family in ("claude", "kiro")
         super().__init__("m", Limits(), sleep=nosleep)
         self.first, self.reply, self.calls = first, reply, []
 
