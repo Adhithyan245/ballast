@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "17919952",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:41:30.859101+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "ceb31d50ff9058cc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are reports of mechanical dysfunction in chronic oro-facial pain related to somatisation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 85}",
+ "input_tokens": 114,
+ "output_tokens": 14,
+ "latency_s": 0.187,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "838",
+   "x-ratelimit-remaining-tokens": "7872",
+   "x-ratelimit-reset-requests": "3h53m16.8s",
+   "x-ratelimit-reset-tokens": "960ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-28489926-80e5-4005-8a9d-8aac5f26a5bf",
+  "object": "chat.completion",
+  "created": 1793389290,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 85}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.095794477,
+   "prompt_tokens": 114,
+   "prompt_time": 0.009159978,
+   "completion_tokens": 14,
+   "completion_time": 0.031624953,
+   "total_tokens": 128,
+   "total_time": 0.040784931
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5e14805ce3",
+  "x_groq": {
+   "id": "req_01m6759rx4e55bma98s4y8p5e8",
+   "seed": 2121687460
+  },
+  "service_tier": "on_demand"
+ }
+}

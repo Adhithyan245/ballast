@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "19145527",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:43:23.392290+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "7d63ef094d6119e2",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do emergency medical services professionals think they should participate in disease prevention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+ "input_tokens": 111,
+ "output_tokens": 14,
+ "latency_s": 0.187,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "793",
+   "x-ratelimit-remaining-tokens": "7874",
+   "x-ratelimit-reset-requests": "4h58m4.8s",
+   "x-ratelimit-reset-tokens": "945ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-7c4d0685-8681-41c6-8ed0-762e1106a603",
+  "object": "chat.completion",
+  "created": 1793389403,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 90}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.095829293,
+   "prompt_tokens": 111,
+   "prompt_time": 0.008933628,
+   "completion_tokens": 14,
+   "completion_time": 0.027641252,
+   "total_tokens": 125,
+   "total_time": 0.03657488
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5e14805ce3",
+  "x_groq": {
+   "id": "req_01m675d6syepmtyy7382svwmt2",
+   "seed": 1932722683
+  },
+  "service_tier": "on_demand"
+ }
+}

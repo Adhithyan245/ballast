@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "12040336",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T19:38:09.455254+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "af4d9be540e513d1",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Cardiogenic shock complicating acute myocardial infarction in elderly patients: does admission to a tertiary center improve survival?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 68}",
+ "input_tokens": 171,
+ "output_tokens": 133,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "941",
+   "x-ratelimit-remaining-tokens": "7612",
+   "x-ratelimit-reset-requests": "1h24m57.599s",
+   "x-ratelimit-reset-tokens": "2.91s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-fca52b7b-e83c-4833-8311-80de7b592b8e",
+  "object": "chat.completion",
+  "created": 1793389089,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 68}",
+     "reasoning": "We need to answer the question: \"Cardiogenic shock complicating acute myocardial infarction in elderly patients: does admission to a tertiary center improve survival?\" The answer likely is \"maybe\" because data may be limited; some studies show improved outcomes at specialized centers, but evidence specific to elderly may be unclear. However, many guidelines suggest that cardiogenic shock benefits from care at tertiary centers with revascularization capabilities, which improves survival. For elderly, there may be benefit but less clear. So perhaps \"maybe\" with moderate confidence.\n\nThus output JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243388626,
+   "prompt_tokens": 171,
+   "prompt_time": 0.00681238,
+   "completion_tokens": 133,
+   "completion_time": 0.278898929,
+   "total_tokens": 304,
+   "total_time": 0.285711309,
+   "completion_tokens_details": {
+    "reasoning_tokens": 112
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4a7bb72c24",
+  "x_groq": {
+   "id": "req_01m6753kv4e6evb5a1rvzbq8c5",
+   "seed": 840719317
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "10966943",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T19:36:23.255589+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "52d1d4858d48741b",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Amblyopia: is visual loss permanent?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 85}",
+ "input_tokens": 107,
+ "output_tokens": 14,
+ "latency_s": 0.204,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "961",
+   "x-ratelimit-remaining-tokens": "7879",
+   "x-ratelimit-reset-requests": "56m9.6s",
+   "x-ratelimit-reset-tokens": "907ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-8aab0326-0b7a-427a-b30f-5bdca88eb5f4",
+  "object": "chat.completion",
+  "created": 1793388982,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 85}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096171369,
+   "prompt_tokens": 107,
+   "prompt_time": 0.008295021,
+   "completion_tokens": 14,
+   "completion_time": 0.027719575,
+   "total_tokens": 121,
+   "total_time": 0.036014596
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5e14805ce3",
+  "x_groq": {
+   "id": "req_01m6750cgtemcsrrgtm3gc2kmr",
+   "seed": 2053258
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "15223725",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T19:40:11.604573+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "aa27cbe423918238",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does blood pressure change in treated hypertensive patients depending on whether it is measured by a physician or a nurse?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 171,
+ "output_tokens": 133,
+ "latency_s": 0.5,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "906",
+   "x-ratelimit-remaining-tokens": "7507",
+   "x-ratelimit-reset-requests": "2h15m21.6s",
+   "x-ratelimit-reset-tokens": "3.697s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-d961364c-353f-4b67-8618-c97f753c1c9c",
+  "object": "chat.completion",
+  "created": 1793389211,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer whether blood pressure changes in treated hypertensive patients depending on whether measured by a physician or a nurse. This is about white coat effect: BP may be higher when measured by a doctor vs nurse. Evidence suggests differences, but maybe not consistent. The question: \"Does blood pressure change in treated hypertensive patients depending on whether it is measured by a physician or a nurse?\" Likely yes, there is a difference (white coat effect). So answer \"yes\". Confidence? Based on literature, moderate-high. I'd give maybe 85."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.151408178,
+   "prompt_tokens": 171,
+   "prompt_time": 0.008836803,
+   "completion_tokens": 133,
+   "completion_time": 0.274588593,
+   "total_tokens": 304,
+   "total_time": 0.283425396,
+   "completion_tokens_details": {
+    "reasoning_tokens": 112
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f640395b96",
+  "x_groq": {
+   "id": "req_01m6757b76esqbxqt1srwc1s55",
+   "seed": 1910700188
+  },
+  "service_tier": "on_demand"
+ }
+}

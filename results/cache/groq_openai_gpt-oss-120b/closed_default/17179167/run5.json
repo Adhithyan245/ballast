@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "17179167",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T19:42:39.543756+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "d6454c280a1fbd8a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Human papillomavirus and pterygium. Is the virus a risk factor?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 166,
+ "output_tokens": 150,
+ "latency_s": 0.61,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "860",
+   "x-ratelimit-remaining-tokens": "7479",
+   "x-ratelimit-reset-requests": "3h21m36s",
+   "x-ratelimit-reset-tokens": "3.907s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c1e1991d-be58-49e4-abba-216c83953bdc",
+  "object": "chat.completion",
+  "created": 1793389359,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer: Is HPV a risk factor for pterygium? Need to answer yes/no/maybe with confidence. We need knowledge: Pterygium is a fibrovascular growth on conjunctiva; risk factors include UV exposure, chronic irritation, dust, etc. Some studies have investigated viral infections like HPV, EBV, HSV, and found HPV DNA in pterygium tissue. However evidence is not conclusive. Some meta-analyses suggest possible association but not definitive. So answer maybe, with moderate confidence.\n\nThus produce JSON: {\"answer\":\"maybe\",\"confidence\":70} maybe 70.\n\nLet's output."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147286118,
+   "prompt_tokens": 166,
+   "prompt_time": 0.006817526,
+   "completion_tokens": 150,
+   "completion_time": 0.313021219,
+   "total_tokens": 316,
+   "total_time": 0.319838745,
+   "completion_tokens_details": {
+    "reasoning_tokens": 129
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8ea50c0161",
+  "x_groq": {
+   "id": "req_01m675bvjqehgrvp3nb16eyfc0",
+   "seed": 1558402556
+  },
+  "service_tier": "on_demand"
+ }
+}

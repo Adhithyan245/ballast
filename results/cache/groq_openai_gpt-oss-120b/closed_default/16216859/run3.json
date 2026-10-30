@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "16216859",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T19:42:03.925628+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "32f1df13fbf0d4cc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does a well developed collateral circulation predispose to restenosis after percutaneous coronary intervention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62}",
+ "input_tokens": 166,
+ "output_tokens": 199,
+ "latency_s": 0.64,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "872",
+   "x-ratelimit-remaining-tokens": "7465",
+   "x-ratelimit-reset-requests": "3h4m19.2s",
+   "x-ratelimit-reset-tokens": "4.012s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-35ff54a1-5647-4174-b19a-3c139a16a959",
+  "object": "chat.completion",
+  "created": 1793389323,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 62}",
+     "reasoning": "We need to answer: Does a well developed collateral circulation predispose to restenosis after PCI? Need to answer yes/no/maybe with confidence.\n\nWe must rely on knowledge. Collateral circulation may affect outcomes. Some studies suggest that well-developed collaterals are protective against myocardial damage, but may be associated with higher restenosis? I recall that presence of collaterals may be associated with more severe disease and may predict restenosis? Actually, restenosis is related to lesion characteristics, vessel size, stent type, diabetes, etc. Collateral development indicates chronic ischemia and perhaps more atherosclerosis. Some data: \"Collateral circulation as a predictor of restenosis after PTCA\" maybe some early studies indicated that presence of collaterals predicts higher restenosis rates. Not entirely sure. Could be maybe.\n\nThus answer maybe \"maybe\". Confidence moderate ~60.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147137734,
+   "prompt_tokens": 166,
+   "prompt_time": 0.006306567,
+   "completion_tokens": 199,
+   "completion_time": 0.413172876,
+   "total_tokens": 365,
+   "total_time": 0.419479443,
+   "completion_tokens_details": {
+    "reasoning_tokens": 178
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_64b2f1c926",
+  "x_groq": {
+   "id": "req_01m675arrre7xsvsyyz5jg7pa8",
+   "seed": 1541064907
+  },
+  "service_tier": "on_demand"
+ }
+}

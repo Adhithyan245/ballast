@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "17403428",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T19:40:58.449312+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "0204e32f061f8c29",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 113,
+ "output_tokens": 19,
+ "latency_s": 0.297,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "851",
+   "x-ratelimit-remaining-tokens": "7869",
+   "x-ratelimit-reset-requests": "3h34m33.599s",
+   "x-ratelimit-reset-tokens": "982ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-4891a1ee-4200-4b10-a088-0a2141f4fd2f",
+  "object": "chat.completion",
+  "created": 1793389258,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.18656632,
+   "prompt_tokens": 113,
+   "prompt_time": 0.010007123,
+   "completion_tokens": 19,
+   "completion_time": 0.037779326,
+   "total_tokens": 132,
+   "total_time": 0.047786449
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m6758s58ec18t0ytfnce154r",
+   "seed": 264554668
+  },
+  "service_tier": "on_demand"
+ }
+}

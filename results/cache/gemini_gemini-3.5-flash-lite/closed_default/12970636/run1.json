@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "12970636",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T19:41:54.941324+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "e875afa3adb5c657",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 101,
+ "output_tokens": 13,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0TLn9Hqyexuz763/wI3qO+BF9xDpqHkVQJc5LDf2Ss4WGse2MLF9V0XVc8CH8QAxoFNLMePqkpimTl2IUM30G+PAJYONQxAp58WyPNqSVx7qUpOXpg4xm/Sq4="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 101,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 114,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 101
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "AvPkaquPDOzH0_gP--WbqQk"
+ }
+}

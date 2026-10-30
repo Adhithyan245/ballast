@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "10966943",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:36:53.477687+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "52d1d4858d48741b",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Amblyopia: is visual loss permanent?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 80}",
+ "input_tokens": 158,
+ "output_tokens": 170,
+ "latency_s": 0.656,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "963",
+   "x-ratelimit-remaining-tokens": "7586",
+   "x-ratelimit-reset-requests": "53m16.799s",
+   "x-ratelimit-reset-tokens": "3.105s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c04913bf-394e-499c-a53a-d27b386aad66",
+  "object": "chat.completion",
+  "created": 1793389013,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 80}",
+     "reasoning": "We need to answer the question: \"Amblyopia: is visual loss permanent?\" The answer should be \"yes\", \"no\", or \"maybe\", with confidence.\n\nAmblyopia (lazy eye) is a developmental visual disorder due to abnormal visual experience early in life, leading to reduced visual acuity not correctable by lenses. If untreated early, the visual loss can become permanent. However, treatment can improve if started early (before age 7-8). Some residual deficits may persist. So the question: \"is visual loss permanent?\" The answer likely: maybe. Because if untreated, it's permanent; but treatment can improve. So ambiguous. The question probably expects \"maybe\". Provide confidence maybe 80.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243204031,
+   "prompt_tokens": 158,
+   "prompt_time": 0.007010808,
+   "completion_tokens": 170,
+   "completion_time": 0.35242503,
+   "total_tokens": 328,
+   "total_time": 0.359435838,
+   "completion_tokens_details": {
+    "reasoning_tokens": 149
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01m67519jhefms7g2xpqwmr80h",
+   "seed": 1108103247
+  },
+  "service_tier": "on_demand"
+ }
+}

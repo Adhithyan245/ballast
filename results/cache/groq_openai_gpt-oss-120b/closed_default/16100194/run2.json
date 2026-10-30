@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "16100194",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:41:39.792013+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "6b2aa22f51529a68",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are physicians aware of the side effects of angiotensin-converting enzyme inhibitors?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 165,
+ "output_tokens": 80,
+ "latency_s": 0.485,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "878",
+   "x-ratelimit-remaining-tokens": "7599",
+   "x-ratelimit-reset-requests": "2h55m40.8s",
+   "x-ratelimit-reset-tokens": "3.007s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c97a1d5c-b8f3-4f25-bc83-8765a5befe92",
+  "object": "chat.completion",
+  "created": 1793389299,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer yes/no/maybe about whether physicians are aware of side effects of ACE inhibitors. This is a research question; answer likely \"maybe\" because awareness varies, but many studies show physicians generally aware but some gaps. So \"maybe\". Confidence maybe 70. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.24381818,
+   "prompt_tokens": 165,
+   "prompt_time": 0.006732163,
+   "completion_tokens": 80,
+   "completion_time": 0.165560374,
+   "total_tokens": 245,
+   "total_time": 0.172292537,
+   "completion_tokens_details": {
+    "reasoning_tokens": 59
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m675a1bee19abdqkgzgsr0t1",
+   "seed": 1696860823
+  },
+  "service_tier": "on_demand"
+ }
+}

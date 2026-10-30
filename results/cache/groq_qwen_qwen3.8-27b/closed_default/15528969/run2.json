@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "15528969",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:39:00.785322+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "369d86ca2b7acd8a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is expert breast pathology assessment necessary for the management of ductal carcinoma in situ ?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 114,
+ "output_tokens": 14,
+ "latency_s": 0.203,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "898",
+   "x-ratelimit-remaining-tokens": "7866",
+   "x-ratelimit-reset-requests": "2h26m52.8s",
+   "x-ratelimit-reset-tokens": "1.005s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-53bf9f97-8c38-4a7a-afe8-d2582ab7cf8a",
+  "object": "chat.completion",
+  "created": 1793389140,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.095945357,
+   "prompt_tokens": 114,
+   "prompt_time": 0.008080683,
+   "completion_tokens": 14,
+   "completion_time": 0.026731166,
+   "total_tokens": 128,
+   "total_time": 0.034811849
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fea14bdc83",
+  "x_groq": {
+   "id": "req_01m67556bae0ytb6t3h3hdzntb",
+   "seed": 1594996750
+  },
+  "service_tier": "on_demand"
+ }
+}

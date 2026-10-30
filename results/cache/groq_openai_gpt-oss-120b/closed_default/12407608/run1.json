@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "12407608",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T19:38:52.942994+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "ab5e68aef4cafec8",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does ultrasound imaging before puncture facilitate internal jugular vein cannulation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 163,
+ "output_tokens": 71,
+ "latency_s": 0.516,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "929",
+   "x-ratelimit-remaining-tokens": "7591",
+   "x-ratelimit-reset-requests": "1h42m14.4s",
+   "x-ratelimit-reset-tokens": "3.067s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c72694e6-f65b-4526-97dd-5b09dda4788d",
+  "object": "chat.completion",
+  "created": 1793389132,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}",
+     "reasoning": "We need to answer: Does ultrasound imaging before puncture facilitate internal jugular vein cannulation? Known: Numerous studies show ultrasound guidance improves success, reduces complications, etc. So answer: yes. Confidence high, maybe 95. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243786595,
+   "prompt_tokens": 163,
+   "prompt_time": 0.00762847,
+   "completion_tokens": 71,
+   "completion_time": 0.145518514,
+   "total_tokens": 234,
+   "total_time": 0.153146984,
+   "completion_tokens_details": {
+    "reasoning_tokens": 50
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "x_groq": {
+   "id": "req_01m6754ye6es8tyzxma47725ef",
+   "seed": 1979863113
+  },
+  "service_tier": "on_demand"
+ }
+}

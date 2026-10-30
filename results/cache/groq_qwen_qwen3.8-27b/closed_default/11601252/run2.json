@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "11601252",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:36:43.162754+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "61fd777e041850ab",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is endothelin-1 an aggravating factor in the development of acute pancreatitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 115,
+ "output_tokens": 14,
+ "latency_s": 0.11,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "953",
+   "x-ratelimit-remaining-tokens": "7871",
+   "x-ratelimit-reset-requests": "1h7m40.8s",
+   "x-ratelimit-reset-tokens": "967ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-19191d44-460f-4cec-9ee0-7aae2289b70b",
+  "object": "chat.completion",
+  "created": 1793389002,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.013942881,
+   "prompt_tokens": 115,
+   "prompt_time": 0.009894863,
+   "completion_tokens": 14,
+   "completion_time": 0.027708849,
+   "total_tokens": 129,
+   "total_time": 0.037603712
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m675101eeh8vg7e6qkgqjwkb",
+   "seed": 1586650737
+  },
+  "service_tier": "on_demand"
+ }
+}

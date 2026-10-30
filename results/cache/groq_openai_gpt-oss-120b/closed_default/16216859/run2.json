@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "16216859",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:42:01.629170+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "32f1df13fbf0d4cc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does a well developed collateral circulation predispose to restenosis after percutaneous coronary intervention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 60}",
+ "input_tokens": 166,
+ "output_tokens": 231,
+ "latency_s": 0.844,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "873",
+   "x-ratelimit-remaining-tokens": "7619",
+   "x-ratelimit-reset-requests": "3h2m52.8s",
+   "x-ratelimit-reset-tokens": "2.857s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-31bf76ae-d602-45ac-9d82-c6b3e51f86e5",
+  "object": "chat.completion",
+  "created": 1793389321,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 60}",
+     "reasoning": "We need to answer the question: Does a well developed collateral circulation predispose to restenosis after PCI? Need to answer yes/no/maybe, with confidence.\n\nWe must recall literature. Collateral circulation may protect myocardium and perhaps reduce restenosis? Some studies suggest well-developed collaterals are associated with less restenosis because lower plaque burden? Actually restenosis is neointimal hyperplasia due to vessel injury, may be influenced by vessel size, lesion complexity, and collateral flow may reduce shear stress? I think some data suggest well-developed collaterals are associated with higher restenosis rates because they may cause less flow, leading to reduced shear stress, promoting intimal hyperplasia. But I'm not sure.\n\nSearch memory: In the era of balloon angioplasty, some studies indicated that collateral circulation was protective against restenosis. However, for stenting, collaterals may not affect. I think the answer may be \"maybe\". Since evidence is mixed.\n\nThus answer maybe with moderate confidence, say 60.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243188846,
+   "prompt_tokens": 166,
+   "prompt_time": 0.006731236,
+   "completion_tokens": 231,
+   "completion_time": 0.47756869,
+   "total_tokens": 397,
+   "total_time": 0.484299926,
+   "completion_tokens_details": {
+    "reasoning_tokens": 207
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_27194a498a",
+  "x_groq": {
+   "id": "req_01m675apc4ef6ajsq0k72ezf88",
+   "seed": 136228162
+  },
+  "service_tier": "on_demand"
+ }
+}

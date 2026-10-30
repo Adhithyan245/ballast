@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "15528969",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:43:40.096673+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "369d86ca2b7acd8a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is expert breast pathology assessment necessary for the management of ductal carcinoma in situ ?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 103,
+ "output_tokens": 13,
+ "latency_s": 0.672,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+       "thoughtSignature": "EmAKXgFpFH0T6xrpW47H7YOSd7Xv8Ey4vPfkVCGgXJMhSkovRFz6fijDAUc0Y7Mq7EcCLccrAs30liteHSHaJYMLsHmfAkIDsO7p6sXY0H0PchAsSY0xZnDWM8E/UWHpeC0="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 103,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 116,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 103
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "a_PkaomtD5HRiLMPpICpmAU"
+ }
+}

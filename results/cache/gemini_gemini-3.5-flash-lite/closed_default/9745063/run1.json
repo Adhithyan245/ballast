@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "9745063",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T19:36:26.829141+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "acf2782a2c0ca047",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is laparoscopic sonography a reliable and sensitive procedure for staging colorectal cancer?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 101,
+ "output_tokens": 13,
+ "latency_s": 1.031,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0Tl9SIab49DLlxoF5fJQaWeBzTVPnqHwuok1ro2RJ8Q4MIKxxRLAnRNg6fQaUbs4hlptx9tSKPEJg46NpZ6zDo5CspcrV0dqZTfx82M1Wt34uCAcXMFyG9QK0="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 101,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 114,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 101
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "ufHkatPUJ4mBiLMPhIW2mAc"
+ }
+}

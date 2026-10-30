@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "12094116",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T19:40:01.698596+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "a14c75ed5b729b4e",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is muscle power related to running speed with changes of direction?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100}\n```",
+ "input_tokens": 99,
+ "output_tokens": 19,
+ "latency_s": 0.594,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T93yKdUT7mlCxbbQP3S/wAN4CuLBORqoxnhBY5Nxv24Rf6rTVVFx/Peu50ejmZt/s8Ahxc4CXCDjATUAw+XD8Ia9cg+myk7cqDDV6IF5kJ2b8Q+12x43+76E="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 99,
+   "candidatesTokenCount": 19,
+   "totalTokenCount": 118,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 99
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "kPLkarX7OLCb0_gP_fCv2Qg"
+ }
+}

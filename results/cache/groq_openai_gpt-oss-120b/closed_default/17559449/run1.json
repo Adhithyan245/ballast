@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "17559449",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T19:43:20.544599+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "f04d716bb4b19be6",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are sugars-free medicines more erosive than sugars-containing medicines?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62}",
+ "input_tokens": 161,
+ "output_tokens": 219,
+ "latency_s": 0.891,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "849",
+   "x-ratelimit-remaining-tokens": "7485",
+   "x-ratelimit-reset-requests": "3h37m26.4s",
+   "x-ratelimit-reset-tokens": "3.862s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-b489435c-56f4-4b34-85da-df4443bda6ed",
+  "object": "chat.completion",
+  "created": 1793389400,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 62}",
+     "reasoning": "We need to answer the biomedical research question: Are sugar-free medicines more erosive than sugar-containing medicines? The answer could be yes, no, maybe. Need to give confidence integer.\n\nWe need to consider the literature. Dental erosion is caused by acidic pH. Sugar itself is not erosive; it's fermentable and contributes to caries. Sugar-free medicines often contain acidic sweeteners, e.g., sorbitol, aspartame, citric acid, etc., to improve taste; many are liquid formulations with acidic pH (e.g., cough syrups). Sugar-containing medicines may have sucrose but also may have lower acidity.\n\nStudies have shown that sugar-free medicines (especially those with acidic flavors like citric acid) can have lower pH and higher erosive potential compared to sugar-containing ones. However evidence may be limited.\n\nThus answer likely \"maybe\" because not definitively known across all meds. But confidence maybe 60.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.18049634,
+   "prompt_tokens": 161,
+   "prompt_time": 0.007082257,
+   "completion_tokens": 219,
+   "completion_time": 0.464832686,
+   "total_tokens": 380,
+   "total_time": 0.471914943,
+   "completion_tokens_details": {
+    "reasoning_tokens": 195
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_96d96a151c",
+  "x_groq": {
+   "id": "req_01m675d3b9exqs0zwnq43jfqfn",
+   "seed": 821070341
+  },
+  "service_tier": "on_demand"
+ }
+}

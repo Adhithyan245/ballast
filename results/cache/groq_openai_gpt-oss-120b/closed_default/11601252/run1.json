@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "11601252",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T19:37:18.594070+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "61fd777e041850ab",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is endothelin-1 an aggravating factor in the development of acute pancreatitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 88}",
+ "input_tokens": 167,
+ "output_tokens": 248,
+ "latency_s": 0.735,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "954",
+   "x-ratelimit-remaining-tokens": "7508",
+   "x-ratelimit-reset-requests": "1h6m14.4s",
+   "x-ratelimit-reset-tokens": "3.69s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-becebeb9-9a60-4a12-bca7-1b4d6eeb8424",
+  "object": "chat.completion",
+  "created": 1793389038,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 88}",
+     "reasoning": "We need to answer whether endothelin-1 is an aggravating factor in development of acute pancreatitis. Need to give yes/no/maybe and confidence. I need to consider literature. Endothelin-1 (ET-1) is a potent vasoconstrictor peptide produced by endothelial cells. In acute pancreatitis, microcirculatory disturbances, vasoconstriction, inflammation, and edema occur. Studies have shown that ET-1 levels are increased in experimental acute pancreatitis and correlate with severity. ET-1 can cause pancreatic vasoconstriction, reduce blood flow, exacerbate injury. Some animal studies show that ET-1 antagonists reduce severity. Human studies show elevated serum ET-1 in severe cases. Therefore likely yes, ET-1 is an aggravating factor. Confidence high, maybe 85-90. However, there may be some ambiguity about causality vs marker. The question: \"Is endothelin-1 an aggravating factor in the development of acute pancreatitis?\" I think evidence supports that it aggravates. So answer yes with confidence 88.\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.146811068,
+   "prompt_tokens": 167,
+   "prompt_time": 0.007218811,
+   "completion_tokens": 248,
+   "completion_time": 0.5184914,
+   "total_tokens": 415,
+   "total_time": 0.525710211,
+   "completion_tokens_details": {
+    "reasoning_tokens": 227
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_64b2f1c926",
+  "x_groq": {
+   "id": "req_01m6752216e2nt7f04dm5kdqk9",
+   "seed": 718057495
+  },
+  "service_tier": "on_demand"
+ }
+}

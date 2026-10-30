@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "9427037",
+  "run": 1
+ },
+ "cached_at": "2026-10-30T19:35:23.731281+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "f8c2e16de502b47b",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are endothelial cell patterns of astrocytomas indicative of grade?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 82}",
+ "input_tokens": 162,
+ "output_tokens": 211,
+ "latency_s": 0.953,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "984",
+   "x-ratelimit-remaining-tokens": "7563",
+   "x-ratelimit-reset-requests": "23m2.4s",
+   "x-ratelimit-reset-tokens": "3.277s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-76c5dd3e-aec8-4ba2-a60c-abe55fe93185",
+  "object": "chat.completion",
+  "created": 1793388923,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 82}",
+     "reasoning": "We need to answer biomedical research question: \"Are endothelial cell patterns of astrocytomas indicative of grade?\" We must respond with yes/no/maybe and confidence.\n\nWe need to recall literature: Astrocytomas grading (WHO I-IV). Endothelial cell patterns (e.g., microvascular proliferation) are a hallmark of high-grade gliomas, especially grade IV glioblastoma. Microvascular proliferation is a criterion for grade IV. Also, endothelial cell proliferation or vascular pattern may correlate with grade. Some studies have looked at endothelial cell density, morphology, patterns like \"glomeruloid\" vessels. So likely yes: endothelial cell patterns are indicative of grade, particularly higher grades show more angiogenesis.\n\nBut there may be nuance: while microvascular proliferation is a hallmark of grade IV, other endothelial patterns may not be strictly grade-specific; but generally they indicate higher grade. So answer likely \"yes\". Confidence maybe 80.\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.146906536,
+   "prompt_tokens": 162,
+   "prompt_time": 0.007570513,
+   "completion_tokens": 211,
+   "completion_time": 0.438570061,
+   "total_tokens": 373,
+   "total_time": 0.446140574,
+   "completion_tokens_details": {
+    "reasoning_tokens": 190
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4200b3f836",
+  "x_groq": {
+   "id": "req_01m674yhmmetz8d4eeeva2xky0",
+   "seed": 1136523811
+  },
+  "service_tier": "on_demand"
+ }
+}

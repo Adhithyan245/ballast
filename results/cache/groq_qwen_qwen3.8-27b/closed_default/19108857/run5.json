@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_default",
+  "qid": "19108857",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T19:43:05.888399+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4a644f53014b3aac",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Cerebromediastinal tuberculosis in a child with a probable Say-Barber-Miller syndrome: a causative link?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 20}",
+ "input_tokens": 124,
+ "output_tokens": 14,
+ "latency_s": 0.204,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "800",
+   "x-ratelimit-remaining-tokens": "7862",
+   "x-ratelimit-reset-requests": "4h48m0s",
+   "x-ratelimit-reset-tokens": "1.035s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-176583e2-a259-4807-9239-71d5475d1da5",
+  "object": "chat.completion",
+  "created": 1793389385,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 20}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.118333825,
+   "prompt_tokens": 124,
+   "prompt_time": 0.010374569,
+   "completion_tokens": 14,
+   "completion_time": 0.027762595,
+   "total_tokens": 138,
+   "total_time": 0.038137164
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_57c7e760a9",
+  "x_groq": {
+   "id": "req_01m675cnp6e58s9k934v1vgtmt",
+   "seed": 1765732517
+  },
+  "service_tier": "on_demand"
+ }
+}

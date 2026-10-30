@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "15939071",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T19:41:12.934075+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "1b9fc1deb302ead0",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: High cumulative insulin exposure: a risk factor of atherosclerosis in type 1 diabetes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62}",
+ "input_tokens": 167,
+ "output_tokens": 183,
+ "latency_s": 0.812,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "888",
+   "x-ratelimit-remaining-tokens": "7621",
+   "x-ratelimit-reset-requests": "2h41m16.8s",
+   "x-ratelimit-reset-tokens": "2.842s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e612f6a0-e96e-48ba-ac42-8655b10a9a88",
+  "object": "chat.completion",
+  "created": 1793389272,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 62}",
+     "reasoning": "We need to answer the question: \"High cumulative insulin exposure: a risk factor of atherosclerosis in type 1 diabetes?\" We need to answer \"yes\", \"no\", or \"maybe\", with confidence.\n\nWe need to consider literature. In type 1 diabetes, insulin therapy is required; high cumulative insulin exposure could reflect more intensive therapy, potentially associated with weight gain, hypoglycemia, but does it increase atherosclerosis risk? Some studies suggest hyperinsulinemia may be atherogenic. However, in type 1, insulin is replacement, and good glycemic control reduces CVD risk. High cumulative insulin could be a proxy for poor glycemic control or longer disease duration. The evidence is not conclusive. So maybe \"maybe\". Confidence maybe 60.\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.148257119,
+   "prompt_tokens": 167,
+   "prompt_time": 0.041182567,
+   "completion_tokens": 183,
+   "completion_time": 0.38807067,
+   "total_tokens": 350,
+   "total_time": 0.429253237,
+   "completion_tokens_details": {
+    "reasoning_tokens": 162
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fe269835c7",
+  "x_groq": {
+   "id": "req_01m67596sjec8vwtvp9r98d0sr",
+   "seed": 1015228605
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "12970636",
+  "run": 4
+ },
+ "cached_at": "2026-10-30T19:39:56.644150+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "e875afa3adb5c657",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 70}",
+ "input_tokens": 164,
+ "output_tokens": 215,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "911",
+   "x-ratelimit-remaining-tokens": "7646",
+   "x-ratelimit-reset-requests": "2h8m9.599s",
+   "x-ratelimit-reset-tokens": "2.655s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-413cb008-86e7-4cfe-9b31-f124c2aed575",
+  "object": "chat.completion",
+  "created": 1793389196,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 70}",
+     "reasoning": "We need to answer the question: \"Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?\" It's a research question likely about whether early discharge plus home nurse visits impacts the adequacy (i.e., completeness/quality) of newborn metabolic screening. Need to answer yes/no/maybe and give confidence.\n\nWe must consider evidence. I recall some studies: early discharge may reduce timely collection of heel prick blood spots. Nurse home visits might help ensure screening is done. Some evidence suggests that early discharge with follow-up improves screening rates compared to no follow-up. But the question: \"Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?\" Likely there is an effect. Might be \"maybe\" if evidence inconclusive. But I think there is evidence that early discharge plus nurse home visits improves adequacy (ensures screening is done) vs early discharge alone. So answer \"yes\". Confidence maybe 70.\n\nThus produce JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147021325,
+   "prompt_tokens": 164,
+   "prompt_time": 0.008552099,
+   "completion_tokens": 215,
+   "completion_time": 0.444237997,
+   "total_tokens": 379,
+   "total_time": 0.452790096,
+   "completion_tokens_details": {
+    "reasoning_tokens": 194
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_64b2f1c926",
+  "x_groq": {
+   "id": "req_01m6756weee2prw6tvdxjhah26",
+   "seed": 1156443284
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_default",
+  "qid": "16046584",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T19:41:34.760988+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "3a642350b22d88b3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Menopausal hormone therapy and irregular endometrial bleeding: a potential role for uterine natural killer cells?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 68}",
+ "input_tokens": 171,
+ "output_tokens": 129,
+ "latency_s": 0.454,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "880",
+   "x-ratelimit-remaining-tokens": "7619",
+   "x-ratelimit-reset-requests": "2h52m48s",
+   "x-ratelimit-reset-tokens": "2.857s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-f19a94cc-6244-49b9-8301-149d08aebc0d",
+  "object": "chat.completion",
+  "created": 1793389294,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 68}",
+     "reasoning": "We need to interpret the question: \"Menopausal hormone therapy and irregular endometrial bleeding: a potential role for uterine natural killer cells?\" They ask to answer \"yes\", \"no\", or \"maybe\", and give confidence.\n\nWe need to decide if uterine NK cells could play a role in irregular endometrial bleeding associated with menopausal hormone therapy. This is likely speculative. The literature may not have definitive evidence; perhaps it's plausible but not proven. So answer maybe.\n\nConfidence? Maybe 65? Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.088028938,
+   "prompt_tokens": 171,
+   "prompt_time": 0.032524316,
+   "completion_tokens": 129,
+   "completion_time": 0.273416672,
+   "total_tokens": 300,
+   "total_time": 0.305940988,
+   "completion_tokens_details": {
+    "reasoning_tokens": 108
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e5b4e54fbb",
+  "x_groq": {
+   "id": "req_01m6759wf2e9tvpm0s7z4h76hk",
+   "seed": 286834654
+  },
+  "service_tier": "on_demand"
+ }
+}

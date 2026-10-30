@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "9427037",
+  "run": 3
+ },
+ "cached_at": "2026-10-30T19:36:11.427364+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "f8c2e16de502b47b",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are endothelial cell patterns of astrocytomas indicative of grade?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100}\n```",
+ "input_tokens": 100,
+ "output_tokens": 19,
+ "latency_s": 0.64,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T+qISSwQF6zZsmkhjp4h1gWVtL6YL6OUIqO1OgtGtyZncIAKby0jOnix0qTjbHtnoPe/MXLsprCyRBdqcdq/ojUZfeGh5D5vK+1tKKgWJieUKbJXVv9rnSkY="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 100,
+   "candidatesTokenCount": 19,
+   "totalTokenCount": 119,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 100
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "qvHkasHFJtDy0_gP9dXE6QU"
+ }
+}
