@@ -45,8 +45,14 @@ def wait_until(t: datetime, log) -> None:
 def main(sample: str, key: str) -> None:
     load_dotenv(config.ROOT / ".env")
 
+    config.LOG_DIR.mkdir(parents=True, exist_ok=True)
+    log_file = config.LOG_DIR / f"{sample}_{key}.log"
+
     def log(msg):
-        print(f"{datetime.now(timezone.utc).isoformat(timespec='seconds')} [{key}] {msg}", flush=True)
+        line = f"{datetime.now(timezone.utc).isoformat(timespec='seconds')} [{key}] {msg}"
+        print(line, flush=True)
+        with open(log_file, "a", encoding="utf-8") as f:
+            f.write(line + "\n")
 
     items = data.load()
     chosen = [items[q] for q in data.load_sample(sample)]
