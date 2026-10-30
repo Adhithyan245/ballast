@@ -69,6 +69,12 @@ def main(sample: str, key: str) -> None:
         if s.stopped:  # ProviderUnavailable (e.g. auth): needs a person
             log("stopping: provider unavailable; fix it and rerun this command to resume")
             return
+        if s.failed_transient:
+            # e.g. no internet while travelling: every call failed after its retries.
+            # Never treat that as "finished"; wait and try again until the stopping date.
+            log(f"{s.failed_transient} calls failed without a response; retrying in 15 minutes")
+            wait_until(min(datetime.now(timezone.utc) + timedelta(minutes=15), STOP_AT), log)
+            continue
         if s.done == 0:
             log("finished: nothing left to request (remaining gaps, if any, are logged failures)")
             return

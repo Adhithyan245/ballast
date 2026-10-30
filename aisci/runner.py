@@ -39,6 +39,7 @@ class RunSummary:
     done: int = 0
     cached: int = 0
     failed: int = 0
+    failed_transient: int = 0  # timeouts / connection / 5xx after all retries: worth trying later
     skipped: int = 0  # pushback turns with no valid first answer to push back on
     stopped: str | None = None
     seconds: float = 0.0
@@ -177,6 +178,7 @@ def run_provider(provider: Provider, items: list[Item], conditions: list[str],
         except (RetryableError, FatalError) as e:
             with lock:
                 s.failed += 1
+                s.failed_transient += isinstance(e, RetryableError)
                 s.failures.append(f"{key.condition}/{key.qid}/run{key.run}: {e}")
             log_error({"model": provider.study_id, **key.__dict__,
                        "error": str(e)[:500], "kind": type(e).__name__})
