@@ -28,6 +28,7 @@ DEFAULT_RESET_UTC = (0, 5)
 CLAUDE_WINDOW_WAIT = timedelta(minutes=60)  # Claude usage limits are rolling windows, not daily
 
 
+AUTH_RETRIES = 3  # consecutive "provider unavailable" stops tolerated before exiting
 ROLLING_TOKEN_WAIT = timedelta(minutes=30)  # Groq's tokens-per-day limit is a rolling 24 h window
 
 
@@ -64,6 +65,7 @@ def main(sample: str, key: str) -> None:
     items = data.load()
     chosen = [items[q] for q in data.load_sample(sample)]
     spec = load_study_models()["models"][key]
+    auth_failures = 0
     while datetime.now(timezone.utc) < STOP_AT:
         p = make_provider(key)
         s = run_provider(p, chosen, conditions_for(p, include_t0=True), sample,
@@ -73,9 +75,16 @@ def main(sample: str, key: str) -> None:
         if s.stopped and ("QuotaExhausted" in s.stopped or "usage limit" in s.stopped):
             wait_until(min(next_resume(p.family, s.stopped, datetime.now(timezone.utc)), STOP_AT), log)
             continue
-        if s.stopped:  # ProviderUnavailable (e.g. auth): needs a person
+        if s.stopped:  # ProviderUnavailable (e.g. auth)
+            auth_failures += 1
+            if auth_failures <= AUTH_RETRIES:
+                # CLIs sometimes report "not logged in" while refreshing a session; give it time
+                log(f"provider unavailable ({auth_failures}/{AUTH_RETRIES}); retrying in 15 minutes")
+                wait_until(min(datetime.now(timezone.utc) + timedelta(minutes=15), STOP_AT), log)
+                continue
             log("stopping: provider unavailable; fix it and rerun this command to resume")
             return
+        auth_failures = 0
         if s.failed_transient:
             # e.g. no internet while travelling: every call failed after its retries.
             # Never treat that as "finished"; wait and try again until the stopping date.
