@@ -1,0 +1,434 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "10223070",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:34:07.277058+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "91fe940961a2417c",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is perforation of the appendix a risk factor for tubal infertility and ectopic pregnancy?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "Based on medical research knowledge, I can provide an answer to this biomedical research question.\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsSince I cannot access external medical research data, I'll provide an answer based on my existing medical knowledge:\n\n```json\n{\"answer\": \"yes\", \"confidence\": 75}\n```\n\nPerforation of the appendix (appendiceal rupture) can lead to pelvic inflammatory disease and the formation of pelvic adhesions, which are known risk factors for both tubal infertility and ectopic pregnancy. The inflammation and infection from a perforated appendix can damage fallopian tubes and create scar tissue that impairs tubal function.",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 12.984,
+ "meta": {
+  "session_id": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+  "credits": 0.21501,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " medical research knowledge, I can"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " provide an answer to this biomedical research question.\n\n<｜DSML｜"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "contextUsagePercentage": 6.95060920715332,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_2cIyhkK2xR8oEb4AwGOgGi",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "appendix perforation appendix rupture risk factor tubal infertility ectopic pregnancy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_2cIyhkK2xR8oEb4AwGOgGi",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "appendix perforation appendix rupture risk factor tubal infertility ectopic pregnancy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "contextUsagePercentage": 7.054878234863281,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_XiysCDli0MVnFYLwRYWLky",
+      "title": "Fetching web content",
+      "kind": "read",
+      "rawInput": {
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2943772/",
+       "mode": "selective",
+       "search_terms": "appendix perforation tubal infertility ectopic pregnancy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_XiysCDli0MVnFYLwRYWLky",
+      "kind": "read",
+      "status": "failed",
+      "title": "web_fetch",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2943772/",
+       "mode": "selective",
+       "search_terms": "appendix perforation tubal infertility ectopic pregnancy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Since I cannot access external medical research data, I'll provide an answer based on my existing medical knowledge:\n\n```"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "json\n{\"answer\": \"yes\", \"confidence\": 75}\n```\n\nPerforation of the appendix"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " (appendiceal rupture) can lead to pelvic inflammatory disease and the formation of pelvic adhesions, which"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " are known risk factors for both tubal infertility and ectopic pregnancy. The inflammation and infection from a perfor"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "ated appendix can damage fallopian tubes and create scar tissue that impairs tubal function."
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "contextUsagePercentage": 7.160365581512451,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "contextUsagePercentage": 7.160365581512451,
+     "meteringUsage": [
+      {
+       "value": 0.07037344278606965,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07179087230514096,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07284551243781096,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 9732,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "3b71f7ba-3785-4dba-bb90-c97b38af7d2c",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "Based on medical research knowledge, I can provide an answer to this biomedical research question.\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsSince I cannot access external medical research data, I'll provide an answer based on my existing medical knowledge:\n\n```json\n{\"answer\": \"yes\", \"confidence\": 75}\n```\n\nPerforation of the appendix (appendiceal rupture) can lead to pelvic inflammatory disease and the formation of pelvic adhesions, which are known risk factors for both tubal infertility and ectopic pregnancy. The inflammation and infection from a perforated appendix can damage fallopian tubes and create scar tissue that impairs tubal function.",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

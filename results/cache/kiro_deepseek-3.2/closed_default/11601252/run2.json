@@ -1,0 +1,234 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "11601252",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T23:37:55.987005+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "61fd777e041850ab",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is endothelin-1 an aggravating factor in the development of acute pancreatitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 8.391,
+ "meta": {
+  "session_id": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+  "credits": 0.140484,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "contextUsagePercentage": 6.948780059814453,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_dWebXtY6ezOM7lBcLgDgUd",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "show",
+       "__tool_use_purpose": "Check available knowledge bases before answering the biomedical research question"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_dWebXtY6ezOM7lBcLgDgUd",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "show",
+       "__tool_use_purpose": "Check available knowledge bases before answering the biomedical research question"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "contextUsagePercentage": 6.998780250549316,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "contextUsagePercentage": 6.998780250549316,
+     "meteringUsage": [
+      {
+       "value": 0.07035515422885572,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07012927031509122,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 5903,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "679a8d1a-dbb6-4b0d-9655-3ff4ad029806",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

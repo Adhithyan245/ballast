@@ -1,0 +1,340 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "17403428",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T23:54:27.661682+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "0204e32f061f8c29",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 9.563,
+ "meta": {
+  "session_id": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+  "credits": 0.211836,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "contextUsagePercentage": 6.938414096832275,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_rKIFhN207N0ZXHcEZ8UA8r",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "recurrent spontaneous abortion skewed X-inactivation association research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_rKIFhN207N0ZXHcEZ8UA8r",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "recurrent spontaneous abortion skewed X-inactivation association research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "contextUsagePercentage": 7.01890230178833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_5vDUCFrBNiiYox0RNy4yVP",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "recurrent spontaneous abortion skewed X-inactivation association"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_5vDUCFrBNiiYox0RNy4yVP",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "recurrent spontaneous abortion skewed X-inactivation association"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "contextUsagePercentage": 7.068902015686035,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "contextUsagePercentage": 7.068902015686035,
+     "meteringUsage": [
+      {
+       "value": 0.07002169154228856,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.0709836384742952,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07083033167495854,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 7939,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "df978fed-d91d-49ed-8cae-7a4d2b9926a2",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

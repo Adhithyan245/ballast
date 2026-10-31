@@ -1,0 +1,459 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "15223725",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:46:13.623816+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "aa27cbe423918238",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does blood pressure change in treated hypertensive patients depending on whether it is measured by a physician or a nurse?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my knowledge of biomedical research, this question relates to the \"white coat hypertension\" phenomenon where patients' blood pressure tends to be higher when measured by a physician compared to other healthcare professionals due to anxiety or stress. For treated hypertensive patients, blood pressure measurements by physicians tend to be higher than those by nurses. This is a well-documented effect in medical literature.\n\n{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 12.016,
+ "meta": {
+  "session_id": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+  "credits": 0.213851,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "contextUsagePercentage": 6.958536624908447,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_ym8jxhoDNZHDWJmSzmi7Ev",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "blood pressure measurement difference physician nurse white coat hypertension",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_ym8jxhoDNZHDWJmSzmi7Ev",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "blood pressure measurement difference physician nurse white coat hypertension",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "contextUsagePercentage": 7.032317161560059,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_wmhge8buTS1G9MvhFhRXeU",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "blood pressure measurement physician nurse difference white coat hypertension treated patients"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_wmhge8buTS1G9MvhFhRXeU",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "blood pressure measurement physician nurse difference white coat hypertension treated patients"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on my knowledge of biomedical research, this question relates"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " to the \"white coat hypertension\" phenomenon where patients"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "' blood pressure tends to be higher when measured by"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " a physician compared to other healthcare professionals due to anxiety"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " or stress. For treated hypertensive patients, blood pressure"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " measurements by physicians tend to be higher than those by"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " nurses. This is a well-documented effect in"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " medical literature.\n\n{\"answer\": \"yes\", \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "confidence\": 85}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "contextUsagePercentage": 7.128048896789551,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "contextUsagePercentage": 7.128048896789551,
+     "meteringUsage": [
+      {
+       "value": 0.07057365505804312,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07096050414593698,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07231677943615258,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 9787,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "a65d4254-61f9-4c19-a82b-0a453f78700c",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my knowledge of biomedical research, this question relates to the \"white coat hypertension\" phenomenon where patients' blood pressure tends to be higher when measured by a physician compared to other healthcare professionals due to anxiety or stress. For treated hypertensive patients, blood pressure measurements by physicians tend to be higher than those by nurses. This is a well-documented effect in medical literature.\n\n{\"answer\": \"yes\", \"confidence\": 85}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

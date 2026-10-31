@@ -1,0 +1,494 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "15477551",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T23:46:34.367409+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "10ba372ded90b898",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Chronic progressive cervical myelopathy with HTLV-I infection: Variant form of HAM/TSP?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my medical knowledge, HTLV-I-associated myelopathy/tropical spastic paraparesis (HAM/TSP) typically presents as a chronic progressive myelopathy affecting the thoracic spinal cord. Cervical myelopathy would be an atypical presentation. However, variant forms of HAM/TSP with different clinical manifestations have been described in the literature, including cervical involvement. I need to answer this based on general biomedical knowledge.\n\n{\"answer\": \"yes\", \"confidence\": 75}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 13.219,
+ "meta": {
+  "session_id": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+  "credits": 0.212848,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "contextUsagePercentage": 6.932316780090332,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_0HNCDs3Qsad3fgefvqIefa",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_0HNCDs3Qsad3fgefvqIefa",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "contextUsagePercentage": 7.009755611419678,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_9viNLtznosurQ5bES8f8Gs",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "Chronic progressive cervical myelopathy HTLV-I infection variant form HAM TSP"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_9viNLtznosurQ5bES8f8Gs",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "Chronic progressive cervical myelopathy HTLV-I infection variant form HAM TSP"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on my medical knowledge, HTLV-I-associated myel"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "opathy/t"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "ropical spastic paraparesis ("
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "HAM"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "/T"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "SP) typically presents as a chronic progressive myelopathy affecting"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the thoracic spinal cord. Cervical myelopathy would"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " be an atypical presentation. However, variant forms of"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " HAM/TSP with different clinical manifestations have been"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " described in the literature, including cervical involvement. I"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " need to answer this based on"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " general biomedical knowledge.\n\n{\"answer\": \"yes"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\", \"confidence\": 75}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "contextUsagePercentage": 7.109146595001221,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "contextUsagePercentage": 7.109146595001221,
+     "meteringUsage": [
+      {
+       "value": 0.06982767164179104,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07078333001658375,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07223666334991709,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 10834,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "c408b42f-3005-482a-9b94-5c20f4035a5b",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my medical knowledge, HTLV-I-associated myelopathy/tropical spastic paraparesis (HAM/TSP) typically presents as a chronic progressive myelopathy affecting the thoracic spinal cord. Cervical myelopathy would be an atypical presentation. However, variant forms of HAM/TSP with different clinical manifestations have been described in the literature, including cervical involvement. I need to answer this based on general biomedical knowledge.\n\n{\"answer\": \"yes\", \"confidence\": 75}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

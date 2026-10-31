@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "15477551",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T00:06:34.728610+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "2a0262e526a12b1e",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To investigate the role of human T-lymphotrophic virus type I (HTLV-I) infection in four patients who developed slowly progressive myelopathy with abnormal MRI lesions in the cervical cord levels.\n\nMETHODS: Clinical and neuroradiologic examinations were performed, and the odds that an HTLV-I-infected individual of specified genotype, age, and provirus load had HTLV-I-associated myelopathy (HAM)/tropical spastic paraparesis (TSP) were calculated.\n\nRESULTS: Anti-HTLV-I antibodies were positive in both the serum and the CSF in all of the patients. Biopsied sample from spinal cord lesions showed inflammatory changes in Patient 1. Patient 2 had a demyelinating type of sensorimotor polyneuropathy. Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\n\"\"\"\n\nQuestion: Chronic progressive cervical myelopathy with HTLV-I infection: Variant form of HAM/TSP?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"Anti-HTLV-I antibodies were positive in both the serum and the CSF in all of the patients.\",\n    \"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"\n  ]\n}",
+ "input_tokens": 394,
+ "output_tokens": 322,
+ "latency_s": 1.0,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "558",
+   "x-ratelimit-remaining-tokens": "7381",
+   "x-ratelimit-reset-requests": "10h36m28.8s",
+   "x-ratelimit-reset-tokens": "4.642s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-b4e5328e-adf5-4bc0-bc84-fd499e5f7245",
+  "object": "chat.completion",
+  "created": 1793405193,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"Anti-HTLV-I antibodies were positive in both the serum and the CSF in all of the patients.\",\n    \"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"\n  ]\n}",
+     "reasoning": "We need to interpret: question: \"Chronic progressive cervical myelopathy with HTLV-I infection: Variant form of HAM/TSP?\" They ask answer yes/no/maybe with confidence and supporting quotes.\n\nFrom abstract: patients with slowly progressive myelopathy, abnormal MRI lesions in cervical cord. Anti-HTLV-I antibodies positive. Two of three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects. So suggests it could be a variant form. So answer maybe? The evidence suggests that it's possibly a variant. The abstract indicates they investigated role, and found high risk of developing HAM/TSP; but the condition described is cervical myelopathy, may be variant. The question: \"Chronic progressive cervical myelopathy with HTLV-I infection: Variant form of HAM/TSP?\" Likely answer maybe (uncertain). I'd answer \"maybe\" with moderate confidence, say 70.\n\nQuotes: \"Anti-HTLV-I antibodies were positive in both the serum and the CSF in all of the patients.\" and \"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"\n\nProvide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083776612,
+   "prompt_tokens": 394,
+   "prompt_time": 0.016155956,
+   "completion_tokens": 322,
+   "completion_time": 0.67153836,
+   "total_tokens": 716,
+   "total_time": 0.687694316,
+   "completion_tokens_details": {
+    "reasoning_tokens": 241
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e1a78f200e",
+  "x_groq": {
+   "id": "req_01m67mf2xfeapvk6n8x28at60w",
+   "seed": 180725758
+  },
+  "service_tier": "on_demand"
+ }
+}

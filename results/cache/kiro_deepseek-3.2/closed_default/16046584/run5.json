@@ -1,0 +1,127 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "16046584",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:50:33.922048+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "3a642350b22d88b3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Menopausal hormone therapy and irregular endometrial bleeding: a potential role for uterine natural killer cells?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 45}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.328,
+ "meta": {
+  "session_id": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+  "credits": 0.069282,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 45}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+     "contextUsagePercentage": 6.9140238761901855,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+     "contextUsagePercentage": 6.9140238761901855,
+     "meteringUsage": [
+      {
+       "value": 0.06928190049751244,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1986,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "a9b15cfe-69dd-49fe-9bd8-d3d33a9892ea",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"maybe\", \"confidence\": 45}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

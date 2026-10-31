@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "17919952",
+  "run": 2
+ },
+ "cached_at": "2026-10-30T23:58:14.596971+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "ceb31d50ff9058cc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are reports of mechanical dysfunction in chronic oro-facial pain related to somatisation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 3.859,
+ "meta": {
+  "session_id": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+  "credits": 0.06933,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"maybe\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 65\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "contextUsagePercentage": 6.9140238761901855,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "contextUsagePercentage": 6.9140238761901855,
+     "meteringUsage": [
+      {
+       "value": 0.06933028524046433,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1969,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "b85b9453-7f3c-4d98-9dcb-25ffd6ef43b8",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,368 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "12970636",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:45:31.390172+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "e875afa3adb5c657",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does early discharge with nurse home visits affect adequacy of newborn metabolic screening?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 10.782,
+ "meta": {
+  "session_id": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+  "credits": 0.212304,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "contextUsagePercentage": 6.9536590576171875,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_MHWrZv9LnP4C0VEhW1Bt6b",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "early discharge newborn metabolic screening nurse home visits adequacy",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_MHWrZv9LnP4C0VEhW1Bt6b",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "early discharge newborn metabolic screening nurse home visits adequacy",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "contextUsagePercentage": 7.025609970092773,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_e72V9IZgf0sLmoh1gsBSw0",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "early discharge newborn metabolic screening nurse home visits adequacy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_e72V9IZgf0sLmoh1gsBSw0",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "early discharge newborn metabolic screening nurse home visits adequacy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "maybe"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "contextUsagePercentage": 7.076828956604004,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "contextUsagePercentage": 7.076828956604004,
+     "meteringUsage": [
+      {
+       "value": 0.0705248855721393,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07086925373134328,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07090958208955224,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 8975,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "9026c1d8-406e-4002-b1bf-f2d028c43d2b",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

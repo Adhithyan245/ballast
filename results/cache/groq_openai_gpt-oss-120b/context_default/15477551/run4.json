@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "15477551",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T00:06:37.369711+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "2a0262e526a12b1e",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To investigate the role of human T-lymphotrophic virus type I (HTLV-I) infection in four patients who developed slowly progressive myelopathy with abnormal MRI lesions in the cervical cord levels.\n\nMETHODS: Clinical and neuroradiologic examinations were performed, and the odds that an HTLV-I-infected individual of specified genotype, age, and provirus load had HTLV-I-associated myelopathy (HAM)/tropical spastic paraparesis (TSP) were calculated.\n\nRESULTS: Anti-HTLV-I antibodies were positive in both the serum and the CSF in all of the patients. Biopsied sample from spinal cord lesions showed inflammatory changes in Patient 1. Patient 2 had a demyelinating type of sensorimotor polyneuropathy. Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\n\"\"\"\n\nQuestion: Chronic progressive cervical myelopathy with HTLV-I infection: Variant form of HAM/TSP?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"to investigate the role of human T-lymphotrophic virus type I (HTLV-I) infection in four patients who developed slowly progressive myelopathy with abnormal MRI lesions in the cervical cord levels.\",\n    \"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"\n  ]\n}",
+ "input_tokens": 394,
+ "output_tokens": 327,
+ "latency_s": 1.141,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "557",
+   "x-ratelimit-remaining-tokens": "6912",
+   "x-ratelimit-reset-requests": "10h37m55.2s",
+   "x-ratelimit-reset-tokens": "8.16s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-fa248186-ba2d-46fa-b2d3-88cc8bcf46ce",
+  "object": "chat.completion",
+  "created": 1793405196,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"to investigate the role of human T-lymphotrophic virus type I (HTLV-I) infection in four patients who developed slowly progressive myelopathy with abnormal MRI lesions in the cervical cord levels.\",\n    \"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"\n  ]\n}",
+     "reasoning": "We need to answer whether \"Chronic progressive cervical myelopathy with HTLV-I infection: Variant form of HAM/TSP?\" So is the condition a variant form? The abstract suggests they investigated role of HTLV-I infection in patients who developed slowly progressive myelopathy with abnormal MRI lesions in cervical cord. They found anti-HTLV-I positive, some had high risk of developing HAM/TSP. The question asks: is this a variant form of HAM/TSP? Probably maybe. Since they suggest it's a variant but not definitively. The abstract says \"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\" That suggests it could be a variant. So answer maybe.\n\nConfidence maybe 70.\n\nProvide quotes: \"to investigate the role of human T-lymphotrophic virus type I (HTLV-I) infection in four patients who developed slowly progressive myelopathy with abnormal MRI lesions in the cervical cord levels.\" and \"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.201821564,
+   "prompt_tokens": 394,
+   "prompt_time": 0.017640304,
+   "completion_tokens": 327,
+   "completion_time": 0.685411064,
+   "total_tokens": 721,
+   "total_time": 0.703051368,
+   "completion_tokens_details": {
+    "reasoning_tokens": 227
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_05e76be18c",
+  "x_groq": {
+   "id": "req_01m67mf59kejcratz8yt0v0atr",
+   "seed": 158241569
+  },
+  "service_tier": "on_demand"
+ }
+}

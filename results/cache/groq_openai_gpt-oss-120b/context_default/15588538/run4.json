@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "15588538",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T02:11:31.206701+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "4eef1f5e98e14a0b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Reliable longitudinal data of patients with functional somatic symptoms in general practice are lacking.\n\nAIMS: To identify distinctive features in patients with chronic functional somatic symptoms, and to determine whether these symptoms support the hypothesis of the existence of specific somatic syndromes.\n\nDESIGN OF STUDY: Observational study, with a comparison control group.\n\nSETTING: Four primary care practices affiliated with the University of Nijmegen in the Netherlands.\n\nMETHOD: One hundred and eighty-two patients diagnosed between 1998 and 2002 as having chronic functional somatic symptoms and 182 controls matched by age, sex, socioeconomic status, and practice were included. Data on comorbidity, referrals, diagnostic tests, and hospital admissions over a period of 10 years prior to the diagnosis were collected. Medication use and number of visits to the general practitioner (GP) were extracted from the moment computerised registration was started.\n\nRESULTS: In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems, and used more somatic and psychotropic drugs. They visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists. The number of patients undergoing diagnostic tests was higher for patients with chronic functional somatic symptoms than for controls, but hospital admissions rates were equal.\n\"\"\"\n\nQuestion: Chronic functional somatic symptoms: a single syndrome?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 55, \"quotes\": [\"In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems.\", \"They visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists.\"]}",
+ "input_tokens": 480,
+ "output_tokens": 401,
+ "latency_s": 1.297,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "632",
+   "x-ratelimit-remaining-tokens": "7201",
+   "x-ratelimit-reset-requests": "8h49m55.2s",
+   "x-ratelimit-reset-tokens": "5.992s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-92b01dc3-fa03-4818-9a89-17b9251b8b6e",
+  "object": "chat.completion",
+  "created": 1793412690,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 55, \"quotes\": [\"In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems.\", \"They visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists.\"]}",
+     "reasoning": "We need to answer whether chronic functional somatic symptoms constitute a single syndrome. The abstract aims to determine if symptoms support hypothesis of specific somatic syndromes. The results show patients have symptoms in at least two body systems, more psychiatric morbidity, more referrals, etc. This suggests they have heterogeneous symptoms across systems, possibly not a single syndrome but multiple. The study is trying to identify distinctive features; they find varied involvement, indicating perhaps not a single syndrome. The question: \"Chronic functional somatic symptoms: a single syndrome?\" Answer likely \"maybe\" because evidence is inconclusive. The abstract doesn't directly answer; it shows varied presentations and multiple system involvement, which might argue against a single syndrome. But the aim was to test hypothesis of specific somatic syndromes; results show they present symptoms in multiple systems, which could support a single syndrome spanning multiple systems? Hard.\n\nGiven the data, they have functional symptoms across multiple systems, suggesting a syndrome that is multi-systemic, i.e., possibly a single syndrome. However, the study seems to suggest heterogeneity, not specific syndrome. I'd answer \"maybe\" with moderate confidence, say 55.\n\nNeed quotes supporting. Choose: \"In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems,\" and maybe \"they visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists.\" These show multi-system involvement.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.24335088,
+   "prompt_tokens": 480,
+   "prompt_time": 0.018459652,
+   "completion_tokens": 401,
+   "completion_time": 0.830297504,
+   "total_tokens": 881,
+   "total_time": 0.848757156,
+   "completion_tokens_details": {
+    "reasoning_tokens": 312
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m67vkv92e23vd95cmkj5nvyq",
+   "seed": 1475475665
+  },
+  "service_tier": "on_demand"
+ }
+}

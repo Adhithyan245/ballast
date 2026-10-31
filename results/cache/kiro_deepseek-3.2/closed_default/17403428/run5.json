@@ -1,0 +1,403 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "17403428",
+  "run": 5
+ },
+ "cached_at": "2026-10-30T23:55:37.988919+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "0204e32f061f8c29",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "Based on my understanding of the current biomedical research, I'll provide the most accurate answer.\n\n<｜DSML｜function_callsLet me try to use the knowledge tool to see if there's any relevant information in indexed knowledge bases:\n\n<｜DSML｜function_callsBased on my existing biomedical knowledge, I can provide an answer:\n\n```json\n{\"answer\": \"maybe\", \"confidence\": 65}\n```",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 10.438,
+ "meta": {
+  "session_id": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+  "credits": 0.212534,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on my understanding of the current biomedical research, I'll provide"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the most accurate answer.\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "contextUsagePercentage": 6.946341514587402,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_1eZp92BrQHtx4nHU4fJSds",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "recurrent spontaneous abortion skewed X-inactivation association research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_1eZp92BrQHtx4nHU4fJSds",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "recurrent spontaneous abortion skewed X-inactivation association research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Let me try to use the knowledge tool to see if"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " there's any relevant information in indexed knowledge bases:\n\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "contextUsagePercentage": 7.026219367980957,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_tUSxQZ1h63TsiTdAldhK96",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_tUSxQZ1h63TsiTdAldhK96",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on my existing biomedical knowledge, I can provide an"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " answer:\n\n```json\n{\"answer\": \"maybe"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\", \"confidence\": 65}\n```"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "contextUsagePercentage": 7.087194919586182,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "contextUsagePercentage": 7.087194919586182,
+     "meteringUsage": [
+      {
+       "value": 0.07030657711442787,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07100840796019901,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07121885240464346,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 7945,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "2676342d-6adf-46c8-8508-6b6fc5e64e03",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "Based on my understanding of the current biomedical research, I'll provide the most accurate answer.\n\n<｜DSML｜function_callsLet me try to use the knowledge tool to see if there's any relevant information in indexed knowledge bases:\n\n<｜DSML｜function_callsBased on my existing biomedical knowledge, I can provide an answer:\n\n```json\n{\"answer\": \"maybe\", \"confidence\": 65}\n```",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}
