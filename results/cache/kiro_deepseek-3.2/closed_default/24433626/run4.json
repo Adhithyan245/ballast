@@ -1,0 +1,351 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "24433626",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T03:22:00.180691+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "88b85dc4fa9bece9",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Prevalence of chronic conditions among Medicare Part A beneficiaries in 2008 and 2010: are Medicare beneficiaries getting sicker?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "<｜DSML｜function_calls<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 45}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 10.468,
+ "meta": {
+  "session_id": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+  "credits": 0.211557,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "contextUsagePercentage": 6.946950912475586,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_KhWsnSMTCBcBKvhC9hSiV1",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "Medicare Part A beneficiaries chronic conditions prevalence 2008 2010 getting sicker"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_KhWsnSMTCBcBKvhC9hSiV1",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "Medicare Part A beneficiaries chronic conditions prevalence 2008 2010 getting sicker"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "contextUsagePercentage": 7.0128045082092285,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_bu1SWlSDMSxUWXk9R0Dty1",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_bu1SWlSDMSxUWXk9R0Dty1",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 45"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "contextUsagePercentage": 7.062804698944092,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "contextUsagePercentage": 7.062804698944092,
+     "meteringUsage": [
+      {
+       "value": 0.07016751907131014,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.070620271973466,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07076936981757877,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 8929,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "e0792107-8c49-4761-9e3a-9961e156c6fd",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "<｜DSML｜function_calls<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 45}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

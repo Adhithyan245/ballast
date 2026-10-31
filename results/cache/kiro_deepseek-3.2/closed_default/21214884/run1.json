@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "21214884",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T02:59:53.714126+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4d482e8870f1fc49",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can 'high-risk' human papillomaviruses (HPVs) be detected in human breast milk?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 70\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 3.266,
+ "meta": {
+  "session_id": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+  "credits": 0.069367,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "yes\",\n  \"confidence\": 70\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "contextUsagePercentage": 6.917683124542236,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "contextUsagePercentage": 6.917683124542236,
+     "meteringUsage": [
+      {
+       "value": 0.0693668623548922,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1984,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "995913c6-8b93-4192-b0a8-e072b3b28b79",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 70\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

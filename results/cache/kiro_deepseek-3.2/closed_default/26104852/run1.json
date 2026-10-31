@@ -1,0 +1,355 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "26104852",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T03:34:42.999984+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "7d581971c9745cae",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can echocardiography and ECG discriminate hereditary transthyretin V30M amyloidosis from hypertrophic cardiomyopathy?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 10.25,
+ "meta": {
+  "session_id": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+  "credits": 0.21285,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "contextUsagePercentage": 6.947560787200928,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_5cjWLDrj6PFUX90QP9N5UO",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "echocardiography ECG distinguish hereditary transthyretin V30M amyloidosis from hypertrophic cardiomyopathy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_5cjWLDrj6PFUX90QP9N5UO",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "echocardiography ECG distinguish hereditary transthyretin V30M amyloidosis from hypertrophic cardiomyopathy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "contextUsagePercentage": 7.043902397155762,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_NSTaWW3Lq1GZ4FvkYhcM3D",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "echocardiography ECG differentiate hereditary transthyretin V30M amyloidosis hypertrophic cardiomyopathy",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_NSTaWW3Lq1GZ4FvkYhcM3D",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "echocardiography ECG differentiate hereditary transthyretin V30M amyloidosis hypertrophic cardiomyopathy",
+       "limit": 10
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": \"maybe\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "contextUsagePercentage": 7.093902587890625,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "contextUsagePercentage": 7.093902587890625,
+     "meteringUsage": [
+      {
+       "value": 0.070222,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07154808291873964,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.0710802752902156,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 8853,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "54cd56ef-bef0-48c5-beb8-00e8f0611a27",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

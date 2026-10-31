@@ -1,0 +1,244 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "12094116",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T04:06:34.243951+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "5c2ea43d2bd43d6c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The purpose of this study was to identify the relationships between leg muscle power and sprinting speed with changes of direction.\n\nEXPERIMENTAL DESIGN: the study was designed to describe relationships between physical qualities and a component of sports performance.\n\nSETTING: testing was conducted in an indoor sports hall and a biomechanics laboratory.\n\nPARTICIPANTS: 15 male participants were required to be free of injury and have recent experience competing in sports involving sprints with changes of direction.\n\nMEASURES: subjects were timed in 8 m sprints in a straight line and with various changes of direction. They were also tested for bilateral and unilateral leg extensor muscle concentric power output by an isokinetic squat and reactive strength by a drop jump.\n\nRESULTS: The correlations between concentric power and straight sprinting speed were non-significant whereas the relationships between reactive strength and straight speed were statistically significant. Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength. The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\n\"\"\"\n\nQuestion: Is muscle power related to running speed with changes of direction?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75, \"quotes\": [\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\", \"The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\"]}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 5.281,
+ "meta": {
+  "session_id": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+  "credits": 0.07228,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": \"maybe\", \"confidence\": 75,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"quotes\": [\"Correlations between muscle power"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " and speed while changing direction were generally low and non"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "-significant for concentric leg power with some moderate and"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " significant (p<0.05) coefficients found"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " for reactive strength.\", \"The participants who turned faster"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " to one side tended to have a reactive strength dominance"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " in the leg responsible for the push-off action.\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "]}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "contextUsagePercentage": 7.128048896789551,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "contextUsagePercentage": 7.128048896789551,
+     "meteringUsage": [
+      {
+       "value": 0.07228049087893865,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 3870,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "bc1209f4-499f-4c59-b540-b9a58ae9c60e",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"maybe\", \"confidence\": 75, \"quotes\": [\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\", \"The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\"]}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

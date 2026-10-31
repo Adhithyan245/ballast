@@ -1,0 +1,244 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "19394934",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T04:25:47.862232+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "e65934429ba48381",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The incidence of large-scale urban attacks on civilian populations has significantly increased across the globe over the past decade. These incidents often result in Hospital Multiple Casualty Incidents (HMCI), which are very challenging to hospital teams. 15 years ago the Emergency and Disaster Medicine Division in the Israeli Ministry of Health defined a key of 20 percent of each hospital's bed capacity as its readiness for multiple casualties. Half of those casualties are expected to require immediate medical treatment. This study was performed to evaluate the efficacy of the current readiness guidelines based on the epidemiology of encountered HMCIs.\n\nMETHODS: A retrospective study of HMCIs was recorded in the Israeli Defense Force (IDF) home front command and the Israeli National Trauma Registry (ITR) between November 2000 and June 2003. An HMCI is defined by the Emergency and Disaster Medicine Division in the Israeli Ministry of Health as>or=10 casualties or>or=4 suffering from injuries with an ISS>or=16 arriving to a single hospital.\n\nRESULTS: The study includes a total of 32 attacks, resulting in 62 HMCIs and 1292 casualties. The mean number of arriving casualties to a single hospital was 20.8+/-13.3 (range 4-56, median 16.5). In 95% of the HMCIs the casualty load was<or=52. Based on severity scores and ED discharges 1022 (79.2%) casualties did not necessitate immediate medical treatment.\n\"\"\"\n\nQuestion: Israeli hospital preparedness for terrorism-related multiple casualty incidents: can the surge capacity and injury severity distribution be better predicted?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65,\n  \"quotes\": [\"Based on severity scores and ED discharges 1022 (79.2%) casualties did not necessitate immediate medical treatment.\", \"Half of those casualties are expected to require immediate medical treatment.\", \"In 95% of the HMCIs the casualty load was<or=52.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 6.391,
+ "meta": {
+  "session_id": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+  "credits": 0.072622,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": \"maybe\",\n  \"confidence\": 65"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ",\n  \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "qu"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "otes\": [\"Based on severity scores and ED discharges"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 1022 (79.2%) casualties did"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " not necessitate immediate medical treatment.\", \"Half of those"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " casualties are expected to require immediate medical treatment.\", \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "In 95% of the HMCIs the"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " casualty load was<or=52.\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "contextUsagePercentage": 7.168292999267578,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "contextUsagePercentage": 7.168292999267578,
+     "meteringUsage": [
+      {
+       "value": 0.07262235820895521,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 4392,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "075f77c9-2297-48fc-be5a-b9e1bb0247de",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65,\n  \"quotes\": [\"Based on severity scores and ED discharges 1022 (79.2%) casualties did not necessitate immediate medical treatment.\", \"Half of those casualties are expected to require immediate medical treatment.\", \"In 95% of the HMCIs the casualty load was<or=52.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

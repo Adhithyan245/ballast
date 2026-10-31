@@ -1,0 +1,192 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "16216859",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T04:15:12.702746+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "7a154e7645ed59e2",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To evaluate whether a well developed collateral circulation predisposes to restenosis after percutaneous coronary intervention (PCI).\n\nDESIGN: Prospective observational study.\n\nPATIENTS AND SETTING: 58 patients undergoing elective single vessel PCI in a tertiary referral interventional cardiac unit in the UK.\n\nMETHODS: Collateral flow index (CFI) was calculated as (Pw-Pv)/(Pa-Pv), where Pa, Pw, and Pv are aortic, coronary wedge, and right atrial pressures during maximum hyperaemia. Collateral supply was considered poor (CFI<0.25) or good (CFI>or = 0.25).\n\nMAIN OUTCOME MEASURES: In-stent restenosis six months after PCI, classified as neointimal volume>or = 25% stent volume on intravascular ultrasound (IVUS), or minimum lumen area<or = 50% stent area on IVUS, or minimum lumen diameter<or = 50% reference vessel diameter on quantitative coronary angiography.\n\nRESULTS: Patients with good collaterals had more severe coronary stenoses at baseline (90 (11)% v 75 (16)%, p<0.001). Restenosis rates were similar in poor and good collateral groups (35% v 43%, p = 0.76 for diameter restenosis, 27% v 45%, p = 0.34 for area restenosis, and 23% v 24%, p = 0.84 for volumetric restenosis). CFI was not correlated with diameter, area, or volumetric restenosis (r2<0.1 for each). By multivariate analysis, stent diameter, stent length,>10% residual stenosis, and smoking history were predictive of restenosis.\n\"\"\"\n\nQuestion: Does a well developed collateral circulation predispose to restenosis after percutaneous coronary intervention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\"Restenosis rates were similar in poor and good collateral groups (35% v 43%, p = 0.76 for diameter restenosis, 27% v 45%, p = 0.34 for area restenosis, and 23% v 24%, p = 0.84 for volumetric restenosis).\", \"CFI was not correlated with diameter, area, or volumetric restenosis (r2<0.1 for each).\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.266,
+ "meta": {
+  "session_id": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+  "credits": 0.07371,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\"Restenosis"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " rates were similar in poor and good collateral groups (35% v 43%, p = 0.76"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " for diameter restenosis, 27% v 45%, p = 0.34 for area rest"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "enosis, and 23% v 24%, p = 0.84 for volumetric restenosis"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ").\", \"CFI was not correlated with diameter, area, or volumetric restenosis (r2<"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0.1 for each).\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "contextUsagePercentage": 7.226219654083252,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "contextUsagePercentage": 7.226219654083252,
+     "meteringUsage": [
+      {
+       "value": 0.07370953565505804,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2262,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "b1a23f81-b05c-4fea-988d-a1ff66f146d2",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\"Restenosis rates were similar in poor and good collateral groups (35% v 43%, p = 0.76 for diameter restenosis, 27% v 45%, p = 0.34 for area restenosis, and 23% v 24%, p = 0.84 for volumetric restenosis).\", \"CFI was not correlated with diameter, area, or volumetric restenosis (r2<0.1 for each).\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

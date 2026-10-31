@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "19615731",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T12:34:04.418748+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "e80702bb38dbcd57",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Epidemiologic findings support a positive association between asthma and obesity.\n\nOBJECTIVE: Determine whether obesity or increasing level of body mass index (BMI) are associated with worse asthma control in an ethnically diverse urban population.\n\nMETHODS: Cross-sectional assessment of asthma control was performed in patients with asthma recruited from primary care offices by using 4 different validated asthma control questionnaires: the Asthma Control and Communication Instrument (ACCI), the Asthma Control Test (ACT), the Asthma Control Questionnaire (ACQ), and the Asthma Therapy Assessment Questionnaire (ATAQ). Multiple linear regression analysis was performed to evaluate the association between obesity and increasing BMI level and asthma control.\n\nRESULTS: Of 292 subjects with a mean age of 47 years, the majority were women (82%) and African American (67%). There was a high prevalence of obesity with 63%, with only 15% normal weight. The mean score from all 4 questionnaires showed an average suboptimal asthma control (mean score/maximum possible score): ACCI (8.3/19), ACT (15.4/25), ACQ (2.1/6), and ATAQ (1.3/4). Regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires. This finding persisted even after adjusting for FEV(1), smoking status, race, sex, selected comorbid illnesses, and long-term asthma controller use.\n\"\"\"\n\nQuestion: Does higher body mass index contribute to worse asthma control in an urban population?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires.\",\n    \"This finding persisted even after adjusting for FEV(1), smoking status, race, sex, selected comorbid illnesses, and long-term asthma controller use.\"\n  ]\n}",
+ "input_tokens": 496,
+ "output_tokens": 206,
+ "latency_s": 0.766,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "937",
+   "x-ratelimit-remaining-tokens": "6756",
+   "x-ratelimit-reset-requests": "1h30m43.2s",
+   "x-ratelimit-reset-tokens": "9.33s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e54c236d-e2d6-4b79-8701-71c7718d18d3",
+  "object": "chat.completion",
+  "created": 1793450042,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires.\",\n    \"This finding persisted even after adjusting for FEV(1), smoking status, race, sex, selected comorbid illnesses, and long-term asthma controller use.\"\n  ]\n}",
+     "reasoning": "We need to answer based on abstract. The abstract says regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires. So answer: \"no\" (higher BMI does not contribute to worse control). Confidence high, maybe 95. Provide quotes: \"Regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires.\" Also maybe \"There was a high prevalence of obesity with 63%, with only 15% normal weight.\" but the relevant is the no association. Provide up to three sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243344679,
+   "prompt_tokens": 496,
+   "prompt_time": 0.024925649,
+   "completion_tokens": 206,
+   "completion_time": 0.427135474,
+   "total_tokens": 702,
+   "total_time": 0.452061123,
+   "completion_tokens_details": {
+    "reasoning_tokens": 118
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01m68z7rk2ekkt3gja57axe5sc",
+   "seed": 1478964413
+  },
+  "service_tier": "on_demand"
+ }
+}

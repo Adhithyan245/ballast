@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "19058191",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T08:46:19.021221+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "5a20efbe429a6b7b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nAIMS: Quality of Life (QoL) assessment remains integral in the investigation of women with lower urinary tract dysfunction. Previous work suggests that physicians tend to underestimate patients' symptoms and the bother that they cause. The aim of this study was to assess the relationship between physician and patient assessed QoL using the Kings Health Questionnaire (KHQ).\n\nMETHODS: Patients complaining of troublesome lower urinary tract symptoms (LUTS) were recruited from a tertiary referral urodynamic clinic. Prior to their clinic appointment they were sent a KHQ, which was completed before attending. After taking a detailed urogynecological history, a second KHQ was filled in by the physician, blinded to the patient responses, on the basis of their impression of the symptoms elicited during the interview. These data were analyzed by an independent statistician. Concordance between patient and physician assessment for individual questions was assessed using weighted kappa analysis. QoL scores were compared using Wilcoxons signed rank test.\n\nRESULTS: Seventy-five patients were recruited over a period of 5 months. Overall, the weighted kappa showed relatively poor concordance between the patient and physician responses; mean kappa: 0.33 (range 0.18-0.57). The physician underestimated QoL score in 4/9 domains by a mean of 5.5% and overestimated QoL score in 5/9 domains by a mean of 6.9%. In particular, physicians underestimated the impact of LUTS on social limitations and emotions (P<0.05).\n\"\"\"\n\nQuestion: Is there a discrepancy between patient and physician quality of life assessment?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 96,\n  \"quotes\": [\n    \"Overall, the weighted kappa showed relatively poor concordance between the patient and physician responses; mean kappa: 0.33 (range 0.18-0.57).\",\n    \"The physician underestimated QoL score in 4/9 domains by a mean of 5.5% and overestimated QoL score in 5/9 domains by a mean of 6.9%.\"\n  ]\n}",
+ "input_tokens": 516,
+ "output_tokens": 289,
+ "latency_s": 0.797,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "819",
+   "x-ratelimit-remaining-tokens": "4822",
+   "x-ratelimit-reset-requests": "4h20m38.4s",
+   "x-ratelimit-reset-tokens": "23.835s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-9cdc77b1-8f09-44be-86f0-d5f9d803959b",
+  "object": "chat.completion",
+  "created": 1793436377,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"yes\",\n  \"confidence\": 96,\n  \"quotes\": [\n    \"Overall, the weighted kappa showed relatively poor concordance between the patient and physician responses; mean kappa: 0.33 (range 0.18-0.57).\",\n    \"The physician underestimated QoL score in 4/9 domains by a mean of 5.5% and overestimated QoL score in 5/9 domains by a mean of 6.9%.\"\n  ]\n}",
+     "reasoning": "We need to determine if there's a discrepancy between patient and physician QoL assessment. The abstract says weighted kappa shows relatively poor concordance, mean 0.33, range 0.18-0.57. Also physician underestimated QoL score in 4/9 domains and overestimated in 5/9 domains. So yes discrepancy. Provide confidence high, say 96. Provide quotes: \"Overall, the weighted kappa showed relatively poor concordance between the patient and physician responses; mean kappa: 0.33 (range 0.18-0.57).\" and \"The physician underestimated QoL score in 4/9 domains by a mean of 5.5% and overestimated QoL score in 5/9 domains by a mean of 6.9%.\" That's two sentences. Return JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.035990622,
+   "prompt_tokens": 516,
+   "prompt_time": 0.084872696,
+   "completion_tokens": 289,
+   "completion_time": 0.605578296,
+   "total_tokens": 805,
+   "total_time": 0.690450992,
+   "completion_tokens_details": {
+    "reasoning_tokens": 172
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4140daa9c2",
+  "x_groq": {
+   "id": "req_01m68j6qrbe1bbd75pemzxs9x8",
+   "seed": 1796087788
+  },
+  "service_tier": "on_demand"
+ }
+}

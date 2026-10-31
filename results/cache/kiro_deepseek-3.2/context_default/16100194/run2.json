@@ -1,0 +1,283 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "16100194",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T04:14:20.061748+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "e5f8059c1e88acdd",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nSTUDY OBJECTIVE: Angiotensin-converting enzyme inhibitors (ACE-I) are considered safe, but they are associated with characteristic side effects, namely cough and angioedema, usually requiring discontinuation. We perceived that referrals for these side effects have become more and more frequent; therefore, we evaluated the degree of knowledge on the safety of ACE-I in different medical categories.\n\nDESIGN: A questionnaire (13 questions) on side effects of ACE-I was posted to physicians.\n\nSETTING: Everyday clinical practice.\n\nPARTICIPANTS: Cardiologists, allergists, and general practitioners (GPs) from the National Healthcare System.\n\nMEASUREMENT AND RESULTS: Three hundred twelve physicians were contacted, and 154 returned questionnaires that could be analyzed. Of the 154 physicians (mean age, 45 years) 48 were cardiologists, 52 were GPs, and 54 were allergists. The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists. Thus, GPs provided a significantly higher percentage of correct answers with respect to the remaining categories (p = 0.05). The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take. Cardiologists seemed to be less aware of the fact that angiotensin receptor blockers (sartans) can cross-react with ACE-I.\n\"\"\"\n\nQuestion: Are physicians aware of the side effects of angiotensin-converting enzyme inhibitors?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\n    \"The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists.\",\n    \"Thus, GPs provided a significantly higher percentage of correct answers with respect to the remaining categories (p = 0.05).\",\n    \"The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take.\"\n  ]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 6.593,
+ "meta": {
+  "session_id": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+  "credits": 0.073216,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 85,\n  \"quotes\": [\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "    \"The percentage of correct answers was low:"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 31.9% for cardiologists, "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "40% for GPs, and 33%"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " for allergists.\",\n    \"Thus, GPs"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " provided a significantly higher percentage of"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " correct answers with respect to the remaining categories (p"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " = 0.05).\",\n    \"The"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " lower rate of correct answers (0 to 15"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".9%) concerned the time of onset of cough"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " and the action"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " to take.\"\n  ]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "contextUsagePercentage": 7.18170690536499,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "contextUsagePercentage": 7.18170690536499,
+     "meteringUsage": [
+      {
+       "value": 0.07321612935323382,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 4614,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "bd6e1ec9-95ee-49c1-8e1a-69ed62361a54",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\n    \"The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists.\",\n    \"Thus, GPs provided a significantly higher percentage of correct answers with respect to the remaining categories (p = 0.05).\",\n    \"The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take.\"\n  ]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

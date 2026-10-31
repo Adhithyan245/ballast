@@ -1,0 +1,205 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "25592625",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T06:52:01.782773+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "2b2779576f91eb0b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Although consensus guidelines for pretreatment evaluation and monitoring of propranolol therapy in patients with infantile hemangiomas (IH) have been formulated, little is known about the cardiovascular side effects.\n\nOBJECTIVES: We sought to analyze cardiovascular evaluations in patients with IH at baseline and during treatment with an oral beta-blocker.\n\nMETHODS: Data from 109 patients with IH were retrospectively analyzed. Patient and family history, pretreatment electrocardiogram (ECG), heart rate, and blood pressure were evaluated before initiation of beta-blocker therapy. Blood pressure and standardized questionnaires addressing side effects were evaluated during treatment.\n\nRESULTS: Questionnaire analyses (n = 83) identified 3 cases with a family history of cardiovascular disease in first-degree relatives. ECG findings were normal in each case and no serious complication of therapy occurred. ECG abnormalities were found in 6.5% of patients but there were no contraindications to beta-blocker therapy and no major complications. Hypotension in 9 patients did not require therapy adjustment. In all, 88 parents (81%) reported side effects during beta-blocker treatment.\n\nLIMITATIONS: The relatively small patient cohort is a limitation.\n\"\"\"\n\nQuestion: Is cardiovascular evaluation necessary prior to and during beta-blocker therapy for infantile hemangiomas?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65,\n  \"quotes\": [\"ECG abnormalities were found in 6.5% of patients but there were no contraindications to beta-blocker therapy and no major complications.\", \"In all, 88 parents (81%) reported side effects during beta-blocker treatment.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.281,
+ "meta": {
+  "session_id": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+  "credits": 0.072032,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"maybe\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 65,\n  \"quotes\": [\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "ECG abnormalities were found in 6.5"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "% of patients but there were no contraindications to"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " beta-blocker therapy and no major complications.\", \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "In all, 88 parents (81%) reported"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " side effects during beta-blocker treatment.\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "contextUsagePercentage": 7.117682456970215,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "contextUsagePercentage": 7.117682456970215,
+     "meteringUsage": [
+      {
+       "value": 0.0720317014925373,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2971,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "0413f88d-d4ea-4bc7-b4be-364570a4ad24",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65,\n  \"quotes\": [\"ECG abnormalities were found in 6.5% of patients but there were no contraindications to beta-blocker therapy and no major complications.\", \"In all, 88 parents (81%) reported side effects during beta-blocker treatment.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

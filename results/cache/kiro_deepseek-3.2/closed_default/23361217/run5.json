@@ -1,0 +1,377 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "23361217",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T03:17:36.767083+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "50359d0b748747db",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"yes\", \"confidence\": 75}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 11.782,
+ "meta": {
+  "session_id": "f31e604f-9957-44d0-af69-d9e618247b44",
+  "credits": 0.211271,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "<｜DSML｜function"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "_c"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "alls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "contextUsagePercentage": 6.937195301055908,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_L0HGvd9sC4SaoZyRzltxCg",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "tibial component mechanical alignment unicompartmental knee replacement"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_L0HGvd9sC4SaoZyRzltxCg",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "tibial component mechanical alignment unicompartmental knee replacement"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "contextUsagePercentage": 7.006097793579102,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_N9hmG3Bgokchmi8WfPD5h2",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_N9hmG3Bgokchmi8WfPD5h2",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"yes\", \"confidence\": 75"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "contextUsagePercentage": 7.055487632751465,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "contextUsagePercentage": 7.055487632751465,
+     "meteringUsage": [
+      {
+       "value": 0.0700094991708126,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07056531011608624,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07069621558872306,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 9836,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "f31e604f-9957-44d0-af69-d9e618247b44",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"yes\", \"confidence\": 75}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

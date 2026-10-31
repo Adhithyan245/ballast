@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "10966943",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T12:39:42.314965+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "8166f9167241775e",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nMETHODS: The records of 465 patients with an established diagnosis of age related macular degeneration who had attended a specialist macular clinic between 1990 and 1998 were scrutinised. A full clinical examination and standardised refraction had been carried out in 189 of these cases on a minimum of two occasions. Cases were looked for where an improvement of one or more lines of either distance or near acuity was recorded in the eye unaffected by macular disease. In each one of these cases the improvement in visual acuity could not be attributed to treatment of other existing pathology.\n\nRESULTS: 12 such cases were detected. In nine of these the eye showing improvement of acuity had a history of amblyopia. The mean improvement in distance and near acuity in amblyopic eyes by 12 months was 3.3 and 1.9 lines logMAR respectively. The improvement in acuity generally occurred between 1 and 12 months from baseline and remained stable over the period of follow up.\n\"\"\"\n\nQuestion: Amblyopia: is visual loss permanent?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "```json\n{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"In nine of these the eye showing improvement of acuity had a history of amblyopia.\", \"The mean improvement in distance and near acuity in amblyopic eyes by 12 months was 3.3 and 1.9 lines logMAR respectively.\"]}\n```",
+ "input_tokens": 346,
+ "output_tokens": 75,
+ "latency_s": 0.687,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"In nine of these the eye showing improvement of acuity had a history of amblyopia.\", \"The mean improvement in distance and near acuity in amblyopic eyes by 12 months was 3.3 and 1.9 lines logMAR respectively.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TmtEwrtx8nSbXErbPcXKA1GYbWFRiqQWzRr+sAT4LO8jzL6qn65ge5EFGBmwaZLs3n8dAnbsvnjjGmCZxUyfPYe3/dUOSXPhM7VMPrHaAkYgXFMcnyDmO2mQ="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 55,
+       "endIndex": 261,
+       "uri": "https://pubmed.ncbi.nlm.nih.gov/10966943/",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 346,
+   "candidatesTokenCount": 75,
+   "totalTokenCount": 421,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 346
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "i-HlavH5O5O_xdIPwPfjqAg"
+ }
+}

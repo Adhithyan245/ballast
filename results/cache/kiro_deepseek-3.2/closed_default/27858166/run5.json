@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "27858166",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T03:39:58.942672+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "d3becb8ad4015841",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "Based on my biomedical knowledge:\n\n{\"answer\": \"yes\", \"confidence\": 75}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 5.828,
+ "meta": {
+  "session_id": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+  "credits": 0.069367,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on my biomedical knowledge:\n\n{\"answer\": \"yes"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\", \"confidence\": 75}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "contextUsagePercentage": 6.915243625640869,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "contextUsagePercentage": 6.915243625640869,
+     "meteringUsage": [
+      {
+       "value": 0.06936666998341626,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 4216,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "9e0f288d-b12d-458a-a1b1-c4bdcd7db0e1",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "Based on my biomedical knowledge:\n\n{\"answer\": \"yes\", \"confidence\": 75}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

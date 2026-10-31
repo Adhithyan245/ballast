@@ -1,0 +1,205 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "17704864",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T04:18:58.409146+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "05715a928a542c13",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Laparoscopic adrenalectomy (LA) has become the gold standard treatment for small (less than 6 cm) adrenal masses. However, the role of LA for large-volume (more than 6 cm) masses has not been well defined. Our aim was to evaluate, retrospectively, the outcome of LA for adrenal lesions larger than 7 cm.\n\nPATIENTS AND METHODS: 18 consecutive laparoscopic adrenalectomies were performed from 1996 to 2005 on patients with adrenal lesions larger than 7 cm.\n\nRESULTS: The mean tumor size was 8.3 cm (range 7-13 cm), the mean operative time was 137 min, the mean blood loss was 182 mL (range 100-550 mL), the rate of intraoperative complications was 16%, and in three cases we switched from laparoscopic procedure to open surgery.\n\"\"\"\n\nQuestion: Is laparoscopic adrenalectomy safe and effective for adrenal masses larger than 7 cm?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75, \"quotes\": [\"in three cases we switched from laparoscopic procedure to open surgery\", \"the rate of intraoperative complications was 16%\", \"18 consecutive laparoscopic adrenalectomies were performed from 1996 to 2005 on patients with adrenal lesions larger than 7 cm\"]}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.969,
+ "meta": {
+  "session_id": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+  "credits": 0.071654,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": 75"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ", \"quotes\": [\"in three cases we"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " switched from laparoscopic procedure to open surgery\", \"the"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " rate of intraoperative complications was 16%\","
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"18 consecutive laparoscopic adrenalectomies were performed"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " from 1996 to 2005 on patients"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " with adrenal lesions larger than 7 cm\"]}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "contextUsagePercentage": 7.079877853393555,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "contextUsagePercentage": 7.079877853393555,
+     "meteringUsage": [
+      {
+       "value": 0.07165373797678275,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 3154,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "d7d70e06-7e5c-4570-9b93-abf226fafa8a",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"maybe\", \"confidence\": 75, \"quotes\": [\"in three cases we switched from laparoscopic procedure to open surgery\", \"the rate of intraoperative complications was 16%\", \"18 consecutive laparoscopic adrenalectomies were performed from 1996 to 2005 on patients with adrenal lesions larger than 7 cm\"]}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

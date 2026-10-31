@@ -1,0 +1,153 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "7547656",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T03:58:04.381705+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "d68026550b680f8d",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND AND OBJECTIVES: Bolus intravenous injection of epinephrine can decrease uterine blood flow. This study examined the effects of intravenous infusion of epinephrine on uterine blood flow in the gravid ewe.\n\nMETHODS: Maternal and fetal vascular catheters and a maternal electromagnetic uterine artery flow probe were implanted in 10 near-term gravid ewes. After recovery, saline, 0.125% bupivacaine, 0.125% bupivacaine with 1:200,000 epinephrine, 0.125% bupivacaine with 1:400,000 epinephrine, and 0.125% bupivacaine with 1:800,000 epinephrine were infused into the maternal superior vena cava. Drugs were infused at 10 mL/h for 30 minutes and then at 20 mL/h for an additional 30 minutes. Animals also received an intravenous bolus of epinephrine 15 micrograms. Throughout all infusions, maternal heart rate, systemic and pulmonary blood pressures, uterine blood flow, cardiac output, and acid-base balance were measured, as well as fetal heart rate, blood pressure, and acid-base balance.\n\nRESULTS: Epinephrine 15 micrograms decreased uterine blood flow to 68 +/- 14% of baseline (mean +/- SD). Infusion of all solutions had no effect on any measured hemodynamic variable.\n\"\"\"\n\nQuestion: Does continuous intravenous infusion of low-concentration epinephrine impair uterine blood flow in pregnant ewes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"Infusion of all solutions had no effect on any measured hemodynamic variable.\"]}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 3.579,
+ "meta": {
+  "session_id": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+  "credits": 0.071621,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"no\", \"confidence\": 90,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"quotes\": [\"Infusion of all solutions had"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " no effect on any measured hemodynamic variable.\"]}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "contextUsagePercentage": 7.122561454772949,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "contextUsagePercentage": 7.122561454772949,
+     "meteringUsage": [
+      {
+       "value": 0.07162081592039801,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2186,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "0082f5a6-dc52-48f6-87e6-988b5935358f",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"Infusion of all solutions had no effect on any measured hemodynamic variable.\"]}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

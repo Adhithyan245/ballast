@@ -1,0 +1,218 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "19757704",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T04:28:16.032904+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "e27a7ae22d932c9e",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To determine the practices and knowledge of harmful effects regarding use of Chaalia and Pan Masala in three schools of Mahmoodabad and Chanesar Goth, Jamshed Town, Karachi, Pakistan.\n\nMETHODS: To achieve the objective a cross-sectional design was used in three government schools of Mahmoodabad and Chanesar Goth, Jamshed Town, Karachi. Students of either gender drawn from these schools fulfilling the inclusion and exclusion criteria were interviewed using a pre-coded structured questionnaire. Along with demographic data, questions regarding frequency of Chaalia and Pan Masala use, practices of this habit in friends and family and place of procurement of these substances, were inquired. Knowledge was assessed about harmful effects and its source of information. In addition, practices in relation to that knowledge were assessed.\n\nRESULTS: A total of 370 students were interviewed over a period of six weeks, of which 205 (55.4%) were boys. The ages of the students were between 10 and 15 years. Thirty one percent of the fathers and 62% of the mothers were uneducated. The frequency of use of any brand of Chaalia was found to be 94% and that of Pan Masala was 73.8%. Eighty five percent of them were regular users. A large majority (88%) procured the substances themselves from near their homes. Ninety five percent of the children had friends with the same habits. Eighty four percent were using the substances in full knowledge of their families. Chaalia was considered harmful for health by 96% and Pan Masala by 60%. Good taste was cited as a reason for continuing the habit by 88.5% of the children and use by friends by 57%. Knowledge about established harmful effects was variable. Knowledge about harmful effects was high in both \"daily\" and \"less than daily users\".\n\"\"\"\n\nQuestion: Is Chaalia/Pan Masala harmful for health?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 90,\n  \"quotes\": [\"Chaalia was considered harmful for health by 96% and Pan Masala by 60%.\", \"Knowledge about established harmful effects was variable.\", \"Knowledge about harmful effects was high in both \\\"daily\\\" and \\\"less than daily users\\\".\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 5.078,
+ "meta": {
+  "session_id": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+  "credits": 0.072855,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 90,\n  \"quotes\": [\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Chaalia was considered harmful for health by 96"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "% and Pan Masala by 60%.\","
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"Knowledge about established harmful effects was variable.\", \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Knowledge about harmful effects was high in both \\\"daily"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\\\" and \\\"less than daily users\\\".\"]\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "contextUsagePercentage": 7.1987810134887695,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "contextUsagePercentage": 7.1987810134887695,
+     "meteringUsage": [
+      {
+       "value": 0.0728545903814262,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 3109,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "4fb0d0f3-8a1b-48a4-87f7-aa1841963207",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 90,\n  \"quotes\": [\"Chaalia was considered harmful for health by 96% and Pan Masala by 60%.\", \"Knowledge about established harmful effects was variable.\", \"Knowledge about harmful effects was high in both \\\"daily\\\" and \\\"less than daily users\\\".\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "19615731",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T02:12:42.527185+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "3086f08d5ef8f0a3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does higher body mass index contribute to worse asthma control in an urban population?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 70}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 5.047,
+ "meta": {
+  "session_id": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+  "credits": 0.069251,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"yes\", \"confidence\": 70}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+     "contextUsagePercentage": 6.910975456237793,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+     "contextUsagePercentage": 6.910975456237793,
+     "meteringUsage": [
+      {
+       "value": 0.06925141956882255,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2822,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "e5d982ce-892f-4f5c-84ab-b35ab41d4156",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"yes\", \"confidence\": 70}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

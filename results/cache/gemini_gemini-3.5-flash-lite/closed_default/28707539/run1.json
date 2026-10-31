@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "28707539",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T12:36:22.082603+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "51c4e68fcce807b0",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Visceral adipose tissue area measurement at a single level: can it represent visceral adipose tissue volume?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+ "input_tokens": 106,
+ "output_tokens": 18,
+ "latency_s": 0.5,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TwiBUHjBeqcZiUciJ9Ikr14JB3HqsXkuAm0025f/Jnvugg8vARk9opETKwFgBI6f3eWA8jpxlkxTf/HQxyW0TRtSJVGMMfw4B5RFSL3TT7f+IkOXIPHbaR1U="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 106,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 124,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 106
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "w-DlaoTlObrCxdIP5fXL4Qg"
+ }
+}

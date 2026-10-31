@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "27909738",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T14:06:08.787350+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "4ec6b016ea3d84f3",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: Using high-quality CT-on-rails imaging, the daily motion of the prostate bed clinical target volume (PB-CTV) based on consensus Radiation Therapy Oncology Group (RTOG) definitions (instead of surgical clips/fiducials) was studied. It was assessed whether PB motion in the superior portion of PB-CTV (SUP-CTV) differed from the inferior PB-CTV (INF-CTV).\n\nPATIENTS AND METHODS: Eight pT2-3bN0-1M0 patients underwent postprostatectomy intensity-modulated radiotherapy, totaling 300 fractions. INF-CTV and SUP-CTV were defined as PB-CTV located inferior and superior to the superior border of the pubic symphysis, respectively. Daily pretreatment CT-on-rails images were compared to the planning CT in the left-right (LR), superoinferior (SI), and anteroposterior (AP) directions. Two parameters were defined: \"total PB-CTV motion\" represented total shifts from skin tattoos to RTOG-defined anatomic areas; \"PB-CTV target motion\" (performed for both SUP-CTV and INF-CTV) represented shifts from bone to RTOG-defined anatomic areas (i. e., subtracting shifts from skin tattoos to bone).\n\nRESULTS: Mean (± standard deviation, SD) total PB-CTV motion was -1.5 (± 6.0), 1.3 (± 4.5), and 3.7 (± 5.7) mm in LR, SI, and AP directions, respectively. Mean (± SD) PB-CTV target motion was 0.2 (±1.4), 0.3 (±2.4), and 0 (±3.1) mm in the LR, SI, and AP directions, respectively. Mean (± SD) INF-CTV target motion was 0.1 (± 2.8), 0.5 (± 2.2), and 0.2 (± 2.5) mm, and SUP-CTV target motion was 0.3 (± 1.8), 0.5 (± 2.3), and 0 (± 5.0) mm in LR, SI, and AP directions, respectively. No statistically significant differences between INF-CTV and SUP-CTV motion were present in any direction.\n\"\"\"\n\nQuestion: Prostate bed target interfractional motion using RTOG consensus definitions and daily CT on rails : Does target motion differ between superior and inferior portions of the clinical target volume?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"No statistically significant differences between INF-CTV and SUP-CTV motion were present in any direction.\"\n  ]\n}",
+ "input_tokens": 727,
+ "output_tokens": 54,
+ "latency_s": 1.188,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "729",
+   "x-ratelimit-remaining-tokens": "7153",
+   "x-ratelimit-reset-requests": "6h30m14.4s",
+   "x-ratelimit-reset-tokens": "6.352s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-ed0c65ba-8688-4df0-809b-657fef3bb91b",
+  "object": "chat.completion",
+  "created": 1793455566,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"No statistically significant differences between INF-CTV and SUP-CTV motion were present in any direction.\"\n  ]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.004548112,
+   "prompt_tokens": 727,
+   "prompt_time": 0.063282149,
+   "completion_tokens": 54,
+   "completion_time": 0.110072482,
+   "total_tokens": 781,
+   "total_time": 0.173354631
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m694gbbce8paqkye8kc55hj9",
+   "seed": 564134756
+  },
+  "service_tier": "on_demand"
+ }
+}

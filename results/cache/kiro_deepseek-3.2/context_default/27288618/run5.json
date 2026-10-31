@@ -1,0 +1,270 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "27288618",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T12:35:49.561844+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "70075b5a54b24b4b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: To determine whether prophylactic inhaled heparin is effective for the prevention and treatment of pneumonia patients receiving mechanical ventilation (MV) in the intensive care unit.\n\nMETHODS: A phase 2, double blind randomized controlled trial stratified for study center and patient type (non-operative, post-operative) was conducted in three university-affiliated intensive care units. Patients aged ≥18years and requiring invasive MV for more than 48hours were randomized to usual care, nebulization of unfractionated sodium heparin (5000 units in 2mL) or placebo nebulization with 0.9% sodium chloride (2mL) four times daily with the main outcome measures of the development of ventilator associated pneumonia (VAP), ventilator associated complication (VAC) and sequential organ failure assessment scores in patients with pneumonia on admission or who developed VAP.\n\nTRIAL REGISTRATION: Australian and New Zealand Clinical Trials Registry ACTRN12612000038897.\n\nRESULTS: Two hundred and fourteen patients were enrolled (72 usual care, 71 inhaled sodium heparin, 71 inhaled sodium chloride). There were no differences between treatment groups in terms of the development of VAP, using either Klompas criteria (6-7%, P=1.00) or clinical diagnosis (24-26%, P=0.85). There was no difference in the clinical consistency (P=0.70), number (P=0.28) or the total volume of secretions per day (P=.54). The presence of blood in secretions was significantly less in the usual care group (P=0.005).\n\"\"\"\n\nQuestion: Is inhaled prophylactic heparin useful for prevention and Management of Pneumonia in ventilated ICU patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\n    \"There were no differences between treatment groups in terms of the development of VAP, using either Klompas criteria (6-7%, P=1.00) or clinical diagnosis (24-26%, P=0.85).\",\n    \"There was no difference in the clinical consistency (P=0.70), number (P=0.28) or the total volume of secretions per day (P=.54).\"\n  ]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 5.968,
+ "meta": {
+  "session_id": "b8875012-d300-4308-ad84-00aab803c8fc",
+  "credits": 0.073338,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 85,\n  \"quotes\": [\n   "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"There were no differences between treatment"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " groups in terms of the development of VAP,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " using either Klompas criteria (6-7"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "%, P=1.00) or clinical diagnosis"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " (24-26%, P=0.85"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ").\",\n    \"There was no difference"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " in the clinical consistency (P=0.70"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "), number (P=0.28) or"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the total volume of secretions per day (P=."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "54).\"\n  ]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "contextUsagePercentage": 7.197561264038086,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "contextUsagePercentage": 7.197561264038086,
+     "meteringUsage": [
+      {
+       "value": 0.0733383416252073,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 4189,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "b8875012-d300-4308-ad84-00aab803c8fc",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\n    \"There were no differences between treatment groups in terms of the development of VAP, using either Klompas criteria (6-7%, P=1.00) or clinical diagnosis (24-26%, P=0.85).\",\n    \"There was no difference in the clinical consistency (P=0.70), number (P=0.28) or the total volume of secretions per day (P=.54).\"\n  ]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

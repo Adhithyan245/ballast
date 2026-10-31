@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "27040842",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T12:34:27.313502+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "e75dbec61c0f5133",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does septoplasty change the dimensions of compensatory hypertrophy of the middle turbinate?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 102,
+ "output_tokens": 18,
+ "latency_s": 0.765,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T5V1g3B9X/Yo1ERku+gk734/O6/QdR+oUxEWvLT7b0vgyciK3vi26wlzN1ID1QVlGAEP1pLTPvtmGpqJaME/gfAcFdY3O+d4dmt0Vof3LN3RCOs5y+kxS/Ns="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 102,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 120,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 102
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "UODlap_jN82p5NoP1ZuNoAc"
+ }
+}

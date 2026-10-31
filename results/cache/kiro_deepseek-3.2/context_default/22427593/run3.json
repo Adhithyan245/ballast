@@ -1,0 +1,322 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "22427593",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T04:40:03.726572+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "84d28c651717da92",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: The purpose of this study is to measure the accuracy and reliability of normally sighted, visually impaired, and blind pedestrians at making street crossing decisions using visual and/or auditory information.\n\nMETHODS: Using a 5-point rating scale, safety ratings for vehicular gaps of different durations were measured along a two-lane street of one-way traffic without a traffic signal. Safety ratings were collected from 12 normally sighted, 10 visually impaired, and 10 blind subjects for eight different gap times under three sensory conditions: (1) visual plus auditory information, (2) visual information only, and (3) auditory information only. Accuracy and reliability in street crossing decision-making were calculated for each subject under each sensory condition.\n\nRESULTS: We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05). Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05). Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\n\"\"\"\n\nQuestion: Are normally sighted, visually impaired, and blind pedestrians accurate and reliable at making street crossing decisions?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 90,\n  \"quotes\": [\n    \"We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05).\",\n    \"Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05).\",\n    \"Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\"\n  ]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 6.109,
+ "meta": {
+  "session_id": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+  "credits": 0.073543,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"maybe\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 90,\n  \"quotes\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " [\n    \"We found that normally sighted"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " and visually impaired pedestrians were accurate and reliable in"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " their street crossing decision-making ability when using either"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " vision plus hearing or vision only (P>"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0.05).\",\n    \"Under the"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " hearing only condition, all subjects were reliable ("
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "P>0.05) but inaccurate with"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " their street crossing decisions (P<0."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "05).\",\n    \"Compared to either the"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " normally sighted (P = 0."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "018) or visually impaired subjects (P = "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0.019), blind subjects were the least accurate"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " with their street crossing decisions under the hearing only condition"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".\"\n  ]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "contextUsagePercentage": 7.180488109588623,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "contextUsagePercentage": 7.180488109588623,
+     "meteringUsage": [
+      {
+       "value": 0.07354263018242123,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 4811,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "08ead92e-3f88-4cbd-ae51-b4c2f3158022",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 90,\n  \"quotes\": [\n    \"We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05).\",\n    \"Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05).\",\n    \"Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\"\n  ]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

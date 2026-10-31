@@ -1,0 +1,244 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "18534072",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T04:20:46.591633+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "92a03684c35389f7",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Recent evaluations of IT innovations in primary care have highlighted variations between centres and practices in uptake and use. We evaluated whether structural characteristics of a general practice were associated with variations in use of a web-based clinical information system underpinning a Managed Clinical Network in diabetes, between the years 2001 and 2003.\n\nMETHODS: Using a computerised audit trail, we calculated the numbers of web-based operations that occurred in each practice, stratified by staff type and year, and adjusted for the numbers of registered diabetic patients. In regression analyses, we determined whether total use was associated with structural characteristics of the practice (total list size, training status, numbers of GPs (general practitioners), mean age of the GPs, numbers of female GPs, level of deprivation of the population and whether staff had received advanced training in diabetes care).\n\nRESULTS: Initially there were a few practices which made very frequent use of the information system, with relatively high numbers of practices using the facility infrequently. However, overall use gradually became more evenly spread. This effect was particularly evident among nurse users. Frequent use by GPs was evident in only a small number of practices, with mean GP use decreasing over the three years. In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff. This was consistently associated with increased use by nurses and GPs.\n\"\"\"\n\nQuestion: Do general practice characteristics influence uptake of an information technology (IT) innovation in primary care?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 7.672,
+ "meta": {
+  "session_id": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+  "credits": 0.072106,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": \"no\",\n  \"confidence\": 85"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ",\n  \"quotes\": [\"In linear regression"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " analyses, none of the general practice variables were associated"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " with online use, either overall or stratified by staff"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " type, except for the numbers of diabetes-educated"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " staff"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "]\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "contextUsagePercentage": 7.142072677612305,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "contextUsagePercentage": 7.142072677612305,
+     "meteringUsage": [
+      {
+       "value": 0.07210620232172471,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 5271,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "1e9fb684-283e-41ac-91bc-9efd83fe94af",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

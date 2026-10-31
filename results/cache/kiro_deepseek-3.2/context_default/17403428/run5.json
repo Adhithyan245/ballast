@@ -1,0 +1,296 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "17403428",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T04:17:56.179433+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "b0ed85a3a5774a24",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: The purpose of this study was to determine whether there is an association between skewed X-inactivation and recurrent spontaneous abortion in a large, well-defined sample of women with recurrent loss.\n\nSTUDY DESIGN: X-chromosome inactivation patterns were compared in 5 groups of women. Group 1 (recurrent spontaneous abortion) consisted of 357 women with 2 or more spontaneous losses. In group 2 (infertility), there were 349 subjects from infertility practices recruited at the time of a positive serum beta-human chorionic gonadotropin. Group 3 (spontaneous abortion) women (n = 81) were recruited at the time of an ultrasound diagnosis of an embryonic demise or an anembryonic gestation. Groups 4 (primiparous) and 5 (multiparous) were healthy pregnant subjects previously enrolled in another study to determine the incidence and cause of pregnancy complications, such as preeclampsia and intrauterine growth restriction. The Primiparous group included 114 women in their first pregnancy, whereas the Multiparous group consisted of 79 women with 2 or more pregnancies but without pregnancy loss.\n\nRESULTS: The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01). The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05). When age and skewing of 90% or greater are compared, subjects with extreme skewing have a mean age of 2 years older than those without extreme skewing (P<.05).\n\"\"\"\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\", \"The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05).\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 5.953,
+ "meta": {
+  "session_id": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+  "credits": 0.07391,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"no\",\n  \"confidence\": 85,\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "  \"quotes\": [\"The rate of extreme"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " skewing (90% or greater) in the"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " recurrent spontaneous abortion population was 8.6%,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " and not statistically different from any of the other groups"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ", except the Primiparous group (1."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0%, P<.01).\", \"The"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " incidence of X-inactivation skewing of 90"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "% or greater was no different whether there had been"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " at least 1 live birth (9.9"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "%), or no previous live births and at least "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "3 losses (5.6%, P>.05"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ").\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "contextUsagePercentage": 7.236585140228272,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "contextUsagePercentage": 7.236585140228272,
+     "meteringUsage": [
+      {
+       "value": 0.07390994029850746,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 4360,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "2f8b5c93-a11a-4ad6-9a6a-8c1a25ebff98",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\", \"The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05).\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,470 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "24495711",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T03:22:58.917997+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "26f2e6f0b354f962",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is crime associated with over-the-counter pharmacy syringe sales?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"no\", \"confidence\": 65}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 13.438,
+ "meta": {
+  "session_id": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+  "credits": 0.283542,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "contextUsagePercentage": 6.934756278991699,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_xHNE7EyZd70ZcoC4wrE9ac",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "crime associated with over-the-counter pharmacy syringe sales research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_xHNE7EyZd70ZcoC4wrE9ac",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "crime associated with over-the-counter pharmacy syringe sales research studies"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "contextUsagePercentage": 7.010975360870361,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_ZfcrscM9N8bu1JRiGCfi7f",
+      "title": "Fetching web content",
+      "kind": "read",
+      "rawInput": {
+       "url": "https://www.cdc.gov/pwid/syringe-services-programs/index.html"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_ZfcrscM9N8bu1JRiGCfi7f",
+      "kind": "read",
+      "status": "failed",
+      "title": "web_fetch",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "url": "https://www.cdc.gov/pwid/syringe-services-programs/index.html"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "contextUsagePercentage": 7.0804877281188965,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_FDFpE73hw0nQEalFrhEElO",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_FDFpE73hw0nQEalFrhEElO",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "no\", \"confidence\": 65}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "contextUsagePercentage": 7.128658771514893,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "contextUsagePercentage": 7.128658771514893,
+     "meteringUsage": [
+      {
+       "value": 0.06998511442786069,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07081971475953566,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.0713090447761194,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07142775787728028,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 11495,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "95220c8a-632d-4bd7-8f61-9ae2bcf63d17",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"no\", \"confidence\": 65}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

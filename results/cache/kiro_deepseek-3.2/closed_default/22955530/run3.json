@@ -1,0 +1,680 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "22955530",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T03:16:02.457641+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "5feb5bb08e49ca31",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Type II supracondylar humerus fractures: can some be treated nonoperatively?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my medical knowledge:\n\nType II supracondylar humerus fractures are classified as Gartland Type II fractures, which are displaced fractures with an intact posterior cortex. The current standard of care for Type II supracondylar humerus fractures in children is typically operative treatment (closed reduction and percutaneous pinning) because they are unstable and have a high risk of displacement with nonoperative treatment. However, some studies suggest that certain Type II fractures with minimal displacement and good alignment might be managed nonoperatively with close monitoring.\n\nGiven the standard practice and risk of complications like cubitus varus with nonoperative management, most Type II fractures require surgical intervention.\n\n{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 17.422,
+ "meta": {
+  "session_id": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+  "credits": 0.286661,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "｜DSML｜"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "function"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "_c"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "alls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "contextUsagePercentage": 6.939024448394775,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_eafgrYWknkM0nUuubV6lG9",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "Type II supracondylar humerus fractures nonoperative treatment"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_eafgrYWknkM0nUuubV6lG9",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "Type II supracondylar humerus fractures nonoperative treatment"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "contextUsagePercentage": 7.027439117431641,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_cNmM8R5GtOuYPgwCPuiTji",
+      "title": "Fetching web content",
+      "kind": "read",
+      "rawInput": {
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3916904/",
+       "mode": "truncated"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_cNmM8R5GtOuYPgwCPuiTji",
+      "kind": "read",
+      "status": "failed",
+      "title": "web_fetch",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3916904/",
+       "mode": "truncated"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "contextUsagePercentage": 7.093902587890625,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_4DuyfPeeLIqkFSMlrhT6yj",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_4DuyfPeeLIqkFSMlrhT6yj",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "show"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on my medical knowledge:\n\nType II supracondyl"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "ar humerus fractures are classified as Gartland"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " Type II fractures, which are displaced fractures with an"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " intact posterior cortex. The current standard of care for"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " Type II supracondylar humerus fractures in"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " children is typically operative treatment (closed reduction and percutaneous"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " pinning) because they are unstable and have a"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " high risk of displacement with nonoperative treatment. However"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ", some studies suggest that certain Type II fractures with"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " minimal displacement and good alignment might be managed non"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "operatively with close monitoring.\n\nGiven the standard practice and risk"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " of complications like cubitus varus with nonoperative"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " management, most Type II fractures require surgical intervention.\n\n"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"maybe\", \"confidence\": "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "75}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "contextUsagePercentage": 7.224999904632568,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "contextUsagePercentage": 7.224999904632568,
+     "meteringUsage": [
+      {
+       "value": 0.07003988391376452,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07120204311774463,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.0714431608623549,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07397555555555556,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 15835,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "980a3c47-c6b1-4b78-9762-a59e15d982bf",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my medical knowledge:\n\nType II supracondylar humerus fractures are classified as Gartland Type II fractures, which are displaced fractures with an intact posterior cortex. The current standard of care for Type II supracondylar humerus fractures in children is typically operative treatment (closed reduction and percutaneous pinning) because they are unstable and have a high risk of displacement with nonoperative treatment. However, some studies suggest that certain Type II fractures with minimal displacement and good alignment might be managed nonoperatively with close monitoring.\n\nGiven the standard practice and risk of complications like cubitus varus with nonoperative management, most Type II fractures require surgical intervention.\n\n{\"answer\": \"maybe\", \"confidence\": 75}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

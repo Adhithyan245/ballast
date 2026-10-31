@@ -1,0 +1,179 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "18667100",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T04:22:08.287388+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "f661c2e9b4914756",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Suicide is a leading cause of death and has been strongly associated with affective disorders. The influence of affective disorder polarity on subsequent suicide attempts or completions and any differential effect of suicide risk factors by polarity were assessed in a prospective cohort.\n\nMETHOD: Participants with major affective disorders in the National Institute of Mental Health (NIMH) Collaborative Depression Study (CDS) were followed prospectively for up to 25 years. A total of 909 participants meeting prospective diagnostic criteria for major depressive and bipolar disorders were followed through 4204 mood cycles. Suicidal behavior was defined as suicide attempts or completions. Mixed-effects, grouped-time survival analysis assessed risk of suicidal behavior and differential effects of risk factors for suicidal behavior by polarity. In addition to polarity, the main effects of age, gender, hopelessness, married status, prior suicide attempts and active substance abuse were modeled, with mood cycle as the unit of analysis.\n\nRESULTS: After controlling for age of onset, there were no differences in prior suicide attempts by polarity although bipolar participants had more prior severe attempts. During follow-up, 40 cycles ended in suicide and 384 cycles contained at least one suicide attempt. Age, hopelessness and active substance abuse but not polarity predicted suicidal behavior. The effects of risk factors did not differ by polarity.\n\"\"\"\n\nQuestion: Do risk factors for suicidal behavior differ by affective disorder polarity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"Age, hopelessness and active substance abuse but not polarity predicted suicidal behavior.\", \"The effects of risk factors did not differ by polarity.\"]}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 10.735,
+ "meta": {
+  "session_id": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+  "credits": 0.071668,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"no\", \"confidence\": 95"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ", \"quotes\": [\"Age, hopelessness"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " and active substance abuse but not polarity predicted suicidal behavior"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".\", \"The effects of risk factors did not differ"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " by polarity.\"]}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "contextUsagePercentage": 7.112804889678955,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "contextUsagePercentage": 7.112804889678955,
+     "meteringUsage": [
+      {
+       "value": 0.07166843117744612,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 8517,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "a0d89324-5285-49f4-91de-6c6f2cd087fd",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"Age, hopelessness and active substance abuse but not polarity predicted suicidal behavior.\", \"The effects of risk factors did not differ by polarity.\"]}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

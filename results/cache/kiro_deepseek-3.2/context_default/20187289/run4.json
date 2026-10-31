@@ -1,0 +1,374 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "20187289",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T04:28:52.564765+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "9b353a3337c7a2d0",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: Stock et al. (Eur Respir J 25:47-53, 2005) recently estimated asthma prevalence in Germany using claims data on prescriptions and hospital diagnoses and found high prevalence peaks in infants. Our objective was to critically assess and discuss various aspects of identifying children with asthma using prescription data.\n\nMETHODS: We replicated the selection procedure of Stock et al. using data on 290,919 children aged 0-17 years insured in the Gmünder ErsatzKasse (GEK) in 2005. Asthma prevalence was also estimated in a sample of 17,641 children aged 0-17 years participating in the German Health Interview and Examination Survey for Children and Adolescents (KiGGS) from 2003 to 2006.\n\nRESULTS: In children aged 0-4 years insured in the GEK, prevalences were found to range from 11.7 to 17.7% for boys and from 7.2 to 11.1% for girls when the criteria of Stock et al. were applied. A steady decline in prevalences was observed in older age groups. Asthma prevalence estimated in the KiGGS data showed a quite different distribution. In the age group 0-4 years, prevalences were found to range from 0 to 2.6% in boys and from 0 to 1.0% in girls; in children>4 years, prevalences were found to increase with increasing age.\n\"\"\"\n\nQuestion: Prescriptions as a proxy for asthma in children: a good choice?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"Asthma prevalence estimated in the KiGGS data showed a quite different distribution.\", \"In children aged 0-4 years insured in the GEK, prevalences were found to range from 11.7 to 17.7% for boys and from 7.2 to 11.1% for girls when the criteria of Stock et al. were applied. In the age group 0-4 years, prevalences were found to range from 0 to 2.6% in boys and from 0 to 1.0% in girls;\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 11.593,
+ "meta": {
+  "session_id": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+  "credits": 0.073641,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 85,\n  \"quotes\": [\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Asthma prevalence estimated in the KiGGS data"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " showed a quite different distribution.\", \"In children aged"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 0-4 years insured in the GEK"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ", prevalences were found to range from 11"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".7 to 17.7% for boys"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " and from 7.2 to 11."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "1% for girls when the criteria of Stock et"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " al. were applied. In the age group "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0-4 years, prevalences were found to"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " range from 0 to 2.6%"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " in boys and from 0 to "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "1"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "%"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " in"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " girls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ";\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "contextUsagePercentage": 7.197561264038086,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "contextUsagePercentage": 7.197561264038086,
+     "meteringUsage": [
+      {
+       "value": 0.07364074626865673,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 9877,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "b7f2d99c-67b8-4f5a-a37b-1319354a282b",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"Asthma prevalence estimated in the KiGGS data showed a quite different distribution.\", \"In children aged 0-4 years insured in the GEK, prevalences were found to range from 11.7 to 17.7% for boys and from 7.2 to 11.1% for girls when the criteria of Stock et al. were applied. In the age group 0-4 years, prevalences were found to range from 0 to 2.6% in boys and from 0 to 1.0% in girls;\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

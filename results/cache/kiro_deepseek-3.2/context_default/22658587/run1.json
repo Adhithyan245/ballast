@@ -1,0 +1,283 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "22658587",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T04:41:51.811672+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "fe90f2e33cc1fa50",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: Affect-regulated exercise to feel 'good' can be used to control exercise intensity amongst both active and sedentary individuals and should support exercise adherence. It is not known, however, whether affect-regulated exercise training can lead to physical health gains. The aim of this study was to examine if affect-regulated exercise to feel 'good' leads to improved fitness over the course of an 8-week training programme.\n\nDESIGN: A repeated measures design (pretest-posttest) with independent groups (training and control).\n\nMETHODS: 20 sedentary females completed a submaximal graded exercise test and were then allocated to either a training group or control group. The training group completed two supervised sessions and one unsupervised session per week for 8 weeks. Exercise intensity was affect-regulated to feel 'good'. Following the 8 weeks of training, both groups completed a second submaximal graded exercise test.\n\nRESULTS: Repeated measures analyses of variance indicated a significant increase in the time to reach ventilatory threshold in the training group (318 ± 23.7s) compared to control (248 ± 16.9s). Overall compliance to training was high (>92%). Participants in the training group exercised at intensities that would be classified as being in the lower range of the recommended guidelines (≈ 50% V˙O(2) max) for cardiovascular health.\n\"\"\"\n\nQuestion: Affect-regulated exercise intensity: does training at an intensity that feels 'good' improve physical health?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\"Repeated measures analyses of variance indicated a significant increase in the time to reach ventilatory threshold in the training group (318 ± 23.7s) compared to control (248 ± 16.9s).\", \"Participants in the training group exercised at intensities that would be classified as being in the lower range of the recommended guidelines (≈ 50% V˙O(2) max) for cardiovascular health.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 6.812,
+ "meta": {
+  "session_id": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+  "credits": 0.072912,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 85,\n  \"quotes\": [\"Repeated"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " measures analyses of variance indicated a significant increase in the time"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " to reach ventilatory threshold in the training group ("
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "318 ± 23.7s) compared to"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " control (248 ± 16.9s)."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\", \"Participants in the training group exercised at intensities"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " that would be classified as being in"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the lower range"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " of the recommended guidelines (≈ 50% V"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "˙O"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "("
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "2) max) for cardiovascular health.\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "contextUsagePercentage": 7.162195205688477,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "contextUsagePercentage": 7.162195205688477,
+     "meteringUsage": [
+      {
+       "value": 0.07291218573797678,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 5395,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "387a56bb-fdcd-4b69-9aaf-eb7262d7cb5b",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\"Repeated measures analyses of variance indicated a significant increase in the time to reach ventilatory threshold in the training group (318 ± 23.7s) compared to control (248 ± 16.9s).\", \"Participants in the training group exercised at intensities that would be classified as being in the lower range of the recommended guidelines (≈ 50% V˙O(2) max) for cardiovascular health.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

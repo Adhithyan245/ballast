@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "28177278",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T12:36:12.072215+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "4c70dfe6f57d4ee5",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does spontaneous remission occur in polyarteritis nodosa?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+ "input_tokens": 98,
+ "output_tokens": 14,
+ "latency_s": 0.484,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+       "thoughtSignature": "EmAKXgFpFH0Ti/YgwtItG3H3eN1RNC055eStnDLM9c6TYZgqnvCWGXPcIbMOf2c0HibGBwgY+1rkIfhBkJABD/gEW5wuhoO28ImWssWE/mh3MX/pexwlpPiwsKqwAraKpiY="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 98,
+   "candidatesTokenCount": 14,
+   "totalTokenCount": 112,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 98
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "ueDlaor8OoWp5NoPtsLakQc"
+ }
+}

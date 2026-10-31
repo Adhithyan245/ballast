@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "12612531",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T12:43:07.282231+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "62f60ef8eda136cd",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Primary eosinophilic esophagitis, a chronic inflammatory disorder of the esophagus, evokes recurrent dysphagia. Endoscopy is often unremarkable, and no consensus exists regarding management of resultant dysphagia. The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \"crêpe-paper\" mucosa is introduced.\n\nMETHODS: Five men underwent endoscopy because of dysphagia confirmed (clinically, endoscopically, and histologically) to be caused by primary eosinophilic esophagitis and were treated by bouginage.\n\nOBSERVATIONS: All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma. After the procedure, patients remained asymptomatic for 3 to 24 months.\n\"\"\"\n\nQuestion: Fragility of the esophageal mucosa: a pathognomonic endoscopic sign of primary eosinophilic esophagitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"maybe\", \"confidence\": 85, \"quotes\": [\"The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"cr\\u00eape-paper\\\" mucosa is introduced.\"]}\n```",
+ "input_tokens": 325,
+ "output_tokens": 77,
+ "latency_s": 0.64,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"maybe\", \"confidence\": 85, \"quotes\": [\"The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"cr\\u00eape-paper\\\" mucosa is introduced.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TpUsAdLG1F4RB3gO0iWWZmUnvI7LjvbyrgkcnHYDTD+mQobxSFSu0jvmim5Eszt1JqbEQYKBojGAVjwqtAiEKU8uS8p2dxdCOJbB1u7bm0bVhqIF54lO7kBY="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 58,
+       "endIndex": 269,
+       "uri": "https://pubmed.ncbi.nlm.nih.gov/12612531/",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 325,
+   "candidatesTokenCount": 77,
+   "totalTokenCount": 402,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 325
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "WOLlauWiPK2v5NoP15yOqAk"
+ }
+}

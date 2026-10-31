@@ -1,0 +1,231 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "28177278",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T12:37:29.107960+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "76e3c68a26ca3719",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Polyarteritis nodosa (PAN) is a systemic vasculitis involving mainly medium-sized arteries and, rarely, small-sized arteries. The diagnosis is principally based on clinical exams, biopsy of an affected organ, and/or arteriography of renal or mesenteric arteries. Once diagnosed, immunosuppressive agents, such as glucocorticoids and cyclophosphamide, are generally introduced as soon as possible. Whether spontaneous remission of PAN occurs is therefore largely unknown.\n\nPRESENTATION: We describe the case of a 51-year-old woman who presented with a 4-day-history of intense pain in her left flank, hypertension, fever, microscopic hematuria, and acute renal failure. Contrast-enhanced renal ultrasound strongly suggested bilateral renal infarction. Medical history and an extensive workup allowed to exclude systemic embolism, recreational drug abuse, cardiac arrhythmias, and thrombophilia. A possible diagnosis of PAN was considered; however, within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment. Finally, 3 months later, renal arteriography confirmed the diagnosis of PAN. The patient remains free of symptoms 1 year after initial presentation.\n\"\"\"\n\nQuestion: Does spontaneous remission occur in polyarteritis nodosa?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 90,\n  \"quotes\": [\"Whether spontaneous remission of PAN occurs is therefore largely unknown.\", \"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 8.0,
+ "meta": {
+  "session_id": "fea81e06-5321-47b9-b690-a590825b0ad0",
+  "credits": 0.071807,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": \"yes\",\n  \"confidence\": 90"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ",\n  \"quotes\": [\"Whether spontaneous remission"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " of PAN occurs is therefore largely unknown.\", \"within"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 2 weeks of admission, spontaneous remission of her"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " clinical and biological symptoms occurred without the use of any"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " immunosuppressive treatment.\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "contextUsagePercentage": 7.108536243438721,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "contextUsagePercentage": 7.108536243438721,
+     "meteringUsage": [
+      {
+       "value": 0.07180720066334992,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 6356,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "fea81e06-5321-47b9-b690-a590825b0ad0",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 90,\n  \"quotes\": [\"Whether spontaneous remission of PAN occurs is therefore largely unknown.\", \"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

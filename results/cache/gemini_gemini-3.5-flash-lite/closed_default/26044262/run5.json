@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "26044262",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T12:33:22.097178+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "29046d010390cc72",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are income-related differences in active travel associated with physical environmental characteristics?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90}\n```",
+ "input_tokens": 101,
+ "output_tokens": 18,
+ "latency_s": 0.532,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TWqnbZ9R9N0gyQRBRnA5QMTtAJY7e0pwADko9I0kvMr8TPfMjoR5So54UjVK0ZZh2/ZgGfsnqLimSDqB30fGFzj/LRR6QS1wDlbS2WKopxyPqKds6B8uKN6E="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 101,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 119,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 101
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "D-DlaobBOO6LiLMPqYXViAc"
+ }
+}

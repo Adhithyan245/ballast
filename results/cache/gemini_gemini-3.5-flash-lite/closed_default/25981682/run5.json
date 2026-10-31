@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "25981682",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T12:32:57.104175+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "5a302bdac550de48",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Preparing patients at high risk of falls for discharge home after rehabilitation: Do we meet the guidelines?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 50}",
+ "input_tokens": 106,
+ "output_tokens": 13,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"maybe\", \"confidence\": 50}",
+       "thoughtSignature": "EmAKXgFpFH0TI9AX263yKVF0zjXkMgxZf/X3v6mFzpa7mlwwLC8qdHS3rgdr/OPCxdC+Wsuhnr2bbxjChiTKbzj/gAjshrWyefB7s9jNWETihH+V67Fn/zU9ntO9d92mh+c="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 106,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 119,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 106
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "9t_latjbN6KtwbUPydnRkAU"
+ }
+}

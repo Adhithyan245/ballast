@@ -1,0 +1,322 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "15588538",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T04:12:16.792152+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "4eef1f5e98e14a0b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Reliable longitudinal data of patients with functional somatic symptoms in general practice are lacking.\n\nAIMS: To identify distinctive features in patients with chronic functional somatic symptoms, and to determine whether these symptoms support the hypothesis of the existence of specific somatic syndromes.\n\nDESIGN OF STUDY: Observational study, with a comparison control group.\n\nSETTING: Four primary care practices affiliated with the University of Nijmegen in the Netherlands.\n\nMETHOD: One hundred and eighty-two patients diagnosed between 1998 and 2002 as having chronic functional somatic symptoms and 182 controls matched by age, sex, socioeconomic status, and practice were included. Data on comorbidity, referrals, diagnostic tests, and hospital admissions over a period of 10 years prior to the diagnosis were collected. Medication use and number of visits to the general practitioner (GP) were extracted from the moment computerised registration was started.\n\nRESULTS: In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems, and used more somatic and psychotropic drugs. They visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists. The number of patients undergoing diagnostic tests was higher for patients with chronic functional somatic symptoms than for controls, but hospital admissions rates were equal.\n\"\"\"\n\nQuestion: Chronic functional somatic symptoms: a single syndrome?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"The aim was to identify distinctive features in patients with chronic functional somatic symptoms, and to determine whether these symptoms support the hypothesis of the existence of specific somatic syndromes.\", \"In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems, and used more somatic and psychotropic drugs.\", \"They visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 9.016,
+ "meta": {
+  "session_id": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+  "credits": 0.073167,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 85,\n  \"quotes\": [\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "The aim was to identify distinctive features in patients with"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " chronic functional somatic symptoms, and to determine whether these"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " symptoms support the hypothesis of the existence of specific somatic"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " syndromes.\", \"In the 10 years before the"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " diagnosis of chronic functional somatic symptoms, significantly more patients"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " than controls presented functional somatic symptoms in at least two"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " body systems, and used more somatic and psychotropic"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " drugs.\","
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "They"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " visited"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " the GP twice as much, statistically had significantly more psychiatric"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " morbidity, and were referred more often to mental health"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " workers and somatic specialists.\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "contextUsagePercentage": 7.1670732498168945,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "contextUsagePercentage": 7.1670732498168945,
+     "meteringUsage": [
+      {
+       "value": 0.0731665903814262,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 7114,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "3c39fa5c-8bbf-4a5f-b9a9-6bffcc1bf406",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"The aim was to identify distinctive features in patients with chronic functional somatic symptoms, and to determine whether these symptoms support the hypothesis of the existence of specific somatic syndromes.\", \"In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems, and used more somatic and psychotropic drugs.\", \"They visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "16100194",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T04:14:33.113098+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "e5f8059c1e88acdd",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nSTUDY OBJECTIVE: Angiotensin-converting enzyme inhibitors (ACE-I) are considered safe, but they are associated with characteristic side effects, namely cough and angioedema, usually requiring discontinuation. We perceived that referrals for these side effects have become more and more frequent; therefore, we evaluated the degree of knowledge on the safety of ACE-I in different medical categories.\n\nDESIGN: A questionnaire (13 questions) on side effects of ACE-I was posted to physicians.\n\nSETTING: Everyday clinical practice.\n\nPARTICIPANTS: Cardiologists, allergists, and general practitioners (GPs) from the National Healthcare System.\n\nMEASUREMENT AND RESULTS: Three hundred twelve physicians were contacted, and 154 returned questionnaires that could be analyzed. Of the 154 physicians (mean age, 45 years) 48 were cardiologists, 52 were GPs, and 54 were allergists. The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists. Thus, GPs provided a significantly higher percentage of correct answers with respect to the remaining categories (p = 0.05). The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take. Cardiologists seemed to be less aware of the fact that angiotensin receptor blockers (sartans) can cross-react with ACE-I.\n\"\"\"\n\nQuestion: Are physicians aware of the side effects of angiotensin-converting enzyme inhibitors?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\"The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.656,
+ "meta": {
+  "session_id": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+  "credits": 0.072088,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 95,\n  \"quotes\": [\"The"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " percentage of correct answers was low: 31."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "9% for cardiologists, 40% for"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " GPs, and 33% for allergists"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "contextUsagePercentage": 7.142683029174805,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "contextUsagePercentage": 7.142683029174805,
+     "meteringUsage": [
+      {
+       "value": 0.07208810613598673,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2717,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "eb3d39e5-4cf5-4027-9837-00c73df027ec",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\"The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,179 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "19142546",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T04:24:28.803252+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "7acad095c5f78d81",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: We compared left ventricular regional wall motion, the global left ventricular ejection fraction, and the New York Heart Association functional class pre- and postoperatively.\n\nINTRODUCTION: Endomyocardial fibrosis is characterized by fibrous tissue deposition in the endomyocardium of the apex and/or inflow tract of one or both ventricles. Although left ventricular global systolic function is preserved, patients exhibit wall motion abnormalities in the apical and inferoapical regions. Fibrous tissue resection in New York Heart Association FC III and IV endomyocardial fibrosis patients has been shown to decrease morbidity and mortality.\n\nMETHODS: We prospectively studied 30 patients (20 female, 30+/-10 years) before and 5+/-8 months after surgery. The left ventricular ejection fraction was determined using the area-length method. Regional left ventricular motion was measured by the centerline method. Five left ventricular segments were analyzed pre- and postoperatively. Abnormality was expressed in units of standard deviation from the mean motion in a normal reference population.\n\nRESULTS: Left ventricular wall motion in the five regions did not differ between pre- and postoperative measurements. Additionally, the left ventricular ejection fraction did not change after surgery (0.45+/-0.13% x 0.43+/-0.12% pre- and postoperatively, respectively). The New York Heart Association functional class improved to class I in 40% and class II in 43% of patients postoperatively (p<0.05).\n\"\"\"\n\nQuestion: Does quantitative left ventricular regional wall motion change after fibrous tissue resection in endomyocardial fibrosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 90,\n  \"quotes\": [\"Left ventricular wall motion in the five regions did not differ between pre- and postoperative measurements.\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.609,
+ "meta": {
+  "session_id": "86df39a8-3d79-4247-866a-bc499a382e9a",
+  "credits": 0.071864,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"no\",\n  \"confidence\": 90,\n "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \"quotes\": [\"Left ventricular wall motion in the"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " five regions did not differ between pre- and postoperative measurements"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "contextUsagePercentage": 7.137195110321045,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "contextUsagePercentage": 7.137195110321045,
+     "meteringUsage": [
+      {
+       "value": 0.07186389386401326,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 2450,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "86df39a8-3d79-4247-866a-bc499a382e9a",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 90,\n  \"quotes\": [\"Left ventricular wall motion in the five regions did not differ between pre- and postoperative measurements.\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

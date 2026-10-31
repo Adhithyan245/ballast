@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "18667100",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T12:52:02.297022+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "f661c2e9b4914756",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Suicide is a leading cause of death and has been strongly associated with affective disorders. The influence of affective disorder polarity on subsequent suicide attempts or completions and any differential effect of suicide risk factors by polarity were assessed in a prospective cohort.\n\nMETHOD: Participants with major affective disorders in the National Institute of Mental Health (NIMH) Collaborative Depression Study (CDS) were followed prospectively for up to 25 years. A total of 909 participants meeting prospective diagnostic criteria for major depressive and bipolar disorders were followed through 4204 mood cycles. Suicidal behavior was defined as suicide attempts or completions. Mixed-effects, grouped-time survival analysis assessed risk of suicidal behavior and differential effects of risk factors for suicidal behavior by polarity. In addition to polarity, the main effects of age, gender, hopelessness, married status, prior suicide attempts and active substance abuse were modeled, with mood cycle as the unit of analysis.\n\nRESULTS: After controlling for age of onset, there were no differences in prior suicide attempts by polarity although bipolar participants had more prior severe attempts. During follow-up, 40 cycles ended in suicide and 384 cycles contained at least one suicide attempt. Age, hopelessness and active substance abuse but not polarity predicted suicidal behavior. The effects of risk factors did not differ by polarity.\n\"\"\"\n\nQuestion: Do risk factors for suicidal behavior differ by affective disorder polarity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"The effects of risk factors did not differ by polarity.\"\n  ]\n}\n```",
+ "input_tokens": 410,
+ "output_tokens": 49,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"The effects of risk factors did not differ by polarity.\"\n  ]\n}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TmRmeCJYn6eZHRPQ0j9a9XLTcUox/3zRo6zGUzNK4DXEzEoynEKTRoSn2Qb/U8vDqdfWchRGJz+faO3jwVNvBo4SEZr0djL6VNqZOCIRQIhaGJVRPPMgD6Mc="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 410,
+   "candidatesTokenCount": 49,
+   "totalTokenCount": 459,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 410
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cOTlapT6BNnZ0_gPiavsqAk"
+ }
+}

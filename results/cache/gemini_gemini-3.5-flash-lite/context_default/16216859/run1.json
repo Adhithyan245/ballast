@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "16216859",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T12:47:12.357854+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "7a154e7645ed59e2",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To evaluate whether a well developed collateral circulation predisposes to restenosis after percutaneous coronary intervention (PCI).\n\nDESIGN: Prospective observational study.\n\nPATIENTS AND SETTING: 58 patients undergoing elective single vessel PCI in a tertiary referral interventional cardiac unit in the UK.\n\nMETHODS: Collateral flow index (CFI) was calculated as (Pw-Pv)/(Pa-Pv), where Pa, Pw, and Pv are aortic, coronary wedge, and right atrial pressures during maximum hyperaemia. Collateral supply was considered poor (CFI<0.25) or good (CFI>or = 0.25).\n\nMAIN OUTCOME MEASURES: In-stent restenosis six months after PCI, classified as neointimal volume>or = 25% stent volume on intravascular ultrasound (IVUS), or minimum lumen area<or = 50% stent area on IVUS, or minimum lumen diameter<or = 50% reference vessel diameter on quantitative coronary angiography.\n\nRESULTS: Patients with good collaterals had more severe coronary stenoses at baseline (90 (11)% v 75 (16)%, p<0.001). Restenosis rates were similar in poor and good collateral groups (35% v 43%, p = 0.76 for diameter restenosis, 27% v 45%, p = 0.34 for area restenosis, and 23% v 24%, p = 0.84 for volumetric restenosis). CFI was not correlated with diameter, area, or volumetric restenosis (r2<0.1 for each). By multivariate analysis, stent diameter, stent length,>10% residual stenosis, and smoking history were predictive of restenosis.\n\"\"\"\n\nQuestion: Does a well developed collateral circulation predispose to restenosis after percutaneous coronary intervention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Restenosis rates were similar in poor and good collateral groups (35% v 43%, p = 0.76 for diameter restenosis, 27% v 45%, p = 0.34 for area restenosis, and 23% v 24%, p = 0.84 for volumetric restenosis).\"\n  ]\n}",
+ "input_tokens": 525,
+ "output_tokens": 109,
+ "latency_s": 0.687,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Restenosis rates were similar in poor and good collateral groups (35% v 43%, p = 0.76 for diameter restenosis, 27% v 45%, p = 0.34 for area restenosis, and 23% v 24%, p = 0.84 for volumetric restenosis).\"\n  ]\n}",
+       "thoughtSignature": "EmAKXgFpFH0T7bf4JQNlQqg83HQ+qOPilkpWUNucybsNPWewnAEJEbaGJSKPuijBq+IFSOM464G1eHDjo5R//Xj7R3719Lbhc4+wi7iXXFolbwmp+MspOlCaEPZZxb7lW+c="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 525,
+   "candidatesTokenCount": 109,
+   "totalTokenCount": 634,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 525
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "TuPlarGuAcf9wbUPj56DwAk"
+ }
+}

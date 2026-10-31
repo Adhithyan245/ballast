@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "19504993",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T12:33:05.275486+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "0fc9aff6b7133ed3",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\n\nOBJECTIVES: To assess the morbidity and mortality in the treatment of Fournier's gangrene in our experience.\n\nMETHODS: The medical records of 14 patients with Fournier's gangrene who presented at the University Hospital Center \"Mother Teresa\" from January 1997 to December 2006 were reviewed retrospectively to analyze the outcome and identify the risk factor and prognostic indicators of mortality.\n\nRESULTS: Of the 14 patients, 5 died and 9 survived. Mean age was 54 years (range from 41-61): it was 53 years in the group of survivors and 62 years in deceased group. There was a significant difference in leukocyte count between patients who survived (range 4900-17000/mm) and those died (range 20.300-31000/mm3). Mean hospital stay was about 19 days (range 2-57 days).\n\"\"\"\n\nQuestion: It's Fournier's gangrene still dangerous?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"mortality rate remains high.\", \"Of the 14 patients, 5 died and 9 survived.\"]}",
+ "input_tokens": 411,
+ "output_tokens": 196,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "944",
+   "x-ratelimit-remaining-tokens": "6118",
+   "x-ratelimit-reset-requests": "1h20m38.4s",
+   "x-ratelimit-reset-tokens": "14.114s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-56bb0f89-6cb1-45d3-827a-614e9e64736e",
+  "object": "chat.completion",
+  "created": 1793449983,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"mortality rate remains high.\", \"Of the 14 patients, 5 died and 9 survived.\"]}",
+     "reasoning": "We need to answer if Fournier's gangrene still dangerous. The abstract says mortality rate remains high, 5 of 14 died (≈36%). So it's dangerous. So answer \"yes\". Confidence high, maybe 95. Provide quotes supporting answer: e.g., \"mortality rate remains high.\" Also \"5 died and 9 survived.\" Provide up to 3 sentences. Ensure exact copy.\n\nLet's extract exact sentences.\n\nFrom abstract:\n\n- \"BACKGROUND: Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\"\n\n- \"Of the 14 patients, 5 died and 9 survived.\"\n\nThose are two sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243440125,
+   "prompt_tokens": 411,
+   "prompt_time": 0.018034749,
+   "completion_tokens": 196,
+   "completion_time": 0.405585211,
+   "total_tokens": 607,
+   "total_time": 0.42361996,
+   "completion_tokens_details": {
+    "reasoning_tokens": 148
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01m68z5yvqe1bt9aeh6s73d1qf",
+   "seed": 1336978741
+  },
+  "service_tier": "on_demand"
+ }
+}

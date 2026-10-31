@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "24977765",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T12:29:22.165216+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "93d75f1765b7034f",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are pediatric concussion patients compliant with discharge instructions?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"no\", \"confidence\": 85}\n```",
+ "input_tokens": 96,
+ "output_tokens": 18,
+ "latency_s": 0.641,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"no\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TFGhBw1zeiDwcXU22jxcUVxwt+lWywj4PKrs3hcdXyNlIWlqP6nJRpmnAWIFIucE2vE1cbcjk8vI2vl52tquEAPgrCfaFR6UbHQp3aHJJV7B1Llou78LGlKE="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 96,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 114,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 96
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "H9_lapeLOL_PiLMP8JukiAU"
+ }
+}

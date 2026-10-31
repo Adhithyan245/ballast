@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "20354380",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T14:05:56.471830+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "5a185bf6450c9c2c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: To assess gender differences among residents regarding their plans to have children during residency and determine the most influential reasons for these differences.\n\nMETHOD: Using the Health Belief Model as a framework, the authors created an instrument to survey 424 residents from 11 residency programs at three academic medical institutions about their intentions to have children during residency. The authors developed a scale to assess the perceived career threats of having children during residency, evaluated its psychometric properties, and calculated the effect of the mediators.\n\nRESULTS: The response rate was 77% (328/424). Forty-one percent of men versus 27% of women planned to have children during residency (P = .01). The instrument measured four career threats-extended training, loss of fellowship positions, pregnancy complications, and interference with career plans-on a five-point Likert scale. The scale had a Cronbach alpha of 0.84 and an eigenvalue of 2.2. Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers. After adjusting for age, institution, postgraduate year, and knowledge of parental leave policies, women were less likely to plan to have children during residency (odds ratio 0.46 [95% confidence interval 0.25-0.84]). In mediation analysis, threats to career explained 67% of the gender variance.\n\"\"\"\n\nQuestion: Do women residents delay childbearing due to perceived career threats?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers.\",\n    \"In mediation analysis, threats to career explained 67% of the gender variance.\"\n  ]\n}",
+ "input_tokens": 461,
+ "output_tokens": 98,
+ "latency_s": 0.828,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers.\",\n    \"In mediation analysis, threats to career explained 67% of the gender variance.\"\n  ]\n}",
+       "thoughtSignature": "EmAKXgFpFH0TM3+Xmt7xrjP1jEdDXHbpHn+u05X6JGOkQjjLVHb5N1kYFh2U7610+70+HGQ/ph+v9+wAA0mnfNIMHCnEGvD9DytA2XtInfqtcs0asgAC4GVLwGDw4NCQpYA="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 461,
+   "candidatesTokenCount": 98,
+   "totalTokenCount": 559,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 461
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "wfXlarztNdHX0_gPra_O6Ag"
+ }
+}

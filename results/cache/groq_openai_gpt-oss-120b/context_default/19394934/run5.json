@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "19394934",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T12:33:03.052564+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "e65934429ba48381",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The incidence of large-scale urban attacks on civilian populations has significantly increased across the globe over the past decade. These incidents often result in Hospital Multiple Casualty Incidents (HMCI), which are very challenging to hospital teams. 15 years ago the Emergency and Disaster Medicine Division in the Israeli Ministry of Health defined a key of 20 percent of each hospital's bed capacity as its readiness for multiple casualties. Half of those casualties are expected to require immediate medical treatment. This study was performed to evaluate the efficacy of the current readiness guidelines based on the epidemiology of encountered HMCIs.\n\nMETHODS: A retrospective study of HMCIs was recorded in the Israeli Defense Force (IDF) home front command and the Israeli National Trauma Registry (ITR) between November 2000 and June 2003. An HMCI is defined by the Emergency and Disaster Medicine Division in the Israeli Ministry of Health as>or=10 casualties or>or=4 suffering from injuries with an ISS>or=16 arriving to a single hospital.\n\nRESULTS: The study includes a total of 32 attacks, resulting in 62 HMCIs and 1292 casualties. The mean number of arriving casualties to a single hospital was 20.8+/-13.3 (range 4-56, median 16.5). In 95% of the HMCIs the casualty load was<or=52. Based on severity scores and ED discharges 1022 (79.2%) casualties did not necessitate immediate medical treatment.\n\"\"\"\n\nQuestion: Israeli hospital preparedness for terrorism-related multiple casualty incidents: can the surge capacity and injury severity distribution be better predicted?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"In 95% of the HMCIs the casualty load was <=52.\",\n    \"Based on severity scores and ED discharges 1022 (79.2%) casualties did not necessitate immediate medical treatment.\"\n  ]\n}",
+ "input_tokens": 521,
+ "output_tokens": 314,
+ "latency_s": 1.0,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "945",
+   "x-ratelimit-remaining-tokens": "6623",
+   "x-ratelimit-reset-requests": "1h19m12s",
+   "x-ratelimit-reset-tokens": "10.327s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-ef1a1b1c-653e-4ca5-9afa-1b435647f96d",
+  "object": "chat.completion",
+  "created": 1793449981,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"In 95% of the HMCIs the casualty load was <=52.\",\n    \"Based on severity scores and ED discharges 1022 (79.2%) casualties did not necessitate immediate medical treatment.\"\n  ]\n}",
+     "reasoning": "The question: \"Israeli hospital preparedness for terrorism-related multiple casualty incidents: can the surge capacity and injury severity distribution be better predicted?\" We need to answer yes/no/maybe whether surge capacity and injury severity distribution can be better predicted. Based on abstract, they evaluated efficacy of guidelines based on epidemiology. They found that 95% of HMCIs casualty load <=52, and 79.2% did not need immediate treatment. This suggests they have data that could improve predictions. The question asks if they can be better predicted. The abstract suggests the current readiness guidelines (20% bed capacity) may not align with actual loads. So maybe they can be better predicted using data. So answer maybe? But likely \"maybe\" because the abstract indicates they evaluated but not necessarily that they can be better predicted. However the data provides insight that could improve prediction. I'd lean \"maybe\". Provide confidence maybe 70.\n\nNeed quotes: \"In 95% of the HMCIs the casualty load was<or=52.\" and \"Based on severity scores and ED discharges 1022 (79.2%) casualties did not necessitate immediate medical treatment.\"\n\nProvide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243508388,
+   "prompt_tokens": 521,
+   "prompt_time": 0.031844542,
+   "completion_tokens": 314,
+   "completion_time": 0.656413192,
+   "total_tokens": 835,
+   "total_time": 0.688257734,
+   "completion_tokens_details": {
+    "reasoning_tokens": 237
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "x_groq": {
+   "id": "req_01m68z5we4e938ean5ebrzvr6e",
+   "seed": 1502260598
+  },
+  "service_tier": "on_demand"
+ }
+}

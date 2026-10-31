@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "25488308",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T03:28:58.654970+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "add9e563a6c8ffb5",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can bone thickness and inter-radicular space affect miniscrew placement in posterior mandibular sites?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\", \n  \"confidence\": 85\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.125,
+ "meta": {
+  "session_id": "8d44b993-0dce-40fb-8729-1eaf24835563",
+  "credits": 0.069361,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\", \n  \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "confidence\": 85\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "contextUsagePercentage": 6.915853977203369,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "contextUsagePercentage": 6.915853977203369,
+     "meteringUsage": [
+      {
+       "value": 0.06936066998341626,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1799,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "8d44b993-0dce-40fb-8729-1eaf24835563",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\", \n  \"confidence\": 85\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

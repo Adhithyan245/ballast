@@ -1,0 +1,140 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "25747932",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T03:30:24.742267+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "e989697494597d45",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Living in an urban environment and non-communicable disease risk in Thailand: Does timing matter?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 7.719,
+ "meta": {
+  "session_id": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+  "credits": 0.069355,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"maybe\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 65\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "contextUsagePercentage": 6.916463375091553,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "contextUsagePercentage": 6.916463375091553,
+     "meteringUsage": [
+      {
+       "value": 0.06935466998341626,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 3035,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "e3a9d900-d6dc-47c0-b34e-70d1685e6674",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 65\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

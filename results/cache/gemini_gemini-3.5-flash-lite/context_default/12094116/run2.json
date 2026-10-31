@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "12094116",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T12:41:52.352810+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "5c2ea43d2bd43d6c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The purpose of this study was to identify the relationships between leg muscle power and sprinting speed with changes of direction.\n\nEXPERIMENTAL DESIGN: the study was designed to describe relationships between physical qualities and a component of sports performance.\n\nSETTING: testing was conducted in an indoor sports hall and a biomechanics laboratory.\n\nPARTICIPANTS: 15 male participants were required to be free of injury and have recent experience competing in sports involving sprints with changes of direction.\n\nMEASURES: subjects were timed in 8 m sprints in a straight line and with various changes of direction. They were also tested for bilateral and unilateral leg extensor muscle concentric power output by an isokinetic squat and reactive strength by a drop jump.\n\nRESULTS: The correlations between concentric power and straight sprinting speed were non-significant whereas the relationships between reactive strength and straight speed were statistically significant. Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength. The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\n\"\"\"\n\nQuestion: Is muscle power related to running speed with changes of direction?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\"]}\n```",
+ "input_tokens": 383,
+ "output_tokens": 63,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Ts+dSbvWR9Llt5uvzRc6a8tRXXrjW+v7FTeV+tosldhNjxjU/cVlG2MPqICUFELoEXMvlXnVaacNPwZRqnK3+p886QiWKr4myea+PFEiRAcMYXwj/etyx4sY="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 56,
+       "endIndex": 270,
+       "uri": "https://pubmed.ncbi.nlm.nih.gov/12094116/",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 383,
+   "candidatesTokenCount": 63,
+   "totalTokenCount": 446,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 383
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "DuLlas9X1dGIsw-Wmsi5BQ"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "18534072",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T12:51:17.496379+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "92a03684c35389f7",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Recent evaluations of IT innovations in primary care have highlighted variations between centres and practices in uptake and use. We evaluated whether structural characteristics of a general practice were associated with variations in use of a web-based clinical information system underpinning a Managed Clinical Network in diabetes, between the years 2001 and 2003.\n\nMETHODS: Using a computerised audit trail, we calculated the numbers of web-based operations that occurred in each practice, stratified by staff type and year, and adjusted for the numbers of registered diabetic patients. In regression analyses, we determined whether total use was associated with structural characteristics of the practice (total list size, training status, numbers of GPs (general practitioners), mean age of the GPs, numbers of female GPs, level of deprivation of the population and whether staff had received advanced training in diabetes care).\n\nRESULTS: Initially there were a few practices which made very frequent use of the information system, with relatively high numbers of practices using the facility infrequently. However, overall use gradually became more evenly spread. This effect was particularly evident among nurse users. Frequent use by GPs was evident in only a small number of practices, with mean GP use decreasing over the three years. In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff. This was consistently associated with increased use by nurses and GPs.\n\"\"\"\n\nQuestion: Do general practice characteristics influence uptake of an information technology (IT) innovation in primary care?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\", \"This was consistently associated with increased use by nurses and GPs.\"]}",
+ "input_tokens": 439,
+ "output_tokens": 67,
+ "latency_s": 0.781,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\", \"This was consistently associated with increased use by nurses and GPs.\"]}",
+       "thoughtSignature": "EmAKXgFpFH0T9hYlN/3Tf3N6l6SiUJRl07Zf3NxSbt9aEp1CKp7CdrQm0f26xdYLODFpJoZOtvfUbN/Oop3ivDMQS+Eil3oKkTPoR5vUizBiqncFbmCvuG+syL4uGm4ouCk="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 49,
+       "endIndex": 315,
+       "uri": "https://pubmed.ncbi.nlm.nih.gov/18534072/",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 439,
+   "candidatesTokenCount": 67,
+   "totalTokenCount": 506,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 439
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Q-TlaursBJ6OwbUP4PvL8Ag"
+ }
+}

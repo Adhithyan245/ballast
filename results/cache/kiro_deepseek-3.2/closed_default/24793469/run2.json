@@ -1,0 +1,392 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "24793469",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T03:24:58.377488+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "581f650b41c6da11",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there any relation between cervical cord plaques and discopathy in patients with multiple sclerosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 60}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 15.125,
+ "meta": {
+  "session_id": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+  "credits": 0.211799,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "contextUsagePercentage": 6.936584949493408,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_qZirCa2WwFHQJxU6EySNMU",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "cervical cord plaques discopathy multiple sclerosis relationship"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_qZirCa2WwFHQJxU6EySNMU",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "cervical cord plaques discopathy multiple sclerosis relationship"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "contextUsagePercentage": 7.0182929039001465,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_ama8lqLfZNsytWUQgqtwL3",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "cervical cord plaques multiple sclerosis discopathy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_ama8lqLfZNsytWUQgqtwL3",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "cervical cord plaques multiple sclerosis discopathy"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "maybe"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\", \"confidence\": 60}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "contextUsagePercentage": 7.068902015686035,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "contextUsagePercentage": 7.068902015686035,
+     "meteringUsage": [
+      {
+       "value": 0.06999130679933666,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07097754228855721,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07083033167495854,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 13491,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "cdb8696c-5d7c-4115-811f-5e972bdf91ba",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls{\"answer\": \"maybe\", \"confidence\": 60}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

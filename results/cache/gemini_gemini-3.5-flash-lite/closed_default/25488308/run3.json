@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_default",
+  "qid": "25488308",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T12:30:42.294112+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "add9e563a6c8ffb5",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can bone thickness and inter-radicular space affect miniscrew placement in posterior mandibular sites?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+ "input_tokens": 105,
+ "output_tokens": 14,
+ "latency_s": 0.766,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+       "thoughtSignature": "EmAKXgFpFH0TVQAdb5Eir+QT/b2VKd9tUZPmvOMhsUh5uPpdPfH0WfzgBs/MiU5Rf46KAe61fLk9qtP2B0c7R8Dqm20rk7qpBVNRH3oY2u2OeLRGilcPREooyWZRqJO9hTI="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 105,
+   "candidatesTokenCount": 14,
+   "totalTokenCount": 119,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 105
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "b9_laoOTOMa9xdIPrYrtgQ0"
+ }
+}

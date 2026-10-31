@@ -1,0 +1,127 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "21550158",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T03:00:50.370821+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "0eeca0e28dd73079",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can autologous platelet-rich plasma gel enhance healing after surgical extraction of mandibular third molars?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 3.969,
+ "meta": {
+  "session_id": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+  "credits": 0.069282,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+     "contextUsagePercentage": 6.9140238761901855,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+     "contextUsagePercentage": 6.9140238761901855,
+     "meteringUsage": [
+      {
+       "value": 0.06928190049751244,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 1746,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "f7199dbb-75a3-4772-b6b6-f766b12b7983",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

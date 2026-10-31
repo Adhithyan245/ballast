@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_default",
+  "qid": "25981682",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T12:33:57.012989+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "b61e8f02e815713f",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nMETHODS: Medical records of 121 people who received inpatient rehabilitation were retrospectively screened; records of 50 people discharged home and at high falls risk (fall in last 12 months, fall preceding/during admission) were audited. Data extracted included falls risk identification during rehabilitation and in discharge documentation; falls risk factors assessed; and fall prevention strategies implemented.\n\nRESULTS: Discharge documentation correctly identified falls risk for just nine of the 50 people. Patients at high falls risk had a median of 8.0 (interquartile range 6-10) of 17 risk factors. There was limited evidence of assessment for osteoporosis (n = 8), footwear (n = 4) and visual assessment in the previous 2 years (n = 1). Patients received a median of 6.5 (interquartile range 5-9) out of 16 possible strategies. Common strategies were mobility (n = 48), strength (n = 44) and Personal Activity of Daily Living training (n = 43). For 12 risk factors, if the factor was present, there was evidence of a strategy in more than 80% of records.\n\"\"\"\n\nQuestion: Preparing patients at high risk of falls for discharge home after rehabilitation: Do we meet the guidelines?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Discharge documentation correctly identified falls risk for just nine of the 50 people.\",\n    \"There was limited evidence of assessment for osteoporosis (n\\u2009=\\u20098), footwear (n\\u2009=\\u20094) and visual assessment in the previous 2 years (n\\u2009=\\u20091).\"\n  ]\n}",
+ "input_tokens": 437,
+ "output_tokens": 118,
+ "latency_s": 0.625,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "702",
+   "x-ratelimit-remaining-tokens": "7396",
+   "x-ratelimit-reset-requests": "7h9m7.199s",
+   "x-ratelimit-reset-tokens": "4.53s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-2272b526-ae25-4dd0-a3ac-08ed08453680",
+  "object": "chat.completion",
+  "created": 1793450035,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Discharge documentation correctly identified falls risk for just nine of the 50 people.\",\n    \"There was limited evidence of assessment for osteoporosis (n\\u2009=\\u20098), footwear (n\\u2009=\\u20094) and visual assessment in the previous 2 years (n\\u2009=\\u20091).\"\n  ]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.174845385,
+   "prompt_tokens": 437,
+   "prompt_time": 0.039219816,
+   "completion_tokens": 118,
+   "completion_time": 0.235575902,
+   "total_tokens": 555,
+   "total_time": 0.274795718
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m68z7hk7ep8vdqkepk38y2s4",
+   "seed": 1713995391
+  },
+  "service_tier": "on_demand"
+ }
+}

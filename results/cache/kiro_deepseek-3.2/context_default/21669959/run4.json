@@ -1,0 +1,231 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "21669959",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T04:35:11.474920+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "efc0ed63cbafa614",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Secondhand smoke exposure (SHSe) threatens fragile infants discharged from a neonatal intensive care unit (NICU). Smoking practices were examined in families with a high respiratory risk infant (born at very low birth weight; ventilated>12 hr) in a Houston, Texas, NICU. Socioeconomic status, race, and mental health status were hypothesized to be related to SHSe and household smoking bans.\n\nMETHODS: Data were collected as part of The Baby's Breath Project, a hospital-based SHSe intervention trial targeting parents with a high-risk infant in the NICU who reported a smoker in the household (N = 99). Measures of sociodemographics, smoking, home and car smoking bans, and depression were collected.\n\nRESULTS: Overall, 26% of all families with a high-risk infant in the NICU reported a household smoker. Almost half of the families with a smoker reported an annual income of less than $25,000. 46.2% of families reported having a total smoking ban in place in both their homes and cars. Only 27.8% families earning less than $25,000 reported having a total smoking ban in place relative to almost 60% of families earning more (p<.01). African American and Caucasian families were less likely to have a smoking ban compared with Hispanics (p<.05). Mothers who reported no smoking ban were more depressed than those who had a household smoking ban (p<.02).\n\"\"\"\n\nQuestion: Secondhand smoke risk in infants discharged from an NICU: potential for significant health disparities?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\"Only 27.8% families earning less than $25,000 reported having a total smoking ban in place relative to almost 60% of families earning more (p<.01).\", \"African American and Caucasian families were less likely to have a smoking ban compared with Hispanics (p<.05).\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 4.89,
+ "meta": {
+  "session_id": "d1b124d4-c7c8-401a-828e-e929534dc797",
+  "credits": 0.072695,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 85,\n  \"quotes\": [\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Only 27.8% families earning less than"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " $25,000 reported having a total smoking ban"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " in place relative to almost 60% of families"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " earning more (p<.01).\", \""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "African American and Caucasian families were less likely to have"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " a smoking ban compared with Hispanics (p<"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ".05).\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "contextUsagePercentage": 7.165853500366211,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "contextUsagePercentage": 7.165853500366211,
+     "meteringUsage": [
+      {
+       "value": 0.07269474295190714,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 3376,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "d1b124d4-c7c8-401a-828e-e929534dc797",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"yes\",\n  \"confidence\": 85,\n  \"quotes\": [\"Only 27.8% families earning less than $25,000 reported having a total smoking ban in place relative to almost 60% of families earning more (p<.01).\", \"African American and Caucasian families were less likely to have a smoking ban compared with Hispanics (p<.05).\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,617 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "closed_default",
+  "qid": "24172579",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T03:20:02.169479+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "closed_default",
+ "temperature": null,
+ "prompt_hash": "859010050eb3b0a3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does sex influence the response to intravenous thrombolysis in ischemic stroke?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": true,
+ "text": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my knowledge of stroke treatment and sex differences in cardiovascular medicine, I know that sex does influence response to intravenous thrombolysis in ischemic stroke. Women often have different stroke presentations, comorbidities, and responses to thrombolytic therapy compared to men. Studies have shown differences in outcomes, bleeding complications, and treatment efficacy.\n\n{\"answer\": \"yes\", \"confidence\": 75}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 17.281,
+ "meta": {
+  "session_id": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+  "credits": 0.28586,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "contextUsagePercentage": 6.934146404266357,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_gGMQFLizhYZvt3OzqTcHLC",
+      "title": "Searching the web",
+      "kind": "search",
+      "rawInput": {
+       "query": "sex influence response intravenous thrombolysis ischemic stroke"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_gGMQFLizhYZvt3OzqTcHLC",
+      "kind": "search",
+      "status": "failed",
+      "title": "web_search",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "query": "sex influence response intravenous thrombolysis ischemic stroke"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_search",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "contextUsagePercentage": 7.02439022064209,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_xQuAGeZ3SEDFxMxINxfvX3",
+      "title": "Fetching web content",
+      "kind": "read",
+      "rawInput": {
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8687155/",
+       "mode": "truncated"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_xQuAGeZ3SEDFxMxINxfvX3",
+      "kind": "read",
+      "status": "failed",
+      "title": "web_fetch",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8687155/",
+       "mode": "truncated"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "web_fetch",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\n\n<｜DSML｜function_calls"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "contextUsagePercentage": 7.1067070960998535,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "tool_call",
+      "toolCallId": "tooluse_XiUDjrXoueIA3EL0o3TFSa",
+      "title": "Querying knowledge base",
+      "rawInput": {
+       "command": "search",
+       "query": "intravenous thrombolysis ischemic stroke sex differences"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "tool_call_update",
+      "toolCallId": "tooluse_XiUDjrXoueIA3EL0o3TFSa",
+      "kind": "other",
+      "status": "failed",
+      "title": "knowledge",
+      "content": [
+       {
+        "type": "content",
+        "content": {
+         "type": "text",
+         "text": "Permission request failed: Internal error: {\n  \"reason\": \"tool permission approval is not supported in non-interactive mode. Use --trust-all-tools to auto-approve tool use, or drop --no-interactive.\"\n}"
+        }
+       }
+      ],
+      "rawInput": {
+       "command": "search",
+       "query": "intravenous thrombolysis ischemic stroke sex differences"
+      },
+      "_meta": {
+       "kiro": {
+        "toolName": "knowledge",
+        "toolCallFailureReason": "permission_denied"
+       }
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "Based on"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " my knowledge of"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " stroke treatment and sex differences in cardiovascular medicine, I"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " know that sex does influence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " response"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " to"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " intravenous"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " thrombolysis in ischemic stroke. Women often have different stroke"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " presentations, comorbidities, and responses to thrombolytic"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " therapy compared to men. Studies have shown differences in"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " outcomes, bleeding complications, and treatment efficacy.\n\n{\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "answer\": \"yes\", \"confidence\":"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 75}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "contextUsagePercentage": 7.194512367248535,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "contextUsagePercentage": 7.194512367248535,
+     "meteringUsage": [
+      {
+       "value": 0.06995482587064678,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07117156218905474,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07187358540630183,
+       "unit": "credit",
+       "unitPlural": "credits"
+      },
+      {
+       "value": 0.07286030182421227,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 15301,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "55d58f61-6edd-44ae-be25-684de5a0dbc5",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_calls\n\n<｜DSML｜function_callsBased on my knowledge of stroke treatment and sex differences in cardiovascular medicine, I know that sex does influence response to intravenous thrombolysis in ischemic stroke. Women often have different stroke presentations, comorbidities, and responses to thrombolytic therapy compared to men. Studies have shown differences in outcomes, bleeding complications, and treatment efficacy.\n\n{\"answer\": \"yes\", \"confidence\": 75}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

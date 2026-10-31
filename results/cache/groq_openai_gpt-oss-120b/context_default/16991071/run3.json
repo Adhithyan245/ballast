@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "16991071",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T02:54:53.375155+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "79208ee6b84b4b95",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\n\nMETHODS: In a retrospective study, 760 open rotator cuff repairs were analysed and related to the profession and occupational load. Exclusion criteria were traumatic tears and sports injuries. All male persons were statistically analysed and the data compared with occupational patterns of the region, obtained from the Federal Statistical State Office.\n\nRESULTS: Rotator cuff repairs were performed in 472 males who had no evidence for a traumatic origin. After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\n\"\"\"\n\nQuestion: Rotator cuff tear--an occupational disease?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\",\n    \"In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\"\n  ]\n}",
+ "input_tokens": 358,
+ "output_tokens": 276,
+ "latency_s": 0.781,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "635",
+   "x-ratelimit-remaining-tokens": "7238",
+   "x-ratelimit-reset-requests": "8h45m36s",
+   "x-ratelimit-reset-tokens": "5.715s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-4a947808-73e2-49a5-af73-9c0e08296ed5",
+  "object": "chat.completion",
+  "created": 1793415292,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 70,\n  \"quotes\": [\n    \"After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\",\n    \"In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\"\n  ]\n}",
+     "reasoning": "We need to answer whether rotator cuff tear is an occupational disease based on abstract. The abstract indicates significantly more patients in agriculture/forestry and building industry compared to regional distribution, suggesting occupational influence. So answer maybe? The question: \"Rotator cuff tear--an occupational disease?\" The data suggests association; but does it prove it is occupational disease? Probably \"maybe\". Provide confidence maybe 70. Provide quotes: \"we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\" Also maybe earlier sentence: \"In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\" Provide two quotes. Return JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082736101,
+   "prompt_tokens": 358,
+   "prompt_time": 0.014549168,
+   "completion_tokens": 276,
+   "completion_time": 0.569618525,
+   "total_tokens": 634,
+   "total_time": 0.584167693,
+   "completion_tokens_details": {
+    "reasoning_tokens": 164
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01m67y38tdemtvdw7g556qs83h",
+   "seed": 1549893320
+  },
+  "service_tier": "on_demand"
+ }
+}

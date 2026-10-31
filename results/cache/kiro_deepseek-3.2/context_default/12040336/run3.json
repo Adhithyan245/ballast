@@ -1,0 +1,309 @@
+{
+ "key": {
+  "model": "kiro:deepseek-3.2",
+  "condition": "context_default",
+  "qid": "12040336",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T04:05:43.927375+00:00",
+ "sample": "main",
+ "family": "kiro",
+ "model_requested": "deepseek-3.2",
+ "model_reported": null,
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "0e4378a4f9eab7de",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The role of early revascularization among patients with acute myocardial infarction complicated by cardiogenic shock remains controversial. Angioplasty registries, while suggesting a benefit, are subject to selection bias, and clinical trials have been underpowered to detect early benefits. If an invasive strategy is beneficial in this population, patients admitted to hospitals with onsite coronary revascularization might be expected to have a better prognosis. We sought to determine whether access to cardiovascular resources at the admitting hospital influenced the prognosis of patients with acute myocardial infarction complicated by cardiogenic shock.\n\nMETHODS: By use of the Cooperative Cardiovascular Project database (a retrospective medical record review of Medicare patients discharged with acute myocardial infarction), we identified patients aged>or =65 years whose myocardial infarction was complicated by cardiogenic shock.\n\nRESULTS: Of the 601 patients with cardiogenic shock, 287 (47.8%) were admitted to hospitals without revascularization services and 314 (52.2%) were admitted to hospitals with coronary angioplasty and coronary artery bypass surgery facilities. Clinical characteristics were similar across the subgroups. Patients admitted to hospitals with revascularization services were more likely to undergo coronary revascularization during the index hospitalization and during the first month after acute myocardial infarction. After adjustment for demographic, clinical, hospital, and treatment strategies, the presence of onsite revascularization services was not associated with a significantly lower 30-day (odds ratio 0.83, 95% CI 0.47, 1.45) or 1-year mortality (odds ratio 0.91, 95% CI 0.49, 1.72).\n\"\"\"\n\nQuestion: Cardiogenic shock complicating acute myocardial infarction in elderly patients: does admission to a tertiary center improve survival?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"After adjustment for demographic, clinical, hospital, and treatment strategies, the presence of onsite revascularization services was not associated with a significantly lower 30-day (odds ratio 0.83, 95% CI 0.47, 1.45) or 1-year mortality (odds ratio 0.91, 95% CI 0.49, 1.72).\"]\n}",
+ "input_tokens": null,
+ "output_tokens": null,
+ "latency_s": 9.734,
+ "meta": {
+  "session_id": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+  "credits": 0.073211,
+  "stop_reason": "end_turn"
+ },
+ "raw": {
+  "events": [
+   {
+    "type": "runStarted",
+    "data": {
+     "payloadSchema": "acp",
+     "acpProtocolVersion": 1,
+     "engine": "v2"
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "contextUsagePercentage": 3.55649995803833,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "contextUsagePercentage": 4.33719539642334,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": ""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "{\n  \"answer\": \"no\",\n  \"confidence"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "\": 85,\n  \"quotes\": [\""
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "After adjustment for demographic, clinical, hospital, and"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " treatment strategies, the presence of onsite revascularization"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " services was not associated with a significantly lower 30"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "-day (odds"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " ratio"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " "
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "0"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "83, 95% CI 0.47,"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " 1.45) or 1-year mortality"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": " (odds ratio 0.91, 95"
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "% CI 0.49, 1."
+      }
+     }
+    }
+   },
+   {
+    "type": "sessionUpdate",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "update": {
+      "sessionUpdate": "agent_message_chunk",
+      "content": {
+       "type": "text",
+       "text": "72).\"]\n}"
+      }
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "contextUsagePercentage": 7.196950912475586,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "metadata",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "contextUsagePercentage": 7.196950912475586,
+     "meteringUsage": [
+      {
+       "value": 0.07321128358208956,
+       "unit": "credit",
+       "unitPlural": "credits"
+      }
+     ],
+     "turnDurationMs": 7877,
+     "reasoning": {
+      "support": "unavailable",
+      "effortLevels": []
+     }
+    }
+   },
+   {
+    "type": "runFinished",
+    "data": {
+     "sessionId": "5fbf1635-cfd5-4bd0-8bd7-5b8073a4dacb",
+     "status": "success",
+     "stopReason": "end_turn",
+     "finalText": "{\n  \"answer\": \"no\",\n  \"confidence\": 85,\n  \"quotes\": [\"After adjustment for demographic, clinical, hospital, and treatment strategies, the presence of onsite revascularization services was not associated with a significantly lower 30-day (odds ratio 0.83, 95% CI 0.47, 1.45) or 1-year mortality (odds ratio 0.91, 95% CI 0.49, 1.72).\"]\n}",
+     "finalTextTruncated": false
+    }
+   }
+  ]
+ }
+}

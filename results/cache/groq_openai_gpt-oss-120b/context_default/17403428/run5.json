@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "17403428",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T04:27:27.643369+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "b0ed85a3a5774a24",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: The purpose of this study was to determine whether there is an association between skewed X-inactivation and recurrent spontaneous abortion in a large, well-defined sample of women with recurrent loss.\n\nSTUDY DESIGN: X-chromosome inactivation patterns were compared in 5 groups of women. Group 1 (recurrent spontaneous abortion) consisted of 357 women with 2 or more spontaneous losses. In group 2 (infertility), there were 349 subjects from infertility practices recruited at the time of a positive serum beta-human chorionic gonadotropin. Group 3 (spontaneous abortion) women (n = 81) were recruited at the time of an ultrasound diagnosis of an embryonic demise or an anembryonic gestation. Groups 4 (primiparous) and 5 (multiparous) were healthy pregnant subjects previously enrolled in another study to determine the incidence and cause of pregnancy complications, such as preeclampsia and intrauterine growth restriction. The Primiparous group included 114 women in their first pregnancy, whereas the Multiparous group consisted of 79 women with 2 or more pregnancies but without pregnancy loss.\n\nRESULTS: The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01). The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05). When age and skewing of 90% or greater are compared, subjects with extreme skewing have a mean age of 2 years older than those without extreme skewing (P<.05).\n\"\"\"\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 90,\n  \"quotes\": [\n    \"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\",\n    \"The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05).\"\n  ]\n}",
+ "input_tokens": 594,
+ "output_tokens": 343,
+ "latency_s": 1.047,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "680",
+   "x-ratelimit-remaining-tokens": "4441",
+   "x-ratelimit-reset-requests": "7h40m48s",
+   "x-ratelimit-reset-tokens": "26.692s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-2746c45e-b2e3-4593-bb29-1e51cc01142d",
+  "object": "chat.completion",
+  "created": 1793420846,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 90,\n  \"quotes\": [\n    \"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\",\n    \"The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05).\"\n  ]\n}",
+     "reasoning": "We need to answer if there is an association between recurrent spontaneous abortion and skewed X-inactivation. The abstract says rate of extreme skewing in recurrent spontaneous abortion population was 8.6%, not statistically different from any of the other groups, except the Primiparous group (which had lower). So no association overall. Therefore answer \"no\". Confidence high, maybe 90. Provide supporting quotes: \"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\" Also maybe \"The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05).\" Provide up to 3 sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.14694047,
+   "prompt_tokens": 594,
+   "prompt_time": 0.026069319,
+   "completion_tokens": 343,
+   "completion_time": 0.712917333,
+   "total_tokens": 937,
+   "total_time": 0.738986652,
+   "completion_tokens_details": {
+    "reasoning_tokens": 201
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_64b2f1c926",
+  "x_groq": {
+   "id": "req_01m683crgyewvvqynt25bc7yf1",
+   "seed": 1265754263
+  },
+  "service_tier": "on_demand"
+ }
+}
