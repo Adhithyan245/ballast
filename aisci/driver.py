@@ -28,9 +28,16 @@ DEFAULT_RESET_UTC = (0, 5)
 CLAUDE_WINDOW_WAIT = timedelta(minutes=60)  # Claude usage limits are rolling windows, not daily
 
 
+ROLLING_TOKEN_WAIT = timedelta(minutes=30)  # Groq's tokens-per-day limit is a rolling 24 h window
+
+
 def next_resume(family: str, reason: str, now: datetime) -> datetime:
     if family == "claude" and "usage limit" in reason:
         return now + CLAUDE_WINDOW_WAIT
+    if "tokens per day" in reason:
+        # Groq: "Limit 200000, Used ..., Please try again in 46s". Capacity frees up continuously,
+        # so check back regularly instead of waiting for a calendar reset.
+        return now + ROLLING_TOKEN_WAIT
     h, m = RESET_UTC.get(family, DEFAULT_RESET_UTC)
     t = now.replace(hour=h, minute=m, second=0, microsecond=0)
     return t if t > now else t + timedelta(days=1)

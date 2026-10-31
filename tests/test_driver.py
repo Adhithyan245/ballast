@@ -37,3 +37,9 @@ def test_transient_failures_are_counted_separately(tmp_path, monkeypatch):
     s = run_provider(Flaky([RetryableError("transport: ConnectError"), FatalError("400")]), items,
                      ["closed_default"], "pilot", runs=2, cache=Cache(tmp_path / "c"), log=lambda *_: None)
     assert (s.failed, s.failed_transient, s.done) == (2, 1, 0)
+
+
+def test_groq_rolling_token_limit_waits_30_minutes():
+    now = datetime(2026, 10, 31, 0, 6, tzinfo=timezone.utc)
+    reason = "QuotaExhausted: 429 daily quota: Rate limit reached ... on tokens per day (TPD): Limit 200000"
+    assert next_resume("groq", reason, now) == datetime(2026, 10, 31, 0, 36, tzinfo=timezone.utc)
