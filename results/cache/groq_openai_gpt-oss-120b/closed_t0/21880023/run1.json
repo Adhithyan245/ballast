@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "21880023",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T00:36:47.886146+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "9f5d1a59b86cf0f3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does exercise during pregnancy prevent postnatal depression?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 72}",
+ "input_tokens": 159,
+ "output_tokens": 102,
+ "latency_s": 0.343,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "986",
+   "x-ratelimit-remaining-tokens": "7634",
+   "x-ratelimit-reset-requests": "20m9.6s",
+   "x-ratelimit-reset-tokens": "2.745s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-82773f3f-fbf8-44a6-9752-231891adf0cb",
+  "object": "chat.completion",
+  "created": 1793579807,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 72}",
+     "reasoning": "We need to answer the question: Does exercise during pregnancy prevent postnatal depression? Provide yes/no/maybe and confidence.\n\nWe need to consider evidence. There are studies suggesting that physical activity during pregnancy is associated with lower risk of postpartum depression, but evidence is not entirely conclusive; systematic reviews show moderate evidence, but heterogeneity. So answer maybe. Confidence maybe 70.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.074235389,
+   "prompt_tokens": 159,
+   "prompt_time": 0.007160287,
+   "completion_tokens": 102,
+   "completion_time": 0.214037346,
+   "total_tokens": 261,
+   "total_time": 0.221197633,
+   "completion_tokens_details": {
+    "reasoning_tokens": 81
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01m6ctzw04ej0r5ee1qqha7jg6",
+   "seed": 343574933
+  },
+  "service_tier": "on_demand"
+ }
+}

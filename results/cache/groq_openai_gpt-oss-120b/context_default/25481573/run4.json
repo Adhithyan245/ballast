@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "25481573",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T07:06:08.413794+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "ed4f4fac299e61f9",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To assess the extent to which the title and font of participant information sheets (PISs) can influence pregnant women's and trainee midwives' perceptions of an antenatal intervention.\n\nMETHODS: Pregnant women (n=35) and trainee midwives (n=36) were randomly presented with one of four PISs where the title and font of the PIS had been manipulated to create four experimental conditions (i.e., Double Fluent; Double Awkward; Fluent Title-Awkward Font; Awkward Title-Fluent Font). After reading the PIS, participants rated their perceptions of the intervention (i.e., Attractiveness, Complexity, Expected Risk, Required Effort) using five-point Likert scales.\n\nRESULTS: A 4×2 factorial multivariate analysis of variance revealed that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent (p=.024) and Awkward Title-Fluent Font (p=.021) conditions.\n\"\"\"\n\nQuestion: Processing fluency effects: can the content and presentation of participant information sheets influence recruitment and participation for an antenatal intervention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"OBJECTIVE: To assess the extent to which the title and font of participant information sheets (PISs) can influence pregnant women's and trainee midwives' perceptions of an antenatal intervention.\", \"A 4×2 factorial multivariate analysis of variance revealed that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent (p=.024) and Awkward Title-Fluent Font (p=.021) conditions.\"]}",
+ "input_tokens": 415,
+ "output_tokens": 306,
+ "latency_s": 1.125,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "999",
+   "x-ratelimit-remaining-tokens": "7256",
+   "x-ratelimit-reset-requests": "1m26.4s",
+   "x-ratelimit-reset-tokens": "5.58s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-13593a59-f9a1-409b-953c-c01a826e1ab4",
+  "object": "chat.completion",
+  "created": 1793516767,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"OBJECTIVE: To assess the extent to which the title and font of participant information sheets (PISs) can influence pregnant women's and trainee midwives' perceptions of an antenatal intervention.\", \"A 4×2 factorial multivariate analysis of variance revealed that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent (p=.024) and Awkward Title-Fluent Font (p=.021) conditions.\"]}",
+     "reasoning": "We need to answer whether processing fluency effects (content and presentation of participant information sheets) can influence recruitment and participation for an antenatal intervention. The abstract reports that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent and Awkward Title-Fluent Font conditions. That indicates perception changes due to title and font, which could affect recruitment and participation. So answer \"yes\". Confidence high, maybe 90. Provide quotes.\n\nSelect sentences: \"OBJECTIVE: To assess the extent to which the title and font of participant information sheets (PISs) can influence pregnant women's and trainee midwives' perceptions of an antenatal intervention.\" and \"A 4×2 factorial multivariate analysis of variance revealed that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent (p=.024) and Awkward Title-Fluent Font (p=.021) conditions.\"\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.089921141,
+   "prompt_tokens": 415,
+   "prompt_time": 0.14956504,
+   "completion_tokens": 306,
+   "completion_time": 0.67684475,
+   "total_tokens": 721,
+   "total_time": 0.82640979,
+   "completion_tokens_details": {
+    "reasoning_tokens": 190
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8655ddce88",
+  "x_groq": {
+   "id": "req_01m6ayw11ze2ts7awv45bn7r8j",
+   "seed": 1112006869
+  },
+  "service_tier": "on_demand"
+ }
+}

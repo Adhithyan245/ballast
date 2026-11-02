@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "17403428",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T08:36:23.218374+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "0204e32f061f8c29",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+ "input_tokens": 103,
+ "output_tokens": 18,
+ "latency_s": 0.718,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Tuu7QB7u/r6BVlBpBVzFld6K4H+UyWVCcanFpulyw111iZDCRZZPDHqqxCOKpIhBuAFg0wWGC+u6fnY/VgZS4CHd9LJExnsJ79GUZR16MCsvk1M9kBSnxwKE="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 103,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 121,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 103
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "BfrmavDnF8jGxdIP-4XK6Qg"
+ }
+}

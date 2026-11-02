@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "27858166",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T12:11:13.369412+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "3a098bd368df5884",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: Traumatic aortic injury (TAI) is a rare but life-threatening type of injury. We investigate whether the anatomy of the aortic arch influences the severity of aortic injury.\n\nMETHODS: This is a retrospective study of twenty-two cases treated with TEVAR for TAI in our department from 2009 to 2014. Aortic injury was assessed in accordance with the recommendations of the Society of Vascular Surgery. We measured the aortic arch angle and the aortic arch index, based on the initial angio-CT scan, in each of the analyzed cases.\n\nRESULTS: The mean aortic arch index and mean aortic arch angle were 6.8 cm and 58.3°, respectively, in the type I injury group; 4.4 cm and 45.9° in the type III group; 3.3 cm and 37° in the type IV group. There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups. A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\n\"\"\"\n\nQuestion: Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\", \"There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups.\"]}",
+ "input_tokens": 466,
+ "output_tokens": 265,
+ "latency_s": 1.047,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-remaining-tokens": "5993",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-reset-tokens": "15.052s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c00b4683-d98a-4cb1-80fa-793612ab511f",
+  "object": "chat.completion",
+  "created": 1793535073,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\", \"There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups.\"]}",
+     "reasoning": "We need to answer based on abstract. The question: \"Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\" The abstract reports that multivariate analysis confirmed aortic arch angle significantly associated with occurrence of type III damage, and differences in arch index/angle between groups. So answer yes, with confidence high, maybe 95. Provide quotes. Need one to three sentences exactly as in abstract.\n\nSelect quotes: \"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\" Also maybe \"There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups.\" Provide up to three. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.400301405,
+   "prompt_tokens": 466,
+   "prompt_time": 0.028867692,
+   "completion_tokens": 265,
+   "completion_time": 0.554566775,
+   "total_tokens": 731,
+   "total_time": 0.583434467,
+   "completion_tokens_details": {
+    "reasoning_tokens": 170
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_69334c0be3",
+  "x_groq": {
+   "id": "req_01m6bgap0gevwasdf8sdhn50c3",
+   "seed": 1208275206
+  },
+  "service_tier": "on_demand"
+ }
+}

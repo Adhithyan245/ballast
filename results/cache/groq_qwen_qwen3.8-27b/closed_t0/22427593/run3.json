@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "22427593",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T19:42:32.431679+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d38d9391fba17f74",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are normally sighted, visually impaired, and blind pedestrians accurate and reliable at making street crossing decisions?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 95}",
+ "input_tokens": 118,
+ "output_tokens": 14,
+ "latency_s": 0.172,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "618",
+   "x-ratelimit-remaining-tokens": "7501",
+   "x-ratelimit-reset-requests": "9h10m4.8s",
+   "x-ratelimit-reset-tokens": "3.742s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-41de83c3-f4d2-4aa5-97a3-f78576f3615d",
+  "object": "chat.completion",
+  "created": 1793475752,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.095744758,
+   "prompt_tokens": 118,
+   "prompt_time": 0.009561772,
+   "completion_tokens": 14,
+   "completion_time": 0.027706046,
+   "total_tokens": 132,
+   "total_time": 0.037267818
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5e14805ce3",
+  "x_groq": {
+   "id": "req_01m69qrc1qetzrsjr5m5cz0d8e",
+   "seed": 581432883
+  },
+  "service_tier": "on_demand"
+ }
+}

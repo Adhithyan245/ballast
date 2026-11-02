@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "12006913",
+  "run": 1
+ },
+ "cached_at": "2026-11-01T14:15:05.038783+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "cdd19882ffcb2c85",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do lipids, blood pressure, diabetes, and smoking confer equal risk of myocardial infarction in women as in men?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 85}",
+ "input_tokens": 173,
+ "output_tokens": 182,
+ "latency_s": 0.703,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "986",
+   "x-ratelimit-remaining-tokens": "7311",
+   "x-ratelimit-reset-requests": "20m9.6s",
+   "x-ratelimit-reset-tokens": "5.167s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-db79c822-9b03-4953-b1a4-53d4c5e4d9f2",
+  "object": "chat.completion",
+  "created": 1793542504,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 85}",
+     "reasoning": "We need to answer the question: \"Do lipids, blood pressure, diabetes, and smoking confer equal risk of myocardial infarction in women as in men?\" So we need to answer yes/no/maybe and give confidence.\n\nWe need to consider evidence: Generally, risk factors may have different relative risks between sexes. For example, diabetes confers a higher relative risk of MI in women than men. Smoking also may have a greater relative risk in women. Lipids and hypertension also may have differences but generally similar? I recall that the relative risk of MI associated with diabetes is about 2-3 times higher in women than men. Smoking also higher in women. So the answer is \"no\" (they do not confer equal risk). Confidence moderate-high, maybe 85.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243299454,
+   "prompt_tokens": 173,
+   "prompt_time": 0.007908854,
+   "completion_tokens": 182,
+   "completion_time": 0.383235219,
+   "total_tokens": 355,
+   "total_time": 0.391144073,
+   "completion_tokens_details": {
+    "reasoning_tokens": 161
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "x_groq": {
+   "id": "req_01m6bqdfq0ea48mpmtcac43dxe",
+   "seed": 1286732489
+  },
+  "service_tier": "on_demand"
+ }
+}

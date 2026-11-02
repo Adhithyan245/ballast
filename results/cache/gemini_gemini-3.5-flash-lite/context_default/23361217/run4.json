@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "23361217",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T08:12:37.179273+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "84e9153751d4b830",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: There are a number of factors responsible for the longevity of unicompartmental knee replacements (UKR). These include the magnitude of postoperative alignment and the type of material used. The effect of component design and material on postoperative alignment, however, has not been explored.\n\nMATERIALS AND METHODS: We retrospectively reviewed 89 patients who underwent UKR with robotic guidance. Patients were divided into two groups, according to whether they had received an all-polyethylene inlay component (Inlay group) or a metal-backed onlay component (Onlay group). We explored the magnitude of mechanical alignment correction obtained in both groups.\n\nRESULTS: Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment (Fig. 2). Further exploration revealed that the thickness of the tibial polyethyelene insert had a significant effect on postoperative alignment when added to the model (R2=0.68; P=0.01).\n\"\"\"\n\nQuestion: Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment (Fig. 2).\"\n  ]\n}\n```",
+ "input_tokens": 421,
+ "output_tokens": 138,
+ "latency_s": 0.859,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment (Fig. 2).\"\n  ]\n}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TFoKdsjtIn9pAOpk9mtK5VISC14rlPcGktT54/Z6wCDDB1OOJC84zks6z2ZSrRNhaK9SsXM+HvfzSxNpqe2Nvw7vo9G0jqi4gvfIqJTdt9Df0H0qGoa0UBVE="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 69,
+       "endIndex": 353,
+       "uri": "http://www.pubfacts.com/author/Innocent+Njoku",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 421,
+   "candidatesTokenCount": 138,
+   "totalTokenCount": 559,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 421
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "c_TmaoGmEJHRiLMPo4CpmAU"
+ }
+}

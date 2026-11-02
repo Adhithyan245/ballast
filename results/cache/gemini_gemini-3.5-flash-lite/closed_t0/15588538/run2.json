@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "15588538",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T08:32:53.364317+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "7ca44e5a916d7323",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Chronic functional somatic symptoms: a single syndrome?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 96,
+ "output_tokens": 13,
+ "latency_s": 0.907,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+       "thoughtSignature": "EmAKXgFpFH0Tm6BMG9+orB6PXlticLngH+6gnwoguzXGYDcE7hazL5hQjpH2bqu0aSFSWy0MpKnFKJh/rBx3gkYvB3lBvsQmcssYTLs699EKvPxQaGZ0m9BQTFcyh2UgL/s="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 96,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 109,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 96
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "M_nmaovaFqLAxdIPmpyKuAs"
+ }
+}

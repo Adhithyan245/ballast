@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "17403428",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T00:10:25.592765+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "b0ed85a3a5774a24",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: The purpose of this study was to determine whether there is an association between skewed X-inactivation and recurrent spontaneous abortion in a large, well-defined sample of women with recurrent loss.\n\nSTUDY DESIGN: X-chromosome inactivation patterns were compared in 5 groups of women. Group 1 (recurrent spontaneous abortion) consisted of 357 women with 2 or more spontaneous losses. In group 2 (infertility), there were 349 subjects from infertility practices recruited at the time of a positive serum beta-human chorionic gonadotropin. Group 3 (spontaneous abortion) women (n = 81) were recruited at the time of an ultrasound diagnosis of an embryonic demise or an anembryonic gestation. Groups 4 (primiparous) and 5 (multiparous) were healthy pregnant subjects previously enrolled in another study to determine the incidence and cause of pregnancy complications, such as preeclampsia and intrauterine growth restriction. The Primiparous group included 114 women in their first pregnancy, whereas the Multiparous group consisted of 79 women with 2 or more pregnancies but without pregnancy loss.\n\nRESULTS: The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01). The incidence of X-inactivation skewing of 90% or greater was no different whether there had been at least 1 live birth (9.9%), or no previous live births and at least 3 losses (5.6%, P>.05). When age and skewing of 90% or greater are compared, subjects with extreme skewing have a mean age of 2 years older than those without extreme skewing (P<.05).\n\"\"\"\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"no\", \"confidence\": 85, \"quotes\": [\"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\"]}",
+ "input_tokens": 1420,
+ "output_tokens": 100,
+ "latency_s": 4.953,
+ "meta": {
+  "total_cost_usd_estimate": 0.008248,
+  "num_turns": 1,
+  "session_id": "9a7b2e05-e988-4179-bd41-da58e2933881"
+ },
+ "raw": {
+  "duration_api_ms": 2426,
+  "stop_reason": "end_turn",
+  "session_id": "9a7b2e05-e988-4179-bd41-da58e2933881",
+  "total_cost_usd": 0.008248,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1418,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 100,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1418,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 100,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1418,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1418
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1477,
+    "outputTokens": 19,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001572,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 100,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1418,
+    "webSearchRequests": 0,
+    "costUSD": 0.006676,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 85, \"quotes\": [\"The rate of extreme skewing (90% or greater) in the recurrent spontaneous abortion population was 8.6%, and not statistically different from any of the other groups, except the Primiparous group (1.0%, P<.01).\"]}",
+  "ttft_ms": 2194,
+  "type": "result",
+  "duration_ms": 2302,
+  "uuid": "c3a46737-b606-4252-9c50-b5d3a160b54a",
+  "ttft_stream_ms": 1440,
+  "time_to_request_ms": 708,
+  "first_content_frame_ms": 1441,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

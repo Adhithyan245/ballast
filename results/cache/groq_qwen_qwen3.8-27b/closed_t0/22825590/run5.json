@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "22825590",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T20:14:06.009080+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "609081eca2888102",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Are behavioural risk factors to be blamed for the conversion from optimal blood pressure to hypertensive status in Black South Africans?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": 121,
+ "output_tokens": 14,
+ "latency_s": 0.187,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "601",
+   "x-ratelimit-remaining-tokens": "7865",
+   "x-ratelimit-reset-requests": "9h34m33.6s",
+   "x-ratelimit-reset-tokens": "1.012s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-3bde9fbe-8a79-4ea8-9b81-d2c58efb2e82",
+  "object": "chat.completion",
+  "created": 1793477645,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 75}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.118484262,
+   "prompt_tokens": 121,
+   "prompt_time": 0.009815308,
+   "completion_tokens": 14,
+   "completion_time": 0.02757735,
+   "total_tokens": 135,
+   "total_time": 0.037392658
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_57c7e760a9",
+  "x_groq": {
+   "id": "req_01m69sj56meh7tvardj3vj2x5b",
+   "seed": 81705586
+  },
+  "service_tier": "on_demand"
+ }
+}

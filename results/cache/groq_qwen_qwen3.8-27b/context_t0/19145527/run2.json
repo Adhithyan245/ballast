@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "19145527",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T12:43:05.695189+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "8c4aef50119372ce",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: The primary objective of the study was to determine emergency medical services (EMS) professionals' opinions regarding participation in disease and injury prevention programs. A secondary objective was to determine the proportion of EMS professionals who had participated in disease prevention programs.\n\nMETHODS: As part of the National Registry of Emergency Medical Technicians' biennial reregistration process, EMS professionals reregistering in 2006 were asked to complete an optional survey regarding their opinions on and participation in disease and injury prevention. Demographic characteristics were also collected. Data were analyzed using descriptive statistics and 99% confidence intervals (CIs). The chi-square test was used to compare differences by responder demographics (alpha = 0.01). A 10% difference between groups was determined to be clinically significant.\n\nRESULTS: The survey was completed by 27,233 EMS professionals. Of these responders, 82.7% (99% CI: 82.1-83.3) felt that EMS professionals should participate in disease prevention, with those working 20 to 29 hours per week being the least likely to think they should participate (67.4%, p<0.001). About a third, 33.8% (99% CI: 33.1-34.6), of the respondents reported having provided prevention services, with those having a graduate degree (43.5%, p<0.001), those working in EMS for more than 21 years (44%, p<0.001), those working for the military (57%, p<0.001), those working 60 to 69 hours per week (41%, p<0.001), and those responding to zero emergency calls in a typical week (43%, p<0.001) being the most likely to report having provided prevention services. About half, 51.1% (99% CI: 50.4-51.9), of the respondents agreed that prevention services should be provided during emergency calls, and 7.7% (99% CI: 7.3-8.1) of the respondents reported providing prevention services during emergency calls. No demographic differences existed. Those who had participated in prevention programs were more likely to respond that EMS professionals should participate in prevention (92% vs. 82%, p<0.001). Further, those who had provided prevention services during emergency calls were more likely to think EMS professionals should provide prevention services during emergency calls (81% vs. 51%, p<0.001).\n\"\"\"\n\nQuestion: Do emergency medical services professionals think they should participate in disease prevention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Of these responders, 82.7% (99% CI: 82.1-83.3) felt that EMS professionals should participate in disease prevention, with those working 20 to 29 hours per week being the least likely to think they should participate (67.4%, p<0.001).\"\n]\n}",
+ "input_tokens": 720,
+ "output_tokens": 101,
+ "latency_s": 0.484,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "899",
+   "x-ratelimit-remaining-tokens": "6368",
+   "x-ratelimit-reset-requests": "2h25m26.4s",
+   "x-ratelimit-reset-tokens": "12.239s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-bcb563d7-0842-4540-947d-cd88582abfa4",
+  "object": "chat.completion",
+  "created": 1793536985,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Of these responders, 82.7% (99% CI: 82.1-83.3) felt that EMS professionals should participate in disease prevention, with those working 20 to 29 hours per week being the least likely to think they should participate (67.4%, p<0.001).\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096220028,
+   "prompt_tokens": 720,
+   "prompt_time": 0.051246437,
+   "completion_tokens": 101,
+   "completion_time": 0.203347765,
+   "total_tokens": 821,
+   "total_time": 0.254594202
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fea14bdc83",
+  "x_groq": {
+   "id": "req_01m6bj5236ew0s0y2gbwqz7sh5",
+   "seed": 1251595286
+  },
+  "service_tier": "on_demand"
+ }
+}

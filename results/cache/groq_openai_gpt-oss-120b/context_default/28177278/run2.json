@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "28177278",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T13:11:40.441596+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "76e3c68a26ca3719",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Polyarteritis nodosa (PAN) is a systemic vasculitis involving mainly medium-sized arteries and, rarely, small-sized arteries. The diagnosis is principally based on clinical exams, biopsy of an affected organ, and/or arteriography of renal or mesenteric arteries. Once diagnosed, immunosuppressive agents, such as glucocorticoids and cyclophosphamide, are generally introduced as soon as possible. Whether spontaneous remission of PAN occurs is therefore largely unknown.\n\nPRESENTATION: We describe the case of a 51-year-old woman who presented with a 4-day-history of intense pain in her left flank, hypertension, fever, microscopic hematuria, and acute renal failure. Contrast-enhanced renal ultrasound strongly suggested bilateral renal infarction. Medical history and an extensive workup allowed to exclude systemic embolism, recreational drug abuse, cardiac arrhythmias, and thrombophilia. A possible diagnosis of PAN was considered; however, within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment. Finally, 3 months later, renal arteriography confirmed the diagnosis of PAN. The patient remains free of symptoms 1 year after initial presentation.\n\"\"\"\n\nQuestion: Does spontaneous remission occur in polyarteritis nodosa?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\", \"The patient remains free of symptoms 1 year after initial presentation.\"]}",
+ "input_tokens": 450,
+ "output_tokens": 156,
+ "latency_s": 0.485,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-remaining-tokens": "6244",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-reset-tokens": "13.17s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-a0d0a181-875f-4fcb-a5df-bab325753f2d",
+  "object": "chat.completion",
+  "created": 1793538700,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\", \"The patient remains free of symptoms 1 year after initial presentation.\"]}",
+     "reasoning": "We need to answer based on abstract. The abstract describes a case where spontaneous remission occurred. So answer \"yes\". Confidence high, maybe 95. Provide quotes. Quote: \"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\" Also \"The patient remains free of symptoms 1 year after initial presentation.\" Provide one to three sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082948078,
+   "prompt_tokens": 450,
+   "prompt_time": 0.019753847,
+   "completion_tokens": 156,
+   "completion_time": 0.327076801,
+   "total_tokens": 606,
+   "total_time": 0.346830648,
+   "completion_tokens_details": {
+    "reasoning_tokens": 88
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01m6bkschwe3a8v9mn5rxz2dcq",
+   "seed": 215195729
+  },
+  "service_tier": "on_demand"
+ }
+}

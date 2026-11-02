@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "23347337",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T00:56:05.389067+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "94c3adccad034018",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: To provide equality of cancer care to rural patients, Townsville Cancer Centre administers intensive chemotherapy regimens to rural patients with node-positive breast and metastatic colorectal cancers at the same doses as urban patients. Side-effects were usually managed by rural general practitioners locally.AIM: The aim is to determine the safety of this practice by comparing the profile of serious adverse events and dose intensities between urban and rural patients at the Townsville Cancer Centre.\n\nMETHOD: A retrospective audit was conducted in patients with metastatic colorectal and node-positive breast cancers during a 24-month period. Fisher's exact test was used for analysis. Rurality was determined as per rural, remote and metropolitan classification.\n\nRESULTS: Of the 121 patients included, 70 and 51 patients had breast and colon cancers respectively. The urban versus rural patient split among all patients, breast and colorectal cancer subgroups was 68 versus 53, 43 versus 27 and 25 versus 26 respectively. A total of 421 cycles was given with dose intensity of>95% for breast cancer in both groups (P>0.05). Rate of febrile neutropenia was 9.3% versus 7.4% (P = 0.56). For XELOX, rate of diarrhoea was 20% versus 19% (P = 0.66) and rate of vomiting was 20% versus 11% (P = 0.11). Only two patients were transferred to Townsville for admission. No toxic death occurred in either group.\n\"\"\"\n\nQuestion: Is intensive chemotherapy safe for rural cancer patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"Rate of febrile neutropenia was 9.3% versus 7.4% (P = 0.56).\", \"No toxic death occurred in either group.\", \"Only two patients were transferred to Townsville for admission.\"]}",
+ "input_tokens": 512,
+ "output_tokens": 219,
+ "latency_s": 0.594,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "997",
+   "x-ratelimit-remaining-tokens": "6269",
+   "x-ratelimit-reset-requests": "4m19.2s",
+   "x-ratelimit-reset-tokens": "12.982s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-539ca18d-e4d1-4f3e-a847-15b6adeee55f",
+  "object": "chat.completion",
+  "created": 1793494564,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"Rate of febrile neutropenia was 9.3% versus 7.4% (P = 0.56).\", \"No toxic death occurred in either group.\", \"Only two patients were transferred to Townsville for admission.\"]}",
+     "reasoning": "We need to answer based on abstract. The question: Is intensive chemotherapy safe for rural cancer patients? The abstract reports similar dose intensity >95% both groups, similar rates of febrile neutropenia, diarrhea, vomiting, no toxic deaths, only two transferred for admission. So appears safe. So answer \"yes\". Confidence maybe high, e.g., 85. Provide quotes: \"Rate of febrile neutropenia was 9.3% versus 7.4% (P = 0.56).\" and \"No toxic death occurred in either group.\" Also maybe \"Only two patients were transferred to Townsville for admission.\" Provide 1-3 sentences. Provide JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082786593,
+   "prompt_tokens": 512,
+   "prompt_time": 0.021777418,
+   "completion_tokens": 219,
+   "completion_time": 0.453836422,
+   "total_tokens": 731,
+   "total_time": 0.47561384,
+   "completion_tokens_details": {
+    "reasoning_tokens": 142
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_bb691ea66b",
+  "x_groq": {
+   "id": "req_01m6a9pf9zebavzht8kat0775j",
+   "seed": 1445912761
+  },
+  "service_tier": "on_demand"
+ }
+}

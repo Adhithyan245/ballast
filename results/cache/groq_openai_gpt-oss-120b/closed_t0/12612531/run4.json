@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "12612531",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T16:48:26.042668+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "8739181f7022e994",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Fragility of the esophageal mucosa: a pathognomonic endoscopic sign of primary eosinophilic esophagitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 177,
+ "output_tokens": 222,
+ "latency_s": 0.594,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "993",
+   "x-ratelimit-remaining-tokens": "7577",
+   "x-ratelimit-reset-requests": "10m4.8s",
+   "x-ratelimit-reset-tokens": "3.172s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-08a83239-11b5-44ae-b4a9-c07dd08d9b84",
+  "object": "chat.completion",
+  "created": 1793551705,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer the question: \"Fragility of the esophageal mucosa: a pathognomonic endoscopic sign of primary eosinophilic esophagitis?\" So is fragility of esophageal mucosa a pathognomonic endoscopic sign of primary eosinophilic esophagitis? Need to know literature. In eosinophilic esophagitis (EoE), endoscopic findings include rings, linear furrows, white exudates, edema, strictures, and \"fragile mucosa\" leading to mucosal tears with minimal trauma, sometimes called \"crepe paper\" mucosa. Some literature suggests mucosal fragility is a characteristic but not pathognomonic; other conditions can cause fragility. So answer likely \"maybe\" or \"no\". Pathognomonic means exclusively indicative. Fragility may be seen in EoE but not exclusive. So answer \"maybe\" with moderate confidence. I'd give confidence maybe 70."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082899823,
+   "prompt_tokens": 177,
+   "prompt_time": 0.00866845,
+   "completion_tokens": 222,
+   "completion_time": 0.459662712,
+   "total_tokens": 399,
+   "total_time": 0.468331162,
+   "completion_tokens_details": {
+    "reasoning_tokens": 201
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_8655ddce88",
+  "x_groq": {
+   "id": "req_01m6c0690zetjbnkzhdn03pb6w",
+   "seed": 66145317
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "24495711",
+  "run": 3
+ },
+ "cached_at": "2026-10-31T20:46:07.596709+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "26f2e6f0b354f962",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is crime associated with over-the-counter pharmacy syringe sales?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 95}",
+ "input_tokens": 110,
+ "output_tokens": 14,
+ "latency_s": 0.078,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "573",
+   "x-ratelimit-remaining-tokens": "7876",
+   "x-ratelimit-reset-requests": "10h14m52.799s",
+   "x-ratelimit-reset-tokens": "929ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-ea3114d6-e538-41a9-9591-781ffe470f50",
+  "object": "chat.completion",
+  "created": 1793479567,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.003941467,
+   "prompt_tokens": 110,
+   "prompt_time": 0.008865212,
+   "completion_tokens": 14,
+   "completion_time": 0.028771455,
+   "total_tokens": 124,
+   "total_time": 0.037636667
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m69vcstregdbjwf9chqxnrb5",
+   "seed": 425394916
+  },
+  "service_tier": "on_demand"
+ }
+}

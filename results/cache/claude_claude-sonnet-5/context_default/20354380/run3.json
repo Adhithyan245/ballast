@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "20354380",
+  "run": 3
+ },
+ "cached_at": "2026-11-02T01:07:56.736192+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "5a185bf6450c9c2c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: To assess gender differences among residents regarding their plans to have children during residency and determine the most influential reasons for these differences.\n\nMETHOD: Using the Health Belief Model as a framework, the authors created an instrument to survey 424 residents from 11 residency programs at three academic medical institutions about their intentions to have children during residency. The authors developed a scale to assess the perceived career threats of having children during residency, evaluated its psychometric properties, and calculated the effect of the mediators.\n\nRESULTS: The response rate was 77% (328/424). Forty-one percent of men versus 27% of women planned to have children during residency (P = .01). The instrument measured four career threats-extended training, loss of fellowship positions, pregnancy complications, and interference with career plans-on a five-point Likert scale. The scale had a Cronbach alpha of 0.84 and an eigenvalue of 2.2. Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers. After adjusting for age, institution, postgraduate year, and knowledge of parental leave policies, women were less likely to plan to have children during residency (odds ratio 0.46 [95% confidence interval 0.25-0.84]). In mediation analysis, threats to career explained 67% of the gender variance.\n\"\"\"\n\nQuestion: Do women residents delay childbearing due to perceived career threats?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers.\", \"After adjusting for age, institution, postgraduate year, and knowledge of parental leave policies, women were less likely to plan to have children during residency (odds ratio 0.46 [95% confidence interval 0.25-0.84]).\", \"In mediation analysis, threats to career explained 67% of the gender variance.\"]}",
+ "input_tokens": 1269,
+ "output_tokens": 193,
+ "latency_s": 6.0,
+ "meta": {
+  "total_cost_usd_estimate": 0.0036404000000000002,
+  "num_turns": 1,
+  "session_id": "48806d04-dfbb-418e-8e44-82a460535f87"
+ },
+ "raw": {
+  "duration_api_ms": 3576,
+  "stop_reason": "end_turn",
+  "session_id": "48806d04-dfbb-418e-8e44-82a460535f87",
+  "total_cost_usd": 0.0036404000000000002,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1267,
+   "output_tokens": 193,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 193,
+     "cache_read_input_tokens": 1267,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1363,
+    "outputTokens": 18,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001453,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 193,
+    "cacheReadInputTokens": 1267,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0021874,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Compared with men, women had higher scores for each item and a higher mean score (2.9 versus 2.1, P = .001), signifying greater belief in the potential of pregnancy to threaten careers.\", \"After adjusting for age, institution, postgraduate year, and knowledge of parental leave policies, women were less likely to plan to have children during residency (odds ratio 0.46 [95% confidence interval 0.25-0.84]).\", \"In mediation analysis, threats to career explained 67% of the gender variance.\"]}",
+  "ttft_ms": 2206,
+  "type": "result",
+  "duration_ms": 2343,
+  "uuid": "e510fb97-4d03-43ae-afe3-2d32555aaddf",
+  "ttft_stream_ms": 1054,
+  "time_to_request_ms": 321,
+  "first_content_frame_ms": 1055,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

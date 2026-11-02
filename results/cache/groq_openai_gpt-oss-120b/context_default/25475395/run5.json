@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "25475395",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T06:35:56.876521+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "93ec1868b5106172",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: For women, the correlation between circulating androgens and sexual desire is inconclusive. Substitution with androgens at physiological levels improves sexual function in women who experience decreased sexual desire and androgen deficiency from surgical menopause, pituitary disease, and age-related decline in androgen production in the ovaries. Measuring bioactive testosterone is difficult and new methods have been proposed, including measuring the primary androgen metabolite androsterone glucuronide (ADT-G).AIM: The aim of this study was to investigate a possible correlation between serum levels of androgens and sexual desire in women and whether the level of ADT-G is better correlated than the level of circulating androgens with sexual desire.\n\nMETHODS: This was a cross-sectional study including 560 healthy women aged 19-65 years divided into three age groups. Correlations were considered to be statistically significant at P<0.05.\n\nMAIN OUTCOME MEASURE: Sexual desire was determined as the total score of the sexual desire domain of the Female Sexual Function Index. Total testosterone (TT), calculated free testosterone (FT), androstenedione, dehydroepiandrosterone sulfate (DHEAS), and ADT-G were analyzed using mass spectrometry.\n\nRESULTS: Sexual desire correlated overall with FT and androstenedione in the total cohort of women. In a subgroup of women aged 25-44 years with no use of systemic hormonal contraception, sexual desire correlated with TT, FT, androstenedione, and DHEAS. In women aged 45-65 years, androstenedione correlated with sexual desire. No correlations between ADT-G and sexual desire were identified.\n\"\"\"\n\nQuestion: Is there a correlation between androgens and sexual desire in women?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\":\"yes\",\"confidence\":95,\"quotes\":[\"Sexual desire correlated overall with FT and androstenedione in the total cohort of women.\",\"In a subgroup of women aged 25-44 years with no use of systemic hormonal contraception, sexual desire correlated with TT, FT, androstenedione, and DHEAS.\"]}",
+ "input_tokens": 539,
+ "output_tokens": 219,
+ "latency_s": 0.656,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "997",
+   "x-ratelimit-remaining-tokens": "6302",
+   "x-ratelimit-reset-requests": "4m19.2s",
+   "x-ratelimit-reset-tokens": "12.735s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-47e76d76-bc77-499f-994b-5846e46889c2",
+  "object": "chat.completion",
+  "created": 1793514955,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\":\"yes\",\"confidence\":95,\"quotes\":[\"Sexual desire correlated overall with FT and androstenedione in the total cohort of women.\",\"In a subgroup of women aged 25-44 years with no use of systemic hormonal contraception, sexual desire correlated with TT, FT, androstenedione, and DHEAS.\"]}",
+     "reasoning": "We need to answer whether there is a correlation between androgens and sexual desire in women. The abstract says: \"Sexual desire correlated overall with FT and androstenedione in the total cohort of women.\" Also subgroups show correlations with TT, FT, androstenedione, DHEAS. So yes, there is a correlation. Provide confidence high, maybe 95. Provide quotes: e.g., \"Sexual desire correlated overall with FT and androstenedione in the total cohort of women.\" and perhaps \"In a subgroup of women aged 25-44 years... sexual desire correlated with TT, FT, androstenedione, and DHEAS.\"\n\nReturn JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083273748,
+   "prompt_tokens": 539,
+   "prompt_time": 0.021898764,
+   "completion_tokens": 219,
+   "completion_time": 0.45107323,
+   "total_tokens": 758,
+   "total_time": 0.472971994,
+   "completion_tokens_details": {
+    "reasoning_tokens": 141
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c868cf1eaa",
+  "x_groq": {
+   "id": "req_01m6ax4rd7eqvr123k5m8pwbdm",
+   "seed": 1568251367
+  },
+  "service_tier": "on_demand"
+ }
+}

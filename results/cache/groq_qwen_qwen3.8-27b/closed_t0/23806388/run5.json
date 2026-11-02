@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "23806388",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T20:15:08.505219+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "89f37dd558cf67f2",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do nomograms designed to predict biochemical recurrence (BCR) do a better job of predicting more clinically relevant prostate cancer outcomes than BCR?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": 126,
+ "output_tokens": 14,
+ "latency_s": 0.172,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "576",
+   "x-ratelimit-remaining-tokens": "7860",
+   "x-ratelimit-reset-requests": "10h10m33.6s",
+   "x-ratelimit-reset-tokens": "1.05s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-f0c93de9-fdd1-4a9b-90e1-8da6cd954f32",
+  "object": "chat.completion",
+  "created": 1793477708,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 75}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.092426001,
+   "prompt_tokens": 126,
+   "prompt_time": 0.011264325,
+   "completion_tokens": 14,
+   "completion_time": 0.027774315,
+   "total_tokens": 140,
+   "total_time": 0.03903864
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m69sm28ce65s0gzz4zr9z0qh",
+   "seed": 179600078
+  },
+  "service_tier": "on_demand"
+ }
+}

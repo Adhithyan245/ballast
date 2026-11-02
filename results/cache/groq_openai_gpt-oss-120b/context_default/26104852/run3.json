@@ -1,0 +1,74 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "26104852",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T10:39:36.262228+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "0e75087f5bc8c48d",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: Hereditary transthyretin (ATTR) amyloidosis with increased left ventricular wall thickness could easily be misdiagnosed by echocardiography as hypertrophic cardiomyopathy (HCM). Our aim was to create a diagnostic tool based on echocardiography and ECG that could optimise identification of ATTR amyloidosis.\n\nMETHODS: Data were analysed from 33 patients with biopsy proven ATTR amyloidosis and 30 patients with diagnosed HCM. Conventional features from ECG were acquired as well as two dimensional and Doppler echocardiography, speckle tracking derived strain and tissue characterisation analysis. Classification trees were used to select the most important variables for differentiation between ATTR amyloidosis and HCM.\n\nRESULTS: The best classification was obtained using both ECG and echocardiographic features, where a QRS voltage>30 mm was diagnostic for HCM, whereas in patients with QRS voltage<30 mm, an interventricular septal/posterior wall thickness ratio (IVSt/PWt)>1.6 was consistent with HCM and a ratio<1.6 supported the diagnosis of ATTR amyloidosis. This classification presented both high sensitivity (0.939) and specificity (0.833).\n\"\"\"\n\nQuestion: Can echocardiography and ECG discriminate hereditary transthyretin V30M amyloidosis from hypertrophic cardiomyopathy?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"The best classification was obtained using both ECG and echocardiographic features, where a QRS voltage>30\\u00a0mm was diagnostic for HCM, whereas in patients with QRS voltage<30\\u00a0mm, an interventricular septal/posterior wall thickness ratio (IVSt/PWt)>1.6 was consistent with HCM and a ratio<1.6 supported the diagnosis of ATTR amyloidosis.\", \"This classification presented both high sensitivity (0.939) and specificity (0.833).\"]}",
+ "input_tokens": 467,
+ "output_tokens": 246,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "997",
+   "x-ratelimit-remaining-tokens": "6352",
+   "x-ratelimit-reset-requests": "4m19.2s",
+   "x-ratelimit-reset-tokens": "12.36s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-b75a9ecd-9a56-4928-ba0c-ad9648393029",
+  "object": "chat.completion",
+  "created": 1793529576,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"The best classification was obtained using both ECG and echocardiographic features, where a QRS voltage>30\\u00a0mm was diagnostic for HCM, whereas in patients with QRS voltage<30\\u00a0mm, an interventricular septal/posterior wall thickness ratio (IVSt/PWt)>1.6 was consistent with HCM and a ratio<1.6 supported the diagnosis of ATTR amyloidosis.\", \"This classification presented both high sensitivity (0.939) and specificity (0.833).\"]}",
+     "reasoning": "We need to answer whether echocardiography and ECG can discriminate hereditary transthyretin V30M amyloidosis from HCM. The abstract describes using ECG and echo features to differentiate ATTR amyloidosis vs HCM with high sensitivity and specificity. So answer \"yes\". Confidence high, maybe 95. Provide quotes.\n\nSelect sentences: \"The best classification was obtained using both ECG and echocardiographic features...\" and \"This classification presented both high sensitivity (0.939) and specificity (0.833).\"\n\nProvide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083003955,
+   "prompt_tokens": 467,
+   "prompt_time": 0.01122852,
+   "completion_tokens": 246,
+   "completion_time": 0.58082596,
+   "total_tokens": 713,
+   "total_time": 0.59205448,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 110
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01m6bb2y4beh9synd74am5jpcm",
+   "seed": 1594818127
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "16991071",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T08:35:08.105318+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "6ff8377575f154b7",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Rotator cuff tear--an occupational disease?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+ "input_tokens": 96,
+ "output_tokens": 13,
+ "latency_s": 0.609,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+       "thoughtSignature": "EmAKXgFpFH0TjNa9+gXWQYl84KCZ0ItwFIGGZAX1SdSfQADgRQg4qrZSP3s4HRf0JXw+D82uj2YHAO0WExk+ZiN8Abo1FHQ8gTZcFgyS0CxW1AmOD0vMKGfIB2WuJjbX3Co="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 96,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 109,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 96
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "uvnmate3F-LAxdIPhevssQs"
+ }
+}

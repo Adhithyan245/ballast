@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "21214884",
+  "run": 1
+ },
+ "cached_at": "2026-10-31T15:38:55.652912+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "c0313972d80193f0",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nMETHODS: Using polymerase chain reaction techniques, we evaluated the presence of HPV infection in human breast milk collected from 21 HPV-positive and 11 HPV-negative mothers.\n\nRESULTS: Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\n\"\"\"\n\nQuestion: Can 'high-risk' human papillomaviruses (HPVs) be detected in human breast milk?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\"]}",
+ "input_tokens": 301,
+ "output_tokens": 197,
+ "latency_s": 0.719,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-remaining-tokens": "5548",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-reset-tokens": "18.39s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c5b4a698-1026-4611-9fad-37147420bc4b",
+  "object": "chat.completion",
+  "created": 1793461133,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\"]}",
+     "reasoning": "We need to answer: can high-risk HPVs be detected in human breast milk? The abstract says they evaluated presence using PCR in milk from 21 HPV-positive and 11 HPV-negative mothers. Results: \"Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\" So answer is \"no\". Confidence high, maybe 95. Provide quotes. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.162559431,
+   "prompt_tokens": 301,
+   "prompt_time": 0.04546359,
+   "completion_tokens": 197,
+   "completion_time": 0.409292861,
+   "total_tokens": 498,
+   "total_time": 0.454756451,
+   "completion_tokens_details": {
+    "reasoning_tokens": 116
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fe269835c7",
+  "x_groq": {
+   "id": "req_01m699t7n4e0dtxmfhdbhaxsv6",
+   "seed": 330670609
+  },
+  "service_tier": "on_demand"
+ }
+}

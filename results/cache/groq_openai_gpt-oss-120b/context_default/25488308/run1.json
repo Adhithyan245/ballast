@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "25488308",
+  "run": 1
+ },
+ "cached_at": "2026-11-01T07:06:13.328684+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "23b2434810d63a98",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: The proper angle of miniscrew insertion is important for cortical anchorage, patient safety, and biomechanical control. The purposes of this study are to report the alveolar process thickness and inter-radicular space in the posterior region of the mandible, to assess the impact of different miniscrew insertion angle protocols, and to identify differences between the genders or types of malocclusion.\n\nMATERIALS AND METHODS: In this retrospective study, 100 individuals were selected for orthodontic treatment at a radiology clinic. Cone-beam computed tomography data were imported into 3-dimensional software. The predictor variable was the location in the mandible and insertion angle. The demographic variables collected included age, gender, and malocclusion (Angle Classes I and II). The primary outcome variables were bone thickness and inter-radicular space. The inter-radicular spaces were evaluated 5 mm from the cement-enamel junction. The bone thicknesses were taken at 45°, 60°, and 90° in relation to the alveolar ridge, simulating a miniscrew insertion. These factors were evaluated for sexual dimorphism and malocclusion (Angle Classes I and II). Sexual dimorphism and malocclusion were evaluated with t tests. To compare the inter-radicular space and the thickness of bone between areas, an analysis of variance for repeated measures was used.\n\nRESULTS: The sample was composed of 100 patients with a mean age of 17.4 ± 6.74 years. There were 61 female and 39 male patients and 60 Class I and 40 Class II molar relationships. The inter-radicular space ranged from 2.46 to 3.31 mm, and alveolar bone thickness ranged from 8.01 to 13.77 mm. The thickness tended to decrease with the increase in insertion angle from 45° to 90°. No significant differences between the genders or types of malocclusion were found.\n\"\"\"\n\nQuestion: Can bone thickness and inter-radicular space affect miniscrew placement in posterior mandibular sites?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"The primary outcome variables were bone thickness and inter-radicular space.\",\n    \"The thickness tended to decrease with the increase in insertion angle from 45° to 90°.\"\n  ]\n}",
+ "input_tokens": 605,
+ "output_tokens": 321,
+ "latency_s": 1.047,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "997",
+   "x-ratelimit-remaining-tokens": "6179",
+   "x-ratelimit-reset-requests": "4m19.2s",
+   "x-ratelimit-reset-tokens": "13.657s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-d22364c6-fd14-4387-8edb-86ebe8289b4f",
+  "object": "chat.completion",
+  "created": 1793516772,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"yes\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"The primary outcome variables were bone thickness and inter-radicular space.\",\n    \"The thickness tended to decrease with the increase in insertion angle from 45° to 90°.\"\n  ]\n}",
+     "reasoning": "We need to answer whether bone thickness and inter-radicular space affect miniscrew placement in posterior mandibular sites. The abstract indicates they measured bone thickness and inter-radicular space to assess impact on insertion angle, implying they are relevant. The results: thickness tends to decrease with increased angle, and inter-radicular space ranged etc. It says no differences between genders or malocclusion, but bone thickness and inter-radicular space are considered primary outcomes. The question: \"Can bone thickness and inter-radicular space affect miniscrew placement in posterior mandibular sites?\" The study purpose: to report alveolar process thickness and inter-radicular space, assess impact of different insertion angles. So answer: yes. Provide confidence maybe high, e.g., 95. Provide quotes: \"The primary outcome variables were bone thickness and inter-radicular space.\" and \"The thickness tended to decrease with the increase in insertion angle from 45° to 90°.\" Also \"The inter-radicular space ranged from 2.46 to 3.31 mm, and alveolar bone thickness ranged from 8.01 to 13.77 mm.\"\n\nWe need 1-3 sentences. Provide maybe two. JSON format."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.179581256,
+   "prompt_tokens": 605,
+   "prompt_time": 0.024441556,
+   "completion_tokens": 321,
+   "completion_time": 0.670686084,
+   "total_tokens": 926,
+   "total_time": 0.69512764,
+   "completion_tokens_details": {
+    "reasoning_tokens": 251
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_49bfac06f1",
+  "x_groq": {
+   "id": "req_01m6ayw5vseha86sjkcd3gsew7",
+   "seed": 180134729
+  },
+  "service_tier": "on_demand"
+ }
+}

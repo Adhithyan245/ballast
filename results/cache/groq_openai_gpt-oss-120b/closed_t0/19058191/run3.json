@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "19058191",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T20:53:08.851670+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "47f12e63deae94fa",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there a discrepancy between patient and physician quality of life assessment?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 162,
+ "output_tokens": 82,
+ "latency_s": 0.313,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-remaining-tokens": "7545",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-reset-tokens": "3.412s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-86e29e77-6aa4-4399-b9ae-0dbe66564d2e",
+  "object": "chat.completion",
+  "created": 1793566388,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 85}",
+     "reasoning": "We need to answer whether there is a discrepancy between patient and physician quality of life assessment. In literature, many studies show that physicians often underestimate or misjudge patients' quality of life, especially in chronic diseases, cancer, etc. So answer likely \"yes\". Confidence maybe 85. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082565448,
+   "prompt_tokens": 162,
+   "prompt_time": 0.006415097,
+   "completion_tokens": 82,
+   "completion_time": 0.169424543,
+   "total_tokens": 244,
+   "total_time": 0.17583964,
+   "completion_tokens_details": {
+    "reasoning_tokens": 61
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01m6ce6br6ej1swhvx8a1ztrs5",
+   "seed": 1643125944
+  },
+  "service_tier": "on_demand"
+ }
+}

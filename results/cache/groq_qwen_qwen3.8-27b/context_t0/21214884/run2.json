@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "21214884",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T14:14:55.077532+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "c0313972d80193f0",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nMETHODS: Using polymerase chain reaction techniques, we evaluated the presence of HPV infection in human breast milk collected from 21 HPV-positive and 11 HPV-negative mothers.\n\nRESULTS: Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\n\"\"\"\n\nQuestion: Can 'high-risk' human papillomaviruses (HPVs) be detected in human breast milk?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\"\n  ]\n}",
+ "input_tokens": 271,
+ "output_tokens": 100,
+ "latency_s": 0.265,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "940",
+   "x-ratelimit-remaining-tokens": "4798",
+   "x-ratelimit-reset-requests": "1h26m24s",
+   "x-ratelimit-reset-tokens": "58.26s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-854ddc2f-605c-4b20-8097-47a9d68a63b2",
+  "object": "chat.completion",
+  "created": 1793542494,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"no\",\n  \"confidence\": 95,\n  \"quotes\": [\n    \"Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\"\n  ]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.00708543,
+   "prompt_tokens": 271,
+   "prompt_time": 0.024199637,
+   "completion_tokens": 100,
+   "completion_time": 0.203337959,
+   "total_tokens": 371,
+   "total_time": 0.227537596
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m6bqd6cnew08dy2hpbbgqthw",
+   "seed": 942890620
+  },
+  "service_tier": "on_demand"
+ }
+}

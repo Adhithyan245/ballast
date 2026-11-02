@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "24172579",
+  "run": 1
+ },
+ "cached_at": "2026-11-01T08:14:02.237756+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "dbaa5bb8684ca3c6",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND AND PURPOSE: Women are more likely to have a worse outcome after an acute stroke than men. Some studies have suggested that women also benefit less from intravenous thrombolysis after an acute ischemic stroke, but others found no sex differences in safety and efficacy. We aimed to evaluate differences in 3-month outcome between sexes in intravenous tissue-type plasminogen activator-treated patients registered in the Safe Implementation of Treatments in Stroke-International Stroke Thrombolysis Register.\n\nMETHODS: A total of 45 079 patients treated with intravenous alteplase were recorded from 2002 to 2011. Main outcome measures were symptomatic intracerebral hemorrhage, functional independence (modified Rankin Scale score, 0-2), and mortality at 3 months.\n\nRESULTS: Among 25 777 (57.2%) men and 19 302 (42.8%) women, we found no difference in the rate of symptomatic intracerebral hemorrhage (P=0.13), a significantly higher likelihood of functional independence at 3 months in men (P<0.0001) and a higher mortality in women when compared with men (P<0.00001). After adjustment for confounding variables, we did not observe any difference between sexes in functional outcome (odds ratio, 1.03; 95% confidence interval, 0.97-1.09; P=0.39), whereas male sex was related to a higher risk of mortality (odds ratio, 1.19; 95% confidence interval, 1.10-1.29; P=0.00003) and symptomatic intracerebral hemorrhage (odds ratio, 1.25, 95% confidence interval, 1.04-1.51; P=0.02).\n\"\"\"\n\nQuestion: Does sex influence the response to intravenous thrombolysis in ischemic stroke?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Some studies have suggested that women also benefit less from intravenous thrombolysis after an acute ischemic stroke, but others found no sex differences in safety and efficacy.\", \"After adjustment for confounding variables, we did not observe any difference between sexes in functional outcome (odds ratio, 1.03; 95% confidence interval, 0.97-1.09; P=0.39), whereas male sex was related to a higher risk of mortality (odds ratio, 1.19; 95% confidence interval, 1.10-1.29; P=0.00003) and symptomatic intracerebral hemorrhage (odds ratio, 1.25, 95% confidence interval, 1.04-1.51; P=0.02).\"]}",
+ "input_tokens": 545,
+ "output_tokens": 192,
+ "latency_s": 0.907,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Some studies have suggested that women also benefit less from intravenous thrombolysis after an acute ischemic stroke, but others found no sex differences in safety and efficacy.\", \"After adjustment for confounding variables, we did not observe any difference between sexes in functional outcome (odds ratio, 1.03; 95% confidence interval, 0.97-1.09; P=0.39), whereas male sex was related to a higher risk of mortality (odds ratio, 1.19; 95% confidence interval, 1.10-1.29; P=0.00003) and symptomatic intracerebral hemorrhage (odds ratio, 1.25, 95% confidence interval, 1.04-1.51; P=0.02).\"]}",
+       "thoughtSignature": "EmAKXgFpFH0Tq2iiJvLYE+Uub6lqYfmC5V2WY50PPxEaIQM9bY/wBuelj+DMWIaX+9Ct6L1d4auj9WSm1+ZVjF37cviEd78rkv6/IRsy3UyqeUVNoL39t8QXDPmVbcU+ey8="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 230,
+       "endIndex": 630,
+       "uri": "https://pubmed.ncbi.nlm.nih.gov/24172579/",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 545,
+   "candidatesTokenCount": 192,
+   "totalTokenCount": 737,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 545
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "yPTmauetD8OMytMPw8qTmAw"
+ }
+}

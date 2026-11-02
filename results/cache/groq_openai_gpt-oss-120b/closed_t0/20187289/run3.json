@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "20187289",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T22:25:05.906055+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "32b2afe6c9dc57e6",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Prescriptions as a proxy for asthma in children: a good choice?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 72}",
+ "input_tokens": 163,
+ "output_tokens": 125,
+ "latency_s": 0.704,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-remaining-tokens": "7712",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-reset-tokens": "2.159s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-5e965125-b3b4-4625-9228-47f54adad4be",
+  "object": "chat.completion",
+  "created": 1793571905,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 72}",
+     "reasoning": "We need to answer the question: \"Prescriptions as a proxy for asthma in children: a good choice?\" Provide yes/no/maybe and confidence. Need to consider literature: Using prescription data to identify asthma cases in children is common but has limitations: may miss undiagnosed, overprescribed, or use for other conditions. So it's not perfect; maybe it's a reasonable proxy but with caveats. The question asks \"good choice?\" Likely answer: maybe. Provide confidence maybe 70. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.204224373,
+   "prompt_tokens": 163,
+   "prompt_time": 0.007158102,
+   "completion_tokens": 125,
+   "completion_time": 0.26388677,
+   "total_tokens": 288,
+   "total_time": 0.271044872,
+   "completion_tokens_details": {
+    "reasoning_tokens": 104
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_998410db10",
+  "x_groq": {
+   "id": "req_01m6ckeq0wekwsmq5djjg0kctp",
+   "seed": 164895146
+  },
+  "service_tier": "on_demand"
+ }
+}

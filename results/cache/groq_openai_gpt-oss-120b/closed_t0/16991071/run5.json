@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "16991071",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T18:50:51.113350+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "6ff8377575f154b7",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Rotator cuff tear--an occupational disease?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 158,
+ "output_tokens": 100,
+ "latency_s": 0.282,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "992",
+   "x-ratelimit-remaining-tokens": "7730",
+   "x-ratelimit-reset-requests": "11m31.2s",
+   "x-ratelimit-reset-tokens": "2.025s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-915d674d-a1cc-4c31-9158-62e8a774fa3e",
+  "object": "chat.completion",
+  "created": 1793559050,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer whether rotator cuff tear is an occupational disease. The question: \"Rotator cuff tear--an occupational disease?\" The answer likely is \"maybe\" because some evidence suggests occupational risk factors (repetitive overhead work, heavy lifting) can cause rotator cuff tears, but not universally recognized as occupational disease. So answer maybe with confidence maybe 70. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.032008362,
+   "prompt_tokens": 158,
+   "prompt_time": 0.007183813,
+   "completion_tokens": 100,
+   "completion_time": 0.210489785,
+   "total_tokens": 258,
+   "total_time": 0.217673598,
+   "completion_tokens_details": {
+    "reasoning_tokens": 79
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4140daa9c2",
+  "x_groq": {
+   "id": "req_01m6c76e43e84a47dtw4esxhnq",
+   "seed": 1727102953
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "22955530",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T00:25:06.032849+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "151c0e3783c6582b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The range of injury severity that can be seen within the category of type II supracondylar humerus fractures (SCHFs) raises the question whether some could be treated nonoperatively. However, the clinical difficulty in using this approach lies in determining which type II SCHFs can be managed successfully without a surgical intervention.\n\nMETHODS: We reviewed clinical and radiographic information on 259 pediatric type II SCHFs that were enrolled in a prospective registry of elbow fractures. The characteristics of the patients who were treated without surgery were compared with those of patients who were treated surgically. Treatment outcomes, as assessed by the final clinical and radiographic alignment, range of motion of the elbow, and complications, were compared between the groups to define clinical and radiographic features that related to success or failure of nonoperative management.\n\nRESULTS: During the course of treatment, 39 fractures were found to have unsatisfactory alignment with nonoperative management and were taken for surgery. Ultimately, 150 fractures (57.9%) were treated nonoperatively, and 109 fractures (42.1%) were treated surgically. At final follow-up, outcome measures of change in carrying angle, range of motion, and complications did not show clinically significant differences between treatment groups. Fractures without rotational deformity or coronal angulation and with a shaft-condylar angle of>15 degrees were more likely to be associated with successful nonsurgical treatment. A scoring system was developed using these features to stratify the severity of the injury. Patients with isolated extension deformity, but none of the other features, were more likely to complete successful nonoperative management.\n\"\"\"\n\nQuestion: Type II supracondylar humerus fractures: can some be treated nonoperatively?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Ultimately, 150 fractures (57.9%) were treated nonoperatively, and 109 fractures (42.1%) were treated surgically.\", \"At final follow-up, outcome measures of change in carrying angle, range of motion, and complications did not show clinically significant differences between treatment groups.\", \"Fractures without rotational deformity or coronal angulation and with a shaft-condylar angle of >15 degrees were more likely to be associated with successful nonsurgical treatment.\"]}",
+ "input_tokens": 538,
+ "output_tokens": 261,
+ "latency_s": 0.796,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-remaining-tokens": "5692",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-reset-tokens": "17.31s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-6aac0dfe-1682-4201-bf99-7bb910f0d1f8",
+  "object": "chat.completion",
+  "created": 1793492705,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Ultimately, 150 fractures (57.9%) were treated nonoperatively, and 109 fractures (42.1%) were treated surgically.\", \"At final follow-up, outcome measures of change in carrying angle, range of motion, and complications did not show clinically significant differences between treatment groups.\", \"Fractures without rotational deformity or coronal angulation and with a shaft-condylar angle of >15 degrees were more likely to be associated with successful nonsurgical treatment.\"]}",
+     "reasoning": "We need to answer based on abstract: It says some can be treated nonoperatively; 57.9% treated nonoperatively with similar outcomes. So answer \"yes\". Confidence high, maybe 95. Provide quotes.\n\nSelect sentences: \"Ultimately, 150 fractures (57.9%) were treated nonoperatively, and 109 fractures (42.1%) were treated surgically.\" and \"At final follow-up, outcome measures ... did not show clinically significant differences between treatment groups.\" Also \"Fractures without rotational deformity or coronal angulation ... were more likely to be associated with successful nonsurgical treatment.\" Provide up to 3.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.065120727,
+   "prompt_tokens": 538,
+   "prompt_time": 0.043236699,
+   "completion_tokens": 261,
+   "completion_time": 0.640059672,
+   "total_tokens": 799,
+   "total_time": 0.683296371,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 137
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_47082602e2",
+  "x_groq": {
+   "id": "req_01m6a7xqbzesrtvfg80jgsk9fb",
+   "seed": 399046863
+  },
+  "service_tier": "on_demand"
+ }
+}

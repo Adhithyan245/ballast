@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "12040336",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T08:28:47.012686+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "af4d9be540e513d1",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Cardiogenic shock complicating acute myocardial infarction in elderly patients: does admission to a tertiary center improve survival?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+ "input_tokens": 107,
+ "output_tokens": 13,
+ "latency_s": 0.515,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+       "thoughtSignature": "EmAKXgFpFH0T7uKLjeWSKnkKGoB8pBQUNjymMmE2HulLGVHDzW9ryWSBofjjXXySIKag8TMePYaGGA4Am5YMzNAQ5rFoOs5X/fJDZ3NhhruFXeWw54X033PoL2rIse367fs="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 107,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 120,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 107
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "PfjmauzKGNDy0_gP9dXE6QU"
+ }
+}

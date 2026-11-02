@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "21873082",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T00:06:33.676113+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "572aa6e73175ff7c",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is the h-index predictive of greater NIH funding success among academic radiologists?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 82}",
+ "input_tokens": 164,
+ "output_tokens": 98,
+ "latency_s": 0.516,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "971",
+   "x-ratelimit-remaining-tokens": "7632",
+   "x-ratelimit-reset-requests": "41m45.6s",
+   "x-ratelimit-reset-tokens": "2.76s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-b5156c5c-c9aa-4f19-8fd0-069f2c437929",
+  "object": "chat.completion",
+  "created": 1793577992,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 82}",
+     "reasoning": "We need to answer whether h-index predicts greater NIH funding success among academic radiologists. Likely there is literature. I recall a study: \"The h-index predicts NIH funding among academic radiologists\" maybe. I think there is a paper: \"The h-index predicts NIH funding among academic radiologists\" by someone. I think the answer is yes. Confidence maybe 80."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.24285903,
+   "prompt_tokens": 164,
+   "prompt_time": 0.006206473,
+   "completion_tokens": 98,
+   "completion_time": 0.203319267,
+   "total_tokens": 262,
+   "total_time": 0.20952574,
+   "completion_tokens_details": {
+    "reasoning_tokens": 77
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "x_groq": {
+   "id": "req_01m6cs8g5nene9d79d52vkpjzd",
+   "seed": 1808403686
+  },
+  "service_tier": "on_demand"
+ }
+}

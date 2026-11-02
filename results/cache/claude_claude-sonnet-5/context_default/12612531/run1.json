@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "12612531",
+  "run": 1
+ },
+ "cached_at": "2026-11-01T03:52:01.376308+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "62f60ef8eda136cd",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Primary eosinophilic esophagitis, a chronic inflammatory disorder of the esophagus, evokes recurrent dysphagia. Endoscopy is often unremarkable, and no consensus exists regarding management of resultant dysphagia. The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \"crêpe-paper\" mucosa is introduced.\n\nMETHODS: Five men underwent endoscopy because of dysphagia confirmed (clinically, endoscopically, and histologically) to be caused by primary eosinophilic esophagitis and were treated by bouginage.\n\nOBSERVATIONS: All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma. After the procedure, patients remained asymptomatic for 3 to 24 months.\n\"\"\"\n\nQuestion: Fragility of the esophageal mucosa: a pathognomonic endoscopic sign of primary eosinophilic esophagitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65, \"quotes\": [\"The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"crêpe-paper\\\" mucosa is introduced.\", \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\"]}",
+ "input_tokens": 1155,
+ "output_tokens": 152,
+ "latency_s": 6.297,
+ "meta": {
+  "total_cost_usd_estimate": 0.007549,
+  "num_turns": 1,
+  "session_id": "7ba5cff9-e00a-42d1-a1fb-28236faa1255"
+ },
+ "raw": {
+  "duration_api_ms": 2633,
+  "stop_reason": "end_turn",
+  "session_id": "7ba5cff9-e00a-42d1-a1fb-28236faa1255",
+  "total_cost_usd": 0.007549,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1153,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 152,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1153,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 152,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1153,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1153
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1283,
+    "outputTokens": 26,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001413,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 152,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1153,
+    "webSearchRequests": 0,
+    "costUSD": 0.006136,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"maybe\", \"confidence\": 65, \"quotes\": [\"The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"crêpe-paper\\\" mucosa is introduced.\", \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\"]}",
+  "ttft_ms": 2350,
+  "type": "result",
+  "duration_ms": 2433,
+  "uuid": "e9f8197d-1ce1-4383-b2d4-41ac0b904e2a",
+  "ttft_stream_ms": 1374,
+  "time_to_request_ms": 686,
+  "first_content_frame_ms": 1374,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

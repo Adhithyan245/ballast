@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "26104852",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T22:03:02.029461+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "7d581971c9745cae",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can echocardiography and ECG discriminate hereditary transthyretin V30M amyloidosis from hypertrophic cardiomyopathy?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": 128,
+ "output_tokens": 14,
+ "latency_s": 0.563,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "559",
+   "x-ratelimit-remaining-tokens": "7858",
+   "x-ratelimit-reset-requests": "10h35m2.4s",
+   "x-ratelimit-reset-tokens": "1.065s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-80df8d19-8e01-4fe6-894e-3f440441cd64",
+  "object": "chat.completion",
+  "created": 1793484181,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 75}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.492679886,
+   "prompt_tokens": 128,
+   "prompt_time": 0.011372414,
+   "completion_tokens": 14,
+   "completion_time": 0.027839268,
+   "total_tokens": 142,
+   "total_time": 0.039211682
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m69zskj1egsaztd85nbggw6c",
+   "seed": 720502528
+  },
+  "service_tier": "on_demand"
+ }
+}

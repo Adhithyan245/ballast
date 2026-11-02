@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "21789019",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T23:19:05.514144+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "fb5521ece79786d0",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do elderly cancer patients have different care needs compared with younger ones?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95}",
+ "input_tokens": 162,
+ "output_tokens": 77,
+ "latency_s": 0.438,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "988",
+   "x-ratelimit-remaining-tokens": "7474",
+   "x-ratelimit-reset-requests": "17m16.8s",
+   "x-ratelimit-reset-tokens": "3.945s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-0bcb1ff2-ca72-4951-90b3-f5340f89472a",
+  "object": "chat.completion",
+  "created": 1793575144,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95}",
+     "reasoning": "We need to answer the question: \"Do elderly cancer patients have different care needs compared with younger ones?\" Likely yes, because elderly have comorbidities, functional status, tolerance, etc. So answer \"yes\". Confidence high, maybe 95. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.203801634,
+   "prompt_tokens": 162,
+   "prompt_time": 0.006946355,
+   "completion_tokens": 77,
+   "completion_time": 0.161840467,
+   "total_tokens": 239,
+   "total_time": 0.168786822,
+   "completion_tokens_details": {
+    "reasoning_tokens": 56
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_76082d2bd0",
+  "x_groq": {
+   "id": "req_01m6cphjxce1dt7snjytsybbfn",
+   "seed": 1064161052
+  },
+  "service_tier": "on_demand"
+ }
+}

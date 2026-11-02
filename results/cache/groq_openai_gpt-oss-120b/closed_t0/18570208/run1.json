@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "18570208",
+  "run": 1
+ },
+ "cached_at": "2026-11-01T20:22:37.499120+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "bfc66dada285399a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is severe macrosomia manifested at 11-14 weeks of gestation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 95}",
+ "input_tokens": 164,
+ "output_tokens": 111,
+ "latency_s": 0.422,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "993",
+   "x-ratelimit-remaining-tokens": "7751",
+   "x-ratelimit-reset-requests": "10m4.8s",
+   "x-ratelimit-reset-tokens": "1.867s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-8e539c64-eb9b-4b25-afb3-3e0950f5ba5d",
+  "object": "chat.completion",
+  "created": 1793564556,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 95}",
+     "reasoning": "We need to answer whether severe macrosomia can be manifested at 11-14 weeks gestation. Macrosomia refers to large fetal size, usually defined as birth weight >4000g or >90th percentile, diagnosed later in pregnancy, not at 11-14 weeks. At 11-14 weeks, ultrasound can measure crown-rump length, not macrosomia. So answer likely \"no\". Confidence high, maybe 95."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.146716352,
+   "prompt_tokens": 164,
+   "prompt_time": 0.00745969,
+   "completion_tokens": 111,
+   "completion_time": 0.230683287,
+   "total_tokens": 275,
+   "total_time": 0.238142977,
+   "completion_tokens_details": {
+    "reasoning_tokens": 90
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_64b2f1c926",
+  "x_groq": {
+   "id": "req_01m6ccef7jeqdv1egk2q04y2vt",
+   "seed": 1909886503
+  },
+  "service_tier": "on_demand"
+ }
+}

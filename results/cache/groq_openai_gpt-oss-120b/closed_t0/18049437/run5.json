@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "18049437",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T20:22:22.734354+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "49612740a8330d2f",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there any relationship between streptococcal infection and multiple sclerosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70}",
+ "input_tokens": 164,
+ "output_tokens": 154,
+ "latency_s": 0.672,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "999",
+   "x-ratelimit-remaining-tokens": "7336",
+   "x-ratelimit-reset-requests": "1m26.4s",
+   "x-ratelimit-reset-tokens": "4.98s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-44ea798e-d843-46a0-bf77-ab9de9663618",
+  "object": "chat.completion",
+  "created": 1793564542,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70}",
+     "reasoning": "We need to answer the question: \"Is there any relationship between streptococcal infection and multiple sclerosis?\" Provide answer yes/no/maybe and confidence.\n\nWe need to consider scientific literature. There is some evidence linking infections to MS risk, including EBV strongly. Streptococcal infection (e.g., group A streptococcus) has been investigated for possible molecular mimicry, e.g., cross-reactivity with myelin basic protein, and some studies suggest possible association, but evidence is not conclusive. Some epidemiological studies have not found strong association. So answer likely \"maybe\". Confidence moderate, maybe 70.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243509951,
+   "prompt_tokens": 164,
+   "prompt_time": 0.00661053,
+   "completion_tokens": 154,
+   "completion_time": 0.323770191,
+   "total_tokens": 318,
+   "total_time": 0.330380721,
+   "completion_tokens_details": {
+    "reasoning_tokens": 133
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_86dc843b12",
+  "x_groq": {
+   "id": "req_01m6cce0kren6s7p24hyb0rh2k",
+   "seed": 1173727851
+  },
+  "service_tier": "on_demand"
+ }
+}

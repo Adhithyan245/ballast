@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "25981682",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T08:20:12.261793+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "b61e8f02e815713f",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nMETHODS: Medical records of 121 people who received inpatient rehabilitation were retrospectively screened; records of 50 people discharged home and at high falls risk (fall in last 12 months, fall preceding/during admission) were audited. Data extracted included falls risk identification during rehabilitation and in discharge documentation; falls risk factors assessed; and fall prevention strategies implemented.\n\nRESULTS: Discharge documentation correctly identified falls risk for just nine of the 50 people. Patients at high falls risk had a median of 8.0 (interquartile range 6-10) of 17 risk factors. There was limited evidence of assessment for osteoporosis (n = 8), footwear (n = 4) and visual assessment in the previous 2 years (n = 1). Patients received a median of 6.5 (interquartile range 5-9) out of 16 possible strategies. Common strategies were mobility (n = 48), strength (n = 44) and Personal Activity of Daily Living training (n = 43). For 12 risk factors, if the factor was present, there was evidence of a strategy in more than 80% of records.\n\"\"\"\n\nQuestion: Preparing patients at high risk of falls for discharge home after rehabilitation: Do we meet the guidelines?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"Discharge documentation correctly identified falls risk for just nine of the 50 people.\", \"There was limited evidence of assessment for osteoporosis (n\\u2009=\\u20098), footwear (n\\u2009=\\u20094) and visual assessment in the previous 2 years (n\\u2009=\\u20091).\"]}\n```",
+ "input_tokens": 429,
+ "output_tokens": 107,
+ "latency_s": 0.844,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"Discharge documentation correctly identified falls risk for just nine of the 50 people.\", \"There was limited evidence of assessment for osteoporosis (n\\u2009=\\u20098), footwear (n\\u2009=\\u20094) and visual assessment in the previous 2 years (n\\u2009=\\u20091).\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TNA1CpLMwnyWIBucvCGoYUPvv8k6uSE795ezyt+yODZSBW46g/Y0DA703LywM/HCuFyWAYhpEeuwBnBtQ4yME5Ylrv9Ph+MfjCmWjO16yHZpJJHTY69GL5SM="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 429,
+   "candidatesTokenCount": 107,
+   "totalTokenCount": 536,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 429
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "OvbmaoGJFeuB1sgP2cTJkQw"
+ }
+}

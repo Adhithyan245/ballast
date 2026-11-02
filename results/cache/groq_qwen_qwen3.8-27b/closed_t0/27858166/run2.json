@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "27858166",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T00:05:55.446717+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d3becb8ad4015841",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+ "input_tokens": 118,
+ "output_tokens": 14,
+ "latency_s": 0.532,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "623",
+   "x-ratelimit-remaining-tokens": "7597",
+   "x-ratelimit-reset-requests": "9h2m52.8s",
+   "x-ratelimit-reset-tokens": "3.022s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-1b874b6d-c890-46cc-a27b-dbdb8e7ca266",
+  "object": "chat.completion",
+  "created": 1793491554,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 90}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.45514482,
+   "prompt_tokens": 118,
+   "prompt_time": 0.010237563,
+   "completion_tokens": 14,
+   "completion_time": 0.031357148,
+   "total_tokens": 132,
+   "total_time": 0.041594711
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m6a6tm0rernrhwrx48b0hs3s",
+   "seed": 2134033382
+  },
+  "service_tier": "on_demand"
+ }
+}

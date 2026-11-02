@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "24433626",
+  "run": 1
+ },
+ "cached_at": "2026-11-01T04:03:50.719105+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "91a8d00156b5f786",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Medicare beneficiaries who have chronic conditions are responsible for a disproportionate share of Medicare fee-for-service expenditures. The objective of this study was to analyze the change in the health of Medicare beneficiaries enrolled in Part A (hospital insurance) between 2008 and 2010 by comparing the prevalence of 11 chronic conditions.\n\nMETHODS: We conducted descriptive analyses using the 2008 and 2010 Chronic Conditions Public Use Files, which are newly available from the Centers for Medicare and Medicaid Services and have administrative (claims) data on 100% of the Medicare fee-for-service population. We examined the data by age, sex, and dual eligibility (eligibility for both Medicare and Medicaid).\n\nRESULTS: Medicare Part A beneficiaries had more chronic conditions on average in 2010 than in 2008. The percentage increase in the average number of chronic conditions was larger for dual-eligible beneficiaries (2.8%) than for nondual-eligible beneficiaries (1.2%). The prevalence of some chronic conditions, such as congestive heart failure, ischemic heart disease, and stroke/transient ischemic attack, decreased. The deterioration of average health was due to other chronic conditions: chronic kidney disease, depression, diabetes, osteoporosis, rheumatoid arthritis/osteoarthritis. Trends in Alzheimer's disease, cancer, and chronic obstructive pulmonary disease showed differences by sex or dual eligibility or both.\n\"\"\"\n\nQuestion: Prevalence of chronic conditions among Medicare Part A beneficiaries in 2008 and 2010: are Medicare beneficiaries getting sicker?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\":\"yes\",\"confidence\":95,\"quotes\":[\"Medicare Part A beneficiaries had more chronic conditions on average in 2010 than in 2008.\",\"The percentage increase in the average number of chronic conditions was larger for dual-eligible beneficiaries (2.8%) than for nondual-eligible beneficiaries (1.2%).\"]}",
+ "input_tokens": 493,
+ "output_tokens": 249,
+ "latency_s": 0.734,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "996",
+   "x-ratelimit-remaining-tokens": "6258",
+   "x-ratelimit-reset-requests": "5m45.6s",
+   "x-ratelimit-reset-tokens": "13.065s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-dc542dc8-bf37-4b06-8cca-962efff6cc44",
+  "object": "chat.completion",
+  "created": 1793505829,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\":\"yes\",\"confidence\":95,\"quotes\":[\"Medicare Part A beneficiaries had more chronic conditions on average in 2010 than in 2008.\",\"The percentage increase in the average number of chronic conditions was larger for dual-eligible beneficiaries (2.8%) than for nondual-eligible beneficiaries (1.2%).\"]}",
+     "reasoning": "We need to answer based on abstract. The question: \"Prevalence of chronic conditions among Medicare Part A beneficiaries in 2008 and 2010: are Medicare beneficiaries getting sicker?\" The abstract says: \"Medicare Part A beneficiaries had more chronic conditions on average in 2010 than in 2008.\" That indicates yes, they are getting sicker (more chronic conditions). So answer \"yes\". Confidence high, maybe 95. Provide quotes: the sentence \"Medicare Part A beneficiaries had more chronic conditions on average in 2010 than in 2008.\" Also maybe \"The percentage increase in the average number of chronic conditions was larger for dual-eligible beneficiaries (2.8%) than for nondual-eligible beneficiaries (1.2%).\" Provide up to three sentences. We'll include those two. JSON format exactly.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083014572,
+   "prompt_tokens": 493,
+   "prompt_time": 0.02012625,
+   "completion_tokens": 249,
+   "completion_time": 0.516406426,
+   "total_tokens": 742,
+   "total_time": 0.536532676,
+   "completion_tokens_details": {
+    "reasoning_tokens": 172
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_19b184c447",
+  "x_groq": {
+   "id": "req_01m6ame862eccvwqqk7gg2nb1p",
+   "seed": 1436389659
+  },
+  "service_tier": "on_demand"
+ }
+}

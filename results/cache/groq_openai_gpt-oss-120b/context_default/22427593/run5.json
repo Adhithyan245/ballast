@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "22427593",
+  "run": 5
+ },
+ "cached_at": "2026-10-31T20:43:06.050676+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "84d28c651717da92",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: The purpose of this study is to measure the accuracy and reliability of normally sighted, visually impaired, and blind pedestrians at making street crossing decisions using visual and/or auditory information.\n\nMETHODS: Using a 5-point rating scale, safety ratings for vehicular gaps of different durations were measured along a two-lane street of one-way traffic without a traffic signal. Safety ratings were collected from 12 normally sighted, 10 visually impaired, and 10 blind subjects for eight different gap times under three sensory conditions: (1) visual plus auditory information, (2) visual information only, and (3) auditory information only. Accuracy and reliability in street crossing decision-making were calculated for each subject under each sensory condition.\n\nRESULTS: We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05). Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05). Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\n\"\"\"\n\nQuestion: Are normally sighted, visually impaired, and blind pedestrians accurate and reliable at making street crossing decisions?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 85, \"quotes\": [\"We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05).\", \"Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05).\", \"Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\"]}",
+ "input_tokens": 471,
+ "output_tokens": 458,
+ "latency_s": 1.422,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "998",
+   "x-ratelimit-remaining-tokens": "6360",
+   "x-ratelimit-reset-requests": "2m52.8s",
+   "x-ratelimit-reset-tokens": "12.299s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-a6934158-566f-4ca7-8466-79af82735871",
+  "object": "chat.completion",
+  "created": 1793479385,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 85, \"quotes\": [\"We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05).\", \"Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05).\", \"Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\"]}",
+     "reasoning": "We need to answer: Are normally sighted, visually impaired, and blind pedestrians accurate and reliable at making street crossing decisions? According to abstract: Normally sighted and visually impaired were accurate and reliable when using vision+hearing or vision only. Under hearing only, all subjects were reliable but inaccurate. Compared to others, blind were least accurate under hearing only. The question seems general: are they accurate and reliable? For normal and visually impaired, yes under vision conditions. For blind, not accurate under hearing only, and likely not accurate overall? The question includes all three groups. Are they accurate and reliable? The answer is nuanced: normally sighted and visually impaired are accurate and reliable (under visual conditions). Blind are not accurate (especially under hearing only). So overall answer maybe \"maybe\". Because not all groups are accurate and reliable. So answer maybe \"maybe\". Provide confidence maybe 85. Provide quotes: \"We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05).\" and \"Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05).\" Also \"Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\"\n\nPick one or two sentences. Provide up to three.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.146741912,
+   "prompt_tokens": 471,
+   "prompt_time": 0.138097824,
+   "completion_tokens": 458,
+   "completion_time": 0.946067906,
+   "total_tokens": 929,
+   "total_time": 1.08416573,
+   "completion_tokens_details": {
+    "reasoning_tokens": 315
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_dee443f41b",
+  "x_groq": {
+   "id": "req_01m69v777wed7a0cshawsrxe7f",
+   "seed": 746042605
+  },
+  "service_tier": "on_demand"
+ }
+}

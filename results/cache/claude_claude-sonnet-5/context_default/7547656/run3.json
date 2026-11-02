@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "7547656",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T02:59:52.769728+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "d68026550b680f8d",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND AND OBJECTIVES: Bolus intravenous injection of epinephrine can decrease uterine blood flow. This study examined the effects of intravenous infusion of epinephrine on uterine blood flow in the gravid ewe.\n\nMETHODS: Maternal and fetal vascular catheters and a maternal electromagnetic uterine artery flow probe were implanted in 10 near-term gravid ewes. After recovery, saline, 0.125% bupivacaine, 0.125% bupivacaine with 1:200,000 epinephrine, 0.125% bupivacaine with 1:400,000 epinephrine, and 0.125% bupivacaine with 1:800,000 epinephrine were infused into the maternal superior vena cava. Drugs were infused at 10 mL/h for 30 minutes and then at 20 mL/h for an additional 30 minutes. Animals also received an intravenous bolus of epinephrine 15 micrograms. Throughout all infusions, maternal heart rate, systemic and pulmonary blood pressures, uterine blood flow, cardiac output, and acid-base balance were measured, as well as fetal heart rate, blood pressure, and acid-base balance.\n\nRESULTS: Epinephrine 15 micrograms decreased uterine blood flow to 68 +/- 14% of baseline (mean +/- SD). Infusion of all solutions had no effect on any measured hemodynamic variable.\n\"\"\"\n\nQuestion: Does continuous intravenous infusion of low-concentration epinephrine impair uterine blood flow in pregnant ewes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"Infusion of all solutions had no effect on any measured hemodynamic variable.\"]}",
+ "input_tokens": 1317,
+ "output_tokens": 53,
+ "latency_s": 9.516,
+ "meta": {
+  "total_cost_usd_estimate": 0.002313,
+  "num_turns": 1,
+  "session_id": "a2f57528-ea5c-4807-809b-a8400d42d5ab"
+ },
+ "raw": {
+  "duration_api_ms": 2745,
+  "stop_reason": "end_turn",
+  "session_id": "a2f57528-ea5c-4807-809b-a8400d42d5ab",
+  "total_cost_usd": 0.002313,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1315,
+   "output_tokens": 53,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 53,
+     "cache_read_input_tokens": 1315,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1416,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001516,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 53,
+    "cacheReadInputTokens": 1315,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.000797,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"Infusion of all solutions had no effect on any measured hemodynamic variable.\"]}",
+  "ttft_ms": 1920,
+  "type": "result",
+  "duration_ms": 2050,
+  "uuid": "1d737500-37ea-4ece-9f1e-1eac964522ba",
+  "ttft_stream_ms": 1594,
+  "time_to_request_ms": 209,
+  "first_content_frame_ms": 1595,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

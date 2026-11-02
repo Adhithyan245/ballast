@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "26194560",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T11:10:33.901547+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "7582949461e36256",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The incidence of acetabular fractures in osteoporotic patients is increasing. Immediate total hip arthroplasty (THA) has potential advantages, but achieving acetabular component stability is challenging and, at early followup, reported revision rates for loosening are high.QUESTIONS/\n\nPURPOSES: This study measured acetabular component stability and the initial surface contact achieved between the acetabular component and unfractured region of the pelvis after THA using an oversized acetabular component and cup-cage reconstruction.\n\nMETHODS: Between November 2011 and November 2013, we treated 40 acute acetabular fractures in patients older than 70 years of age. Of these, 12 (30%) underwent immediate THA using an oversized acetabular component with screws inserted only into the ilium and a cup-cage construct. Postoperatively all patients were mobilized without weightbearing restrictions. Indications for immediate THA after acetabular fractures were displaced articular comminution deemed unreducible. Eleven of the 12 were prospectively studied to evaluate the initial stability of the reconstructions using radiostereometric analysis. One of the patients died of a pulmonary embolism after surgery, and the remaining 10 (median age, 81 years; range, 72-86 years) were studied. Of these, five were analyzed at 1 year and five were analyzed at 2 years. Acetabular component migration was defined as acceptable if less than the limits for primary THA that predict later loosening (1.76 mm of proximal migration and 2.53° of sagittal rotation). The contact surface between the acetabular component and ilium in direct continuity with the sacroiliac joint, and the ischium and pubis in direct continuity with the symphysis pubis, was measured on postoperative CT scans.\n\nRESULTS: At 1 year the median proximal migration was 0.83 mm (range, 0.09-5.13 mm) and sagittal rotation was 1.3° (range, 0.1°-7.4°). Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively. The contact surface achieved at surgery between the acetabular component and pelvis ranged from 11 to 17 cm(2) (15%-27% of each component).\n\"\"\"\n\nQuestion: Does cup-cage reconstruction with oversized cups provide initial stability in THA for osteoporotic acetabular fractures?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"At 1 year the median proximal migration was 0.83 mm (range, 0.09-5.13 mm) and sagittal rotation was 1.3\\u00b0 (range, 0.1\\u00b0-7.4\\u00b0).\", \"Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively.\"]}",
+ "input_tokens": 708,
+ "output_tokens": 339,
+ "latency_s": 1.063,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "999",
+   "x-ratelimit-remaining-tokens": "6943",
+   "x-ratelimit-reset-requests": "1m26.4s",
+   "x-ratelimit-reset-tokens": "7.927s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-ed903e0a-dae8-4ef4-b284-8a10923c2c69",
+  "object": "chat.completion",
+  "created": 1793531433,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"At 1 year the median proximal migration was 0.83 mm (range, 0.09-5.13 mm) and sagittal rotation was 1.3\\u00b0 (range, 0.1\\u00b0-7.4\\u00b0).\", \"Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively.\"]}",
+     "reasoning": "We need to decide based on abstract whether cup-cage reconstruction with oversized cups provides initial stability. Results: median migration 0.83 mm, rotation 1.3°, within limits, but three of 10 components had migration above suggested limits. So mixed. The question: \"Does cup-cage reconstruction with oversized cups provide initial stability in THA for osteoporotic acetabular fractures?\" The study measured initial stability. Findings: majority within acceptable limits, but 30% (3/10) above limits. So initial stability is generally achieved but not uniformly. The answer likely \"maybe\". Confidence moderate. Provide quotes: e.g., \"At 1 year the median proximal migration was 0.83 mm (range, 0.09-5.13 mm) and sagittal rotation was 1.3° (range, 0.1°-7.4°).\" and \"Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively.\" Those support mixed result. So answer maybe.\n\nConfidence maybe 70.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.108469068,
+   "prompt_tokens": 708,
+   "prompt_time": 0.060359801,
+   "completion_tokens": 339,
+   "completion_time": 0.71577612,
+   "total_tokens": 1047,
+   "total_time": 0.776135921,
+   "completion_tokens_details": {
+    "reasoning_tokens": 226
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5082008e34",
+  "x_groq": {
+   "id": "req_01m6bcvkzse2rvh7bke9bk5tvz",
+   "seed": 1835887121
+  },
+  "service_tier": "on_demand"
+ }
+}

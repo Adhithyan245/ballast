@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "12094116",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T03:01:00.742826+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "5c2ea43d2bd43d6c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The purpose of this study was to identify the relationships between leg muscle power and sprinting speed with changes of direction.\n\nEXPERIMENTAL DESIGN: the study was designed to describe relationships between physical qualities and a component of sports performance.\n\nSETTING: testing was conducted in an indoor sports hall and a biomechanics laboratory.\n\nPARTICIPANTS: 15 male participants were required to be free of injury and have recent experience competing in sports involving sprints with changes of direction.\n\nMEASURES: subjects were timed in 8 m sprints in a straight line and with various changes of direction. They were also tested for bilateral and unilateral leg extensor muscle concentric power output by an isokinetic squat and reactive strength by a drop jump.\n\nRESULTS: The correlations between concentric power and straight sprinting speed were non-significant whereas the relationships between reactive strength and straight speed were statistically significant. Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength. The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\n\"\"\"\n\nQuestion: Is muscle power related to running speed with changes of direction?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"maybe\",\n\"confidence\": 85,\n\"quotes\": [\n\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\",\n\"The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\"\n]\n}",
+ "input_tokens": 405,
+ "output_tokens": 95,
+ "latency_s": 0.672,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "655",
+   "x-ratelimit-remaining-tokens": "7259",
+   "x-ratelimit-reset-requests": "8h16m47.999s",
+   "x-ratelimit-reset-tokens": "16.38s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c3c76b42-692e-4c11-b5b7-b87c25cc7c96",
+  "object": "chat.completion",
+  "created": 1793502059,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"maybe\",\n\"confidence\": 85,\n\"quotes\": [\n\"Correlations between muscle power and speed while changing direction were generally low and non-significant for concentric leg power with some moderate and significant (p<0.05) coefficients found for reactive strength.\",\n\"The participants who turned faster to one side tended to have a reactive strength dominance in the leg responsible for the push-off action.\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.348323911,
+   "prompt_tokens": 405,
+   "prompt_time": 0.036234531,
+   "completion_tokens": 95,
+   "completion_time": 0.186799718,
+   "total_tokens": 500,
+   "total_time": 0.223034249
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m6agv6pve9rb7ed6dxn3fgc9",
+   "seed": 1298060591
+  },
+  "service_tier": "on_demand"
+ }
+}

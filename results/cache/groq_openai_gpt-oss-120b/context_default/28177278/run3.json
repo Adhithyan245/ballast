@@ -1,0 +1,74 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "28177278",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T13:11:43.194511+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "76e3c68a26ca3719",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Polyarteritis nodosa (PAN) is a systemic vasculitis involving mainly medium-sized arteries and, rarely, small-sized arteries. The diagnosis is principally based on clinical exams, biopsy of an affected organ, and/or arteriography of renal or mesenteric arteries. Once diagnosed, immunosuppressive agents, such as glucocorticoids and cyclophosphamide, are generally introduced as soon as possible. Whether spontaneous remission of PAN occurs is therefore largely unknown.\n\nPRESENTATION: We describe the case of a 51-year-old woman who presented with a 4-day-history of intense pain in her left flank, hypertension, fever, microscopic hematuria, and acute renal failure. Contrast-enhanced renal ultrasound strongly suggested bilateral renal infarction. Medical history and an extensive workup allowed to exclude systemic embolism, recreational drug abuse, cardiac arrhythmias, and thrombophilia. A possible diagnosis of PAN was considered; however, within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment. Finally, 3 months later, renal arteriography confirmed the diagnosis of PAN. The patient remains free of symptoms 1 year after initial presentation.\n\"\"\"\n\nQuestion: Does spontaneous remission occur in polyarteritis nodosa?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\", \"The patient remains free of symptoms 1 year after initial presentation.\"]}",
+ "input_tokens": 450,
+ "output_tokens": 199,
+ "latency_s": 0.75,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "995",
+   "x-ratelimit-remaining-tokens": "5970",
+   "x-ratelimit-reset-requests": "7m12s",
+   "x-ratelimit-reset-tokens": "15.224s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-8a1230b3-601b-409e-9031-b41b7316841b",
+  "object": "chat.completion",
+  "created": 1793538703,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\", \"The patient remains free of symptoms 1 year after initial presentation.\"]}",
+     "reasoning": "We need to answer whether spontaneous remission occurs in polyarteritis nodosa (PAN). The abstract describes a case where a patient had spontaneous remission of clinical and biological symptoms within 2 weeks without immunosuppressive treatment. That indicates spontaneous remission can occur (at least in this case). So answer \"yes\". Confidence high, maybe 90. Provide quotes that support: sentences like \"within 2 weeks of admission, spontaneous remission of her clinical and biological symptoms occurred without the use of any immunosuppressive treatment.\" Also maybe \"The patient remains free of symptoms 1 year after initial presentation.\" Provide up to three sentences.\n\nReturn JSON only."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243405325,
+   "prompt_tokens": 450,
+   "prompt_time": 0.009867355,
+   "completion_tokens": 199,
+   "completion_time": 0.428497053,
+   "total_tokens": 649,
+   "total_time": 0.438364408,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 131
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_69334c0be3",
+  "x_groq": {
+   "id": "req_01m6bksf02e9zb1kjc6nkqmw9y",
+   "seed": 774596938
+  },
+  "service_tier": "on_demand"
+ }
+}

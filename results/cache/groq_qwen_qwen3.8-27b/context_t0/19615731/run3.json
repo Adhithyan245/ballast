@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "19615731",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T14:46:10.935207+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "e80702bb38dbcd57",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Epidemiologic findings support a positive association between asthma and obesity.\n\nOBJECTIVE: Determine whether obesity or increasing level of body mass index (BMI) are associated with worse asthma control in an ethnically diverse urban population.\n\nMETHODS: Cross-sectional assessment of asthma control was performed in patients with asthma recruited from primary care offices by using 4 different validated asthma control questionnaires: the Asthma Control and Communication Instrument (ACCI), the Asthma Control Test (ACT), the Asthma Control Questionnaire (ACQ), and the Asthma Therapy Assessment Questionnaire (ATAQ). Multiple linear regression analysis was performed to evaluate the association between obesity and increasing BMI level and asthma control.\n\nRESULTS: Of 292 subjects with a mean age of 47 years, the majority were women (82%) and African American (67%). There was a high prevalence of obesity with 63%, with only 15% normal weight. The mean score from all 4 questionnaires showed an average suboptimal asthma control (mean score/maximum possible score): ACCI (8.3/19), ACT (15.4/25), ACQ (2.1/6), and ATAQ (1.3/4). Regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires. This finding persisted even after adjusting for FEV(1), smoking status, race, sex, selected comorbid illnesses, and long-term asthma controller use.\n\"\"\"\n\nQuestion: Does higher body mass index contribute to worse asthma control in an urban population?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"no\",\n\"confidence\": 95,\n\"quotes\": [\n\"Regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires.\",\n\"This finding persisted even after adjusting for FEV(1), smoking status, race, sex, selected comorbid illnesses, and long-term asthma controller use.\"\n]\n}",
+ "input_tokens": 467,
+ "output_tokens": 82,
+ "latency_s": 0.438,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "951",
+   "x-ratelimit-remaining-tokens": "6833",
+   "x-ratelimit-reset-requests": "1h10m33.6s",
+   "x-ratelimit-reset-tokens": "14.16s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-0281f756-d33f-440e-8ff2-d3ac4d21766e",
+  "object": "chat.completion",
+  "created": 1793544370,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"no\",\n\"confidence\": 95,\n\"quotes\": [\n\"Regression analysis showed no association between obesity or increasing BMI level and asthma control using all 4 questionnaires.\",\n\"This finding persisted even after adjusting for FEV(1), smoking status, race, sex, selected comorbid illnesses, and long-term asthma controller use.\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.196866145,
+   "prompt_tokens": 467,
+   "prompt_time": 0.041856413,
+   "completion_tokens": 82,
+   "completion_time": 0.163633705,
+   "total_tokens": 549,
+   "total_time": 0.205490118
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5e14805ce3",
+  "x_groq": {
+   "id": "req_01m6bs6e34ek5svk84ccxebp4e",
+   "seed": 1558907809
+  },
+  "service_tier": "on_demand"
+ }
+}

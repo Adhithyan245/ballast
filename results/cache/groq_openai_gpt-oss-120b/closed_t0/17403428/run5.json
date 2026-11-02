@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "17403428",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T19:21:30.538740+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "0204e32f061f8c29",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\":\"maybe\", \"confidence\":65}",
+ "input_tokens": 165,
+ "output_tokens": 172,
+ "latency_s": 1.187,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "992",
+   "x-ratelimit-remaining-tokens": "7529",
+   "x-ratelimit-reset-requests": "11m31.2s",
+   "x-ratelimit-reset-tokens": "3.532s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-de013c63-a690-4671-82e4-c4c2e8a0f0a2",
+  "object": "chat.completion",
+  "created": 1793560889,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\":\"maybe\", \"confidence\":65}",
+     "reasoning": "We need to answer the question: \"Recurrent spontaneous abortion and skewed X-inactivation: is there an association?\" Provide yes/no/maybe and confidence.\n\nWe need to know literature. Recurrent spontaneous abortion (RSA) is recurrent miscarriage. Skewed X-inactivation (XCI) is when one X chromosome is preferentially inactivated. Some studies have examined association between skewed XCI in women and recurrent miscarriage, hypothesizing that X-linked genes may be involved. I recall that some studies found no significant association, while others suggested possible link. The evidence is not conclusive. So answer maybe.\n\nConfidence? Probably moderate, maybe 60-70. I'd give 65.\n\nThus JSON: {\"answer\":\"maybe\",\"confidence\":65}."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243294394,
+   "prompt_tokens": 165,
+   "prompt_time": 0.006639455,
+   "completion_tokens": 172,
+   "completion_time": 0.355327431,
+   "total_tokens": 337,
+   "total_time": 0.361966886,
+   "completion_tokens_details": {
+    "reasoning_tokens": 153
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4727af4560",
+  "x_groq": {
+   "id": "req_01m6c8yhhcexy83fh2p3fpsfdj",
+   "seed": 689580374
+  },
+  "service_tier": "on_demand"
+ }
+}

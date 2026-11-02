@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "18049437",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T08:38:08.049638+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "49612740a8330d2f",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there any relationship between streptococcal infection and multiple sclerosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 99,
+ "output_tokens": 13,
+ "latency_s": 0.562,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0T249lArZry6xqOdVlwM+824UdJRxiE0nsf7RjzBcUSbBZF6D/XxwtSgNDI7qXQBmjsNwjQh4aGubns7VF+z6FVcVNPHfccFubXU2AZn1wUKk0h0FOXlDQyTk="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 99,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 112,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 99
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "bvrmauqVGMrb0_gP06e_yQ0"
+ }
+}

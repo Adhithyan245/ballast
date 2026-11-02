@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "21214884",
+  "run": 3
+ },
+ "cached_at": "2026-11-02T00:06:18.604810+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "4d482e8870f1fc49",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can 'high-risk' human papillomaviruses (HPVs) be detected in human breast milk?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 60}",
+ "input_tokens": 170,
+ "output_tokens": 130,
+ "latency_s": 0.5,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "977",
+   "x-ratelimit-remaining-tokens": "7718",
+   "x-ratelimit-reset-requests": "33m7.2s",
+   "x-ratelimit-reset-tokens": "2.114s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-0ee755a0-cdd2-4d11-b29c-6851b76790dd",
+  "object": "chat.completion",
+  "created": 1793577977,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 60}",
+     "reasoning": "We need to answer whether high-risk HPVs can be detected in human breast milk. Need to recall literature. I know that HPV DNA has been detected in various bodily fluids, including breast milk? Some studies have looked for HPV DNA in breast tissue and milk. I recall a study: \"Human papillomavirus DNA in breast milk of lactating women\" maybe found low prevalence. High-risk types? Some reports detected HPV DNA in breast milk, but not consistently. So answer maybe \"maybe\". Confidence moderate. I'd give maybe 60."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147078591,
+   "prompt_tokens": 170,
+   "prompt_time": 0.008846385,
+   "completion_tokens": 130,
+   "completion_time": 0.271174842,
+   "total_tokens": 300,
+   "total_time": 0.280021227,
+   "completion_tokens_details": {
+    "reasoning_tokens": 109
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_02b0d31eca",
+  "x_groq": {
+   "id": "req_01m6cs81g9ex2b44nzd3hdeere",
+   "seed": 1213720055
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "12407608",
+  "run": 3
+ },
+ "cached_at": "2026-11-01T08:30:02.108865+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "ab5e68aef4cafec8",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does ultrasound imaging before puncture facilitate internal jugular vein cannulation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+ "input_tokens": 100,
+ "output_tokens": 14,
+ "latency_s": 0.594,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+       "thoughtSignature": "EmAKXgFpFH0TX+ktmg369WPd8Ctkg8TI7filUkqswoCWSLcn5XsSw9+XnFHxoUnAz+PuI3z73SZjFvWvKyt3UDPpkvvkL/mI0O0i0Om+8YxIN4vSzYOI4jpwVigE/31N4nw="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 100,
+   "candidatesTokenCount": 14,
+   "totalTokenCount": 114,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 100
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "iPjmaoz2GZSeo_UP2ZGHqAQ"
+ }
+}

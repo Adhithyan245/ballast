@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "16046584",
+  "run": 2
+ },
+ "cached_at": "2026-11-01T08:33:43.011037+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "3a642350b22d88b3",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Menopausal hormone therapy and irregular endometrial bleeding: a potential role for uterine natural killer cells?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 105,
+ "output_tokens": 13,
+ "latency_s": 0.547,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0TT5x6lGeIiTIzpqWiY1o2cROmWngSjuMcAXfFspf9nkvXWaTvLep7sG22L/wR5kzoaRuMw6Bbmw1q9dKGOpvK4NXf9pWH3tMFLFiCDcISNZ2UNvoQ8TiGvMQ="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 105,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 118,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 105
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Zfnmaoy-FuDh0_gPvceL0As"
+ }
+}

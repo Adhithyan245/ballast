@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "21880023",
+  "run": 4
+ },
+ "cached_at": "2026-10-31T18:58:44.728824+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "305bfada709af1ef",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To study whether exercise during pregnancy reduces the risk of postnatal depression.\n\nDESIGN: Randomized controlled trial.\n\nSETTING: Trondheim and Stavanger University Hospitals, Norway.\n\nPOPULATION AND SAMPLE: Eight hundred and fifty-five pregnant women were randomized to intervention or control groups.\n\nMETHODS: The intervention was a 12 week exercise program, including aerobic and strengthening exercises, conducted between week 20 and 36 of pregnancy. One weekly group session was led by physiotherapists, and home exercises were encouraged twice a week. Control women received regular antenatal care.\n\nMAIN OUTCOME MEASURES: Edinburgh Postnatal Depression Scale (EPDS) completed three months after birth. Scores of 10 or more and 13 or more suggested probable minor and major depression, respectively.\n\nRESULTS: Fourteen of 379 (3.7%) women in the intervention group and 17 of 340 (5.0%) in the control group had an EPDS score of ≥10 (p=0.46), and four of 379 (1.2%) women in the intervention group and eight of 340 (2.4%) in the control group had an EPDS score of ≥13 (p=0.25). Among women who did not exercise prior to pregnancy, two of 100 (2.0%) women in the intervention group and nine of 95 (9.5%) in the control group had an EPDS score of ≥10 (p=0.03).\n\"\"\"\n\nQuestion: Does exercise during pregnancy prevent postnatal depression?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 60,\n  \"quotes\": [\n    \"Fourteen of 379 (3.7%) women in the intervention group and 17 of 340 (5.0%) in the control group had an EPDS score of ≥10 (p=0.46), and four of 379 (1.2%) women in the intervention group and eight of 340 (2.4%) in the control group had an EPDS score of ≥13 (p=0.25).\",\n    \"Among women who did not exercise prior to pregnancy, two of 100 (2.0%) women in the intervention group and nine of 95 (9.5%) in the control group had an EPDS score of ≥10 (p=0.03).\"\n  ]\n}",
+ "input_tokens": 501,
+ "output_tokens": 540,
+ "latency_s": 1.547,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "997",
+   "x-ratelimit-remaining-tokens": "6092",
+   "x-ratelimit-reset-requests": "4m19.2s",
+   "x-ratelimit-reset-tokens": "14.309s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-3844f0c8-22e4-4500-8cdb-865b2852ce53",
+  "object": "chat.completion",
+  "created": 1793473124,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n  \"answer\": \"maybe\",\n  \"confidence\": 60,\n  \"quotes\": [\n    \"Fourteen of 379 (3.7%) women in the intervention group and 17 of 340 (5.0%) in the control group had an EPDS score of ≥10 (p=0.46), and four of 379 (1.2%) women in the intervention group and eight of 340 (2.4%) in the control group had an EPDS score of ≥13 (p=0.25).\",\n    \"Among women who did not exercise prior to pregnancy, two of 100 (2.0%) women in the intervention group and nine of 95 (9.5%) in the control group had an EPDS score of ≥10 (p=0.03).\"\n  ]\n}",
+     "reasoning": "We need to interpret abstract. Overall, overall comparison: EPDS >=10 3.7% vs 5.0% (p=0.46) not significant. EPDS >=13 1.2% vs 2.4% (p=0.25) not significant. So overall, no evidence that exercise prevents postnatal depression. However, subgroup of women who did not exercise prior to pregnancy: EPDS >=10 2.0% vs 9.5% (p=0.03) significant. So maybe in that subgroup it's beneficial. The question: \"Does exercise during pregnancy prevent postnatal depression?\" Based on overall RCT, evidence is not significant, so answer maybe \"maybe\". But we need choose yes/no/maybe. Since overall not significant, answer \"no\"? But there is some effect in subgroup, but the question generic. Probably \"maybe\" due to mixed evidence. Confidence? I'd say moderate, maybe 60. Provide quotes: the result lines.\n\nSelect quotes: \"Fourteen of 379 (3.7%) women in the intervention group and 17 of 340 (5.0%) in the control group had an EPDS score of ≥10 (p=0.46), and four of 379 (1.2%) women in the intervention group and eight of 340 (2.4%) in the control group had an EPDS score of ≥13 (p=0.25).\" and \"Among women who did not exercise prior to pregnancy, two of 100 (2.0%) women in the intervention group and nine of 95 (9.5%) in the control group had an EPDS score of ≥10 (p=0.03).\"\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.281540696,
+   "prompt_tokens": 501,
+   "prompt_time": 0.114794558,
+   "completion_tokens": 540,
+   "completion_time": 1.109430037,
+   "total_tokens": 1041,
+   "total_time": 1.224224595,
+   "completion_tokens_details": {
+    "reasoning_tokens": 360
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "x_groq": {
+   "id": "req_01m69n84nke6sb0s1erw8xk3sj",
+   "seed": 2058283561
+  },
+  "service_tier": "on_demand"
+ }
+}

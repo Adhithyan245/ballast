@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "15588538",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T04:13:15.982467+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "4eef1f5e98e14a0b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Reliable longitudinal data of patients with functional somatic symptoms in general practice are lacking.\n\nAIMS: To identify distinctive features in patients with chronic functional somatic symptoms, and to determine whether these symptoms support the hypothesis of the existence of specific somatic syndromes.\n\nDESIGN OF STUDY: Observational study, with a comparison control group.\n\nSETTING: Four primary care practices affiliated with the University of Nijmegen in the Netherlands.\n\nMETHOD: One hundred and eighty-two patients diagnosed between 1998 and 2002 as having chronic functional somatic symptoms and 182 controls matched by age, sex, socioeconomic status, and practice were included. Data on comorbidity, referrals, diagnostic tests, and hospital admissions over a period of 10 years prior to the diagnosis were collected. Medication use and number of visits to the general practitioner (GP) were extracted from the moment computerised registration was started.\n\nRESULTS: In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems, and used more somatic and psychotropic drugs. They visited the GP twice as much, statistically had significantly more psychiatric morbidity, and were referred more often to mental health workers and somatic specialists. The number of patients undergoing diagnostic tests was higher for patients with chronic functional somatic symptoms than for controls, but hospital admissions rates were equal.\n\"\"\"\n\nQuestion: Chronic functional somatic symptoms: a single syndrome?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62, \"quotes\": [\"In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems, and used more somatic and psychotropic drugs.\"]}",
+ "input_tokens": 1319,
+ "output_tokens": 100,
+ "latency_s": 5.828,
+ "meta": {
+  "total_cost_usd_estimate": 0.0026893999999999998,
+  "num_turns": 1,
+  "session_id": "a9c7bf40-31ef-44d2-bbc9-c863f27bb05f"
+ },
+ "raw": {
+  "duration_api_ms": 2283,
+  "stop_reason": "end_turn",
+  "session_id": "a9c7bf40-31ef-44d2-bbc9-c863f27bb05f",
+  "total_cost_usd": 0.0026893999999999998,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1317,
+   "output_tokens": 100,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 100,
+     "cache_read_input_tokens": 1317,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1352,
+    "outputTokens": 14,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0014219999999999999,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 100,
+    "cacheReadInputTokens": 1317,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0012674000000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"maybe\", \"confidence\": 62, \"quotes\": [\"In the 10 years before the diagnosis of chronic functional somatic symptoms, significantly more patients than controls presented functional somatic symptoms in at least two body systems, and used more somatic and psychotropic drugs.\"]}",
+  "ttft_ms": 1683,
+  "type": "result",
+  "duration_ms": 1737,
+  "uuid": "cac07645-caef-4b67-9a00-6f6d02986cad",
+  "ttft_stream_ms": 1076,
+  "time_to_request_ms": 335,
+  "first_content_frame_ms": 1078,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "21550158",
+  "run": 2
+ },
+ "cached_at": "2026-11-02T00:06:28.574143+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "0eeca0e28dd73079",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Can autologous platelet-rich plasma gel enhance healing after surgical extraction of mandibular third molars?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 68}",
+ "input_tokens": 169,
+ "output_tokens": 144,
+ "latency_s": 0.468,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "973",
+   "x-ratelimit-remaining-tokens": "7626",
+   "x-ratelimit-reset-requests": "38m52.8s",
+   "x-ratelimit-reset-tokens": "2.805s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-beba6f25-b547-4b64-9bd2-23c3e4051877",
+  "object": "chat.completion",
+  "created": 1793577987,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 68}",
+     "reasoning": "We need to answer the question: \"Can autologous platelet-rich plasma gel enhance healing after surgical extraction of mandibular third molars?\" Provide yes/no/maybe with confidence.\n\nWe need to consider evidence. PRP is used to promote healing. Many studies on PRP in oral surgery. Some show reduced pain, swelling, faster soft tissue healing, but bone healing evidence mixed. For mandibular third molar extraction, some RCTs show benefit, others not significant. Overall, evidence suggests PRP may enhance healing, but not conclusive. So answer maybe with moderate confidence.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096457483,
+   "prompt_tokens": 169,
+   "prompt_time": 0.006413654,
+   "completion_tokens": 144,
+   "completion_time": 0.301340687,
+   "total_tokens": 313,
+   "total_time": 0.307754341,
+   "completion_tokens_details": {
+    "reasoning_tokens": 123
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01m6cs8b8fesdsb82sqt3kq5h6",
+   "seed": 2036040703
+  },
+  "service_tier": "on_demand"
+ }
+}

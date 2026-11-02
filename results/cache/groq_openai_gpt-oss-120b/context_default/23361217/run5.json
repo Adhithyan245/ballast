@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_default",
+  "qid": "23361217",
+  "run": 5
+ },
+ "cached_at": "2026-11-01T02:57:42.538494+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "84e9153751d4b830",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: There are a number of factors responsible for the longevity of unicompartmental knee replacements (UKR). These include the magnitude of postoperative alignment and the type of material used. The effect of component design and material on postoperative alignment, however, has not been explored.\n\nMATERIALS AND METHODS: We retrospectively reviewed 89 patients who underwent UKR with robotic guidance. Patients were divided into two groups, according to whether they had received an all-polyethylene inlay component (Inlay group) or a metal-backed onlay component (Onlay group). We explored the magnitude of mechanical alignment correction obtained in both groups.\n\nRESULTS: Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment (Fig. 2). Further exploration revealed that the thickness of the tibial polyethyelene insert had a significant effect on postoperative alignment when added to the model (R2=0.68; P=0.01).\n\"\"\"\n\nQuestion: Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment.\", \"Further exploration revealed that the thickness of the tibial polyethyelene insert had a significant effect on postoperative alignment when added to the model (R2=0.68; P=0.01).\"]}",
+ "input_tokens": 478,
+ "output_tokens": 241,
+ "latency_s": 0.718,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "997",
+   "x-ratelimit-remaining-tokens": "6419",
+   "x-ratelimit-reset-requests": "4m19.2s",
+   "x-ratelimit-reset-tokens": "11.857s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-a4e59518-e4aa-4e50-b123-5c729f4a89d1",
+  "object": "chat.completion",
+  "created": 1793501861,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment.\", \"Further exploration revealed that the thickness of the tibial polyethyelene insert had a significant effect on postoperative alignment when added to the model (R2=0.68; P=0.01).\"]}",
+     "reasoning": "We need to answer if type of tibial component affects mechanical alignment. The abstract states: \"Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group ... compared to the Inlay group ... (P=0.003)\". This indicates yes, type affects alignment. Provide confidence high, maybe 95. Provide quotes up to three sentences. Provide JSON only."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096257873,
+   "prompt_tokens": 478,
+   "prompt_time": 0.019552188,
+   "completion_tokens": 241,
+   "completion_time": 0.500530687,
+   "total_tokens": 719,
+   "total_time": 0.520082875,
+   "completion_tokens_details": {
+    "reasoning_tokens": 77
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01m6agn53eez7vg20d0a5waezz",
+   "seed": 2092298216
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_default",
+  "qid": "26104852",
+  "run": 4
+ },
+ "cached_at": "2026-11-01T08:20:57.377556+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "0e75087f5bc8c48d",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: Hereditary transthyretin (ATTR) amyloidosis with increased left ventricular wall thickness could easily be misdiagnosed by echocardiography as hypertrophic cardiomyopathy (HCM). Our aim was to create a diagnostic tool based on echocardiography and ECG that could optimise identification of ATTR amyloidosis.\n\nMETHODS: Data were analysed from 33 patients with biopsy proven ATTR amyloidosis and 30 patients with diagnosed HCM. Conventional features from ECG were acquired as well as two dimensional and Doppler echocardiography, speckle tracking derived strain and tissue characterisation analysis. Classification trees were used to select the most important variables for differentiation between ATTR amyloidosis and HCM.\n\nRESULTS: The best classification was obtained using both ECG and echocardiographic features, where a QRS voltage>30 mm was diagnostic for HCM, whereas in patients with QRS voltage<30 mm, an interventricular septal/posterior wall thickness ratio (IVSt/PWt)>1.6 was consistent with HCM and a ratio<1.6 supported the diagnosis of ATTR amyloidosis. This classification presented both high sensitivity (0.939) and specificity (0.833).\n\"\"\"\n\nQuestion: Can echocardiography and ECG discriminate hereditary transthyretin V30M amyloidosis from hypertrophic cardiomyopathy?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Our aim was to create a diagnostic tool based on echocardiography and ECG that could optimise identification of ATTR amyloidosis.\",\n    \"The best classification was obtained using both ECG and echocardiographic features, where a QRS voltage>30\\u2009mm was diagnostic for HCM, whereas in patients with QRS voltage<30\\u2009mm, an interventricular septal/posterior wall thickness ratio (IVSt/PWt)>1.6 was consistent with HCM and a ratio<1.6 supported the diagnosis of ATTR amyloidosis.\"\n  ]\n}",
+ "input_tokens": 397,
+ "output_tokens": 151,
+ "latency_s": 0.969,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Our aim was to create a diagnostic tool based on echocardiography and ECG that could optimise identification of ATTR amyloidosis.\",\n    \"The best classification was obtained using both ECG and echocardiographic features, where a QRS voltage>30\\u2009mm was diagnostic for HCM, whereas in patients with QRS voltage<30\\u2009mm, an interventricular septal/posterior wall thickness ratio (IVSt/PWt)>1.6 was consistent with HCM and a ratio<1.6 supported the diagnosis of ATTR amyloidosis.\"\n  ]\n}",
+       "thoughtSignature": "EmAKXgFpFH0TFvnOczb9CHr6lMb+82pBEGwoiIPdbSNGfplWMUy5h9ZIyRofOSGsL0jxORXg7POpSI0IAF5bEPcQPXsYskvbpV24FUbN0ieHYPs2vSh1nksyAjkKxhO84Bg="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 198,
+       "endIndex": 500,
+       "uri": "",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 397,
+   "candidatesTokenCount": 151,
+   "totalTokenCount": 548,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 397
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Z_bmapnWFLLW0_gPjN71kQk"
+ }
+}

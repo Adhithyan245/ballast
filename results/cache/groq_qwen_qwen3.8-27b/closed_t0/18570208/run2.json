@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "closed_t0",
+  "qid": "18570208",
+  "run": 2
+ },
+ "cached_at": "2026-10-31T17:29:25.790592+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "bfc66dada285399a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is severe macrosomia manifested at 11-14 weeks of gestation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 95}",
+ "input_tokens": 115,
+ "output_tokens": 14,
+ "latency_s": 0.359,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "668",
+   "x-ratelimit-remaining-tokens": "7871",
+   "x-ratelimit-reset-requests": "7h58m4.8s",
+   "x-ratelimit-reset-tokens": "967ms"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-90862455-2a3a-435f-bb94-7d4f738f01f9",
+  "object": "chat.completion",
+  "created": 1793467765,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 95}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.266722135,
+   "prompt_tokens": 115,
+   "prompt_time": 0.00967617,
+   "completion_tokens": 14,
+   "completion_time": 0.034942357,
+   "total_tokens": 129,
+   "total_time": 0.044618527
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m69g4mjveedaf7tagmb41gca",
+   "seed": 1236587326
+  },
+  "service_tier": "on_demand"
+ }
+}

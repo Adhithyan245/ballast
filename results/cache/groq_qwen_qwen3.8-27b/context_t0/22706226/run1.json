@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "22706226",
+  "run": 1
+ },
+ "cached_at": "2026-11-01T21:22:17.842653+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "388d14291b597ee8",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To determine current practice and to assess the value of routine follow-up procedures for endometrial cancer surveillance. To discuss whether such procedures are feasible and effective to identify asymptomatic recurrences and describe the pattern of relapse detected by procedures.\n\nMETHODS: The records of 282 consecutive women with recurrent endometrial cancer treated from 1986 to 2005 were retrospectively collected in 8 Italian institutions. Primary disease, clinical history, and recurrence features and data were analyzed.\n\nRESULTS: Thirty-five (12.4%) of 282 patients had recurrence in vaginal vault, 51 patients (18.0%) had recurrence in central pelvis, 14 patients (4.9%) had recurrence in pelvic wall, and 39 patients (13.8%) had recurrence in lymph nodes. One-hundred twenty-eight patients (45.3%) showed a distant relapse, whereas 15 patients (5.3%) developed both distant relapse and local relapse. The site of relapse influenced survival because the patients with vaginal vault recurrences lived significantly longer than the patients with recurrences in other sites. Eighty (28.4%) of the 282 patients became symptomatic and anticipated the scheduled visit, 37 (13.1 %) of the patients reported their symptoms during the follow-up meeting, and 165 (58.5 %) of the patients were asymptomatic and the diagnostic path was introduced by a planned visit or examination. Among the asymptomatic patients, the first procedure that led to further examinations was clinical visit alone for 60 (36.4%) of 165 patients, imaging for 103 patients (62.4%), and cytologic examination for 2 patients (1.2%). Symptoms at recurrence can predict survival: patients with an asymptomatic recurrence had a median survival time from relapse of 35 months versus 13 months if they had a symptomatic repetition (P = 0.0001).\n\"\"\"\n\nQuestion: Could different follow-up modalities play a role in the diagnosis of asymptomatic endometrial cancer relapses?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Among the asymptomatic patients, the first procedure that led to further examinations was clinical visit alone for 60 (36.4%) of 165 patients, imaging for 103 patients (62.4%), and cytologic examination for 2 patients (1.2%).\",\n\"Symptoms at recurrence can predict survival: patients with an asymptomatic recurrence had a median survival time from relapse of 35 months versus 13 months if they had a symptomatic repetition (P = 0.0001).\"\n]\n}",
+ "input_tokens": 593,
+ "output_tokens": 142,
+ "latency_s": 0.547,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "998",
+   "x-ratelimit-remaining-tokens": "6918",
+   "x-ratelimit-reset-requests": "2m52.8s",
+   "x-ratelimit-reset-tokens": "8.115s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-e3df3549-a08f-4c76-ada6-55447ba1cdd0",
+  "object": "chat.completion",
+  "created": 1793568137,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"yes\",\n\"confidence\": 95,\n\"quotes\": [\n\"Among the asymptomatic patients, the first procedure that led to further examinations was clinical visit alone for 60 (36.4%) of 165 patients, imaging for 103 patients (62.4%), and cytologic examination for 2 patients (1.2%).\",\n\"Symptoms at recurrence can predict survival: patients with an asymptomatic recurrence had a median survival time from relapse of 35 months versus 13 months if they had a symptomatic repetition (P = 0.0001).\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147536305,
+   "prompt_tokens": 593,
+   "prompt_time": 0.051416484,
+   "completion_tokens": 142,
+   "completion_time": 0.3086357,
+   "total_tokens": 735,
+   "total_time": 0.360052184
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c7e30c203c",
+  "x_groq": {
+   "id": "req_01m6cfvqfgeq2rj1rgh88ntrn7",
+   "seed": 1822482767
+  },
+  "service_tier": "on_demand"
+ }
+}
