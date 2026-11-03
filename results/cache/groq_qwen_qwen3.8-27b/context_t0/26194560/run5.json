@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "groq:qwen/qwen3.8-27b",
+  "condition": "context_t0",
+  "qid": "26194560",
+  "run": 5
+ },
+ "cached_at": "2026-11-02T17:11:38.851087+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "qwen/qwen3.8-27b",
+ "model_reported": "qwen/qwen3.8-27b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "7582949461e36256",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The incidence of acetabular fractures in osteoporotic patients is increasing. Immediate total hip arthroplasty (THA) has potential advantages, but achieving acetabular component stability is challenging and, at early followup, reported revision rates for loosening are high.QUESTIONS/\n\nPURPOSES: This study measured acetabular component stability and the initial surface contact achieved between the acetabular component and unfractured region of the pelvis after THA using an oversized acetabular component and cup-cage reconstruction.\n\nMETHODS: Between November 2011 and November 2013, we treated 40 acute acetabular fractures in patients older than 70 years of age. Of these, 12 (30%) underwent immediate THA using an oversized acetabular component with screws inserted only into the ilium and a cup-cage construct. Postoperatively all patients were mobilized without weightbearing restrictions. Indications for immediate THA after acetabular fractures were displaced articular comminution deemed unreducible. Eleven of the 12 were prospectively studied to evaluate the initial stability of the reconstructions using radiostereometric analysis. One of the patients died of a pulmonary embolism after surgery, and the remaining 10 (median age, 81 years; range, 72-86 years) were studied. Of these, five were analyzed at 1 year and five were analyzed at 2 years. Acetabular component migration was defined as acceptable if less than the limits for primary THA that predict later loosening (1.76 mm of proximal migration and 2.53° of sagittal rotation). The contact surface between the acetabular component and ilium in direct continuity with the sacroiliac joint, and the ischium and pubis in direct continuity with the symphysis pubis, was measured on postoperative CT scans.\n\nRESULTS: At 1 year the median proximal migration was 0.83 mm (range, 0.09-5.13 mm) and sagittal rotation was 1.3° (range, 0.1°-7.4°). Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively. The contact surface achieved at surgery between the acetabular component and pelvis ranged from 11 to 17 cm(2) (15%-27% of each component).\n\"\"\"\n\nQuestion: Does cup-cage reconstruction with oversized cups provide initial stability in THA for osteoporotic acetabular fractures?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n\"answer\": \"maybe\",\n\"confidence\": 75,\n\"quotes\": [\n\"Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively.\",\n\"The contact surface achieved at surgery between the acetabular component and pelvis ranged from 11 to 17 cm(2) (15%-27% of each component).\"\n]\n}",
+ "input_tokens": 692,
+ "output_tokens": 93,
+ "latency_s": 0.469,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": false,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "922",
+   "x-ratelimit-remaining-tokens": "6766",
+   "x-ratelimit-reset-requests": "1h52m19.2s",
+   "x-ratelimit-reset-tokens": "11.46s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-d2b0ca20-62a5-401a-98d4-a150ac02b27a",
+  "object": "chat.completion",
+  "created": 1793639498,
+  "model": "qwen/qwen3.8-27b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\n\"answer\": \"maybe\",\n\"confidence\": 75,\n\"quotes\": [\n\"Three of the 10 components had migration above the suggested limits for primary THA at 1 year postoperatively.\",\n\"The contact surface achieved at surgery between the acetabular component and pelvis ranged from 11 to 17 cm(2) (15%-27% of each component).\"\n]\n}"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.096227166,
+   "prompt_tokens": 692,
+   "prompt_time": 0.059835186,
+   "completion_tokens": 93,
+   "completion_time": 0.187712658,
+   "total_tokens": 785,
+   "total_time": 0.247547844
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_57c7e760a9",
+  "x_groq": {
+   "id": "req_01m6ekxg50eywt99s5epm0m1sg",
+   "seed": 853064094
+  },
+  "service_tier": "on_demand"
+ }
+}

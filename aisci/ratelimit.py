@@ -85,6 +85,14 @@ class RateLimiter:
         self._last = self.clock()
         self._record_request()
 
+    def refund(self) -> None:
+        """Give back a request that never reached the provider (no connection)."""
+        with self._lock:
+            p = self._day_file()
+            n = max(0, self.used_today() - 1)
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text(json.dumps({"provider": self.name, "requests": n}))
+
     def record_tokens(self, n: int) -> None:
         if n:
             with self._lock:

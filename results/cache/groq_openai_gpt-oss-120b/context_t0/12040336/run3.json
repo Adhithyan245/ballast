@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "12040336",
+  "run": 3
+ },
+ "cached_at": "2026-11-02T17:24:00.736989+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "0e4378a4f9eab7de",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The role of early revascularization among patients with acute myocardial infarction complicated by cardiogenic shock remains controversial. Angioplasty registries, while suggesting a benefit, are subject to selection bias, and clinical trials have been underpowered to detect early benefits. If an invasive strategy is beneficial in this population, patients admitted to hospitals with onsite coronary revascularization might be expected to have a better prognosis. We sought to determine whether access to cardiovascular resources at the admitting hospital influenced the prognosis of patients with acute myocardial infarction complicated by cardiogenic shock.\n\nMETHODS: By use of the Cooperative Cardiovascular Project database (a retrospective medical record review of Medicare patients discharged with acute myocardial infarction), we identified patients aged>or =65 years whose myocardial infarction was complicated by cardiogenic shock.\n\nRESULTS: Of the 601 patients with cardiogenic shock, 287 (47.8%) were admitted to hospitals without revascularization services and 314 (52.2%) were admitted to hospitals with coronary angioplasty and coronary artery bypass surgery facilities. Clinical characteristics were similar across the subgroups. Patients admitted to hospitals with revascularization services were more likely to undergo coronary revascularization during the index hospitalization and during the first month after acute myocardial infarction. After adjustment for demographic, clinical, hospital, and treatment strategies, the presence of onsite revascularization services was not associated with a significantly lower 30-day (odds ratio 0.83, 95% CI 0.47, 1.45) or 1-year mortality (odds ratio 0.91, 95% CI 0.49, 1.72).\n\"\"\"\n\nQuestion: Cardiogenic shock complicating acute myocardial infarction in elderly patients: does admission to a tertiary center improve survival?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"After adjustment for demographic, clinical, hospital, and treatment strategies, the presence of onsite revascularization services was not associated with a significantly lower 30-day (odds ratio 0.83, 95% CI 0.47, 1.45) or 1-year mortality (odds ratio 0.91, 95% CI 0.49, 1.72).\"]}",
+ "input_tokens": 546,
+ "output_tokens": 338,
+ "latency_s": 1.079,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "774",
+   "x-ratelimit-remaining-tokens": "7046",
+   "x-ratelimit-reset-requests": "5h25m26.4s",
+   "x-ratelimit-reset-tokens": "7.154s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-d00ac40e-a8ba-465a-915d-e3c149ef5e75",
+  "object": "chat.completion",
+  "created": 1793640240,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"After adjustment for demographic, clinical, hospital, and treatment strategies, the presence of onsite revascularization services was not associated with a significantly lower 30-day (odds ratio 0.83, 95% CI 0.47, 1.45) or 1-year mortality (odds ratio 0.91, 95% CI 0.49, 1.72).\"]}",
+     "reasoning": "We need to answer whether admission to a tertiary center improves survival for cardiogenic shock complicating AMI in elderly patients. The abstract says after adjustment, presence of onsite revascularization services was not associated with significantly lower 30-day or 1-year mortality (odds ratios not significant). So answer \"no\" (i.e., admission does not improve survival). Confidence high, maybe 90. Provide quotes: \"After adjustment for demographic, clinical, hospital, and treatment strategies, the presence of onsite revascularization services was not associated with a significantly lower 30-day (odds ratio 0.83, 95% CI 0.47, 1.45) or 1-year mortality (odds ratio 0.91, 95% CI 0.49, 1.72).\" Also maybe \"Patients admitted to hospitals with revascularization services were more likely to undergo coronary revascularization during the index hospitalization and during the first month after acute myocardial infarction.\" But the key is the lack of survival benefit. Provide 1-3 sentences. We'll include the key sentence. JSON format."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243479693,
+   "prompt_tokens": 546,
+   "prompt_time": 0.027111078,
+   "completion_tokens": 338,
+   "completion_time": 0.704958038,
+   "total_tokens": 884,
+   "total_time": 0.732069116,
+   "completion_tokens_details": {
+    "reasoning_tokens": 229
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "x_groq": {
+   "id": "req_01m6emm40redba0t8v1pb9p2rc",
+   "seed": 1826666807
+  },
+  "service_tier": "on_demand"
+ }
+}

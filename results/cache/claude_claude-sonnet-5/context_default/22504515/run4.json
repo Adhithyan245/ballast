@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "22504515",
+  "run": 4
+ },
+ "cached_at": "2026-11-02T17:15:41.255205+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "02143fe8bfaff188",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: The study was performed to evaluate the clinical and technical efficacy of endovenous laser ablation (EVLA) of small saphenous varicosities, particularly in relation to the site of endovenous access.\n\nMETHODS: Totally 59 patients with unilateral saphenopopliteal junction incompetence and small saphenous vein reflux underwent EVLA (810 nm, 14 W diode laser) with ambulatory phlebectomies. Small saphenous vein access was gained at the lowest site of truncal reflux. Patients were divided into 2 groups: access gained above mid-calf (AMC, n = 33) and below mid-calf (BMC, n = 26) levels. Outcomes included Venous Clinical Severity Scores (VCSS), Aberdeen Varicose Vein Questionnaire (AVVQ), patient satisfaction, complications, and recurrence rates.\n\nRESULTS: Both groups demonstrated significant improvement in VCSS, AVVQ, generic quality of life Short Form 36, and EuroQol scores (P<.05) up to 1 year. No differences were seen between AMC and BMC groups for complications (phlebitis: 2 [6%] and 1 [3.8%], P>.05; paresthesia: 2 [6%] and 5 [19%], P = .223) and recurrence (3 [9%] and 1 [3.8%], P = .623), respectively.\n\"\"\"\n\nQuestion: Endovenous laser ablation in the treatment of small saphenous varicose veins: does site of access influence early outcomes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 88, \"quotes\": [\"No differences were seen between AMC and BMC groups for complications (phlebitis: 2 [6%] and 1 [3.8%], P>.05; paresthesia: 2 [6%] and 5 [19%], P = .223) and recurrence (3 [9%] and 1 [3.8%], P = .623), respectively.\"]}",
+ "input_tokens": 1304,
+ "output_tokens": 132,
+ "latency_s": 3.172,
+ "meta": {
+  "total_cost_usd_estimate": 0.0031064000000000005,
+  "num_turns": 1,
+  "session_id": "93925350-0979-41bd-beeb-9f3644e558e1"
+ },
+ "raw": {
+  "duration_api_ms": 2502,
+  "stop_reason": "end_turn",
+  "session_id": "93925350-0979-41bd-beeb-9f3644e558e1",
+  "total_cost_usd": 0.0031064000000000005,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1302,
+   "output_tokens": 132,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 132,
+     "cache_read_input_tokens": 1302,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1407,
+    "outputTokens": 23,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0015220000000000001,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 132,
+    "cacheReadInputTokens": 1302,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0015844000000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 88, \"quotes\": [\"No differences were seen between AMC and BMC groups for complications (phlebitis: 2 [6%] and 1 [3.8%], P>.05; paresthesia: 2 [6%] and 5 [19%], P = .223) and recurrence (3 [9%] and 1 [3.8%], P = .623), respectively.\"]}",
+  "ttft_ms": 1646,
+  "type": "result",
+  "duration_ms": 1681,
+  "uuid": "ddc2b76d-f07c-4371-9b61-bc1ae92151a1",
+  "ttft_stream_ms": 801,
+  "time_to_request_ms": 70,
+  "first_content_frame_ms": 801,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

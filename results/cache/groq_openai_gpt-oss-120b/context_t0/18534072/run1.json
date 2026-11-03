@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "18534072",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T23:00:17.076484+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "92a03684c35389f7",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Recent evaluations of IT innovations in primary care have highlighted variations between centres and practices in uptake and use. We evaluated whether structural characteristics of a general practice were associated with variations in use of a web-based clinical information system underpinning a Managed Clinical Network in diabetes, between the years 2001 and 2003.\n\nMETHODS: Using a computerised audit trail, we calculated the numbers of web-based operations that occurred in each practice, stratified by staff type and year, and adjusted for the numbers of registered diabetic patients. In regression analyses, we determined whether total use was associated with structural characteristics of the practice (total list size, training status, numbers of GPs (general practitioners), mean age of the GPs, numbers of female GPs, level of deprivation of the population and whether staff had received advanced training in diabetes care).\n\nRESULTS: Initially there were a few practices which made very frequent use of the information system, with relatively high numbers of practices using the facility infrequently. However, overall use gradually became more evenly spread. This effect was particularly evident among nurse users. Frequent use by GPs was evident in only a small number of practices, with mean GP use decreasing over the three years. In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff. This was consistently associated with increased use by nurses and GPs.\n\"\"\"\n\nQuestion: Do general practice characteristics influence uptake of an information technology (IT) innovation in primary care?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 80, \"quotes\": [\"In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\", \"This was consistently associated with increased use by nurses and GPs.\"]}",
+ "input_tokens": 501,
+ "output_tokens": 453,
+ "latency_s": 1.89,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "892",
+   "x-ratelimit-remaining-tokens": "6110",
+   "x-ratelimit-reset-requests": "2h35m31.2s",
+   "x-ratelimit-reset-tokens": "14.174s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-f892dd70-cd50-4be4-b16f-47810019584a",
+  "object": "chat.completion",
+  "created": 1793660415,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 80, \"quotes\": [\"In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\", \"This was consistently associated with increased use by nurses and GPs.\"]}",
+     "reasoning": "We need to answer whether general practice characteristics influence uptake of IT innovation. According to abstract, regression analyses found none of the general practice variables were associated with online use, except numbers of diabetes-educated staff. So generally, characteristics (list size, training status, numbers of GPs, age, female GPs, deprivation) did not influence uptake. However, one characteristic (numbers of diabetes-educated staff) did influence. The question: \"Do general practice characteristics influence uptake of an information technology (IT) innovation in primary care?\" Since some characteristic (diabetes-educated staff) does influence, answer could be \"maybe\" or \"yes\"? The phrase \"general practice characteristics\" could include that variable. The abstract says \"none of the general practice variables were associated ... except for the numbers of diabetes-educated staff.\" So there is at least one characteristic that influences. So answer \"maybe\"? But the question is binary: do they influence? Since there is at least one that does, answer \"yes\". But the overall result is that most characteristics do not, only diabetes-educated staff. The question is general: do characteristics influence uptake? The answer is partially yes. I'd answer \"maybe\" because mixed evidence. But likely they'd expect \"maybe\" because only one characteristic shows association. However the question asks \"Do general practice characteristics influence uptake?\" The abstract says \"none ... except for the numbers of diabetes-educated staff.\" So there is an influence, albeit limited. I'd answer \"maybe\" with moderate confidence. Let's choose \"maybe\". Provide quotes: \"In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\" Also maybe \"This was consistently associated with increased use by nurses and GPs.\" Provide two quotes.\n\nConfidence maybe 80."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.339978465,
+   "prompt_tokens": 501,
+   "prompt_time": 0.239492374,
+   "completion_tokens": 453,
+   "completion_time": 0.953872599,
+   "total_tokens": 954,
+   "total_time": 1.193364973,
+   "completion_tokens_details": {
+    "reasoning_tokens": 376
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_05e76be18c",
+  "x_groq": {
+   "id": "req_01m6f7vt3pexbv380ywhcs2mk3",
+   "seed": 855921561
+  },
+  "service_tier": "on_demand"
+ }
+}

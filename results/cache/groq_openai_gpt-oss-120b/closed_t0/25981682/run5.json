@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "25981682",
+  "run": 5
+ },
+ "cached_at": "2026-11-02T17:11:50.935699+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "5a302bdac550de48",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Preparing patients at high risk of falls for discharge home after rehabilitation: Do we meet the guidelines?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 55}",
+ "input_tokens": 168,
+ "output_tokens": 83,
+ "latency_s": 0.485,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "877",
+   "x-ratelimit-remaining-tokens": "7648",
+   "x-ratelimit-reset-requests": "2h57m7.2s",
+   "x-ratelimit-reset-tokens": "2.639s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-44f820fc-01f8-4489-b3c7-5ac5bb92c9fb",
+  "object": "chat.completion",
+  "created": 1793639510,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 55}",
+     "reasoning": "We need to answer the question: \"Preparing patients at high risk of falls for discharge home after rehabilitation: Do we meet the guidelines?\" This seems like a specific research question about whether guidelines are being met. Likely the answer is unknown without context. So maybe \"maybe\". Confidence moderate. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243610145,
+   "prompt_tokens": 168,
+   "prompt_time": 0.006990917,
+   "completion_tokens": 83,
+   "completion_time": 0.171195202,
+   "total_tokens": 251,
+   "total_time": 0.178186119,
+   "completion_tokens_details": {
+    "reasoning_tokens": 62
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c3da0d4bb9",
+  "x_groq": {
+   "id": "req_01m6ekxvwdej49j6bv2013t4n8",
+   "seed": 1221246448
+  },
+  "service_tier": "on_demand"
+ }
+}

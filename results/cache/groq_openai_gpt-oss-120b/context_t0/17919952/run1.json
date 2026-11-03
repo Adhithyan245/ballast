@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "17919952",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T20:21:29.161474+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "189555c2556c304c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: (i) To examine the association between self-reported mechanical factors and chronic oro-facial pain. (ii) To test the hypothesis that this relationship could be explained by: (a) reporting of psychological factors, (b) common association of self-reported mechanical factors with other unexplained syndromes.\n\nMETHODS: A population based cross-sectional study of 4200 randomly selected adults registered with a General Medical Practice in North West, England. The study examined the association of chronic oro-facial pain with a variety of self-reported mechanical factors: teeth grinding, facial trauma, missing teeth and the feeling that the teeth did not fit together properly. Information was also collected on demographic factors, psychological factors and the reporting of other frequently unexplained syndromes.\n\nRESULTS: An adjusted response rate of 72% was achieved. Only two mechanical factors: teeth grinding (odds ratio (OR) 2.0, 95% CI 1.3-3.0) and facial trauma (OR 2.0; 95% CI 1.3-2.9) were independently associated with chronic oro-facial pain after adjusting for psychological factors. However, these factors were also commonly associated with the reporting of other frequently unexplained syndromes: teeth grinding (odds ratio (OR) 1.8, 95% CI 1.5-2.2), facial trauma (OR 2.1; 95% CI 1.7-2.6).\n\"\"\"\n\nQuestion: Are reports of mechanical dysfunction in chronic oro-facial pain related to somatisation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"Only two mechanical factors: teeth grinding (odds ratio (OR) 2.0, 95% CI 1.3-3.0) and facial trauma (OR 2.0; 95% CI 1.3-2.9) were independently associated with chronic oro-facial pain after adjusting for psychological factors.\", \"However, these factors were also commonly associated with the reporting of other frequently unexplained syndromes: teeth grinding (odds ratio (OR) 1.8, 95% CI 1.5-2.2), facial trauma (OR 2.1; 95% CI 1.7-2.6).\"]}",
+ "input_tokens": 511,
+ "output_tokens": 437,
+ "latency_s": 1.281,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "815",
+   "x-ratelimit-remaining-tokens": "7095",
+   "x-ratelimit-reset-requests": "4h26m24s",
+   "x-ratelimit-reset-tokens": "6.787s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-0c6063ca-e6fa-47b4-aba6-92354bd2b934",
+  "object": "chat.completion",
+  "created": 1793650888,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"Only two mechanical factors: teeth grinding (odds ratio (OR) 2.0, 95% CI 1.3-3.0) and facial trauma (OR 2.0; 95% CI 1.3-2.9) were independently associated with chronic oro-facial pain after adjusting for psychological factors.\", \"However, these factors were also commonly associated with the reporting of other frequently unexplained syndromes: teeth grinding (odds ratio (OR) 1.8, 95% CI 1.5-2.2), facial trauma (OR 2.1; 95% CI 1.7-2.6).\"]}",
+     "reasoning": "We need to interpret the question: \"Are reports of mechanical dysfunction in chronic oro-facial pain related to somatisation?\" Somatisation refers to reporting of psychological distress as physical symptoms, often associated with unexplained syndromes. The abstract says mechanical factors (teeth grinding, facial trauma) are associated with chronic oro-facial pain, but also commonly associated with reporting of other frequently unexplained syndromes. That suggests a link to somatisation. So answer \"yes\". Confidence high, maybe 90. Provide quotes: \"Only two mechanical factors: teeth grinding (odds ratio (OR) 2.0, 95% CI 1.3-3.0) and facial trauma (OR 2.0; 95% CI 1.3-2.9) were independently associated with chronic oro-facial pain after adjusting for psychological factors.\" and \"However, these factors were also commonly associated with the reporting of other frequently unexplained syndromes: teeth grinding (odds ratio (OR) 1.8, 95% CI 1.5-2.2), facial trauma (OR 2.1; 95% CI 1.7-2.6).\" Those show association with other unexplained syndromes (somatisation). Provide up to three sentences. We'll include both.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.201930403,
+   "prompt_tokens": 511,
+   "prompt_time": 0.023274216,
+   "completion_tokens": 437,
+   "completion_time": 0.920547028,
+   "total_tokens": 948,
+   "total_time": 0.943821244,
+   "completion_tokens_details": {
+    "reasoning_tokens": 271
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_7a4ab09ae4",
+  "x_groq": {
+   "id": "req_01m6eys2dde0gtbqn81eybn3x8",
+   "seed": 1043986771
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "16100194",
+  "run": 3
+ },
+ "cached_at": "2026-11-02T19:31:21.797026+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "e5f8059c1e88acdd",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nSTUDY OBJECTIVE: Angiotensin-converting enzyme inhibitors (ACE-I) are considered safe, but they are associated with characteristic side effects, namely cough and angioedema, usually requiring discontinuation. We perceived that referrals for these side effects have become more and more frequent; therefore, we evaluated the degree of knowledge on the safety of ACE-I in different medical categories.\n\nDESIGN: A questionnaire (13 questions) on side effects of ACE-I was posted to physicians.\n\nSETTING: Everyday clinical practice.\n\nPARTICIPANTS: Cardiologists, allergists, and general practitioners (GPs) from the National Healthcare System.\n\nMEASUREMENT AND RESULTS: Three hundred twelve physicians were contacted, and 154 returned questionnaires that could be analyzed. Of the 154 physicians (mean age, 45 years) 48 were cardiologists, 52 were GPs, and 54 were allergists. The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists. Thus, GPs provided a significantly higher percentage of correct answers with respect to the remaining categories (p = 0.05). The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take. Cardiologists seemed to be less aware of the fact that angiotensin receptor blockers (sartans) can cross-react with ACE-I.\n\"\"\"\n\nQuestion: Are physicians aware of the side effects of angiotensin-converting enzyme inhibitors?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists.\", \"The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take.\"]}",
+ "input_tokens": 500,
+ "output_tokens": 262,
+ "latency_s": 0.828,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "789",
+   "x-ratelimit-remaining-tokens": "5244",
+   "x-ratelimit-reset-requests": "5h3m50.399s",
+   "x-ratelimit-reset-tokens": "20.67s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-887a0c6d-deb9-4826-9b15-d48416539724",
+  "object": "chat.completion",
+  "created": 1793647880,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists.\", \"The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take.\"]}",
+     "reasoning": "We need to answer whether physicians are aware of the side effects of ACE inhibitors. The abstract says percentage of correct answers low: 31.9% cardiologists, 40% GPs, 33% allergists. So overall low awareness. So answer: maybe? The question: \"Are physicians aware of the side effects of angiotensin-converting enzyme inhibitors?\" The data suggests they are not well aware (low correct answers). So answer \"no\". Confidence high, maybe 90. Provide quotes: \"The percentage of correct answers was low: 31.9% for cardiologists, 40% for GPs, and 33% for allergists.\" Also \"The lower rate of correct answers (0 to 15.9%) concerned the time of onset of cough and the action to take.\" Provide up to three sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.201444457,
+   "prompt_tokens": 500,
+   "prompt_time": 0.025362582,
+   "completion_tokens": 262,
+   "completion_time": 0.556104013,
+   "total_tokens": 762,
+   "total_time": 0.581466595,
+   "completion_tokens_details": {
+    "reasoning_tokens": 175
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_245acb052a",
+  "x_groq": {
+   "id": "req_01m6evx9zde38sq4jxsdmkaps3",
+   "seed": 845259477
+  },
+  "service_tier": "on_demand"
+ }
+}

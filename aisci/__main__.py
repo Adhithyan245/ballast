@@ -146,7 +146,7 @@ def cmd_status(a):
 
 
 def main(argv=None):
-    load_dotenv(config.ROOT / ".env")
+    load_dotenv(config.ROOT / ".env", override=True)  # project keys win over stale system env vars
     ap = argparse.ArgumentParser(prog="aisci", description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)

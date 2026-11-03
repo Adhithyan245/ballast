@@ -78,3 +78,12 @@ def test_rate_limiter_tpm(tmp_path):
     rl.record_tokens(900)
     rl.acquire(est_tokens=600)  # must wait for the 900 tokens to leave the 60 s window
     assert t[0] > 60
+
+
+def test_rate_limiter_refund(tmp_path):
+    rl = RateLimiter("z", Limits(rpd=10, safety=1.0), tmp_path, clock=lambda: 0.0, sleep=lambda _: None)
+    rl.acquire(); rl.acquire()
+    rl.refund()
+    assert rl.used_today() == 1
+    rl.refund(); rl.refund()
+    assert rl.used_today() == 0  # never negative

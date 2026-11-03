@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "22706226",
+  "run": 2
+ },
+ "cached_at": "2026-11-02T17:20:40.951221+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "388d14291b597ee8",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To determine current practice and to assess the value of routine follow-up procedures for endometrial cancer surveillance. To discuss whether such procedures are feasible and effective to identify asymptomatic recurrences and describe the pattern of relapse detected by procedures.\n\nMETHODS: The records of 282 consecutive women with recurrent endometrial cancer treated from 1986 to 2005 were retrospectively collected in 8 Italian institutions. Primary disease, clinical history, and recurrence features and data were analyzed.\n\nRESULTS: Thirty-five (12.4%) of 282 patients had recurrence in vaginal vault, 51 patients (18.0%) had recurrence in central pelvis, 14 patients (4.9%) had recurrence in pelvic wall, and 39 patients (13.8%) had recurrence in lymph nodes. One-hundred twenty-eight patients (45.3%) showed a distant relapse, whereas 15 patients (5.3%) developed both distant relapse and local relapse. The site of relapse influenced survival because the patients with vaginal vault recurrences lived significantly longer than the patients with recurrences in other sites. Eighty (28.4%) of the 282 patients became symptomatic and anticipated the scheduled visit, 37 (13.1 %) of the patients reported their symptoms during the follow-up meeting, and 165 (58.5 %) of the patients were asymptomatic and the diagnostic path was introduced by a planned visit or examination. Among the asymptomatic patients, the first procedure that led to further examinations was clinical visit alone for 60 (36.4%) of 165 patients, imaging for 103 patients (62.4%), and cytologic examination for 2 patients (1.2%). Symptoms at recurrence can predict survival: patients with an asymptomatic recurrence had a median survival time from relapse of 35 months versus 13 months if they had a symptomatic repetition (P = 0.0001).\n\"\"\"\n\nQuestion: Could different follow-up modalities play a role in the diagnosis of asymptomatic endometrial cancer relapses?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"Among the asymptomatic patients, the first procedure that led to further examinations was clinical visit alone for 60 (36.4%) of 165 patients, imaging for 103 patients (62.4%), and cytologic examination for 2 patients (1.2%).\"]}",
+ "input_tokens": 1487,
+ "output_tokens": 112,
+ "latency_s": 2.875,
+ "meta": {
+  "total_cost_usd_estimate": 0.0030099999999999997,
+  "num_turns": 1,
+  "session_id": "bc2414ba-609f-4e31-96a1-4ffb419a07a6"
+ },
+ "raw": {
+  "duration_api_ms": 2084,
+  "stop_reason": "end_turn",
+  "session_id": "bc2414ba-609f-4e31-96a1-4ffb419a07a6",
+  "total_cost_usd": 0.0030099999999999997,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1485,
+   "output_tokens": 112,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 112,
+     "cache_read_input_tokens": 1485,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1504,
+    "outputTokens": 17,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001589,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 112,
+    "cacheReadInputTokens": 1485,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001421,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"Among the asymptomatic patients, the first procedure that led to further examinations was clinical visit alone for 60 (36.4%) of 165 patients, imaging for 103 patients (62.4%), and cytologic examination for 2 patients (1.2%).\"]}",
+  "ttft_ms": 1332,
+  "type": "result",
+  "duration_ms": 1363,
+  "uuid": "f2a96167-ef72-46b2-8a82-c0bf5d35a8f1",
+  "ttft_stream_ms": 686,
+  "time_to_request_ms": 72,
+  "first_content_frame_ms": 686,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

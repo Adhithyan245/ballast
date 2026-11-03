@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "23361217",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T17:38:49.677524+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "84e9153751d4b830",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: There are a number of factors responsible for the longevity of unicompartmental knee replacements (UKR). These include the magnitude of postoperative alignment and the type of material used. The effect of component design and material on postoperative alignment, however, has not been explored.\n\nMATERIALS AND METHODS: We retrospectively reviewed 89 patients who underwent UKR with robotic guidance. Patients were divided into two groups, according to whether they had received an all-polyethylene inlay component (Inlay group) or a metal-backed onlay component (Onlay group). We explored the magnitude of mechanical alignment correction obtained in both groups.\n\nRESULTS: Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment (Fig. 2). Further exploration revealed that the thickness of the tibial polyethyelene insert had a significant effect on postoperative alignment when added to the model (R2=0.68; P=0.01).\n\"\"\"\n\nQuestion: Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": true,
+ "text": "{\"answer\": \"yes\", \"confidence\": 93, \"quotes\": [\"Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment (Fig. 2).\"]}",
+ "input_tokens": 1242,
+ "output_tokens": 170,
+ "latency_s": 4.062,
+ "meta": {
+  "total_cost_usd_estimate": 0.008107,
+  "num_turns": 1,
+  "session_id": "65568482-590a-4611-8e0a-ff1143e4a65a"
+ },
+ "raw": {
+  "duration_api_ms": 3196,
+  "stop_reason": "end_turn",
+  "session_id": "65568482-590a-4611-8e0a-ff1143e4a65a",
+  "total_cost_usd": 0.008107,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 1240,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 170,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 1240,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 170,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 1240,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 1240
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1343,
+    "outputTokens": 20,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001443,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 170,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 1240,
+    "webSearchRequests": 0,
+    "costUSD": 0.006664,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"yes\", \"confidence\": 93, \"quotes\": [\"Mean postoperative mechanical alignment was significantly closer to neutral in the Onlay group (mean=2.8°; 95% CI=2.4°, 3.2°) compared to the Inlay group (mean=3.9°; 95% CI=3.4°, 4.4°) (R2=0.65; P=0.003), adjusting for gender, BMI, age, side and preoperative mechanical alignment (Fig. 2).\"]}",
+  "ttft_ms": 2384,
+  "type": "result",
+  "duration_ms": 2421,
+  "uuid": "8c980394-3aad-4ae6-8e67-e84cbc422fc3",
+  "ttft_stream_ms": 1290,
+  "time_to_request_ms": 137,
+  "first_content_frame_ms": 1290,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

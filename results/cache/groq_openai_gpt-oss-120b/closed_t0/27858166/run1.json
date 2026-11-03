@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "27858166",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T17:13:11.160329+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d3becb8ad4015841",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": 169,
+ "output_tokens": 177,
+ "latency_s": 0.531,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "851",
+   "x-ratelimit-remaining-tokens": "7576",
+   "x-ratelimit-reset-requests": "3h34m33.599s",
+   "x-ratelimit-reset-tokens": "3.179s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-c578c074-e8c6-4e54-93ed-529290100f24",
+  "object": "chat.completion",
+  "created": 1793639590,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 65}",
+     "reasoning": "We need to answer the question: \"Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\" Provide yes/no/maybe and confidence.\n\nWe need to consider literature. I recall that certain anatomical variations like aortic arch angle, distance from sternum, curvature, and presence of aortic isthmus location affect susceptibility to injury. Studies have shown that the aortic isthmus (just distal to left subclavian) is most common site due to fixation and curvature. The anatomy (e.g., aortic arch type, angle, length) may influence severity. However, direct evidence linking arch anatomy to severity (extent of injury) may be limited. So answer maybe.\n\nConfidence moderate, maybe 65.\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083113478,
+   "prompt_tokens": 169,
+   "prompt_time": 0.009785757,
+   "completion_tokens": 177,
+   "completion_time": 0.377515347,
+   "total_tokens": 346,
+   "total_time": 0.387301104,
+   "completion_tokens_details": {
+    "reasoning_tokens": 156
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_803c0ba83d",
+  "x_groq": {
+   "id": "req_01m6em0a5wee1s1prb3zexhhx9",
+   "seed": 1431964872
+  },
+  "service_tier": "on_demand"
+ }
+}

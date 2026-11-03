@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "23806388",
+  "run": 4
+ },
+ "cached_at": "2026-11-02T17:07:36.658804+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "89f37dd558cf67f2",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do nomograms designed to predict biochemical recurrence (BCR) do a better job of predicting more clinically relevant prostate cancer outcomes than BCR?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 68}",
+ "input_tokens": 177,
+ "output_tokens": 129,
+ "latency_s": 0.578,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "958",
+   "x-ratelimit-remaining-tokens": "7563",
+   "x-ratelimit-reset-requests": "1h0m28.8s",
+   "x-ratelimit-reset-tokens": "3.277s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-12fe753a-c9b5-4cfd-8a35-9db52ea19eea",
+  "object": "chat.completion",
+  "created": 1793639256,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 68}",
+     "reasoning": "We need to answer the question: \"Do nomograms designed to predict biochemical recurrence (BCR) do a better job of predicting more clinically relevant prostate cancer outcomes than BCR?\" So they ask whether nomograms predicting BCR are better at predicting more clinically relevant outcomes than BCR itself. Likely answer: maybe. Because BCR is a surrogate endpoint; nomograms may incorporate more variables and may improve prediction of outcomes like metastasis, cancer-specific mortality, but evidence is mixed. So answer maybe with moderate confidence. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.244008535,
+   "prompt_tokens": 177,
+   "prompt_time": 0.006757769,
+   "completion_tokens": 129,
+   "completion_time": 0.268361605,
+   "total_tokens": 306,
+   "total_time": 0.275119374,
+   "completion_tokens_details": {
+    "reasoning_tokens": 108
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_4a7bb72c24",
+  "x_groq": {
+   "id": "req_01m6ekp3fgew38jj7scp8hzba3",
+   "seed": 296218494
+  },
+  "service_tier": "on_demand"
+ }
+}

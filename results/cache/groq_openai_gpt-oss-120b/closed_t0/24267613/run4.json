@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "24267613",
+  "run": 4
+ },
+ "cached_at": "2026-11-02T17:08:30.199548+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "5f443fc5085fb554",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is the advanced age a contraindication to GERD laparoscopic surgery?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 85}",
+ "input_tokens": 163,
+ "output_tokens": 118,
+ "latency_s": 0.562,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "943",
+   "x-ratelimit-remaining-tokens": "7667",
+   "x-ratelimit-reset-requests": "1h22m4.8s",
+   "x-ratelimit-reset-tokens": "2.497s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-f06f538b-8431-4411-804b-b21dff2cb3d6",
+  "object": "chat.completion",
+  "created": 1793639309,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 85}",
+     "reasoning": "We need to answer whether advanced age is a contraindication to GERD laparoscopic surgery. In general, advanced age is not an absolute contraindication; surgery can be performed in elderly patients if they are fit. So answer \"maybe\" or \"no\"? The question: \"Is the advanced age a contraindication to GERD laparoscopic surgery?\" Typically, advanced age alone is not a contraindication; comorbidities matter. So answer \"no\". Confidence maybe 85."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.230088453,
+   "prompt_tokens": 163,
+   "prompt_time": 0.007464698,
+   "completion_tokens": 118,
+   "completion_time": 0.245502595,
+   "total_tokens": 281,
+   "total_time": 0.252967293,
+   "completion_tokens_details": {
+    "reasoning_tokens": 97
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_5a93aea882",
+  "x_groq": {
+   "id": "req_01m6ekqqsdeqj891f6ncmac7bq",
+   "seed": 424173432
+  },
+  "service_tier": "on_demand"
+ }
+}

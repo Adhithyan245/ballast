@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "12612531",
+  "run": 4
+ },
+ "cached_at": "2026-11-02T17:27:12.481479+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "62f60ef8eda136cd",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Primary eosinophilic esophagitis, a chronic inflammatory disorder of the esophagus, evokes recurrent dysphagia. Endoscopy is often unremarkable, and no consensus exists regarding management of resultant dysphagia. The response of a series of patients with primary eosinophilic esophagitis to dilation is reported together with a description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \"crêpe-paper\" mucosa is introduced.\n\nMETHODS: Five men underwent endoscopy because of dysphagia confirmed (clinically, endoscopically, and histologically) to be caused by primary eosinophilic esophagitis and were treated by bouginage.\n\nOBSERVATIONS: All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma. After the procedure, patients remained asymptomatic for 3 to 24 months.\n\"\"\"\n\nQuestion: Fragility of the esophageal mucosa: a pathognomonic endoscopic sign of primary eosinophilic esophagitis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"crêpe-paper\\\" mucosa is introduced.\", \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\"]}",
+ "input_tokens": 409,
+ "output_tokens": 280,
+ "latency_s": 0.829,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "753",
+   "x-ratelimit-remaining-tokens": "6710",
+   "x-ratelimit-reset-requests": "5h55m40.8s",
+   "x-ratelimit-reset-tokens": "9.675s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-7350af25-5939-4463-80b1-35a4115eeddf",
+  "object": "chat.completion",
+  "created": 1793640431,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 70, \"quotes\": [\"description of a possibly pathognomonic sign: fragile esophageal mucosa, for which the term \\\"crêpe-paper\\\" mucosa is introduced.\", \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\"]}",
+     "reasoning": "We need to answer whether fragility of esophageal mucosa is a pathognomonic endoscopic sign of primary eosinophilic esophagitis. The abstract introduces \"fragile esophageal mucosa\" and says they introduce term \"crêpe-paper\" mucosa, possibly pathognomonic sign. The question: \"Fragility of the esophageal mucosa: a pathognomonic endoscopic sign of primary eosinophilic esophagitis?\" The abstract says \"description of a possibly pathognomonic sign: fragile esophageal mucosa\". So it's possibly pathognomonic, not definitively proven. So answer maybe. Provide confidence. I'd say maybe with moderate confidence, maybe 70. Provide quotes: \"description of a possibly pathognomonic sign: fragile esophageal mucosa\" and \"All patients had extremely fragile, inelastic, and delicate mucosa, which tore easily even with minor trauma.\" Provide two sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147256637,
+   "prompt_tokens": 409,
+   "prompt_time": 0.019312016,
+   "completion_tokens": 280,
+   "completion_time": 0.586795086,
+   "total_tokens": 689,
+   "total_time": 0.606107102,
+   "completion_tokens_details": {
+    "reasoning_tokens": 199
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_64b2f1c926",
+  "x_groq": {
+   "id": "req_01m6emszfeertvqhy9z2h6r3gk",
+   "seed": 687362884
+  },
+  "service_tier": "on_demand"
+ }
+}

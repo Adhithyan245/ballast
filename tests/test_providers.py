@@ -317,3 +317,15 @@ def test_long_retry_after_stops_cleanly(tmp_path):
     with pytest.raises(QuotaExhausted):
         p.call("x")
     assert "3600" in (tmp_path / "logs" / "retries.jsonl").read_text()
+
+
+def test_transport_failures_do_not_use_daily_budget(tmp_path):
+    p = GroqProvider("m", Limits(rpd=100), max_attempts=3, sleep=nosleep)
+
+    def boom(req):
+        raise httpx.ConnectError("offline")
+
+    p.client = mock_client(boom)
+    with pytest.raises(RetryableError):
+        p.call("x")
+    assert p.limiter.used_today() == 0

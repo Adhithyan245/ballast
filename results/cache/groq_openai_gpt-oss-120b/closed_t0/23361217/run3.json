@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "23361217",
+  "run": 3
+ },
+ "cached_at": "2026-11-02T17:06:50.396920+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "50359d0b748747db",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 65}",
+ "input_tokens": 167,
+ "output_tokens": 194,
+ "latency_s": 0.688,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "969",
+   "x-ratelimit-remaining-tokens": "7600",
+   "x-ratelimit-reset-requests": "44m38.4s",
+   "x-ratelimit-reset-tokens": "3s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-237f5710-2651-4f50-87a8-f68ebe622e94",
+  "object": "chat.completion",
+  "created": 1793639209,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 65}",
+     "reasoning": "We need to answer the question: \"Does the type of tibial component affect mechanical alignment in unicompartmental knee replacement?\" Provide yes/no/maybe with confidence.\n\nWe need to consider literature. The question asks whether the type of tibial component (e.g., fixed-bearing vs mobile-bearing, different designs) influences mechanical alignment outcomes in UKR. I recall that alignment is more dependent on surgical technique and component positioning rather than tibial component design. Some studies compare different tibial components and find no significant difference in postoperative alignment. So answer maybe \"no\" (type does not affect alignment). But there may be some evidence that certain designs (e.g., mobile-bearing) allow better alignment or less overcorrection. However overall evidence is limited, so maybe \"maybe\". Confidence moderate.\n\nGiven uncertainty, I'd answer \"maybe\" with confidence ~65."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.154698847,
+   "prompt_tokens": 167,
+   "prompt_time": 0.052149262,
+   "completion_tokens": 194,
+   "completion_time": 0.405928913,
+   "total_tokens": 361,
+   "total_time": 0.458078175,
+   "completion_tokens_details": {
+    "reasoning_tokens": 173
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_f640395b96",
+  "x_groq": {
+   "id": "req_01m6ekmp64e4wtgyt6w5tp0e1m",
+   "seed": 1604962413
+  },
+  "service_tier": "on_demand"
+ }
+}

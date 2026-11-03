@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "12145243",
+  "run": 1
+ },
+ "cached_at": "2026-11-02T17:25:07.062548+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "a938a704f6bded5f",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: Type 2 diabetes may be present for several years before diagnosis, by which time many patients have already developed diabetic complications. Earlier detection and treatment may reduce this burden, but evidence to support this approach is lacking.\n\nRESEARCH DESIGN AND METHODS: Glycemic control and clinical and surrogate outcomes were compared for 5,088 of 5,102 U.K. Diabetes Prospective Study participants according to whether they had low (<140 mg/dl [<7.8 mmol/l]), intermediate (140 to<180 mg/dl [7.8 to<10.0 mmol/l]), or high (>or =180 mg/dl [>or =10 mmol/l]) fasting plasma glucose (FPG) levels at diagnosis. Individuals who presented with and without diabetic symptoms were also compared.\n\nRESULTS: Fewer people with FPG in the lowest category had retinopathy, abnormal biothesiometer measurements, or reported erectile dysfunction. The rate of increase in FPG and HbA(1c) during the study was identical in all three groups, although absolute differences persisted. Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke, whereas those in the intermediate group had significantly reduced risk for each outcome except stroke and myocardial infarction. The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\n\"\"\"\n\nQuestion: Are lower fasting plasma glucose levels at diagnosis of type 2 diabetes associated with improved outcomes?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke, whereas those in the intermediate group had significantly reduced risk for each outcome except stroke and myocardial infarction.\", \"The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\"]}",
+ "input_tokens": 498,
+ "output_tokens": 261,
+ "latency_s": 0.828,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "766",
+   "x-ratelimit-remaining-tokens": "6142",
+   "x-ratelimit-reset-requests": "5h36m57.6s",
+   "x-ratelimit-reset-tokens": "13.935s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-62320e69-7530-4a5c-b8fb-8fbdbe868e7b",
+  "object": "chat.completion",
+  "created": 1793640306,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke, whereas those in the intermediate group had significantly reduced risk for each outcome except stroke and myocardial infarction.\", \"The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\"]}",
+     "reasoning": "We need to interpret abstract: It compares outcomes based on fasting plasma glucose (FPG) categories at diagnosis. Results: \"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke...\". Also \"low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy...\". So lower FPG associated with improved outcomes. So answer \"yes\". Confidence high, maybe 95. Provide quotes: e.g., \"Individuals in the low FPG group had a significantly reduced risk for each predefined clinical outcome except stroke...\" and \"The low and intermediate FPG groups had a significantly reduced risk for progression of retinopathy, reduction in vibration sensory threshold, or development of microalbuminuria.\" Provide up to three sentences. JSON format."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083601753,
+   "prompt_tokens": 498,
+   "prompt_time": 0.123257566,
+   "completion_tokens": 261,
+   "completion_time": 0.547645853,
+   "total_tokens": 759,
+   "total_time": 0.670903419,
+   "completion_tokens_details": {
+    "reasoning_tokens": 160
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_93703442d9",
+  "x_groq": {
+   "id": "req_01m6emp505ewq9ddcc7msf14wx",
+   "seed": 452218389
+  },
+  "service_tier": "on_demand"
+ }
+}

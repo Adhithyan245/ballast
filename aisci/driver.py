@@ -51,7 +51,7 @@ def wait_until(t: datetime, log) -> None:
 
 
 def main(sample: str, key: str) -> None:
-    load_dotenv(config.ROOT / ".env")
+    load_dotenv(config.ROOT / ".env", override=True)  # project keys win over stale system env vars
 
     config.LOG_DIR.mkdir(parents=True, exist_ok=True)
     log_file = config.LOG_DIR / f"{sample}_{key}.log"

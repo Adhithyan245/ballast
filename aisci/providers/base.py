@@ -73,6 +73,8 @@ class Provider(ABC):
             try:
                 res = self._call(prompt, temperature, history, session)
             except RetryableError as e:
+                if str(e).startswith("transport:"):
+                    self.limiter.refund()  # never reached the provider, so it used no quota
                 wait = max(min(120.0, 2.0 ** attempt + random.uniform(0, 1)), e.retry_after or 0.0)
                 log_retry({"provider": self.limiter.name, "model": self.model, "attempt": attempt,
                            "error": str(e)[:300], "retry_after": e.retry_after, "wait_s": round(wait, 1)})

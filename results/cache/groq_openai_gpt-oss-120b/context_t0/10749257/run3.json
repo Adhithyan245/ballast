@@ -1,0 +1,74 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "10749257",
+  "run": 3
+ },
+ "cached_at": "2026-11-02T17:19:20.802855+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d74350d76a500496",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: The United States Food and Drug Administration implemented federal regulations governing mammography under the Mammography Quality Standards Act (MQSA) of 1992. During 1995, its first year in implementation, we examined the impact of the MQSA on the quality of mammography in North Carolina.\n\nMATERIALS AND METHODS: All mammography facilities were inspected during 1993-1994, and again in 1995. Both inspections evaluated mean glandular radiation dose, phantom image evaluation, darkroom fog, and developer temperature. Two mammography health specialists employed by the North Carolina Division of Radiation Protection performed all inspections and collected and codified data.\n\nRESULTS: The percentage of facilities that met quality standards increased from the first inspection to the second inspection. Phantom scores passing rate was 31.6% versus 78.2%; darkroom fog passing rate was 74.3% versus 88.5%; and temperature difference passing rate was 62.4% versus 86.9%.\n\"\"\"\n\nQuestion: Has the mammography quality standards act affected the mammography quality in North Carolina?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"The percentage of facilities that met quality standards increased from the first inspection to the second inspection.\", \"Phantom scores passing rate was 31.6% versus 78.2%; darkroom fog passing rate was 74.3% versus 88.5%; and temperature difference passing rate was 62.4% versus 86.9%.\"]}",
+ "input_tokens": 409,
+ "output_tokens": 234,
+ "latency_s": 1.937,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "799",
+   "x-ratelimit-remaining-tokens": "7177",
+   "x-ratelimit-reset-requests": "4h49m26.4s",
+   "x-ratelimit-reset-tokens": "6.172s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-32665df5-08ac-4dd3-8d0b-e20fdaba4f50",
+  "object": "chat.completion",
+  "created": 1793639960,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"The percentage of facilities that met quality standards increased from the first inspection to the second inspection.\", \"Phantom scores passing rate was 31.6% versus 78.2%; darkroom fog passing rate was 74.3% versus 88.5%; and temperature difference passing rate was 62.4% versus 86.9%.\"]}",
+     "reasoning": "We need to answer whether the MQSA affected mammography quality in NC. The abstract reports that percentage of facilities meeting quality standards increased from first to second inspection, with specific passing rates improving. So answer \"yes\". Confidence high, maybe 95. Provide quotes: \"The percentage of facilities that met quality standards increased from the first inspection to the second inspection.\" and maybe \"Phantom scores passing rate was 31.6% versus 78.2%; darkroom fog passing rate was 74.3% versus 88.5%; and temperature difference passing rate was 62.4% versus 86.9%.\" Provide up to three sentences. JSON format."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.287909123,
+   "prompt_tokens": 409,
+   "prompt_time": 0.465481273,
+   "completion_tokens": 234,
+   "completion_time": 0.959240373,
+   "total_tokens": 643,
+   "total_time": 1.424721646,
+   "prompt_tokens_details": {
+    "cached_tokens": 256
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 137
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_e1a78f200e",
+  "x_groq": {
+   "id": "req_01m6embhtpeytt8t0ddyv53dbw",
+   "seed": 395717550
+  },
+  "service_tier": "on_demand"
+ }
+}

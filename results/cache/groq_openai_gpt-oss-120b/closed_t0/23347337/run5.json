@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "closed_t0",
+  "qid": "23347337",
+  "run": 5
+ },
+ "cached_at": "2026-11-02T17:06:42.734362+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "cb74cfe39c25857d",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is intensive chemotherapy safe for rural cancer patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62}",
+ "input_tokens": 158,
+ "output_tokens": 109,
+ "latency_s": 0.532,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "972",
+   "x-ratelimit-remaining-tokens": "7636",
+   "x-ratelimit-reset-requests": "40m19.2s",
+   "x-ratelimit-reset-tokens": "2.73s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-5d28dabf-98a4-4f9a-a61c-79b850f6eb7d",
+  "object": "chat.completion",
+  "created": 1793639202,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 62}",
+     "reasoning": "We need to answer the question: \"Is intensive chemotherapy safe for rural cancer patients?\" Provide yes/no/maybe with confidence.\n\nWe need to consider evidence: safety of intensive chemo may depend on access to supportive care, monitoring, comorbidities, travel distance. Rural patients may have less access, leading to higher toxicity risk. So safety is uncertain. Likely \"maybe\". Confidence moderate, maybe 60.\n\nThus output JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243043488,
+   "prompt_tokens": 158,
+   "prompt_time": 0.008261838,
+   "completion_tokens": 109,
+   "completion_time": 0.225427381,
+   "total_tokens": 267,
+   "total_time": 0.233689219,
+   "completion_tokens_details": {
+    "reasoning_tokens": 88
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_a655021f7d",
+  "x_groq": {
+   "id": "req_01m6ekmevnepjtdmkgfaqffmr2",
+   "seed": 1311742099
+  },
+  "service_tier": "on_demand"
+ }
+}

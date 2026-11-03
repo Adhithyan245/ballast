@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "12920330",
+  "run": 2
+ },
+ "cached_at": "2026-11-02T17:27:19.903201+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d39d39e1ed617017",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Evidence suggests substantial comorbidity between symptoms of somatization and depression in clinical as well as nonclinical populations. However, as most existing research has been retrospective or cross-sectional in design, very little is known about the specific nature of this relationship. In particular, it is unclear whether somatic complaints may heighten the risk for the subsequent development of depressive symptoms.\n\nMETHODS: We report findings on the link between symptoms of somatization (assessed using the SCL-90-R) and depression 5 years later (assessed using the CES-D) in an initially healthy cohort of community adults, based on prospective data from the RENO Diet-Heart Study.\n\nRESULTS: Gender-stratified multiple regression analyses revealed that baseline CES-D scores were the best predictors of subsequent depressive symptoms for men and women. Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women. However, somatic complaints were a somewhat less powerful predictor than income and age.\n\"\"\"\n\nQuestion: Do somatic complaints predict subsequent symptoms of depression?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\", \"However, somatic complaints were a somewhat less powerful predictor than income and age.\"]}",
+ "input_tokens": 416,
+ "output_tokens": 225,
+ "latency_s": 0.75,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "750",
+   "x-ratelimit-remaining-tokens": "5710",
+   "x-ratelimit-reset-requests": "6h0m0s",
+   "x-ratelimit-reset-tokens": "17.175s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-4121a0c9-3de5-4ec2-9a08-583ffce8a0ef",
+  "object": "chat.completion",
+  "created": 1793640439,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\", \"However, somatic complaints were a somewhat less powerful predictor than income and age.\"]}",
+     "reasoning": "We need to answer based on abstract. The question: \"Do somatic complaints predict subsequent symptoms of depression?\" According to abstract: \"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\" So answer: yes (they predict, at least in women). Provide confidence high, maybe 95. Provide quotes: \"Baseline scores on the SCL-90-R somatization subscale significantly predicted subsequent self-reported symptoms of depressed mood 5 years later, but only in women.\" Also maybe \"Somatic complaints were a somewhat less powerful predictor than income and age.\" Provide up to three sentences. So JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.18073208,
+   "prompt_tokens": 416,
+   "prompt_time": 0.021332094,
+   "completion_tokens": 225,
+   "completion_time": 0.472066013,
+   "total_tokens": 641,
+   "total_time": 0.493398107,
+   "completion_tokens_details": {
+    "reasoning_tokens": 147
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_854fa9be4c",
+  "x_groq": {
+   "id": "req_01m6emt6sqek19ajhgrq8892bx",
+   "seed": 1159658605
+  },
+  "service_tier": "on_demand"
+ }
+}
