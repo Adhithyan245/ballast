@@ -63,6 +63,8 @@ def classify(raw: dict) -> None:
         raise ProviderUnavailable(f"claude auth: {msg[:200]}")
     if "limit" in low and ("usage" in low or "reach" in low or "reset" in low):
         raise QuotaExhausted(f"claude usage limit: {msg[:200]}")
+    if "can't reach the api server" in low or "enotfound" in low or "econnrefused" in low:
+        raise RetryableError(f"transport: claude offline: {msg[:150]}")  # no request reached the API
     if raw.get("api_error_status") == 400 or "api error: 400" in low:
         raise FatalError(f"claude bad request: {msg[:200]}")  # retrying cannot fix a 400
     if raw.get("terminal_reason") == "api_error" or "overloaded" in low or "rate limit" in low:

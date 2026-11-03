@@ -329,3 +329,10 @@ def test_transport_failures_do_not_use_daily_budget(tmp_path):
     with pytest.raises(RetryableError):
         p.call("x")
     assert p.limiter.used_today() == 0
+
+
+def test_claude_offline_is_a_transport_failure():
+    with pytest.raises(RetryableError) as e:
+        claude_code.classify({"is_error": True, "terminal_reason": "api_error",
+                              "result": "API Error: Can't reach the API server - check your internet or DNS (ENOTFOUND)"})
+    assert str(e.value).startswith("transport:")
