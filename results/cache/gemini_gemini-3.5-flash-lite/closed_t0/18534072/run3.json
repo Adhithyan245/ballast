@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "18534072",
+  "run": 3
+ },
+ "cached_at": "2026-11-03T17:05:01.322305+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "bea74a16270b2fdb",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do general practice characteristics influence uptake of an information technology (IT) innovation in primary care?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+ "input_tokens": 105,
+ "output_tokens": 14,
+ "latency_s": 54.032,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+       "thoughtSignature": "EmAKXgFpFH0TZ4ycAjDDcuXw2+EAves/b0UXFTqFzw93r+q1GYkZ9EnA6XtXZg0sJaoe4xESEg4qrmZp/YgVntHFgKFMwY1fklJj4cxM7LdjeyxgryQQKXsshO727RBKuzQ="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 105,
+   "candidatesTokenCount": 14,
+   "totalTokenCount": 119,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 105
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "BxTqasCRBIunxdIP1pmhsAU"
+ }
+}

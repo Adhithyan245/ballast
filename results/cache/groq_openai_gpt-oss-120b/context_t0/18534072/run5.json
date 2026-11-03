@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "18534072",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T17:06:19.924472+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "92a03684c35389f7",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Recent evaluations of IT innovations in primary care have highlighted variations between centres and practices in uptake and use. We evaluated whether structural characteristics of a general practice were associated with variations in use of a web-based clinical information system underpinning a Managed Clinical Network in diabetes, between the years 2001 and 2003.\n\nMETHODS: Using a computerised audit trail, we calculated the numbers of web-based operations that occurred in each practice, stratified by staff type and year, and adjusted for the numbers of registered diabetic patients. In regression analyses, we determined whether total use was associated with structural characteristics of the practice (total list size, training status, numbers of GPs (general practitioners), mean age of the GPs, numbers of female GPs, level of deprivation of the population and whether staff had received advanced training in diabetes care).\n\nRESULTS: Initially there were a few practices which made very frequent use of the information system, with relatively high numbers of practices using the facility infrequently. However, overall use gradually became more evenly spread. This effect was particularly evident among nurse users. Frequent use by GPs was evident in only a small number of practices, with mean GP use decreasing over the three years. In linear regression analyses, none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff. This was consistently associated with increased use by nurses and GPs.\n\"\"\"\n\nQuestion: Do general practice characteristics influence uptake of an information technology (IT) innovation in primary care?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 80, \"quotes\": [\"none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\", \"This was consistently associated with increased use by nurses and GPs.\"]}",
+ "input_tokens": 501,
+ "output_tokens": 325,
+ "latency_s": 0.891,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "986",
+   "x-ratelimit-remaining-tokens": "6545",
+   "x-ratelimit-reset-requests": "20m9.6s",
+   "x-ratelimit-reset-tokens": "10.912s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-0ebbadf8-85fe-402f-8460-9517d017a925",
+  "object": "chat.completion",
+  "created": 1793725579,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 80, \"quotes\": [\"none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff.\", \"This was consistently associated with increased use by nurses and GPs.\"]}",
+     "reasoning": "We need to answer whether general practice characteristics influence uptake of IT innovation. According to abstract, regression analyses found none of the general practice variables were associated with online use, except numbers of diabetes-educated staff. So generally, characteristics (list size, training status, numbers of GPs, age, female GPs, deprivation) did not influence uptake. However, one characteristic (numbers of diabetes-educated staff) did influence. The question: \"Do general practice characteristics influence uptake of an information technology (IT) innovation in primary care?\" Since some characteristic (diabetes-educated staff) does influence, answer could be \"maybe\" because most characteristics not associated, but one is. The question is broad: \"general practice characteristics\" plural. Since at least one characteristic influences, we could answer \"maybe\". But we could also answer \"yes\" because there is an association with diabetes-educated staff. The phrase \"general practice characteristics\" includes that variable. So answer \"yes\". Confidence maybe 80. Provide quotes: \"none of the general practice variables were associated with online use, either overall or stratified by staff type, except for the numbers of diabetes-educated staff. This was consistently associated with increased use by nurses and GPs.\"\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.082382567,
+   "prompt_tokens": 501,
+   "prompt_time": 0.051272225,
+   "completion_tokens": 325,
+   "completion_time": 0.687624271,
+   "total_tokens": 826,
+   "total_time": 0.738896496,
+   "completion_tokens_details": {
+    "reasoning_tokens": 253
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_6fb4303df4",
+  "x_groq": {
+   "id": "req_01m6h60fbseenar6tvpppqeh6p",
+   "seed": 371369744
+  },
+  "service_tier": "on_demand"
+ }
+}
