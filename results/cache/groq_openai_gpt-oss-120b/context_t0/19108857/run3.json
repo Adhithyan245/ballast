@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "19108857",
+  "run": 3
+ },
+ "cached_at": "2026-11-03T17:09:39.862951+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "126a60c9496a3266",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Tuberculosis continues to be a public health problem in emerging countries with a recent evidence of increased incidence of extrapulmonary localization in developed countries probably linked to HIV. To our knowledge the occurrence of cerebro-mediastinal tuberculosis in an immuno-competent child has not been previously described; moreover the child we describe has a probable Say-Barber-Miller syndrome. We discuss a putative causative link between this syndrome and the occurrence of tuberculosis.\n\nCASE REPORT: A seven-year-old girl presented to our department with a history of infantile encephalopathy since birth characterized by a facial dysmorphy (evocative of a bird face), microcephaly, and mental retardation, and with recurrent infections. The child had complained of back pain for several months; the parents reported anorexia, loss of weight. Spinal and cerebral MRI showed a mediastinal mass involving the spine and cerebral lesions evocative of tuberculomas. The tuberculin interdermal reaction was positive. Culture of a vertebral biopsy was positive for Koch bacillus. Anti-tuberculosis treatment improved general and local status. An extensive immunological work-up was normal.\n\"\"\"\n\nQuestion: Cerebromediastinal tuberculosis in a child with a probable Say-Barber-Miller syndrome: a causative link?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62, \"quotes\": [\"To our knowledge the occurrence of cerebro-mediastinal tuberculosis in an immuno-competent child has not been previously described; moreover the child we describe has a probable Say-Barber-Miller syndrome.\", \"We discuss a putative causative link between this syndrome and the occurrence of tuberculosis.\"]}",
+ "input_tokens": 450,
+ "output_tokens": 302,
+ "latency_s": 0.829,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "963",
+   "x-ratelimit-remaining-tokens": "5020",
+   "x-ratelimit-reset-requests": "53m16.799s",
+   "x-ratelimit-reset-tokens": "22.35s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-dacb64de-722a-4dcd-9dd8-772c5beac8de",
+  "object": "chat.completion",
+  "created": 1793725779,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"maybe\", \"confidence\": 62, \"quotes\": [\"To our knowledge the occurrence of cerebro-mediastinal tuberculosis in an immuno-competent child has not been previously described; moreover the child we describe has a probable Say-Barber-Miller syndrome.\", \"We discuss a putative causative link between this syndrome and the occurrence of tuberculosis.\"]}",
+     "reasoning": "We need to answer whether there is a causative link between cerebromediastinal tuberculosis and Say-Barber-Miller syndrome. The abstract says they discuss a putative causative link, but does not provide evidence; they just note it's probable and discuss. So the question: \"Cerebromediastinal tuberculosis in a child with a probable Say-Barber-Miller syndrome: a causative link?\" Likely answer is \"maybe\" because it's speculative. Provide confidence maybe 60. Need quotes supporting answer: sentences indicating they discuss a putative link and that it's not previously described. For example: \"To our knowledge the occurrence of cerebro-mediastinal tuberculosis in an immuno-competent child has not been previously described; moreover the child we describe has a probable Say-Barrel-Miller syndrome. We discuss a putative causative link between this syndrome and the occurrence of tuberculosis.\" Also maybe \"An extensive immunological work-up was normal.\" That suggests no immunodeficiency, so link is uncertain. Provide 1-2 sentences.\n\nThus JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.083162922,
+   "prompt_tokens": 450,
+   "prompt_time": 0.022209573,
+   "completion_tokens": 302,
+   "completion_time": 0.639194029,
+   "total_tokens": 752,
+   "total_time": 0.661403602,
+   "completion_tokens_details": {
+    "reasoning_tokens": 217
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_90620edd96",
+  "x_groq": {
+   "id": "req_01m6h66jnme38vq84b7rrfhwnw",
+   "seed": 1461297132
+  },
+  "service_tier": "on_demand"
+ }
+}

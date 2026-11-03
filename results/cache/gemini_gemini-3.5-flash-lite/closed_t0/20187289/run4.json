@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "20187289",
+  "run": 4
+ },
+ "cached_at": "2026-11-03T17:42:14.351005+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "32b2afe6c9dc57e6",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Prescriptions as a proxy for asthma in children: a good choice?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 85}",
+ "input_tokens": 101,
+ "output_tokens": 13,
+ "latency_s": 26.375,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"maybe\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0TIGr3g3CD3Ux6uI2BE2xvi3YnA/FjlyDgw03XRpCDBH/68TLT7F1RTB3a5+JocoV22jOGYFgp/kX3tf23NilIp2geBlOtDmu6Ont8NF381vxH2WDjYvVpr2k="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 101,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 114,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 101
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "2xzqavyRKPTX0_gP4_rk4Qk"
+ }
+}

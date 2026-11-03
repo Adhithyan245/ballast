@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "25488308",
+  "run": 2
+ },
+ "cached_at": "2026-11-03T17:35:59.477398+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "23b2434810d63a98",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: The proper angle of miniscrew insertion is important for cortical anchorage, patient safety, and biomechanical control. The purposes of this study are to report the alveolar process thickness and inter-radicular space in the posterior region of the mandible, to assess the impact of different miniscrew insertion angle protocols, and to identify differences between the genders or types of malocclusion.\n\nMATERIALS AND METHODS: In this retrospective study, 100 individuals were selected for orthodontic treatment at a radiology clinic. Cone-beam computed tomography data were imported into 3-dimensional software. The predictor variable was the location in the mandible and insertion angle. The demographic variables collected included age, gender, and malocclusion (Angle Classes I and II). The primary outcome variables were bone thickness and inter-radicular space. The inter-radicular spaces were evaluated 5 mm from the cement-enamel junction. The bone thicknesses were taken at 45°, 60°, and 90° in relation to the alveolar ridge, simulating a miniscrew insertion. These factors were evaluated for sexual dimorphism and malocclusion (Angle Classes I and II). Sexual dimorphism and malocclusion were evaluated with t tests. To compare the inter-radicular space and the thickness of bone between areas, an analysis of variance for repeated measures was used.\n\nRESULTS: The sample was composed of 100 patients with a mean age of 17.4 ± 6.74 years. There were 61 female and 39 male patients and 60 Class I and 40 Class II molar relationships. The inter-radicular space ranged from 2.46 to 3.31 mm, and alveolar bone thickness ranged from 8.01 to 13.77 mm. The thickness tended to decrease with the increase in insertion angle from 45° to 90°. No significant differences between the genders or types of malocclusion were found.\n\"\"\"\n\nQuestion: Can bone thickness and inter-radicular space affect miniscrew placement in posterior mandibular sites?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"The inter-radicular space ranged from 2.46 to 3.31 mm, and alveolar bone thickness ranged from 8.01 to 13.77 mm.\", \"The thickness tended to decrease with the increase in insertion angle from 45° to 90°.\", \"The proper angle of miniscrew insertion is important for cortical anchorage, patient safety, and biomechanical control.\"]}",
+ "input_tokens": 1456,
+ "output_tokens": 153,
+ "latency_s": 4.344,
+ "meta": {
+  "total_cost_usd_estimate": 0.0033988000000000004,
+  "num_turns": 1,
+  "session_id": "3ff7435a-7726-4ebe-8ecf-7f2f9066d03e"
+ },
+ "raw": {
+  "duration_api_ms": 3172,
+  "stop_reason": "end_turn",
+  "session_id": "3ff7435a-7726-4ebe-8ecf-7f2f9066d03e",
+  "total_cost_usd": 0.0033988000000000004,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1454,
+   "output_tokens": 153,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 153,
+     "cache_read_input_tokens": 1454,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1494,
+    "outputTokens": 16,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001574,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 153,
+    "cacheReadInputTokens": 1454,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0018248000000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"The inter-radicular space ranged from 2.46 to 3.31 mm, and alveolar bone thickness ranged from 8.01 to 13.77 mm.\", \"The thickness tended to decrease with the increase in insertion angle from 45° to 90°.\", \"The proper angle of miniscrew insertion is important for cortical anchorage, patient safety, and biomechanical control.\"]}",
+  "ttft_ms": 2071,
+  "type": "result",
+  "duration_ms": 2136,
+  "uuid": "a1d28cef-0e1f-405d-af0c-fb4fadf9dfb2",
+  "ttft_stream_ms": 1108,
+  "time_to_request_ms": 172,
+  "first_content_frame_ms": 1109,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

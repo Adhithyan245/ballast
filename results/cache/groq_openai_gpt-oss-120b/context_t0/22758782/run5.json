@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "22758782",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T17:32:22.297494+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "63999f2895181949",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nINTRODUCTION: Hip fracture in geriatric patients has a substantial economic impact and represents a major cause of morbidity and mortality in this population. At our institution, a regional anesthesia program was instituted for patients undergoing surgery for hip fracture. This retrospective cohort review examines the effects of regional anesthesia (from mainly after July 2007) vs general anesthesia (mainly prior to July 2007) on morbidity, mortality and hospitalization costs.\n\nMETHODS: This retrospective cohort study involved data collection from electronic and paper charts of 308 patients who underwent surgery for hip fracture from September 2006 to December 2008. Data on postoperative morbidity, in-patient mortality, and cost of hospitalization (as estimated from data on hospital charges) were collected and analyzed. Seventy-three patients received regional anesthesia and 235 patients received general anesthesia. During July 2007, approximately halfway through the study period, a regional anesthesia and analgesia program was introduced.\n\nRESULTS: The average cost of hospitalization in patients who received surgery for hip fracture was no different between patients who receive regional or general anesthesia ($16,789 + 631 vs $16,815 + 643, respectively, P = 0.9557). Delay in surgery and intensive care unit (ICU) admission resulted in significantly higher hospitalization costs. Age, male gender, African American race and ICU admission were associated with increased in-hospital mortality. In-hospital mortality and rates of readmission are not statistically different between the two anesthesia groups.\n\"\"\"\n\nQuestion: Regional anesthesia as compared with general anesthesia for surgery in geriatric patients with hip fracture: does it decrease morbidity, mortality, and health care costs?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"The average cost of hospitalization in patients who received surgery for hip fracture was no different between patients who receive regional or general anesthesia ($16,789 + 631 vs $16,815 + 643, respectively, P = 0.9557).\", \"In-hospital mortality and rates of readmission are not statistically different between the two anesthesia groups.\"]}",
+ "input_tokens": 518,
+ "output_tokens": 282,
+ "latency_s": 1.031,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "827",
+   "x-ratelimit-remaining-tokens": "6841",
+   "x-ratelimit-reset-requests": "4h9m7.199s",
+   "x-ratelimit-reset-tokens": "8.692s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-63ab644e-22d5-4408-86d0-7372477fb529",
+  "object": "chat.completion",
+  "created": 1793727141,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"The average cost of hospitalization in patients who received surgery for hip fracture was no different between patients who receive regional or general anesthesia ($16,789 + 631 vs $16,815 + 643, respectively, P = 0.9557).\", \"In-hospital mortality and rates of readmission are not statistically different between the two anesthesia groups.\"]}",
+     "reasoning": "We need to answer the question: Does regional anesthesia compared with general anesthesia for surgery in geriatric patients with hip fracture decrease morbidity, mortality, and health care costs? Based on abstract: It says average cost no different (P=0.9557). In-hospital mortality and rates of readmission are not statistically different between the two anesthesia groups. It doesn't explicitly mention morbidity differences; earlier says postoperative morbidity collected but results not given as different. So answer is \"no\" (i.e., it does not decrease). Confidence high, maybe 90. Provide quotes: \"The average cost of hospitalization ... was no different between patients who receive regional or general anesthesia ($16,789 + 631 vs $16,815 + 643, respectively, P = 0.9557).\" and \"In-hospital mortality and rates of readmission are not statistically different between the two anesthesia groups.\"\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.193202303,
+   "prompt_tokens": 518,
+   "prompt_time": 0.138281101,
+   "completion_tokens": 282,
+   "completion_time": 0.616843367,
+   "total_tokens": 800,
+   "total_time": 0.755124468,
+   "completion_tokens_details": {
+    "reasoning_tokens": 184
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_df9620fe21",
+  "x_groq": {
+   "id": "req_01m6h7g4z0eeb8q4e45emsz1r6",
+   "seed": 808805683
+  },
+  "service_tier": "on_demand"
+ }
+}

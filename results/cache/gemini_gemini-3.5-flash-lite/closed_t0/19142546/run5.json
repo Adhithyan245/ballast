@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "19142546",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T17:29:55.795243+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "c9cb3b7faad0e011",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does quantitative left ventricular regional wall motion change after fibrous tissue resection in endomyocardial fibrosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 105,
+ "output_tokens": 13,
+ "latency_s": 53.359,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0TmNwFTZ+CCcR3sfo27HjOLNv+ZkxeuE1vfRLFeUEs8jyA5WTYuVcxwUf55tV6shzxfNvLysM/HALROXoGf15VFtt5MMCLX9jfUWwi4IgHsGS1pv9njDB4GWM="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 105,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 118,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 105
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "3hnqapHEBaStwbUPx6626Qk"
+ }
+}

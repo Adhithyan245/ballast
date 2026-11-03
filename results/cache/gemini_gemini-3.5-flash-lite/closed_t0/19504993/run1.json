@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "19504993",
+  "run": 1
+ },
+ "cached_at": "2026-11-03T17:36:21.955128+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "5faa729df53b3548",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: It's Fournier's gangrene still dangerous?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+ "input_tokens": 98,
+ "output_tokens": 14,
+ "latency_s": 33.766,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 100}",
+       "thoughtSignature": "EmAKXgFpFH0TnFw2oAj3s8+NLtz38fIC3kfSk2DJPNfGoh7lUcPetxwKa3iE0Xp/xjMM2ssCi3wuETvY0jZchan7Xw3w+jmCPs8gLdhXT9utde0u0Ck5PCAe3gBr5CmFXN0="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 98,
+   "candidatesTokenCount": 14,
+   "totalTokenCount": 112,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 98
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cxvqav-OMtPFxdIP27q-4QQ"
+ }
+}

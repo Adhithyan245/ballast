@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "19504993",
+  "run": 1
+ },
+ "cached_at": "2026-11-03T17:12:38.388295+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "0fc9aff6b7133ed3",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\n\nOBJECTIVES: To assess the morbidity and mortality in the treatment of Fournier's gangrene in our experience.\n\nMETHODS: The medical records of 14 patients with Fournier's gangrene who presented at the University Hospital Center \"Mother Teresa\" from January 1997 to December 2006 were reviewed retrospectively to analyze the outcome and identify the risk factor and prognostic indicators of mortality.\n\nRESULTS: Of the 14 patients, 5 died and 9 survived. Mean age was 54 years (range from 41-61): it was 53 years in the group of survivors and 62 years in deceased group. There was a significant difference in leukocyte count between patients who survived (range 4900-17000/mm) and those died (range 20.300-31000/mm3). Mean hospital stay was about 19 days (range 2-57 days).\n\"\"\"\n\nQuestion: It's Fournier's gangrene still dangerous?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"mortality rate remains high.\", \"Of the 14 patients, 5 died and 9 survived.\"]}",
+ "input_tokens": 411,
+ "output_tokens": 133,
+ "latency_s": 0.656,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "945",
+   "x-ratelimit-remaining-tokens": "5751",
+   "x-ratelimit-reset-requests": "1h19m12s",
+   "x-ratelimit-reset-tokens": "16.867s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-57135e99-84b4-4560-97ae-81191e59db33",
+  "object": "chat.completion",
+  "created": 1793725957,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"mortality rate remains high.\", \"Of the 14 patients, 5 died and 9 survived.\"]}",
+     "reasoning": "We need to answer whether Fournier's gangrene still dangerous. Based on abstract: mortality rate remains high, 5 out of 14 died (≈36%). So answer \"yes\". Confidence high, maybe 95. Provide quotes: \"mortality rate remains high.\" and \"Of the 14 patients, 5 died and 9 survived.\" Provide up to three sentences. Ensure exact copy. Provide JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.147587944,
+   "prompt_tokens": 411,
+   "prompt_time": 0.022226616,
+   "completion_tokens": 133,
+   "completion_time": 0.279708012,
+   "total_tokens": 544,
+   "total_time": 0.301934628,
+   "completion_tokens_details": {
+    "reasoning_tokens": 85
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_fe269835c7",
+  "x_groq": {
+   "id": "req_01m6h6c15vexfv89sdvkwy170s",
+   "seed": 359600813
+  },
+  "service_tier": "on_demand"
+ }
+}

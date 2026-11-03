@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "18570208",
+  "run": 4
+ },
+ "cached_at": "2026-11-03T17:11:14.293654+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "bfc66dada285399a",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is severe macrosomia manifested at 11-14 weeks of gestation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 99}",
+ "input_tokens": 103,
+ "output_tokens": 13,
+ "latency_s": 62.421,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"no\", \"confidence\": 99}",
+       "thoughtSignature": "EmAKXgFpFH0T6ldEYv879d3Ioz41eJw2G9S9CT8N0Rn7lcKhyGgxDQ209dUWnEuWurHEiLJxqpdhRiFyMMt19mzedhYmzWDlQ9OYD4H5iiA/tQnx56NVNPrVvXyEDbyNlH0="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 103,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 116,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 103
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "cxXqavzBI7apxdIPu5vX4Q4"
+ }
+}

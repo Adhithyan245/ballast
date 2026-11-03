@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "25592625",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T17:41:00.438211+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "2b2779576f91eb0b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Although consensus guidelines for pretreatment evaluation and monitoring of propranolol therapy in patients with infantile hemangiomas (IH) have been formulated, little is known about the cardiovascular side effects.\n\nOBJECTIVES: We sought to analyze cardiovascular evaluations in patients with IH at baseline and during treatment with an oral beta-blocker.\n\nMETHODS: Data from 109 patients with IH were retrospectively analyzed. Patient and family history, pretreatment electrocardiogram (ECG), heart rate, and blood pressure were evaluated before initiation of beta-blocker therapy. Blood pressure and standardized questionnaires addressing side effects were evaluated during treatment.\n\nRESULTS: Questionnaire analyses (n = 83) identified 3 cases with a family history of cardiovascular disease in first-degree relatives. ECG findings were normal in each case and no serious complication of therapy occurred. ECG abnormalities were found in 6.5% of patients but there were no contraindications to beta-blocker therapy and no major complications. Hypotension in 9 patients did not require therapy adjustment. In all, 88 parents (81%) reported side effects during beta-blocker treatment.\n\nLIMITATIONS: The relatively small patient cohort is a limitation.\n\"\"\"\n\nQuestion: Is cardiovascular evaluation necessary prior to and during beta-blocker therapy for infantile hemangiomas?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 62, \"quotes\": [\"Patient and family history, pretreatment electrocardiogram (ECG), heart rate, and blood pressure were evaluated before initiation of beta-blocker therapy.\", \"ECG abnormalities were found in 6.5% of patients but there were no contraindications to beta-blocker therapy and no major complications.\", \"Hypotension in 9 patients did not require therapy adjustment.\"]}",
+ "input_tokens": 1273,
+ "output_tokens": 153,
+ "latency_s": 5.281,
+ "meta": {
+  "total_cost_usd_estimate": 0.0032242,
+  "num_turns": 1,
+  "session_id": "bff78ee5-1be3-40d7-b4f4-352311ad6c6a"
+ },
+ "raw": {
+  "duration_api_ms": 2813,
+  "stop_reason": "end_turn",
+  "session_id": "bff78ee5-1be3-40d7-b4f4-352311ad6c6a",
+  "total_cost_usd": 0.0032242,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1271,
+   "output_tokens": 153,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 153,
+     "cache_read_input_tokens": 1271,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1326,
+    "outputTokens": 22,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.001436,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 153,
+    "cacheReadInputTokens": 1271,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0017882000000000002,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"maybe\", \"confidence\": 62, \"quotes\": [\"Patient and family history, pretreatment electrocardiogram (ECG), heart rate, and blood pressure were evaluated before initiation of beta-blocker therapy.\", \"ECG abnormalities were found in 6.5% of patients but there were no contraindications to beta-blocker therapy and no major complications.\", \"Hypotension in 9 patients did not require therapy adjustment.\"]}",
+  "ttft_ms": 1717,
+  "type": "result",
+  "duration_ms": 1779,
+  "uuid": "aebc6b90-17e8-40b4-8585-b187f4ecd3df",
+  "ttft_stream_ms": 737,
+  "time_to_request_ms": 208,
+  "first_content_frame_ms": 738,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

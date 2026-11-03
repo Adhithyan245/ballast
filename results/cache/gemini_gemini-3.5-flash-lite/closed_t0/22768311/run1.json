@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "22768311",
+  "run": 1
+ },
+ "cached_at": "2026-11-03T18:11:55.616477+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "274869fbd8a2f774",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is human cytomegalovirus infection associated with hypertension?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 75}",
+ "input_tokens": 97,
+ "output_tokens": 13,
+ "latency_s": 1.0,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 75}",
+       "thoughtSignature": "EmAKXgFpFH0T7jFADOInm0yfrKty11UoaIPAx093VvC7wSNZRJDXjxUJckF/V42f2OEsxmDJl2cOxqjYl7aGFT+l3BdwYEnN4u9iDmGtKuwCgEOGUukEQUxQlVCnfrA5HMI="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 97,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 110,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 97
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "6iPqaoTbDbWCuMYPx7zO8Ac"
+ }
+}

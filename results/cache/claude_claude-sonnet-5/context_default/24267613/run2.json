@@ -1,0 +1,138 @@
+{
+ "key": {
+  "model": "claude:claude-sonnet-5",
+  "condition": "context_default",
+  "qid": "24267613",
+  "run": 2
+ },
+ "cached_at": "2026-11-03T17:09:44.641637+00:00",
+ "sample": "main",
+ "family": "claude",
+ "model_requested": "claude-sonnet-5",
+ "model_reported": "claude-haiku-4-5-20251001,claude-sonnet-5",
+ "condition": "context_default",
+ "temperature": null,
+ "prompt_hash": "96673914d8d8931c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: In this prospective non randomized observational cohort study we have evaluated the influence of age on outcome of laparoscopic total fundoplication for GERD.\n\nMETHODS: Six hundred and twenty consecutive patients underwent total laparoscopic fundoplication for GERD. Five hundred and twenty-four patients were younger than 65 years (YG), and 96 patients were 65 years or older (EG). The following parameters were considered in the preoperative and postoperative evaluation: presence, duration, and severity of GERD symptoms, presence of a hiatal hernia, manometric and 24 hour pH-monitoring data, duration of operation, incidence of complications and length of hospital stay.\n\nRESULTS: Elderly patients more often had atypical symptoms of GERD and at manometric evaluation had a higher rate of impaired esophageal peristalsis in comparison with younger patients. The duration of the operation was similar between the two groups. The incidence of intraoperative and postoperative complications was low and the difference was not statistically significant between the two groups. An excellent outcome was observed in 93.0% of young patients and in 88.9% of elderly patients (p = NS).\n\"\"\"\n\nQuestion: Is the advanced age a contraindication to GERD laparoscopic surgery?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"The incidence of intraoperative and postoperative complications was low and the difference was not statistically significant between the two groups.\", \"An excellent outcome was observed in 93.0% of young patients and in 88.9% of elderly patients (p = NS).\"]}",
+ "input_tokens": 1207,
+ "output_tokens": 105,
+ "latency_s": 4.422,
+ "meta": {
+  "total_cost_usd_estimate": 0.002719,
+  "num_turns": 1,
+  "session_id": "da3d845d-e11c-451a-8b56-71975a62bc3b"
+ },
+ "raw": {
+  "duration_api_ms": 2224,
+  "stop_reason": "end_turn",
+  "session_id": "da3d845d-e11c-451a-8b56-71975a62bc3b",
+  "total_cost_usd": 0.002719,
+  "usage": {
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 1205,
+   "output_tokens": 105,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 0,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "global",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 105,
+     "cache_read_input_tokens": 1205,
+     "cache_creation_input_tokens": 0,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+     },
+     "type": "message"
+    }
+   ],
+   "speed": "standard"
+  },
+  "modelUsage": {
+   "claude-haiku-4-5-20251001": {
+    "inputTokens": 1314,
+    "outputTokens": 22,
+    "cacheReadInputTokens": 0,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0014240000000000001,
+    "contextWindow": 200000,
+    "maxOutputTokens": 32000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   },
+   "claude-sonnet-5": {
+    "inputTokens": 2,
+    "outputTokens": 105,
+    "cacheReadInputTokens": 1205,
+    "cacheCreationInputTokens": 0,
+    "webSearchRequests": 0,
+    "costUSD": 0.0012950000000000001,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 0,
+    "canonicalModel": "claude-sonnet-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "fast_mode_disabled_reason": "sdk_opt_in_required",
+  "subagent_stats": {
+   "spawned": 0,
+   "requested": {
+    "background": 0,
+    "foreground": 0,
+    "unset": 0
+   },
+   "started_in_background": 0,
+   "max_depth": 0,
+   "spawned_by_subagents": 0,
+   "completed": 0,
+   "failed": 0,
+   "killed": {
+    "parent": 0,
+    "user": 0,
+    "system": 0
+   },
+   "refused": {
+    "depth_limit": 0,
+    "concurrency_limit": 0,
+    "budget": 0
+   },
+   "by_type": {}
+  },
+  "is_error": false,
+  "num_turns": 1,
+  "subtype": "success",
+  "api_error_status": null,
+  "result": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"The incidence of intraoperative and postoperative complications was low and the difference was not statistically significant between the two groups.\", \"An excellent outcome was observed in 93.0% of young patients and in 88.9% of elderly patients (p = NS).\"]}",
+  "ttft_ms": 1605,
+  "type": "result",
+  "duration_ms": 1639,
+  "uuid": "6cc41b10-0788-47c6-8a4c-13fbe52eb315",
+  "ttft_stream_ms": 757,
+  "time_to_request_ms": 195,
+  "first_content_frame_ms": 758,
+  "queued_turn_count": 0,
+  "result_index": 0
+ }
+}

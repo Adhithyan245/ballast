@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "18667100",
+  "run": 3
+ },
+ "cached_at": "2026-11-03T17:15:55.159270+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "6975a3b7830c5489",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do risk factors for suicidal behavior differ by affective disorder polarity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+ "input_tokens": 99,
+ "output_tokens": 13,
+ "latency_s": 37.781,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+       "thoughtSignature": "EmAKXgFpFH0Tl/EPfN2dUPCDlICupPRny4Xtq00MDhvuQl1W8Bo0/4/c3HBclTf2Ikf0wqAgLZQAtIjot2d7W5V6/E89jcenzmkzzbI3WiX9IaV2a5DWwvrFQnScOgbsYbA="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 99,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 112,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 99
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "pRbqaq2TA8iLiLMPkfS8sAc"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "19145527",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T17:32:41.156375+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "7d63ef094d6119e2",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Do emergency medical services professionals think they should participate in disease prevention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 100,
+ "output_tokens": 13,
+ "latency_s": 41.281,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0TQyaOMSkzhQv/7bxyIBjAyDBRn1XlmWhpNuO1K/gJE1NnkSKtrvpPL8I8uUMgbEmu8WnTJJlkbUVQcuk0MXt+jg6fRGu5pwkTod4jWcGUrBWRGYekWQyGXoA="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 100,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 113,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 100
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "jxrqaqXGH-zx0_gPoey08Q8"
+ }
+}

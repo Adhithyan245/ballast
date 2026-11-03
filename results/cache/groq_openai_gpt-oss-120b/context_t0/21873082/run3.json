@@ -1,0 +1,74 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "21873082",
+  "run": 3
+ },
+ "cached_at": "2026-11-03T17:24:17.900734+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d234b305846a9f39",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nRATIONALE AND OBJECTIVES: Despite rapid adoption of the Hirsch index (h-index) as a measure of academic success, the correlations between the h-index and other metrics of productivity remain poorly understood. The aims of this study were to determine whether h-indices were associated with greater National Institutes of Health (NIH) funding success among academic radiologists.\n\nMATERIALS AND METHODS: Using the Scopus database, h-indices were calculated for a random sample of academic radiologists with the rank of professor. Using the NIH tool Research Portfolio Online Reporting Tools Expenditures and Reports, we determined the number, classification, and total years of NIH grant funding as principal investigator for each radiologist. Differences in h-index, sorted by funding status, were determined using Wilcoxon's tests. Associations between h-index and funding status were determined using logistic regression. Significant correlations between h-index and grant metrics were determined using Spearman's ρ.\n\nRESULTS: Among 210 professors of radiology, 48 (23%) secured at least one NIH grant. The mean h-index was significantly higher among individuals who secured at least one NIH grant (19.1) compared to those who did not (10.4) (P<.0001). Professors with h-indices<10 compared to those with h-indices>10 were significantly less likely to receive NIH funding (odds ratio, 0.07; P = .0321). However, h-indices>10 were not significantly predictive of greater funding. No significant relationships were observed between h-index and the number of grant awards, years of prior funding, the amounts of grant awards, or grant classification.\n\"\"\"\n\nQuestion: Is the h-index predictive of greater NIH funding success among academic radiologists?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"Professors with h-indices<10 compared to those with h-indices>10 were significantly less likely to receive NIH funding (odds ratio, 0.07; P = .0321). However, h-indices>10 were not significantly predictive of greater funding.\", \"No significant relationships were observed between h-index and the number of grant awards, years of prior funding, the amounts of grant awards, or grant classification.\"]}",
+ "input_tokens": 1050,
+ "output_tokens": 424,
+ "latency_s": 1.688,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "874",
+   "x-ratelimit-remaining-tokens": "4694",
+   "x-ratelimit-reset-requests": "3h1m26.4s",
+   "x-ratelimit-reset-tokens": "24.795s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-f54dd9cc-571f-4935-992c-ab316efd63f5",
+  "object": "chat.completion",
+  "created": 1793726657,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 92, \"quotes\": [\"Professors with h-indices<10 compared to those with h-indices>10 were significantly less likely to receive NIH funding (odds ratio, 0.07; P = .0321). However, h-indices>10 were not significantly predictive of greater funding.\", \"No significant relationships were observed between h-index and the number of grant awards, years of prior funding, the amounts of grant awards, or grant classification.\"]}",
+     "reasoning": "We need to answer: Is the h-index predictive of greater NIH funding success among academic radiologists? From abstract: \"Professors with h-indices<10 compared to those with h-indices>10 were significantly less likely to receive NIH funding (odds ratio, 0.07; P = .0321). However, h-indices>10 were not significantly predictive of greater funding.\" Also \"No significant relationships were observed between h-index and the number of grant awards, years of prior funding, the amounts of grant awards, or grant classification.\" So h-index is associated with likelihood of any funding (lower h-index less likely), but not predictive of greater funding (i.e., amount, number). The question: \"Is the h-index predictive of greater NIH funding success among academic radiologists?\" The phrase \"greater NIH funding success\" could mean more funding (amount, number) or just any funding. The abstract says h-index >10 not predictive of greater funding. So answer likely \"no\". Provide confidence high, maybe 90. Provide quotes: \"Professors with h-indices<10 compared to those with h-indices>10 were significantly less likely to receive NIH funding (odds ratio, 0.07; P = .0321). However, h-indices>10 were not significantly predictive of greater funding.\" Also \"No significant relationships were observed between h-index and the number of grant awards, years of prior funding, the amounts of grant awards, or grant classification.\"\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.074728909,
+   "prompt_tokens": 1050,
+   "prompt_time": 0.001034143,
+   "completion_tokens": 424,
+   "completion_time": 1.559784823,
+   "total_tokens": 1474,
+   "total_time": 1.560818966,
+   "prompt_tokens_details": {
+    "cached_tokens": 512
+   },
+   "completion_tokens_details": {
+    "reasoning_tokens": 309
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_9241e9962b",
+  "x_groq": {
+   "id": "req_01m6h71b88esbv05ashdjxqv8f",
+   "seed": 23853808
+  },
+  "service_tier": "on_demand"
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "20538207",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T17:18:00.269976+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d112fc351153b71d",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nGOAL: It is generally considered that kidney grafts should be preserved at 4 degrees C during cold storage. However, actual temperature conditions are not known. We decided to study the temperature levels during preservation with the Biotainer storage can and Vitalpack transport pack.\n\nMATERIAL: Temperature was monitored using the Thermobouton probe during preservation of pig kidneys, in the same conditions used with human grafts. The probe recorded the temperature level every 10 minutes during four days. We compared the results found with the new storage can with results obtained in the same conditions with the storage can formerly used by our team. We also studied the best position of the probe for temperature monitoring and the influence of the amount of ice within the transport pack on the temperature level. We then monitored the temperature during the conservation of actual human kidney grafts harvested at our institution from August 2007 to May 2008.\n\nRESULTS: The temperature levels were the same regardless of the position of the probe within the transport pack. The lowest temperature was maintained during 15 hours, and the temperature level stayed below 5 degrees C for 57 hours with the new storage can. The former storage can maintained the lowest temperature level for 80 minutes, and temperature reached 5 degrees C after 10 hours 40 minutes. Temperature levels were similar when 2 or 4 kg of crushed ice were used. We observed similar results when monitoring the conservation of human grafts.\n\"\"\"\n\nQuestion: Should temperature be monitorized during kidney allograft preservation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"Temperature was monitored using the Thermobouton probe during preservation of pig kidneys, in the same conditions used with human grafts.\", \"We compared the results found with the new storage can with results obtained in the same conditions with the storage can formerly used by our team.\", \"We observed similar results when monitoring the conservation of human grafts.\"]}",
+ "input_tokens": 493,
+ "output_tokens": 239,
+ "latency_s": 0.641,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "917",
+   "x-ratelimit-remaining-tokens": "4944",
+   "x-ratelimit-reset-requests": "1h59m31.2s",
+   "x-ratelimit-reset-tokens": "22.92s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-b321ea96-60df-4e5b-9a2e-354f5122fece",
+  "object": "chat.completion",
+  "created": 1793726279,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"Temperature was monitored using the Thermobouton probe during preservation of pig kidneys, in the same conditions used with human grafts.\", \"We compared the results found with the new storage can with results obtained in the same conditions with the storage can formerly used by our team.\", \"We observed similar results when monitoring the conservation of human grafts.\"]}",
+     "reasoning": "We need to answer whether temperature should be monitorized during kidney allograft preservation. The abstract discusses monitoring temperature using a probe, comparing storage cans, and mentions that temperature levels were studied. The question: Should temperature be monitorized? The abstract suggests they monitored and found differences, implying monitoring is important. So answer \"yes\". Provide confidence high, maybe 90. Provide quotes supporting that they monitored temperature and studied its levels. For example: \"Temperature was monitored using the Thermobouton probe during preservation of pig kidneys...\" and \"We compared the results found with the new storage can...\" Also \"We observed similar results when monitoring the conservation of human grafts.\" Provide up to three sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.032824625,
+   "prompt_tokens": 493,
+   "prompt_time": 0.021150333,
+   "completion_tokens": 239,
+   "completion_time": 0.503719424,
+   "total_tokens": 732,
+   "total_time": 0.524869757,
+   "completion_tokens_details": {
+    "reasoning_tokens": 144
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_60e4b492db",
+  "x_groq": {
+   "id": "req_01m6h6nvgyemrbefpxde6bfdmt",
+   "seed": 1636288651
+  },
+  "service_tier": "on_demand"
+ }
+}

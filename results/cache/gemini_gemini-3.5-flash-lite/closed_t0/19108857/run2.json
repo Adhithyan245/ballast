@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "19108857",
+  "run": 2
+ },
+ "cached_at": "2026-11-03T17:25:44.789264+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "4a644f53014b3aac",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Cerebromediastinal tuberculosis in a child with a probable Say-Barber-Miller syndrome: a causative link?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"maybe\", \"confidence\": 50}\n```",
+ "input_tokens": 111,
+ "output_tokens": 18,
+ "latency_s": 33.359,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"maybe\", \"confidence\": 50}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T5RSyhkOWM2XMQtOXPKGMt6Wn57d0RNgHoAMBoIztEtOX3XuiwAk07gVM6LgWviCHwKFY7l4i+9ZQzxsuJUT1GDNd8xa5n3YqEUo4ALJaxXj8FsZ4ZuMxOQs="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 111,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 129,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 111
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "9xjqatGUB--s5NoPt4WvkQM"
+ }
+}

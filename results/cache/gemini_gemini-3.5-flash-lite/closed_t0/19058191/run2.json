@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "19058191",
+  "run": 2
+ },
+ "cached_at": "2026-11-03T17:19:27.642648+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "47f12e63deae94fa",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there a discrepancy between patient and physician quality of life assessment?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 99}\n```",
+ "input_tokens": 100,
+ "output_tokens": 18,
+ "latency_s": 54.766,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 99}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TSXlmb7DhlUiwwzbt77Gnec/G7dG43VC65YjCRQEBLUaUN1Qf2Qj1t25NQnTAlIESTow3t8L5vUx9VKYaTo8W7rKYQ4szQw5SUpFct+6VDw2Wq3X3bycqWeE="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 100,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 118,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 100
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "aBfqaq2GIbapxdIPu5vX4Q4"
+ }
+}
