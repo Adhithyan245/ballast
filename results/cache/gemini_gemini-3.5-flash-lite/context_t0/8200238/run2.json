@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "8200238",
+  "run": 2
+ },
+ "cached_at": "2026-11-03T19:21:58.028821+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "21e1dd0ba88f85b8",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: This prospective, randomized study was designed to evaluate whether or not early postoperative feeding (claimed as a unique benefit of laparoscopic surgery) is possible after laparotomy and colorectal resection.\n\nMETHODS: The trial was performed between July 1, 1992 and October 31, 1992 and included all 64 consecutive patients who underwent laparotomy with either a colonic or an ileal resection. In all cases the nasogastric tube was removed immediately after the operation. Group 1 consisted of 32 patients (age range, 15-81 years; mean, 52 years) who received a regular diet on the first postoperative morning. Group 2 consisted of 32 patients (age range, 15-87 years; mean, 52 years) who were fed in a traditional manner. Regular food was permitted after resolution of ileus as defined by resumption of bowel movements in the absence of abdominal distention, nausea, or vomiting.\n\nRESULTS: The rate of nasogastric tube reinsertion for distention with persistent vomiting was 18.7 percent (six patients) in Group 1 and 12.5 percent (four patients) in Group 2. Although vomiting was experienced more frequently by patients in Group 1 (44 percent vs. 25 percent, respectively), there was no difference between the two groups with regard to the duration of postoperative ileus (3.6 vs. 3.4 days, respectively). In the 26 patients from Group 1 who did not require nasogastric tube reinsertion, there was a trend toward shorter hospitalization (6.7 vs. 8.0 days, respectively).\n\"\"\"\n\nQuestion: Must early postoperative oral intake be limited to laparoscopy?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"PURPOSE: This prospective, randomized study was designed to evaluate whether or not early postoperative feeding (claimed as a unique benefit of laparoscopic surgery) is possible after laparotomy and colorectal resection.\"\n  ]\n}\n```",
+ "input_tokens": 496,
+ "output_tokens": 75,
+ "latency_s": 0.813,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\n  \"answer\": \"no\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"PURPOSE: This prospective, randomized study was designed to evaluate whether or not early postoperative feeding (claimed as a unique benefit of laparoscopic surgery) is possible after laparotomy and colorectal resection.\"\n  ]\n}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TiZ18VuH07USHCuj7+XLBn9S0Rr98vtspKSHwuYDv3gYDbNh8qEAADQFPkNKLXZhyuf0fxZKQQZQJpnvjGU9QFn6kFHOfmuN5GdtscKR/1Cq/YE8Y5rfd3ig="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 77,
+       "endIndex": 280,
+       "uri": "https://pubmed.ncbi.nlm.nih.gov/8200238/",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 496,
+   "candidatesTokenCount": 75,
+   "totalTokenCount": 571,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 496
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "VDTqaqrXKKiPwbUP-aCC-Ak"
+ }
+}

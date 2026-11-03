@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "27288618",
+  "run": 3
+ },
+ "cached_at": "2026-11-03T19:19:33.017708+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "b19c32e411885099",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is inhaled prophylactic heparin useful for prevention and Management of Pneumonia in ventilated ICU patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+ "input_tokens": 104,
+ "output_tokens": 13,
+ "latency_s": 0.844,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"maybe\", \"confidence\": 75}",
+       "thoughtSignature": "EmAKXgFpFH0T8R2bDtAj3xWhnYAyK0kX9nM7K21JHgWLKC5opRJoxqtPUbt6+dXuCQDeCW8JwztMV4cNG6czj3X3gqb0gkrK5aeKtTZHdVe7d12RzzsA3BMg392hUV02bKY="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 104,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 117,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 104
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "wzPqasTpJcK_xdIPj-_xuAo"
+ }
+}

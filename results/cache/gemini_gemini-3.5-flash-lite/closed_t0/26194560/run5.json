@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "26194560",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T19:18:52.674696+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "9acb4a4e7671d6bc",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Does cup-cage reconstruction with oversized cups provide initial stability in THA for osteoporotic acetabular fractures?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 110,
+ "output_tokens": 13,
+ "latency_s": 0.515,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0T7bpr6zUWIQ4Zp+KUkV/C0GJFl6lJelmmbPlHTTqt7uke4a97/SrkQvnFQuDp+3c6X13LCsBp/nviLRy+8zVfIUP3SCPTJLZro5uChOl4er3K1BDnuXgndro="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 110,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 123,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 110
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "mzPqapfUJsz60_gPipOi2QU"
+ }
+}

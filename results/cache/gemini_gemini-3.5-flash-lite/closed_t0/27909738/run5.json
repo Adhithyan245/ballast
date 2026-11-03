@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "27909738",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T19:20:32.785962+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "f784e4b60bdda766",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Prostate bed target interfractional motion using RTOG consensus definitions and daily CT on rails : Does target motion differ between superior and inferior portions of the clinical target volume?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+ "input_tokens": 120,
+ "output_tokens": 13,
+ "latency_s": 0.609,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 85}",
+       "thoughtSignature": "EmAKXgFpFH0T9U1LYY5EOuE74s2VXU72MuWy13OTViMm2ddkNh4IZVN4F2p957yL8d48Py286Y+6CEUl895jpeuoHSQ05lltBNI18iu0rAubILQM0ZkW+MIN//sth2lOIdc="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 120,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 133,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 120
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "_zPqaoWjJ_jX0_gP6pDA8AU"
+ }
+}

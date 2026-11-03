@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "25481573",
+  "run": 1
+ },
+ "cached_at": "2026-11-03T18:24:00.955061+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "b253bb1a2e4e6ee6",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Processing fluency effects: can the content and presentation of participant information sheets influence recruitment and participation for an antenatal intervention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+ "input_tokens": 110,
+ "output_tokens": 13,
+ "latency_s": 0.813,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 90}",
+       "thoughtSignature": "EmAKXgFpFH0TB0n+n8vYR0ijeKhFS9mNtTVI0EJScyq8TO7S5flRCo0kP2APgGI93DnXmah+CAdaWcOZ0i5U1StjufIcu5Y3JVi1X8sxNEfxN7Q7uiz+GZFeAjYo29K6bu8="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 110,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 123,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 110
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "vybqaoXhLI_SiLMPlLbt-Qk"
+ }
+}

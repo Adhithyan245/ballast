@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "27858166",
+  "run": 5
+ },
+ "cached_at": "2026-11-03T19:20:07.713330+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "d3becb8ad4015841",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+ "input_tokens": 104,
+ "output_tokens": 18,
+ "latency_s": 0.531,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T27T/GO6G4tktrN2iPhKRILOLX/E2oRMWWCRxX5zhEv0A8AkCkgV87uVAtmK55ZFHlyTJSM95nAZwe0M1hiJscU8AP5J2QUaX18yrlBOZPx/C0DBXjGtDY4M="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 104,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 122,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 104
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "5jPqap2DJ7-LiLMPpams0QU"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "24793469",
+  "run": 3
+ },
+ "cached_at": "2026-11-03T18:22:55.669520+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "581f650b41c6da11",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is there any relation between cervical cord plaques and discopathy in patients with multiple sclerosis?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 75}",
+ "input_tokens": 104,
+ "output_tokens": 13,
+ "latency_s": 0.546,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 75}",
+       "thoughtSignature": "EmAKXgFpFH0TDj5J/cjMc+I5sRgLYnJYVCkkMxk1bBgHn+RQsMMq/B0mktWw/od/gv6ORAAw1QWSwttt0pK4PmYoRe4neR3YYmJzCmUqgZ46uf979qtRJtFCbWe9tEB2I+I="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 104,
+   "candidatesTokenCount": 13,
+   "totalTokenCount": 117,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 104
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "fibqavqmK__35NoP08mM-AY"
+ }
+}

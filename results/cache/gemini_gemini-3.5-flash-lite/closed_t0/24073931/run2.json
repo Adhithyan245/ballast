@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "closed_t0",
+  "qid": "24073931",
+  "run": 2
+ },
+ "cached_at": "2026-11-03T18:20:03.519860+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "closed_t0",
+ "temperature": 0.0,
+ "prompt_hash": "90a7ea989ec8c585",
+ "prompt": "You are answering a biomedical research question.\n\nQuestion: Is the covering of the resection margin after distal pancreatectomy advantageous?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 75}\n```",
+ "input_tokens": 101,
+ "output_tokens": 18,
+ "latency_s": 2.063,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 75}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Tb9LpduiNOSIzq9bwIL4y3Ln4dNAptg1CAyVTkNvEOGcXViPSGWlfmAp1oujLrcMMtt4ubwJJaumx6sZ6LhL2Z/Z+0KE74i7dh9QvKu6B5OvH7A8vLEfws2E="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 101,
+   "candidatesTokenCount": 18,
+   "totalTokenCount": 119,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 101
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "0SXqapSXBIrHiLMPhb3OMQ"
+ }
+}
