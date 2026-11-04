@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "27858166",
+  "run": 5
+ },
+ "cached_at": "2026-11-04T06:23:20.076393+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "3a098bd368df5884",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: Traumatic aortic injury (TAI) is a rare but life-threatening type of injury. We investigate whether the anatomy of the aortic arch influences the severity of aortic injury.\n\nMETHODS: This is a retrospective study of twenty-two cases treated with TEVAR for TAI in our department from 2009 to 2014. Aortic injury was assessed in accordance with the recommendations of the Society of Vascular Surgery. We measured the aortic arch angle and the aortic arch index, based on the initial angio-CT scan, in each of the analyzed cases.\n\nRESULTS: The mean aortic arch index and mean aortic arch angle were 6.8 cm and 58.3°, respectively, in the type I injury group; 4.4 cm and 45.9° in the type III group; 3.3 cm and 37° in the type IV group. There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups. A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\n\"\"\"\n\nQuestion: Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\", \"There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups.\"]}",
+ "input_tokens": 466,
+ "output_tokens": 258,
+ "latency_s": 0.875,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "995",
+   "x-ratelimit-remaining-tokens": "5778",
+   "x-ratelimit-reset-requests": "7m12s",
+   "x-ratelimit-reset-tokens": "16.665s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-7be52477-7bdf-45c5-ac8a-f8e74cc51f67",
+  "object": "chat.completion",
+  "created": 1793773398,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"yes\", \"confidence\": 92, \"quotes\": [\"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\", \"There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups.\"]}",
+     "reasoning": "We need to answer based on abstract. The question: \"Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\" The abstract reports that aortic arch angle is significantly associated with occurrence of type III damage (OR 1.5). Also differences in arch index and angle between groups. So answer \"yes\". Confidence high, maybe 90. Provide quotes: e.g., \"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\" Also \"There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups.\" Provide up to three sentences.\n\nReturn JSON."
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243426082,
+   "prompt_tokens": 466,
+   "prompt_time": 0.019437032,
+   "completion_tokens": 258,
+   "completion_time": 0.542985555,
+   "total_tokens": 724,
+   "total_time": 0.562422587,
+   "completion_tokens_details": {
+    "reasoning_tokens": 163
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_69334c0be3",
+  "x_groq": {
+   "id": "req_01m6jkksj3e91tdg0pbjkkw3vg",
+   "seed": 992137461
+  },
+  "service_tier": "on_demand"
+ }
+}

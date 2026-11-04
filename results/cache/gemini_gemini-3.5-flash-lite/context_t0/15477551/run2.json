@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "15477551",
+  "run": 2
+ },
+ "cached_at": "2026-11-04T16:27:10.495071+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "2a0262e526a12b1e",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To investigate the role of human T-lymphotrophic virus type I (HTLV-I) infection in four patients who developed slowly progressive myelopathy with abnormal MRI lesions in the cervical cord levels.\n\nMETHODS: Clinical and neuroradiologic examinations were performed, and the odds that an HTLV-I-infected individual of specified genotype, age, and provirus load had HTLV-I-associated myelopathy (HAM)/tropical spastic paraparesis (TSP) were calculated.\n\nRESULTS: Anti-HTLV-I antibodies were positive in both the serum and the CSF in all of the patients. Biopsied sample from spinal cord lesions showed inflammatory changes in Patient 1. Patient 2 had a demyelinating type of sensorimotor polyneuropathy. Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\n\"\"\"\n\nQuestion: Chronic progressive cervical myelopathy with HTLV-I infection: Variant form of HAM/TSP?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"]}\n```",
+ "input_tokens": 332,
+ "output_tokens": 45,
+ "latency_s": 1.375,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 90, \"quotes\": [\"Two of the three patients examined showed high risk of developing HAM/TSP in virologic and immunologic aspects.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TQzp1kmY8o7ax/LY/4DDHonM3eTotbphPb2QZJhMs+4QiVmn4AczhoN4fSnl5JoAuASO0MFFnavj4WOgiOSAfxKbGsjSZOUQIxeNG4LTdBp/svku9Mhp/rIA="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 332,
+   "candidatesTokenCount": 45,
+   "totalTokenCount": 377,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 332
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "2lzrapDyL-zx0_gPys7ukQk"
+ }
+}

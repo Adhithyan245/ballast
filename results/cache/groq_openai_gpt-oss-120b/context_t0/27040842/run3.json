@@ -1,0 +1,71 @@
+{
+ "key": {
+  "model": "groq:openai/gpt-oss-120b",
+  "condition": "context_t0",
+  "qid": "27040842",
+  "run": 3
+ },
+ "cached_at": "2026-11-04T04:42:44.564683+00:00",
+ "sample": "main",
+ "family": "groq",
+ "model_requested": "openai/gpt-oss-120b",
+ "model_reported": "openai/gpt-oss-120b",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "ed02c553d657c367",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To measure the dimensions of compensatory hypertrophy of the middle turbinate in patients with nasal septal deviation, before and after septoplasty.\n\nMETHODS: The mucosal and bony structures of the middle turbinate and the angle of the septum were measured using radiological analysis before septoplasty and at least one year after septoplasty. All pre- and post-operative measurements of the middle turbinate were compared using the paired sample t-test and Wilcoxon rank sum test.\n\nRESULTS: The dimensions of bony and mucosal components of the middle turbinate on concave and convex sides of the septum were not significantly changed by septoplasty. There was a significant negative correlation after septoplasty between the angle of the septum and the middle turbinate total area on the deviated side (p = 0.033).\n\"\"\"\n\nQuestion: Does septoplasty change the dimensions of compensatory hypertrophy of the middle turbinate?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"The dimensions of bony and mucosal components of the middle turbinate on concave and convex sides of the septum were not significantly changed by septoplasty.\"]}",
+ "input_tokens": 376,
+ "output_tokens": 144,
+ "latency_s": 0.625,
+ "meta": {
+  "finish_reason": "stop",
+  "has_reasoning": true,
+  "ratelimit_headers": {
+   "x-ratelimit-limit-requests": "1000",
+   "x-ratelimit-limit-tokens": "8000",
+   "x-ratelimit-remaining-requests": "995",
+   "x-ratelimit-remaining-tokens": "5543",
+   "x-ratelimit-reset-requests": "7m12s",
+   "x-ratelimit-reset-tokens": "18.427s"
+  }
+ },
+ "raw": {
+  "id": "chatcmpl-bdb5447c-9b4c-4883-b770-edb2d982d637",
+  "object": "chat.completion",
+  "created": 1793767362,
+  "model": "openai/gpt-oss-120b",
+  "choices": [
+   {
+    "index": 0,
+    "message": {
+     "role": "assistant",
+     "content": "{\"answer\": \"no\", \"confidence\": 95, \"quotes\": [\"The dimensions of bony and mucosal components of the middle turbinate on concave and convex sides of the septum were not significantly changed by septoplasty.\"]}",
+     "reasoning": "We need to answer whether septoplasty changes dimensions of compensatory hypertrophy of middle turbinate. The abstract says: \"The dimensions of bony and mucosal components of the middle turbinate on concave and convex sides of the septum were not significantly changed by septoplasty.\" So answer: no. Confidence high, maybe 95. Provide quotes. Provide one to three sentences. Use exact sentences. Provide JSON.\n\n"
+    },
+    "logprobs": null,
+    "finish_reason": "stop"
+   }
+  ],
+  "usage": {
+   "queue_time": 0.243572062,
+   "prompt_tokens": 376,
+   "prompt_time": 0.016183912,
+   "completion_tokens": 144,
+   "completion_time": 0.300175411,
+   "total_tokens": 520,
+   "total_time": 0.316359323,
+   "completion_tokens_details": {
+    "reasoning_tokens": 85
+   }
+  },
+  "usage_breakdown": null,
+  "system_fingerprint": "fp_c15aa9c1b7",
+  "x_groq": {
+   "id": "req_01m6jdvkvve9t9jxdw1kv7dvm2",
+   "seed": 474939494
+  },
+  "service_tier": "on_demand"
+ }
+}
