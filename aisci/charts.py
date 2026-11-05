@@ -91,7 +91,7 @@ def _gate_curves(res, path):
                         ax.plot(p["coverage"], p["accuracy_answered"], marker=marker, markersize=11,
                                 markerfacecolor="none", markeredgecolor=color, markeredgewidth=1.5)
             ax.set_xlim(0, 1.02)
-            ax.set_ylim(0.3, 1.0)
+            ax.set_ylim(0.2, 1.0)
             ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0, decimals=0))
             ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0, decimals=0))
             _style(ax, f"{m['name']}{'†' if m['exploratory'] else ''}" if row == 0 else "", "")
