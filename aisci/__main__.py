@@ -7,6 +7,7 @@
   smoke [ENTRY ...]     one test call per provider (saved under results/smoke/)
   run SAMPLE            run the study on a sample (resumable from cache)
   status [SAMPLE]       calls, missing and parse failures per model/condition
+  analyze               preregistered analysis: tables (results/analysis/) and charts (results/charts/)
 """
 from __future__ import annotations
 
@@ -138,6 +139,14 @@ def cmd_run(a):
               + (f"  STOPPED: {s.stopped}" if s.stopped else ""))
 
 
+def cmd_analyze(a):
+    from .analysis import run
+
+    res = run(charts=not a.no_charts)
+    print(f"analysed {res['questions']} questions x {len(res['models'])} models -> "
+          f"results/analysis/ and results/charts/")
+
+
 def cmd_status(a):
     from .results import status_table
 
@@ -165,6 +174,8 @@ def main(argv=None):
     p.add_argument("--max-calls", type=int, help="stop each provider after this many new calls")
     p.add_argument("--limit", type=int, help="only the first N questions (debugging)")
     p.set_defaults(fn=cmd_run)
+    p = sub.add_parser("analyze"); p.add_argument("--no-charts", action="store_true")
+    p.set_defaults(fn=cmd_analyze)
     p = sub.add_parser("status"); p.add_argument("sample", nargs="?")
     p.set_defaults(fn=cmd_status)
     a = ap.parse_args(argv)
