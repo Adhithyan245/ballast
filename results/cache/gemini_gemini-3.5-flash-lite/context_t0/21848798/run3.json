@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "21848798",
+  "run": 3
+ },
+ "cached_at": "2026-11-04T18:03:29.686698+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "b345c37a8fcd520a",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: In recent clinical trials (RCT) of bowel preparation, Golytely was more efficacious than MiraLAX. We hypothesised that there is a difference in adenoma detection between Golytely and MiraLAX.\n\nAIMS: To compare the adenoma detection rate (ADR) between these bowel preparations, and to identify independent predictors of bowel preparation quality and adenoma detection.\n\nMETHODS: This was a post hoc analysis of an RCT that assessed efficacy and patient tolerability of Golytely vs. MiraLAX/Gatorade in average risk screening colonoscopy patients. Bowel preparation quality was measured with the Boston Bowel Preparation Scale (BBPS). An excellent/good equivalent BBPS score was defined as ≥ 7. Polyp pathology review was performed. ADR was defined as the proportion of colonoscopies with an adenoma. Univariate and multivariate analyses were conducted.\n\nRESULTS: One hundred and ninety patients were prospectively enrolled (87 MiraLAX, 103 Golytely). Golytely had a higher rate of a BBPS score ≥ 7 (82.5% vs. MiraLAX 67.8%, P=0.02). The ADR in the Golytely cohort was 26.2% (27/103), and was 16.1% (14/87) for MiraLAX (P = 0.091). On multivariate analyses, Golytely was 2.13 × more likely to be associated with a BBPS ≥ 7 (95% CI 1.05-4.32, P = 0.04) and 2.28 × more likely to be associated with adenoma detection (95% CI 1.05-4.98, P = 0.04) than MiraLAX.\n\"\"\"\n\nQuestion: MiraLAX vs. Golytely: is there a significant difference in the adenoma detection rate?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"On multivariate analyses, Golytely was 2.13 \\u00d7 more likely to be associated with a BBPS \\u2265 7 (95% CI 1.05-4.32, P = 0.04) and 2.28 \\u00d7 more likely to be associated with adenoma detection (95% CI 1.05-4.98, P = 0.04) than MiraLAX.\"]}",
+ "input_tokens": 545,
+ "output_tokens": 129,
+ "latency_s": 22.5,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"On multivariate analyses, Golytely was 2.13 \\u00d7 more likely to be associated with a BBPS \\u2265 7 (95% CI 1.05-4.32, P = 0.04) and 2.28 \\u00d7 more likely to be associated with adenoma detection (95% CI 1.05-4.98, P = 0.04) than MiraLAX.\"]}",
+       "thoughtSignature": "EmAKXgFpFH0ToG6mxfGM3c3GI+76jsh0do9jQHUZLVwKRn70EbBoTCAfiTaKKJvSfKfp1Pu+i1+uYkenQJIU72246yfEq+lRAKGi+J93lQ8cuFd4saV8PIYQeDhCNuZXCWM="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 545,
+   "candidatesTokenCount": 129,
+   "totalTokenCount": 674,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 545
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "WHPrapXbLf6F1sgPv_CF2QE"
+ }
+}

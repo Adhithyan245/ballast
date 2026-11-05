@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "18570208",
+  "run": 4
+ },
+ "cached_at": "2026-11-04T17:32:35.657726+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "863e869431d18c43",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To determine the association between fetal biometry in the first or early second trimester and severe macrosomia at delivery.\n\nMETHODS: This case-control study included 30 term severely macrosomic neonates; 90 appropriate-for-gestational age (AGA) neonates served as controls. All pregnancies underwent nuchal translucency (NT) screening at 11-14 weeks' gestation. Pregnancies were dated by accurate last menstrual period consistent with crown-rump length (CRL) measurements at the time of screening, early pregnancy CRL or date of fertilization. The association between birth weight and the difference between the measured and the expected CRL at the time of NT screening was analyzed.\n\nRESULTS: The difference between measured and expected CRL, expressed both in mm and in days of gestation, was statistically greater in the severely macrosomic neonates compared with controls (mean, 6.66 +/- 4.78 mm vs. 1.17 +/- 4.6 mm, P<0.0001 and 3 +/- 2.2 days vs. 0.5 +/- 2.3 days, P<0.0001, respectively). Furthermore, there were significant correlations between the extent of macrosomia and the discrepancy between expected and measured fetal size at the time of NT screening (r = 0.47, P<0.01 and r = 0.48, P<0.01, respectively).\n\"\"\"\n\nQuestion: Is severe macrosomia manifested at 11-14 weeks of gestation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"The difference between measured and expected CRL, expressed both in mm and in days of gestation, was statistically greater in the severely macrosomic neonates compared with controls (mean, 6.66 +/- 4.78 mm vs. 1.17 +/- 4.6 mm, P<0.0001 and 3 +/- 2.2 days vs. 0.5 +/- 2.3 days, P<0.0001, respectively).\", \"Furthermore, there were significant correlations between the extent of macrosomia and the discrepancy between expected and measured fetal size at the time of NT screening (r = 0.47, P<0.01 and r = 0.48, P<0.01, respectively).\"]}\n```",
+ "input_tokens": 455,
+ "output_tokens": 186,
+ "latency_s": 16.11,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"The difference between measured and expected CRL, expressed both in mm and in days of gestation, was statistically greater in the severely macrosomic neonates compared with controls (mean, 6.66 +/- 4.78 mm vs. 1.17 +/- 4.6 mm, P<0.0001 and 3 +/- 2.2 days vs. 0.5 +/- 2.3 days, P<0.0001, respectively).\", \"Furthermore, there were significant correlations between the extent of macrosomia and the discrepancy between expected and measured fetal size at the time of NT screening (r = 0.47, P<0.01 and r = 0.48, P<0.01, respectively).\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0THbgwgpDUk5IE6huCpKzdq1jnH9QxsY3LdevuAXuCXll7JutLX4nm/WCW8M4gGEUJQCnJWzUCQ+ERK5fr1tcQ0UPl/iU5sCQY//OPd9x+Ck4KOpPomnOBcCU="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 56,
+       "endIndex": 579,
+       "uri": "https://www.ncbi.nlm.nih.gov/pubmed/18570208",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 455,
+   "candidatesTokenCount": 186,
+   "totalTokenCount": 641,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 455
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "IWzrapXHBoKsuMYPo_ST8AU"
+ }
+}

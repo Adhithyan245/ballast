@@ -1,0 +1,60 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "27858166",
+  "run": 3
+ },
+ "cached_at": "2026-11-05T13:26:38.451515+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "3a098bd368df5884",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: Traumatic aortic injury (TAI) is a rare but life-threatening type of injury. We investigate whether the anatomy of the aortic arch influences the severity of aortic injury.\n\nMETHODS: This is a retrospective study of twenty-two cases treated with TEVAR for TAI in our department from 2009 to 2014. Aortic injury was assessed in accordance with the recommendations of the Society of Vascular Surgery. We measured the aortic arch angle and the aortic arch index, based on the initial angio-CT scan, in each of the analyzed cases.\n\nRESULTS: The mean aortic arch index and mean aortic arch angle were 6.8 cm and 58.3°, respectively, in the type I injury group; 4.4 cm and 45.9° in the type III group; 3.3 cm and 37° in the type IV group. There were substantial differences in both the aortic arch index and the aortic arch angle of the type III and IV groups. A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\n\"\"\"\n\nQuestion: Traumatic aortic injury: does the anatomy of the aortic arch influence aortic trauma severity?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\"\n  ]\n}",
+ "input_tokens": 407,
+ "output_tokens": 74,
+ "latency_s": 3.172,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\n"
+      },
+      {
+       "text": "  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"A multivariate analysis confirmed that the aortic arch angle was significantly associated with the occurrence of type III damage (OR 1.5; 95% CI 1.03-2.2).\"\n  ]\n}",
+       "thoughtSignature": "EmAKXgFpFH0TYipR5h54N/eldfzjaRZLL+vWs9h23Ez3Vx6kUAXaVZivRl7ugolOb1/qX8MH3QMrF2O274p3bN+ARx+Xy51xMMMAarnuav05tmTgaFUNEus1wdiKWnX2lrI="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 407,
+   "candidatesTokenCount": 74,
+   "totalTokenCount": 481,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 407
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "CoTsasPYB4C6xdIPvvSpsQ4"
+ }
+}

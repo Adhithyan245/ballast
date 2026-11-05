@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "16991071",
+  "run": 2
+ },
+ "cached_at": "2026-11-04T17:19:35.296134+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "79208ee6b84b4b95",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: In literature there are only few data which describe the influence of occupation on the development of rotator cuff disease.\n\nMETHODS: In a retrospective study, 760 open rotator cuff repairs were analysed and related to the profession and occupational load. Exclusion criteria were traumatic tears and sports injuries. All male persons were statistically analysed and the data compared with occupational patterns of the region, obtained from the Federal Statistical State Office.\n\nRESULTS: Rotator cuff repairs were performed in 472 males who had no evidence for a traumatic origin. After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\n\"\"\"\n\nQuestion: Rotator cuff tear--an occupational disease?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\"]}\n```",
+ "input_tokens": 309,
+ "output_tokens": 84,
+ "latency_s": 11.25,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"After statistical analysis (p<0.001) we found significantly more patients working in agriculture and forestry (6.38% versus 1.07% in Bavaria) and in the building industry (35.11% versus 13.40% in Bavaria).\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TO9h9TVXnn+vPViAtM/QtHvdKXxhEpfAHkTwoq+49KC+KVpq0D4mwkwEyG/HRTpZjicXQR36iiIzxwvjm0xFpbu17dqR6hfBJs3NPmJwpM/uykGsSlTpqqgQ="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 309,
+   "candidatesTokenCount": 84,
+   "totalTokenCount": 393,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 309
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "GWnraoaoJrnBxdIP7_uLyQk"
+ }
+}

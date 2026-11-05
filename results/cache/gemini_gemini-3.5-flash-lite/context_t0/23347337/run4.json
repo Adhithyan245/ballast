@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "23347337",
+  "run": 4
+ },
+ "cached_at": "2026-11-04T18:25:37.104694+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "94c3adccad034018",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: To provide equality of cancer care to rural patients, Townsville Cancer Centre administers intensive chemotherapy regimens to rural patients with node-positive breast and metastatic colorectal cancers at the same doses as urban patients. Side-effects were usually managed by rural general practitioners locally.AIM: The aim is to determine the safety of this practice by comparing the profile of serious adverse events and dose intensities between urban and rural patients at the Townsville Cancer Centre.\n\nMETHOD: A retrospective audit was conducted in patients with metastatic colorectal and node-positive breast cancers during a 24-month period. Fisher's exact test was used for analysis. Rurality was determined as per rural, remote and metropolitan classification.\n\nRESULTS: Of the 121 patients included, 70 and 51 patients had breast and colon cancers respectively. The urban versus rural patient split among all patients, breast and colorectal cancer subgroups was 68 versus 53, 43 versus 27 and 25 versus 26 respectively. A total of 421 cycles was given with dose intensity of>95% for breast cancer in both groups (P>0.05). Rate of febrile neutropenia was 9.3% versus 7.4% (P = 0.56). For XELOX, rate of diarrhoea was 20% versus 19% (P = 0.66) and rate of vomiting was 20% versus 11% (P = 0.11). Only two patients were transferred to Townsville for admission. No toxic death occurred in either group.\n\"\"\"\n\nQuestion: Is intensive chemotherapy safe for rural cancer patients?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Only two patients were transferred to Townsville for admission.\", \"No toxic death occurred in either group.\"]}\n```",
+ "input_tokens": 475,
+ "output_tokens": 44,
+ "latency_s": 5.813,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Only two patients were transferred to Townsville for admission.\", \"No toxic death occurred in either group.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Tt/Ozv+OzlrRFTmCeECJTYTydTr5RFFJ+RQSJUd+bsh/IVdBev6r9pmSmwiZAeEWtVO6T3YBsp6McYbqvNF+T7s927o0p1BFnvvwJCtCWXBPMjrgZ2paY0Bs="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 475,
+   "candidatesTokenCount": 44,
+   "totalTokenCount": 519,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 475
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "mHjrar_AMZ-p5NoP8NzmiQU"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "19504993",
+  "run": 5
+ },
+ "cached_at": "2026-11-04T17:46:02.281454+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "0fc9aff6b7133ed3",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\n\nOBJECTIVES: To assess the morbidity and mortality in the treatment of Fournier's gangrene in our experience.\n\nMETHODS: The medical records of 14 patients with Fournier's gangrene who presented at the University Hospital Center \"Mother Teresa\" from January 1997 to December 2006 were reviewed retrospectively to analyze the outcome and identify the risk factor and prognostic indicators of mortality.\n\nRESULTS: Of the 14 patients, 5 died and 9 survived. Mean age was 54 years (range from 41-61): it was 53 years in the group of survivors and 62 years in deceased group. There was a significant difference in leukocyte count between patients who survived (range 4900-17000/mm) and those died (range 20.300-31000/mm3). Mean hospital stay was about 19 days (range 2-57 days).\n\"\"\"\n\nQuestion: It's Fournier's gangrene still dangerous?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\"]}\n```",
+ "input_tokens": 380,
+ "output_tokens": 54,
+ "latency_s": 11.438,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Fournier's gangrene is known to have an impact in the morbidity and despite antibiotics and aggressive debridement, the mortality rate remains high.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Th1rVH+Iz1tr7X+m8IIZrR+vusdVdl/QVIImKL80CgaU06WtcpmG2f9DqGsvme4f+wlgLrDWHS/i0e0Yiu66rM0BqXh1jDQIvbkqROMV38fs4kL4ILPPGqIs="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 380,
+   "candidatesTokenCount": 54,
+   "totalTokenCount": 434,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 380
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "TG_raqfaGPPNytMPnbOLsAw"
+ }
+}

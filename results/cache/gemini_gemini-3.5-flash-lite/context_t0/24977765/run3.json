@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "24977765",
+  "run": 3
+ },
+ "cached_at": "2026-11-04T18:37:57.844752+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "f42de9acdf96885a",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Concussions are commonly diagnosed in pediatric patients presenting to the emergency department (ED). The primary objective of this study was to evaluate compliance with ED discharge instructions for concussion management.\n\nMETHODS: A prospective cohort study was conducted from November 2011 to November 2012 in a pediatric ED at a regional Level 1 trauma center, serving 35,000 pediatric patients per year. Subjects were aged 8 years to 17 years and were discharged from the ED with a diagnosis of concussion. Exclusion criteria included recent (past 3 months) diagnosis of head injury, hospital admission, intracranial injury, skull fracture, suspected nonaccidental trauma, or preexisting neurologic condition. Subjects were administered a baseline survey in the ED and were given standardized discharge instructions for concussion by the treating physician. Telephone follow-up surveys were conducted at 2 weeks and 4 weeks after ED visit.\n\nRESULTS: A total of 150 patients were enrolled. The majority (67%) of concussions were sports related. Among sports-related concussions, soccer (30%), football (11%), lacrosse (8%), and basketball (8%) injuries were most common. More than one third (39%) reported return to play (RTP) on the day of the injury. Physician follow-up was equivalent for sport and nonsport concussions (2 weeks, 58%; 4 weeks, 64%). Sports-related concussion patients were more likely to follow up with a trainer (2 weeks, 25% vs. 10%, p = 0.06; 4 weeks, 29% vs. 8%, p<0.01). Of the patients who did RTP or normal activities at 2 weeks (44%), more than one third (35%) were symptomatic, and most (58%) did not receive medical clearance. Of the patients who had returned to activities at 4 weeks (64%), less than one quarter (23%) were symptomatic, and most (54%) received medical clearance.\n\"\"\"\n\nQuestion: Are pediatric concussion patients compliant with discharge instructions?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"Of the patients who did RTP or normal activities at 2 weeks (44%), more than one third (35%) were symptomatic, and most (58%) did not receive medical clearance.\"]}",
+ "input_tokens": 567,
+ "output_tokens": 58,
+ "latency_s": 1.187,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"no\", \"confidence\": 90, \"quotes\": [\"Of the patients who did RTP or normal activities at 2 weeks (44%), more than one third (35%) were symptomatic, and most (58%) did not receive medical clearance.\"]}",
+       "thoughtSignature": "EmAKXgFpFH0T8EYQyJ+Jvw3ln0oRzrKfoXJ0rwXFdB3XWVhLFlOCBQ/oDhQRaNZnAKlP1Hi83d9jLzAtTFS5CKJaeeij8mb5ONdkFIYQqgq24NczltHrVG3ydTq13F9WZ8E="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 567,
+   "candidatesTokenCount": 58,
+   "totalTokenCount": 625,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 567
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "gnvravbPCfPNytMP7PyF-AI"
+ }
+}

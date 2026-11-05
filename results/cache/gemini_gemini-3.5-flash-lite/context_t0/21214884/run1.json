@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "21214884",
+  "run": 1
+ },
+ "cached_at": "2026-11-04T17:56:29.913013+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "c0313972d80193f0",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nMETHODS: Using polymerase chain reaction techniques, we evaluated the presence of HPV infection in human breast milk collected from 21 HPV-positive and 11 HPV-negative mothers.\n\nRESULTS: Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\n\"\"\"\n\nQuestion: Can 'high-risk' human papillomaviruses (HPVs) be detected in human breast milk?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 100, \"quotes\": [\"RESULTS: Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\"]}",
+ "input_tokens": 260,
+ "output_tokens": 89,
+ "latency_s": 17.359,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"no\", \"confidence\": 100, \"quotes\": [\"RESULTS: Of the 32 studied human milk specimens, no 'high-risk' HPV 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58 or 58 DNA was detected.\"]}",
+       "thoughtSignature": "EmAKXgFpFH0TSz+ylL3IUUAn38Cab0VhAoCr2zfI1rFSUkMJ2jNLH19QRYbAJZ9GxhX2IBwRNLOsLIpFhZXounWUqZ8sXbVyKvnOc+dhDQNEHKIZA45UnGIpZb2cI9Rq5Qs="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 260,
+   "candidatesTokenCount": 89,
+   "totalTokenCount": 349,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 260
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "unHravagB9r9ytMPsO-AiAI"
+ }
+}

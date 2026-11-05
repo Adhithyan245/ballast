@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "25481573",
+  "run": 4
+ },
+ "cached_at": "2026-11-04T18:40:17.489072+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "ed4f4fac299e61f9",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To assess the extent to which the title and font of participant information sheets (PISs) can influence pregnant women's and trainee midwives' perceptions of an antenatal intervention.\n\nMETHODS: Pregnant women (n=35) and trainee midwives (n=36) were randomly presented with one of four PISs where the title and font of the PIS had been manipulated to create four experimental conditions (i.e., Double Fluent; Double Awkward; Fluent Title-Awkward Font; Awkward Title-Fluent Font). After reading the PIS, participants rated their perceptions of the intervention (i.e., Attractiveness, Complexity, Expected Risk, Required Effort) using five-point Likert scales.\n\nRESULTS: A 4×2 factorial multivariate analysis of variance revealed that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent (p=.024) and Awkward Title-Fluent Font (p=.021) conditions.\n\"\"\"\n\nQuestion: Processing fluency effects: can the content and presentation of participant information sheets influence recruitment and participation for an antenatal intervention?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"OBJECTIVE: To assess the extent to which the title and font of participant information sheets (PISs) can influence pregnant women's and trainee midwives' perceptions of an antenatal intervention.\", \"RESULTS: A 4×2 factorial multivariate analysis of variance revealed that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent (p=.024) and Awkward Title-Fluent Font (p=.021) conditions.\"]}\n```",
+ "input_tokens": 363,
+ "output_tokens": 119,
+ "latency_s": 8.422,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"OBJECTIVE: To assess the extent to which the title and font of participant information sheets (PISs) can influence pregnant women's and trainee midwives' perceptions of an antenatal intervention.\", \"RESULTS: A 4×2 factorial multivariate analysis of variance revealed that pregnant women rated the Double Awkward condition as significantly more complex than the Double Fluent (p=.024) and Awkward Title-Fluent Font (p=.021) conditions.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TN/23MIP9VpNfwBchr7kRxBu13dsP9EicC4enrE8uJdMApxF9F0E7OraJlPjAevvBi77jjFdpJF0SwKoHs3LkghlLJWt9kYUoorZwa3+mMv+O71cVu/CPi4c="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 256,
+       "endIndex": 487,
+       "uri": "https://www.researchgate.net/profile/Tina_Lavender2",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 363,
+   "candidatesTokenCount": 119,
+   "totalTokenCount": 482,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 363
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Bnzrap7wI72p5NoPmOSHgAU"
+ }
+}

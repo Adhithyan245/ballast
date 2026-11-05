@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "21880023",
+  "run": 5
+ },
+ "cached_at": "2026-11-04T18:07:33.602840+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "305bfada709af1ef",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To study whether exercise during pregnancy reduces the risk of postnatal depression.\n\nDESIGN: Randomized controlled trial.\n\nSETTING: Trondheim and Stavanger University Hospitals, Norway.\n\nPOPULATION AND SAMPLE: Eight hundred and fifty-five pregnant women were randomized to intervention or control groups.\n\nMETHODS: The intervention was a 12 week exercise program, including aerobic and strengthening exercises, conducted between week 20 and 36 of pregnancy. One weekly group session was led by physiotherapists, and home exercises were encouraged twice a week. Control women received regular antenatal care.\n\nMAIN OUTCOME MEASURES: Edinburgh Postnatal Depression Scale (EPDS) completed three months after birth. Scores of 10 or more and 13 or more suggested probable minor and major depression, respectively.\n\nRESULTS: Fourteen of 379 (3.7%) women in the intervention group and 17 of 340 (5.0%) in the control group had an EPDS score of ≥10 (p=0.46), and four of 379 (1.2%) women in the intervention group and eight of 340 (2.4%) in the control group had an EPDS score of ≥13 (p=0.25). Among women who did not exercise prior to pregnancy, two of 100 (2.0%) women in the intervention group and nine of 95 (9.5%) in the control group had an EPDS score of ≥10 (p=0.03).\n\"\"\"\n\nQuestion: Does exercise during pregnancy prevent postnatal depression?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"no\", \"confidence\": 85, \"quotes\": [\"Fourteen of 379 (3.7%) women in the intervention group and 17 of 340 (5.0%) in the control group had an EPDS score of \\\\u226510 (p=0.46), and four of 379 (1.2%) women in the intervention group and eight of 340 (2.4%) in the control group had an EPDS score of \\\\u226513 (p=0.25).\"]}",
+ "input_tokens": 465,
+ "output_tokens": 130,
+ "latency_s": 16.094,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"no\", \"confidence\": 85, \"quotes\": [\"Fourteen of 379 (3.7%) women in the intervention group and 17 of 340 (5.0%) in the control group had an EPDS score of \\\\u226510 (p=0.46), and four of 379 (1.2%) women in the intervention group and eight of 340 (2.4%) in the control group had an EPDS score of \\\\u226513 (p=0.25).\"]}",
+       "thoughtSignature": "EmAKXgFpFH0T50d839b8gDPRPUEqY9OxQZ6g3AnjLEVD6+6S9s4qrF+9iBvokDhGG62uf0HDrMl9dYsFRWX92TKJ5f0EDhlyPzMz059brcus2B+FekxjgvoSKaLUBpOezaw="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 465,
+   "candidatesTokenCount": 130,
+   "totalTokenCount": 595,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 465
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "U3TraqPdAs_EytMP2uGeaQ"
+ }
+}

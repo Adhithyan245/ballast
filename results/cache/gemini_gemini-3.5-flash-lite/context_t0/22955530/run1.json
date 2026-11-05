@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "22955530",
+  "run": 1
+ },
+ "cached_at": "2026-11-04T18:23:13.915378+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "151c0e3783c6582b",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: The range of injury severity that can be seen within the category of type II supracondylar humerus fractures (SCHFs) raises the question whether some could be treated nonoperatively. However, the clinical difficulty in using this approach lies in determining which type II SCHFs can be managed successfully without a surgical intervention.\n\nMETHODS: We reviewed clinical and radiographic information on 259 pediatric type II SCHFs that were enrolled in a prospective registry of elbow fractures. The characteristics of the patients who were treated without surgery were compared with those of patients who were treated surgically. Treatment outcomes, as assessed by the final clinical and radiographic alignment, range of motion of the elbow, and complications, were compared between the groups to define clinical and radiographic features that related to success or failure of nonoperative management.\n\nRESULTS: During the course of treatment, 39 fractures were found to have unsatisfactory alignment with nonoperative management and were taken for surgery. Ultimately, 150 fractures (57.9%) were treated nonoperatively, and 109 fractures (42.1%) were treated surgically. At final follow-up, outcome measures of change in carrying angle, range of motion, and complications did not show clinically significant differences between treatment groups. Fractures without rotational deformity or coronal angulation and with a shaft-condylar angle of>15 degrees were more likely to be associated with successful nonsurgical treatment. A scoring system was developed using these features to stratify the severity of the injury. Patients with isolated extension deformity, but none of the other features, were more likely to complete successful nonoperative management.\n\"\"\"\n\nQuestion: Type II supracondylar humerus fractures: can some be treated nonoperatively?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Ultimately, 150 fractures (57.9%) were treated nonoperatively, and 109 fractures (42.1%) were treated surgically.\", \"The range of injury severity that can be seen within the category of type II supracondylar humerus fractures (SCHFs) raises the question whether some could be treated nonoperatively.\"]}\n```",
+ "input_tokens": 476,
+ "output_tokens": 96,
+ "latency_s": 0.75,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 100, \"quotes\": [\"Ultimately, 150 fractures (57.9%) were treated nonoperatively, and 109 fractures (42.1%) were treated surgically.\", \"The range of injury severity that can be seen within the category of type II supracondylar humerus fractures (SCHFs) raises the question whether some could be treated nonoperatively.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T8q5CPZhIjniDqwZeazP+DMyAkS1YMWxkIh+hsCUL+cCi35ic4UhSNjUIdDekfwUJKjoKAdXUQTlrMLO3g8NswaqIywj6ZcgdNvwxxeuH/zMdnTTViNezsx0="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 476,
+   "candidatesTokenCount": 96,
+   "totalTokenCount": 572,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 476
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "Dnjravu_KvG0xdIP1aWiwAk"
+ }
+}

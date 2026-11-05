@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "19757704",
+  "run": 1
+ },
+ "cached_at": "2026-11-04T17:47:10.425038+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "e27a7ae22d932c9e",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVE: To determine the practices and knowledge of harmful effects regarding use of Chaalia and Pan Masala in three schools of Mahmoodabad and Chanesar Goth, Jamshed Town, Karachi, Pakistan.\n\nMETHODS: To achieve the objective a cross-sectional design was used in three government schools of Mahmoodabad and Chanesar Goth, Jamshed Town, Karachi. Students of either gender drawn from these schools fulfilling the inclusion and exclusion criteria were interviewed using a pre-coded structured questionnaire. Along with demographic data, questions regarding frequency of Chaalia and Pan Masala use, practices of this habit in friends and family and place of procurement of these substances, were inquired. Knowledge was assessed about harmful effects and its source of information. In addition, practices in relation to that knowledge were assessed.\n\nRESULTS: A total of 370 students were interviewed over a period of six weeks, of which 205 (55.4%) were boys. The ages of the students were between 10 and 15 years. Thirty one percent of the fathers and 62% of the mothers were uneducated. The frequency of use of any brand of Chaalia was found to be 94% and that of Pan Masala was 73.8%. Eighty five percent of them were regular users. A large majority (88%) procured the substances themselves from near their homes. Ninety five percent of the children had friends with the same habits. Eighty four percent were using the substances in full knowledge of their families. Chaalia was considered harmful for health by 96% and Pan Masala by 60%. Good taste was cited as a reason for continuing the habit by 88.5% of the children and use by friends by 57%. Knowledge about established harmful effects was variable. Knowledge about harmful effects was high in both \"daily\" and \"less than daily users\".\n\"\"\"\n\nQuestion: Is Chaalia/Pan Masala harmful for health?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Chaalia was considered harmful for health by 96% and Pan Masala by 60%.\"\n  ]\n}\n```",
+ "input_tokens": 533,
+ "output_tokens": 60,
+ "latency_s": 11.453,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\n  \"answer\": \"yes\",\n  \"confidence\": 100,\n  \"quotes\": [\n    \"Chaalia was considered harmful for health by 96% and Pan Masala by 60%.\"\n  ]\n}\n```",
+       "thoughtSignature": "EmAKXgFpFH0Thr5P0RIJUXnth17jL/xmzOk/CH21Qesv/tR1a2gwlRF1sM8s1xYqdgALdZHe1s4Mmv52hofIJVPtHJBJPZ6gOf66SAnsvjf06Y5khSTK2al6DdncrZ4Pytw="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 533,
+   "candidatesTokenCount": 60,
+   "totalTokenCount": 593,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 533
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "kG_ravGKJb36ytMPypCUaQ"
+ }
+}

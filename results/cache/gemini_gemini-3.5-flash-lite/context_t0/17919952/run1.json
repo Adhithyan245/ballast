@@ -1,0 +1,57 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "17919952",
+  "run": 1
+ },
+ "cached_at": "2026-11-04T17:27:27.966411+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "189555c2556c304c",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nOBJECTIVES: (i) To examine the association between self-reported mechanical factors and chronic oro-facial pain. (ii) To test the hypothesis that this relationship could be explained by: (a) reporting of psychological factors, (b) common association of self-reported mechanical factors with other unexplained syndromes.\n\nMETHODS: A population based cross-sectional study of 4200 randomly selected adults registered with a General Medical Practice in North West, England. The study examined the association of chronic oro-facial pain with a variety of self-reported mechanical factors: teeth grinding, facial trauma, missing teeth and the feeling that the teeth did not fit together properly. Information was also collected on demographic factors, psychological factors and the reporting of other frequently unexplained syndromes.\n\nRESULTS: An adjusted response rate of 72% was achieved. Only two mechanical factors: teeth grinding (odds ratio (OR) 2.0, 95% CI 1.3-3.0) and facial trauma (OR 2.0; 95% CI 1.3-2.9) were independently associated with chronic oro-facial pain after adjusting for psychological factors. However, these factors were also commonly associated with the reporting of other frequently unexplained syndromes: teeth grinding (odds ratio (OR) 1.8, 95% CI 1.5-2.2), facial trauma (OR 2.1; 95% CI 1.7-2.6).\n\"\"\"\n\nQuestion: Are reports of mechanical dysfunction in chronic oro-facial pain related to somatisation?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"However, these factors were also commonly associated with the reporting of other frequently unexplained syndromes: teeth grinding (odds ratio (OR) 1.8, 95% CI 1.5-2.2), facial trauma (OR 2.1; 95% CI 1.7-2.6).\"]}\n```",
+ "input_tokens": 454,
+ "output_tokens": 90,
+ "latency_s": 5.422,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 95, \"quotes\": [\"However, these factors were also commonly associated with the reporting of other frequently unexplained syndromes: teeth grinding (odds ratio (OR) 1.8, 95% CI 1.5-2.2), facial trauma (OR 2.1; 95% CI 1.7-2.6).\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0T6k/igpuG3hpHXO5xbJ+T4mcMgLMzcwdjmpp9ZcB7FwLE4nJMDXyN2z4VKZyWvn/9w9oQgrNk+m8PJg+CEqcut1dHBKdnIpG+gC6r726r4PuMohnqj2FwgaE="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 454,
+   "candidatesTokenCount": 90,
+   "totalTokenCount": 544,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 454
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "-GrrasyyCPGfo_UPiInw2AE"
+ }
+}

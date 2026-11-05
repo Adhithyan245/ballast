@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "22427593",
+  "run": 1
+ },
+ "cached_at": "2026-11-04T18:10:20.431553+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "84d28c651717da92",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nPURPOSE: The purpose of this study is to measure the accuracy and reliability of normally sighted, visually impaired, and blind pedestrians at making street crossing decisions using visual and/or auditory information.\n\nMETHODS: Using a 5-point rating scale, safety ratings for vehicular gaps of different durations were measured along a two-lane street of one-way traffic without a traffic signal. Safety ratings were collected from 12 normally sighted, 10 visually impaired, and 10 blind subjects for eight different gap times under three sensory conditions: (1) visual plus auditory information, (2) visual information only, and (3) auditory information only. Accuracy and reliability in street crossing decision-making were calculated for each subject under each sensory condition.\n\nRESULTS: We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05). Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05). Compared to either the normally sighted (P = 0.018) or visually impaired subjects (P = 0.019), blind subjects were the least accurate with their street crossing decisions under the hearing only condition.\n\"\"\"\n\nQuestion: Are normally sighted, visually impaired, and blind pedestrians accurate and reliable at making street crossing decisions?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "{\"answer\": \"maybe\", \"confidence\": 100, \"quotes\": [\"We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05).\", \"Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05).\"]}",
+ "input_tokens": 422,
+ "output_tokens": 92,
+ "latency_s": 16.953,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "{\"answer\": \"maybe\", \"confidence\": 100, \"quotes\": [\"We found that normally sighted and visually impaired pedestrians were accurate and reliable in their street crossing decision-making ability when using either vision plus hearing or vision only (P>0.05).\", \"Under the hearing only condition, all subjects were reliable (P>0.05) but inaccurate with their street crossing decisions (P<0.05).\"]}",
+       "thoughtSignature": "EmAKXgFpFH0TmwxVVWws8EuAioe5N1tWW10z/ww1zlf2Gg7m9Y3xDOEvP0ikQeAwdsPLEh5heNpeyha/vSCBTH/zmmaq+h4GSpXl8oeuaiRYqqyh2DOsaEBHhlFdXlamsuk="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 130,
+       "endIndex": 382,
+       "uri": "https://www.ncbi.nlm.nih.gov/pubmed/22427593",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 422,
+   "candidatesTokenCount": 92,
+   "totalTokenCount": 514,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 422
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "-XTraujjAcXjytMPosXYsQM"
+ }
+}

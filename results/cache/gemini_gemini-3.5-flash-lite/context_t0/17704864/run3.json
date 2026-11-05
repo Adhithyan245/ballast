@@ -1,0 +1,67 @@
+{
+ "key": {
+  "model": "gemini:gemini-3.5-flash-lite",
+  "condition": "context_t0",
+  "qid": "17704864",
+  "run": 3
+ },
+ "cached_at": "2026-11-04T17:26:53.584587+00:00",
+ "sample": "main",
+ "family": "gemini",
+ "model_requested": "gemini-3.5-flash-lite",
+ "model_reported": "gemini-3.5-flash-lite",
+ "condition": "context_t0",
+ "temperature": 0.0,
+ "prompt_hash": "05715a928a542c13",
+ "prompt": "You are answering a biomedical research question using the abstract below.\n\nAbstract:\n\"\"\"\nBACKGROUND: Laparoscopic adrenalectomy (LA) has become the gold standard treatment for small (less than 6 cm) adrenal masses. However, the role of LA for large-volume (more than 6 cm) masses has not been well defined. Our aim was to evaluate, retrospectively, the outcome of LA for adrenal lesions larger than 7 cm.\n\nPATIENTS AND METHODS: 18 consecutive laparoscopic adrenalectomies were performed from 1996 to 2005 on patients with adrenal lesions larger than 7 cm.\n\nRESULTS: The mean tumor size was 8.3 cm (range 7-13 cm), the mean operative time was 137 min, the mean blood loss was 182 mL (range 100-550 mL), the rate of intraoperative complications was 16%, and in three cases we switched from laparoscopic procedure to open surgery.\n\"\"\"\n\nQuestion: Is laparoscopic adrenalectomy safe and effective for adrenal masses larger than 7 cm?\n\nAnswer \"yes\", \"no\", or \"maybe\", and give your confidence from 0 to 100 that your answer is correct. Also copy, word for word, one to three sentences from the abstract that support your answer.\n\nRespond with only a JSON object and no other text, in exactly this format:\n{\"answer\": \"yes\" or \"no\" or \"maybe\", \"confidence\": integer from 0 to 100, \"quotes\": [\"exact sentence copied from the abstract\", ...]}",
+ "session_persisted": false,
+ "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"18 consecutive laparoscopic adrenalectomies were performed from 1996 to 2005 on patients with adrenal lesions larger than 7 cm.\", \"The mean tumor size was 8.3 cm (range 7-13 cm), the mean operative time was 137 min, the mean blood loss was 182 mL (range 100-550 mL), the rate of intraoperative complications was 16%, and in three cases we switched from laparoscopic procedure to open surgery.\"]}\n```",
+ "input_tokens": 340,
+ "output_tokens": 133,
+ "latency_s": 7.64,
+ "meta": {
+  "finish_reason": "STOP",
+  "thoughts_tokens": null
+ },
+ "raw": {
+  "candidates": [
+   {
+    "content": {
+     "parts": [
+      {
+       "text": "```json\n{\"answer\": \"yes\", \"confidence\": 85, \"quotes\": [\"18 consecutive laparoscopic adrenalectomies were performed from 1996 to 2005 on patients with adrenal lesions larger than 7 cm.\", \"The mean tumor size was 8.3 cm (range 7-13 cm), the mean operative time was 137 min, the mean blood loss was 182 mL (range 100-550 mL), the rate of intraoperative complications was 16%, and in three cases we switched from laparoscopic procedure to open surgery.\"]}\n```",
+       "thoughtSignature": "EmAKXgFpFH0TMQsNa3Yv9tzfDNQmuMwW4Qgqq8lqKXyeHfU6RTKvQrzfFF1cwzJo3uZlyhV9UeTYXB7vvXiN/vGdP89a5zZuAnSqUU8Z/RyJZNDuWxYFsHySZzMpTd4IN2g="
+      }
+     ],
+     "role": "model"
+    },
+    "finishReason": "STOP",
+    "index": 0,
+    "citationMetadata": {
+     "citationSources": [
+      {
+       "startIndex": 187,
+       "endIndex": 445,
+       "uri": "https://neuro.unboundmedicine.com/medline/citation/17704864/Is_laparoscopic_adrenalectomy_safe_and_effective_for_adrenal_masses_larger_than_7_cm",
+       "license": ""
+      }
+     ]
+    }
+   }
+  ],
+  "usageMetadata": {
+   "promptTokenCount": 340,
+   "candidatesTokenCount": 133,
+   "totalTokenCount": 473,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 340
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3.5-flash-lite",
+  "responseId": "02rraoP5IZzhytMP3uHEeA"
+ }
+}
