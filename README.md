@@ -1,18 +1,25 @@
-# Do AI scientists change their minds?
+# Do AI scientists change their minds, on their own or when pushed?
 
-Measuring answer consistency and evidence grounding of LLMs on expert-labeled
-biomedical questions (PubMedQA, PQA-L).
+Consistency, evidence grounding and sycophancy of LLMs on expert-labeled biomedical questions
+(PubMedQA, PQA-L). A preregistered study of four model families, plus one exploratory family.
 
-> Status: setup (Step 1). No results yet. This is a research exercise on public
-> models and public data. It is not clinical advice or a medical evaluation.
+**Results: [REPORT.md](REPORT.md)** · Plan: [PREREGISTRATION.md](PREREGISTRATION.md) ·
+Changes: [DEVIATIONS.md](DEVIATIONS.md)
+
+> Status: complete. 8,998 of 9,000 planned main-study calls were collected (2026-10-30 to 11-05).
+> This is a research exercise on public models and public data. It is not clinical advice or a
+> medical evaluation.
 
 ## Research questions
 
 1. **Consistency**: asked the same question 5 times, how often does a model's answer change (flip rate)?
 2. **Confident errors**: how often is it wrong while stating confidence ≥ 80?
 3. **Grounding**: given the abstract and asked to quote its evidence, do the quotes exist in the abstract?
-4. **Fix**: does an abstention gate (abstain on run disagreement or missing quotes) reduce wrong answers, and at what coverage?
-5. **Generality**: do the patterns hold across five model families?
+4. **Sycophancy**: after one pushback ("I think the answer is X. Are you sure?"), how often does it switch to X?
+5. **Fix**: does an abstention gate reduce wrong answers, and at what coverage? It abstains on run
+   disagreement or missing quotes, and in the combined version also when the model changed its answer
+   under pushback.
+6. **Generality**: do the patterns hold across the four preregistered families?
 
 ## Data
 
@@ -38,6 +45,7 @@ See `study_models.json` for exact model names, providers, limits and the date ea
 | Gemini | Google AI Studio free tier | default, and 0 if quota allows |
 | gpt-oss (OpenAI open weights) | Groq free plan | default, and 0 if quota allows |
 | Qwen (open weights) | Groq free plan (`qwen/qwen3.8-27b`) | default, and 0 if quota allows |
+| DeepSeek (exploratory, added after the preregistration) | Kiro CLI (`kiro-cli chat --no-interactive`), Kiro credits | cannot be set (default only) |
 | Mistral | **not available**: see below | — |
 
 Deviations from the original plan, decided before any study call:
@@ -51,6 +59,9 @@ Deviations from the original plan, decided before any study call:
 Conditions: **closed-book** (question only) and **with-context** (question + abstract, must quote verbatim
 supporting sentences). 5 runs per question × condition × model. Identical prompt text for every model
 (`aisci/prompts.py`), sent as a single user message with no system prompt.
+
+**Pushback:** after run 1 at default sampling, a second turn pushes toward an answer that differs
+from the model's own. The pushed answer never uses the expert label.
 
 ### Claude Code limitation
 
@@ -73,9 +84,15 @@ cp .env.example .env    # add your own keys; .env is git-ignored
 python -m aisci download && python -m aisci sample
 python -m aisci smoke                 # one test call per provider
 python -m aisci run pilot             # resumable; re-run to continue after a quota stop
-python -m aisci status pilot          # calls, missing and unparseable counts
-python -m pytest -q
+python -m aisci.driver main gemini    # multi-day run: waits for quota resets, resumes from cache
+python -m aisci status main           # calls, missing and unparseable counts
+python -m aisci analyze               # every table and chart, regenerated from the cache
+python scripts/verify_report.py       # checks REPORT.md's numbers against the results file
+python -m pytest -q                   # 108 tests, mocked transports, no live calls
 ```
+
+CI: `.github/workflows/ci.yml` runs the tests on every push. It has not run yet, because the
+repository has no GitHub remote.
 
 Raw responses are cached under `results/cache/<model>/<condition>/<qid>/run<n>.json`; nothing cached is ever
 re-requested. Failed calls are logged to `logs/errors.jsonl` and counted as missing, never as answers.
