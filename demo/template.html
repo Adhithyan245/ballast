@@ -73,12 +73,12 @@ section { padding-block: 56px; border-top: 1px solid var(--line); }
 /* try it */
 .try-head { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; }
 .try-head p { color: var(--ink2); max-width: 38em; }
-.controls { margin-top: 28px; display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; }
-.ctl-row { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.controls { margin-top: 28px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; }
+.ctl-row { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; min-width: 0; }
 .ctl { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
 .ctl > .lab { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink3); }
 .qpick { display: flex; gap: 8px; align-items: center; flex: 1 1 420px; min-width: 0; }
-.qpick select { flex: 1; min-width: 0; font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.qpick select { flex: 1; min-width: 0; width: 100%; text-overflow: ellipsis; font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
 .iconbtn { font: inherit; width: 38px; height: 38px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; display: grid; place-items: center; flex: none; }
 .iconbtn:hover { border-color: var(--accent); }
 .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; flex-wrap: wrap; }
