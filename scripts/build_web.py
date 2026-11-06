@@ -60,6 +60,22 @@ def main():
                    "push_no": prompts.build_pushback("no")})
     (WEB / "tests" / "prompt_fixtures.json").write_text(json.dumps(pf), encoding="utf-8")
     print(f"generated web/lib/generated.js; {len(fx)} parse fixtures; {len(pf)} prompt fixtures")
+    publish_docs()
+
+
+LIVE_API = "https://ballast-weld.vercel.app"   # the Vercel deployment of web/
+
+
+def publish_docs():
+    """GitHub Pages copy of the workbench (docs/), calling the Vercel API across origins."""
+    docs = ROOT / "docs"
+    docs.mkdir(exist_ok=True)
+    page = (WEB / "index.html").read_text(encoding="utf-8").replace("__API_BASE__", LIVE_API)
+    (docs / "index.html").write_text(page, encoding="utf-8")
+    for name in ["ballast.js", "generated.js", "study-data.json"]:
+        (docs / name).write_bytes((WEB / name).read_bytes())
+    (docs / ".nojekyll").write_text("", encoding="utf-8")
+    print(f"wrote docs/ for GitHub Pages (API at {LIVE_API})")
 
 
 if __name__ == "__main__":

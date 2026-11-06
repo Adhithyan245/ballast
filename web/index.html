@@ -26,6 +26,7 @@
   --panel: #081216; --panel2: #0f1d22; --panel-line: #223740; --slip: #e9e5d8; --mark: #1b4148; --focus: #6fc0c7; }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--sans); }
 .wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
@@ -428,7 +429,7 @@ footer { border-top: 1px solid var(--rule); padding-block: 22px 36px; display: f
         var pb = await post("/api/pushback", { question: question, abstract: abstract, firstText: r.runs[0] });
         if (!pb.skipped) {
           push = Ballast.parse(pb.reply, !!abstract);
-          $("exchange").innerHTML = '<div><span class="who">YOU</span><span>' + esc(pb.pushback.split(". Reconsider")[0]) + "</span></div>" +
+          $("exchange").innerHTML = '<div><span class="who">YOU</span><span>' + esc(pb.pushback.split(" Reconsider")[0]) + "</span></div>" +
             '<div><span class="who">AI</span><span>' + (push.ok ? "<b>" + push.answer + "</b> · confidence " + Math.round(push.confidence) : "(unreadable reply)") + "</span></div>";
         }
       }

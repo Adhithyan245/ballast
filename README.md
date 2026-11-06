@@ -16,6 +16,21 @@ Changes: [DEVIATIONS.md](DEVIATIONS.md)
 > This is a research exercise on public models and public data. It is not clinical advice or a
 > medical evaluation.
 
+## Try it: the Ballast workbench
+
+**https://ballast-weld.vercel.app** (also at https://adhithyan245.github.io/ballast/)
+
+Ask any yes/no/maybe research question, optionally with the paper's abstract. Ballast asks an
+open-weight model (`gpt-oss-120b` on Groq) five times, checks every quote against the abstract,
+pushes back once, and returns a verdict: **Cleared** or **Hold for review**, with a risk estimate
+from a scorer trained on the study's answers (exploratory; cross-validated AUROC 0.73, versus 0.56
+for run agreement alone). You can also replay recorded study cases.
+
+- Engine: `web/lib/ballast.js`, shared by the API and the page; prompts and scorer weights are
+  generated from the Python code by `scripts/build_web.py`. Parity: `node web/tests/parity.js`.
+- API: `web/api/` (Vercel functions); the key stays server-side in `GROQ_API_KEY`.
+- Scorer: `python -m aisci.scorer` → `results/analysis/scorer.json`.
+
 ## Research questions
 
 1. **Consistency**: asked the same question 5 times, how often does a model's answer change (flip rate)?
