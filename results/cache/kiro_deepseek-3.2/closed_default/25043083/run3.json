@@ -427,7 +427,7 @@
       "content": [
        {
         "type": "diff",
-        "path": "C:\\Users\\Adhithyan Aravind\\AppData\\Local\\Claude-Data\\claude_pzs8sxrjxfjjc\\scratch-workspaces\\ae042a0e-9969-4b9d-82b2-f9a2fc73975a\\02812373-138d-4a58-874b-33e46fa50871\\scratch-2026-10-26-acea06\\.kiro_sandbox\\response.json",
+        "path": "<HOME>\\AppData\\Local\\Claude-Data\\claude_pzs8sxrjxfjjc\\scratch-workspaces\\ae042a0e-9969-4b9d-82b2-f9a2fc73975a\\02812373-138d-4a58-874b-33e46fa50871\\scratch-2026-10-26-acea06\\.kiro_sandbox\\response.json",
         "oldText": null,
         "newText": "{\"answer\": \"yes\", \"confidence\": 75}"
        }

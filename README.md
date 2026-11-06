@@ -95,4 +95,5 @@ CI: `.github/workflows/ci.yml` runs the tests on every push. It has not run yet,
 repository has no GitHub remote.
 
 Raw responses are cached under `results/cache/<model>/<condition>/<qid>/run<n>.json`; nothing cached is ever
-re-requested. Failed calls are logged to `logs/errors.jsonl` and counted as missing, never as answers.
+re-requested. In 9 DeepSeek records, a local Windows folder path inside Kiro's tool-event log was replaced
+with `<HOME>` for privacy; no answer text was changed, and the analysis output is identical. Failed calls are logged to `logs/errors.jsonl` and counted as missing, never as answers.
