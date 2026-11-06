@@ -418,8 +418,9 @@ footer { border-top: 1px solid var(--rule); padding-block: 22px 36px; display: f
       var parsed = r.runs.map(function (t) { return Ballast.parse(t, !!abstract); });
       renderRuns(parsed.map(function (p) { return p.ok ? { answer: p.answer, confidence: p.confidence } : null; }));
       var first = parsed[0];
-      var quoteList = [];
-      parsed.forEach(function (p) { if (p.ok && p.quotes) p.quotes.forEach(function (q) { quoteList.push([q, Ballast.quoteFound(q, abstract)]); }); });
+      var quoteList = [], seen = {};
+      parsed.forEach(function (p) { if (p.ok && p.quotes) p.quotes.forEach(function (q) {
+        var k = Ballast.normalize(q); if (seen[k]) return; seen[k] = 1; quoteList.push([q, Ballast.quoteFound(q, abstract)]); }); });
       quoteList.sort(function (a, b) { return a[1] - b[1]; });
       if (abstract) renderQuotes(quoteList, abstract);
       setLamp("busy", "Pushing back");
