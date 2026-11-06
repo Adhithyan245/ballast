@@ -287,6 +287,11 @@ These are stated plainly, as the preregistration requires:
 - **Agent wrappers:** Claude and DeepSeek ran through agent tools (Claude Code, Kiro) that add their
   own context (about 1,100 tokens for Claude after replacing its system prompt) and do not allow setting
   temperature. Their results are not raw-API results.
+- **DeepSeek tried to use tools.** In 123 of its 1,200 main-study calls (114 of them closed-book),
+  Kiro's agent attempted tool use even though no tools were trusted. Every web search and file write was
+  refused (`permission_denied`). The only tools that ran were Kiro's internal planning tools, its
+  self-description tool, and one `grep` inside the empty working folder. So no outside information
+  reached the model, but its answers were produced in an agent loop, unlike the API models.
 - **Hosted models can change** behind a fixed name. The model name each provider reported is saved with
   every response; collection ran 30 Oct – 5 Nov 2026.
 - **Free-tier constraints shaped the design:** Gemini Flash-Lite instead of Flash (because of daily
