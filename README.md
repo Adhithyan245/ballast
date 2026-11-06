@@ -1,5 +1,7 @@
 # Ballast
 
+[![tests](https://github.com/Adhithyan245/ballast/actions/workflows/ci.yml/badge.svg)](https://github.com/Adhithyan245/ballast/actions/workflows/ci.yml)
+
 **Measuring whether AI answers hold steady under repetition and pushback.**
 
 *Do AI scientists change their minds, on their own or when pushed?*
@@ -95,8 +97,7 @@ python scripts/verify_report.py       # checks REPORT.md's numbers against the r
 python -m pytest -q                   # 108 tests, mocked transports, no live calls
 ```
 
-CI: `.github/workflows/ci.yml` runs the tests on every push. It has not run yet, because the
-repository has no GitHub remote.
+CI: `.github/workflows/ci.yml` runs the tests on every push (GitHub Actions, Ubuntu, Python 3.11).
 
 Raw responses are cached under `results/cache/<model>/<condition>/<qid>/run<n>.json`; nothing cached is ever
 re-requested. In 9 DeepSeek records, a local Windows folder path inside Kiro's tool-event log was replaced
