@@ -1,0 +1,146 @@
+{
+ "features": [
+  "disagreement",
+  "tie",
+  "pushback_changed",
+  "pushback_missing",
+  "quote_failed",
+  "with_abstract",
+  "low_confidence"
+ ],
+ "rows": 800,
+ "wrong_rate": 0.42625,
+ "note": "Exploratory, added after the preregistration. Predicts whether the majority answer is wrong from Ballast's signals only.",
+ "cv_grouped_by_question": {
+  "scorer": {
+   "auroc": 0.7299561075652157,
+   "auroc_ci": [
+    0.6728921082162879,
+    0.7837697661757494
+   ],
+   "brier": 0.20595584072549733
+  },
+  "agreement_only": {
+   "auroc": 0.5603281390757672,
+   "auroc_ci": [
+    0.5087226400020598,
+    0.6140274665016903
+   ],
+   "brier": 0.23295043165885926
+  },
+  "confidence_only": {
+   "auroc": 0.7081728096908363,
+   "auroc_ci": [
+    0.6452022122671403,
+    0.767169122443938
+   ],
+   "brier": 0.2112756822122092
+  },
+  "with_answer_maybe_feature": {
+   "auroc": 0.7807071345970776,
+   "auroc_ci": [
+    0.7132581023017903,
+    0.8421173303431609
+   ],
+   "brier": 0.18065417350576282,
+   "note": "PubMedQA-specific; not used in the product"
+  },
+  "base_rate_brier": 0.24456093749999994
+ },
+ "calibration_quartiles": [
+  {
+   "risk_from": 0.004619147014142157,
+   "risk_to": 0.21584631318318306,
+   "n": 201,
+   "mean_predicted": 0.17016493588451287,
+   "observed_wrong": 0.21890547263681592
+  },
+  {
+   "risk_from": 0.21584631318318306,
+   "risk_to": 0.3817462642421384,
+   "n": 201,
+   "mean_predicted": 0.29274602066016087,
+   "observed_wrong": 0.26865671641791045
+  },
+  {
+   "risk_from": 0.3817462642421384,
+   "risk_to": 0.6169016184533787,
+   "n": 200,
+   "mean_predicted": 0.4935253235281185,
+   "observed_wrong": 0.525
+  },
+  {
+   "risk_from": 0.6169016184533787,
+   "risk_to": 0.9975509012144913,
+   "n": 200,
+   "mean_predicted": 0.7444825897123413,
+   "observed_wrong": 0.69
+  }
+ ],
+ "leave_one_model_out": {
+  "claude": {
+   "auroc": 0.7813852813852814,
+   "n": 200
+  },
+  "gemini": {
+   "auroc": 0.7259114583333334,
+   "n": 200
+  },
+  "groq": {
+   "auroc": 0.8201992753623188,
+   "n": 200
+  },
+  "qwen_groq": {
+   "auroc": 0.7135160098522167,
+   "n": 200
+  }
+ },
+ "deepseek_holdout": {
+  "auroc": 0.7682268226822683,
+  "auroc_ci": [
+   0.6947244075384197,
+   0.8370078775149175
+  ],
+  "brier": 0.19653227151809255,
+  "n": 200
+ },
+ "final_model": {
+  "bias": -0.3206344969197896,
+  "weights": [
+   0.29368836604797227,
+   0.332950189036239,
+   0.17111686184942754,
+   -0.007298473904370621,
+   0.03981482855596268,
+   -0.2810086458092314,
+   0.6743352390598344
+  ],
+  "mean": [
+   0.06525,
+   0.0075,
+   0.28125,
+   0.0025,
+   0.0475,
+   0.5,
+   0.16116937499999998
+  ],
+  "std": [
+   0.13487934423031572,
+   0.08627716963368699,
+   0.4496092053105675,
+   0.04993746088859544,
+   0.21270578271405788,
+   0.5,
+   0.12300903066283131
+  ],
+  "features": [
+   "disagreement",
+   "tie",
+   "pushback_changed",
+   "pushback_missing",
+   "quote_failed",
+   "with_abstract",
+   "low_confidence"
+  ]
+ }
+}
