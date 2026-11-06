@@ -1,4 +1,4 @@
-# Do AI scientists change their minds, on their own or when pushed?
+# Ballast: do AI scientists change their minds, on their own or when pushed?
 
 **Consistency, evidence grounding and sycophancy of LLMs on 100 expert-labeled biomedical questions
 (PubMedQA, PQA-L).** A preregistered study of four model families, plus one exploratory family.

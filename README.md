@@ -1,4 +1,8 @@
-# Do AI scientists change their minds, on their own or when pushed?
+# Ballast
+
+**Measuring whether AI answers hold steady under repetition and pushback.**
+
+*Do AI scientists change their minds, on their own or when pushed?*
 
 Consistency, evidence grounding and sycophancy of LLMs on expert-labeled biomedical questions
 (PubMedQA, PQA-L). A preregistered study of four model families, plus one exploratory family.
