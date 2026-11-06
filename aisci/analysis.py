@@ -198,6 +198,61 @@ def gate_tests(runs, qids, labels, abstracts, ctx, pairs, rng) -> dict:
     }
 
 
+# --- exploratory: matched coverage (DEVIATIONS.md section B) ----------------------
+def expected_top_n_accuracy(scores: np.ndarray, correct: np.ndarray, n: int) -> float:
+    """Accuracy when answering the n highest-scoring questions. Questions tied at the cutoff
+    are taken at random, so they contribute their mean correctness (deterministic)."""
+    if n <= 0:
+        return math.nan
+    n = min(n, len(scores))
+    v = np.sort(scores)[::-1][n - 1]          # score of the n-th best question
+    above = scores > v
+    tied = scores == v
+    need = n - above.sum()
+    exp_correct = correct[above].sum() + need * correct[tied].mean()
+    return float(exp_correct / n)
+
+
+def consistency_scores(runs, qids, labels, abstracts, ctx):
+    """Per question: score = run agreement (0 if no modal answer, or if the quote check fails
+    with context) and whether the modal answer is correct."""
+    sc, cor = [], []
+    for q in qids:
+        rs = runs.get(q, [])
+        top, k, n = modal(rs)
+        ok = top is not None and n > 0
+        if ok and ctx == "context":
+            ok = all(o.quotes and all(quote_found(s, abstracts[q]) for s in o.quotes)
+                     for o in rs if o.valid)
+        sc.append(k / n if ok else 0.0)
+        cor.append(1.0 if ok and top == labels[q] else 0.0)
+    return np.array(sc), np.array(cor)
+
+
+def matched_coverage(runs, qids, labels, abstracts, ctx, pairs, rng) -> dict:
+    """Combined gate (tau 0.8) vs the consistency ranking answering the same number of
+    questions, plus random abstention at that coverage (= ungated majority accuracy)."""
+    a_comb, c_comb = gate_vectors(runs, qids, labels, abstracts, ctx, pairs, PRIMARY_TAU, True)
+    sc, cor = consistency_scores(runs, qids, labels, abstracts, ctx)
+    maj = np.array([bool(majority_correct(runs.get(q, []), labels[q])) for q in qids])
+
+    def stats(idx):
+        n_c = int(a_comb[idx].sum())
+        comb = c_comb[idx].sum() / n_c if n_c else math.nan
+        cons = expected_top_n_accuracy(sc[idx], cor[idx], n_c)
+        return n_c, comb, cons, maj[idx].mean()
+
+    n_c, comb, cons, rand = stats(np.arange(len(qids)))
+    boot = np.array([stats(i)[1] - stats(i)[2]
+                     for i in rng.integers(0, len(qids), size=(N_BOOT, len(qids)))])
+    lo, hi = np.nanquantile(boot, [0.025, 0.975])
+    return {"answered": n_c, "coverage": n_c / len(qids),
+            "combined_accuracy": comb, "consistency_matched_accuracy": cons,
+            "random_abstention_accuracy": rand,
+            "diff_combined_minus_consistency": {"est": comb - cons, "lo": float(lo),
+                                                "hi": float(hi), "p": bootstrap_p(boot)}}
+
+
 # --- main -------------------------------------------------------------------------
 def run(out_dir: Path = OUT_DIR, charts: bool = True) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -210,6 +265,8 @@ def run(out_dir: Path = OUT_DIR, charts: bool = True) -> dict:
     obs = load_observations(SAMPLE)
     pbs = load_pushbacks(SAMPLE)
     rng = np.random.default_rng(config.SEED)
+    # separate stream, so exploratory checks never shift the preregistered bootstrap results
+    rng_explore = np.random.default_rng(config.SEED + 1)
 
     res = {"sample": SAMPLE, "questions": len(qids), "label_counts":
            {lab: sum(labels[q] == lab for q in qids) for lab in config.LABELS},
@@ -221,7 +278,7 @@ def run(out_dir: Path = OUT_DIR, charts: bool = True) -> dict:
         sid = f"{adapter_class(key, s).family}:{s['model']}"
         m = {"name": name, "study_id": sid, "exploratory": key not in PRIMARY,
              "conditions": {}, "conditions_yesno": {}, "pushback": {}, "pushback_yesno": {},
-             "gates": {}, "gate_curves": {}, "secondary": {}}
+             "gates": {}, "gate_curves": {}, "secondary": {}, "exploratory_matched_coverage": {}}
         conds = sorted({c for (mid, c) in obs if mid == sid})
         for cond in conds:
             ctx = cond.split("_")[0]
@@ -233,6 +290,8 @@ def run(out_dir: Path = OUT_DIR, charts: bool = True) -> dict:
             m["pushback"][ctx] = pushback_summary(pairs, qids, labels)
             m["pushback_yesno"][ctx] = pushback_summary(pairs, yesno, labels)
             m["gates"][ctx] = gate_tests(runs, qids, labels, abstracts, ctx, pairs, rng)
+            m["exploratory_matched_coverage"][ctx] = matched_coverage(runs, qids, labels, abstracts,
+                                                                      ctx, pairs, rng_explore)
             curves = {
                 "consistency": coverage_curve({q: runs.get(q, []) for q in qids}, labels, THRESHOLDS,
                                               abstracts, ctx == "context"),
@@ -407,6 +466,16 @@ def write_tables(res: dict, out_dir: Path) -> None:
                                "reasons": json.dumps(pt["reasons"])})
     _csv(out_dir / "gate_curves.csv", gc)
     _csv(out_dir / "hypotheses.csv", res["hypotheses"]["rows"])
+    mc = []
+    for key, m in res["models"].items():
+        for ctx, x in m["exploratory_matched_coverage"].items():
+            d = x["diff_combined_minus_consistency"]
+            mc.append({"model": m["name"], "context": ctx, "answered": x["answered"],
+                       "combined_accuracy": x["combined_accuracy"],
+                       "consistency_matched_accuracy": x["consistency_matched_accuracy"],
+                       "random_abstention_accuracy": x["random_abstention_accuracy"],
+                       "diff": d["est"], "diff_lo": d["lo"], "diff_hi": d["hi"], "p_uncorrected": d["p"]})
+    _csv(out_dir / "exploratory_matched_coverage.csv", mc)
 
 
 def _csv(path: Path, rows: list[dict]) -> None:

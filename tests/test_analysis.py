@@ -68,3 +68,25 @@ def test_gate_tests_counts_and_direction():
     assert g["H4_diff"]["est"] == pytest.approx(2 / 3 - 2 / 4)
     assert g["H7_diff"]["est"] == pytest.approx(1 / 2 - 2 / 3)
     assert 0 <= g["H4_diff"]["p"] <= 1
+
+
+def test_expected_top_n_accuracy_handles_ties():
+    scores = np.array([1.0, 1.0, 0.8, 0.8, 0.8, 0.0])
+    correct = np.array([1.0, 0.0, 1.0, 1.0, 0.0, 1.0])
+    assert A.expected_top_n_accuracy(scores, correct, 2) == pytest.approx(0.5)
+    # top 3: both 1.0s (1 correct) + 1 of the three 0.8s (mean 2/3) -> (1 + 2/3) / 3
+    assert A.expected_top_n_accuracy(scores, correct, 3) == pytest.approx((1 + 2 / 3) / 3)
+    assert A.expected_top_n_accuracy(scores, correct, 6) == pytest.approx(4 / 6)
+    assert math.isnan(A.expected_top_n_accuracy(scores, correct, 0))
+
+
+def test_matched_coverage_counts():
+    runs = {"1": [o("yes")] * 5, "2": [o("no")] * 3 + [o("yes")] * 2,
+            "3": [o("no")] * 5, "4": [o("no")] * 5}
+    pairs = {"1": Pushback(o("yes"), o("yes"), "no"), "3": Pushback(o("no"), o("yes"), "yes"),
+             "4": Pushback(o("no"), o("no"), "yes")}
+    m = A.matched_coverage(runs, QIDS, LABELS, ABS, "closed", pairs, np.random.default_rng(0))
+    assert m["answered"] == 2 and m["combined_accuracy"] == pytest.approx(0.5)
+    # consistency ranking at n=2: three questions tied at 1.0 (1 right, 3 right, 4 wrong) -> 2/3
+    assert m["consistency_matched_accuracy"] == pytest.approx(2 / 3)
+    assert m["random_abstention_accuracy"] == pytest.approx(0.5)
