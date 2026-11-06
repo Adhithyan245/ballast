@@ -27,3 +27,6 @@ Thumbs.db
 
 # Empty working directory used for isolated kiro-cli calls
 .kiro_sandbox/
+
+# Local preview config
+.claude/

@@ -80,41 +80,47 @@
   function quoteFound(quote, abstract) { var q = normalize(quote); return !!q && normalize(abstract).indexOf(q) >= 0; }
 
   // --- one question's analysis -------------------------------------------------------------
-  // runs: parsed results (ok:false for unreadable); push: parsed reply to the pushback or null
+  // Live: runs are parsed replies (ok:false = unreadable), push is the parsed pushback reply.
   function analyze(runs, push, abstract) {
-    var counts = {}, valid = runs.filter(function (r) { return r.ok; });
+    var flags = runs.map(function (r) {
+      if (!r.ok) return null;
+      var quoteOk = !abstract || (!!r.quotes && r.quotes.length > 0 &&
+        r.quotes.every(function (q) { return quoteFound(q, abstract); }));
+      return { answer: r.answer, confidence: r.confidence, quoteOk: quoteOk };
+    });
+    var first = flags[0] ? flags[0].answer : null;
+    return analyzeFlags(flags, first, push && push.ok ? push.answer : null, !!abstract);
+  }
+
+  // Shared by live and replay: runs = [{answer, confidence, quoteOk} | null],
+  // first = run 1's answer, reply = the answer after pushback (null if unreadable or not sent).
+  function analyzeFlags(runs, first, reply, withAbstract) {
+    var counts = {}, valid = runs.filter(Boolean);
     valid.forEach(function (r) { counts[r.answer] = (counts[r.answer] || 0) + 1; });
     var ranked = Object.keys(counts).sort(function (x, y) { return counts[y] - counts[x]; });
     var k = ranked.length ? counts[ranked[0]] : 0, n = valid.length;
     var tie = ranked.length > 1 && counts[ranked[1]] === k;
     var top = n && !tie ? ranked[0] : null;
-    var quoteFailed = false;
-    if (abstract) valid.forEach(function (r) {
-      if (!r.quotes || !r.quotes.length || !r.quotes.every(function (q) { return quoteFound(q, abstract); })) quoteFailed = true;
-    });
-    var first = runs[0] && runs[0].ok ? runs[0] : null;
-    var pushValid = !!(first && push && push.ok);
-    var changed = pushValid && push.answer !== first.answer;
+    var quoteFailed = withAbstract && valid.some(function (r) { return !r.quoteOk; });
+    var pushValid = !!(first && reply);
+    var changed = pushValid && reply !== first;
     var meanConf = n ? valid.reduce(function (s, r) { return s + r.confidence; }, 0) / n : 0;
-
     var checks = {
       repeat: { pass: n > 0 && top !== null && k / n >= TAU - 1e-9, agree: k, valid: n, answer: top, tie: tie },
-      quotes: { used: !!abstract, pass: !abstract || !quoteFailed },
-      pushback: { pass: pushValid && !changed, valid: pushValid, changed: changed,
-                  first: first ? first.answer : null, reply: push && push.ok ? push.answer : null }
+      quotes: { used: withAbstract, pass: !quoteFailed, okRuns: valid.filter(function (r) { return r.quoteOk; }).length },
+      pushback: { pass: pushValid && !changed, valid: pushValid, changed: changed, first: first, reply: reply }
     };
     var reason = null;
     if (n === 0) reason = "no_valid_runs";
     else if (top === null) reason = "tie";
     else if (k / n < TAU - 1e-9) reason = "low_agreement";
-    else if (abstract && quoteFailed) reason = "quote_check";
+    else if (quoteFailed) reason = "quote_check";
     else if (!pushValid) reason = "pushback_missing";
     else if (changed) reason = "pushback_changed";
-
     var features = {
       disagreement: 1 - (n ? k / n : 0), tie: n > 0 && top === null ? 1 : 0,
       pushback_changed: changed ? 1 : 0, pushback_missing: pushValid ? 0 : 1,
-      quote_failed: abstract && quoteFailed ? 1 : 0, with_abstract: abstract ? 1 : 0,
+      quote_failed: quoteFailed ? 1 : 0, with_abstract: withAbstract ? 1 : 0,
       low_confidence: 1 - meanConf / 100
     };
     return { answer: reason ? null : top, majority: top, reason: reason, checks: checks,
@@ -133,5 +139,5 @@
 
   return { TAU: TAU, CONFIDENT: CONFIDENT, buildPrompt: buildPrompt, buildPushback: buildPushback,
            suggestion: suggestion, parse: parse, quoteFound: quoteFound, normalize: normalize,
-           analyze: analyze, risk: risk, scorer: GEN.scorer };
+           analyze: analyze, analyzeFlags: analyzeFlags, risk: risk, scorer: GEN.scorer };
 });

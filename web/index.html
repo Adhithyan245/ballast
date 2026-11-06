@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ballast</title>
+<meta name="description" content="Ballast checks an AI's answer to a research question before it reaches a scientist: it asks again, verifies quotes against the paper, and pushes back once. Built on a preregistered study of 8,998 LLM answers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: a workbench. Left, the scientist's notebook entry on graph paper. Right, the Ballast
+   instrument (a ship's bridge panel): three check stations, a load-line risk gauge, a verdict slip. */
+:root {
+  color-scheme: light;
+  --paper: #edf1ef; --paper-line: #d7e0dc; --card: #f8faf9; --ink: #13232b; --ink2: #4b5e65; --ink3: #74868c; --rule: #cbd6d3;
+  --panel: #0f1d24; --panel2: #16282f; --panel-line: #29404a; --dial: #e7efe9; --dial2: #9fb6b4; --brass: #c9a252;
+  --clear: #2f9e6b; --hold: #d9692e; --slip: #f6f3e9; --slip-ink: #1d2a2e; --mark: #cfe3df; --focus: #1f6f78;
+  --serif: "IBM Plex Serif", Georgia, serif; --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  color-scheme: dark; --paper: #0c1519; --paper-line: #18262c; --card: #111e23; --ink: #e2ebec; --ink2: #a4b6ba; --ink3: #7d9095; --rule: #24363d;
+  --panel: #081216; --panel2: #0f1d22; --panel-line: #223740; --slip: #e9e5d8; --mark: #1b4148; --focus: #6fc0c7; } }
+:root[data-theme="dark"] {
+  color-scheme: dark; --paper: #0c1519; --paper-line: #18262c; --card: #111e23; --ink: #e2ebec; --ink2: #a4b6ba; --ink3: #7d9095; --rule: #24363d;
+  --panel: #081216; --panel2: #0f1d22; --panel-line: #223740; --slip: #e9e5d8; --mark: #1b4148; --focus: #6fc0c7; }
+
+* { box-sizing: border-box; }
+html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--sans); }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--focus); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.label { font: 500 0.7rem/1.2 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink3); }
+.num { font-variant-numeric: tabular-nums; }
+button { font: inherit; }
+
+/* masthead */
+.mast { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 18px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; }
+.brand svg { width: 40px; height: 40px; flex: none; }
+.brand b { font: 600 1.45rem/1 var(--serif); letter-spacing: 0.01em; display: block; }
+.brand span { font-size: 0.82rem; color: var(--ink2); }
+.mast nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.9rem; }
+.mast nav a { color: var(--ink2); text-decoration: none; }
+.mast nav a:hover { color: var(--focus); }
+
+.intro { padding-block: 10px 26px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 36px; align-items: end; }
+.intro h1 { font: 600 clamp(1.7rem, 3.6vw, 2.6rem)/1.12 var(--serif); }
+.intro p { color: var(--ink2); max-width: 42em; }
+
+/* workbench */
+.bench { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr); gap: 20px; align-items: start; padding-bottom: 28px; }
+
+.notebook { background-color: var(--card);
+  background-image: linear-gradient(var(--paper-line) 1px, transparent 1px), linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+  background-size: 22px 22px; border: 1px solid var(--rule); border-radius: 6px; padding: 20px; display: grid; gap: 14px; position: relative; }
+.notebook::before { content: ""; position: absolute; left: 44px; top: 0; bottom: 0; width: 1.5px; background: color-mix(in srgb, var(--hold) 45%, transparent); }
+.notebook > * { position: relative; }
+.nb-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding-left: 36px; }
+.nb-head h2 { font: 600 1.15rem var(--serif); }
+.field { display: grid; gap: 6px; padding-left: 36px; }
+.field label { font-weight: 600; font-size: 0.9rem; }
+.field label small { font-weight: 400; color: var(--ink3); }
+textarea { width: 100%; font: 15px/1.5 var(--sans); color: var(--ink); background: color-mix(in srgb, var(--card) 88%, transparent); border: 1px solid var(--rule); border-radius: 4px; padding: 10px 12px; resize: vertical; }
+#question { min-height: 72px; font-family: var(--serif); font-size: 1.05rem; }
+#abstract { min-height: 150px; font-size: 0.9rem; }
+.counter { font: 0.72rem var(--mono); color: var(--ink3); justify-self: end; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; padding-left: 36px; }
+.run { background: var(--panel); color: var(--dial); border: 0; border-radius: 4px; padding: 11px 18px; font-weight: 600; cursor: pointer; display: inline-flex; gap: 10px; align-items: center; }
+.run:hover { background: var(--panel2); }
+.run[disabled] { opacity: 0.6; cursor: progress; }
+.ghost { background: transparent; color: var(--ink); border: 1px solid var(--rule); border-radius: 4px; padding: 10px 14px; cursor: pointer; }
+.ghost:hover { border-color: var(--focus); }
+.fineprint { font-size: 0.8rem; color: var(--ink3); padding-left: 36px; }
+.examples { padding-left: 36px; display: grid; gap: 8px; }
+.examples ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.examples button { width: 100%; text-align: left; background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 8px 10px; cursor: pointer; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: baseline; color: var(--ink); }
+.examples button:hover { border-color: var(--focus); }
+.examples .tag { font: 500 0.66rem var(--mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 6px; border-radius: 3px; background: var(--paper); color: var(--ink2); white-space: nowrap; }
+.examples .qt { font-size: 0.86rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* instrument */
+.instrument { background: var(--panel); color: var(--dial); border-radius: 10px; padding: 18px; display: grid; gap: 14px; box-shadow: inset 0 0 0 1px var(--panel-line); }
+.inst-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; font: 500 0.74rem var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--dial2); }
+.inst-head .lamp { display: inline-flex; align-items: center; gap: 8px; }
+.inst-head .lamp i { width: 9px; height: 9px; border-radius: 50%; background: var(--dial2); }
+.inst-head .lamp.live i { background: var(--clear); box-shadow: 0 0 0 3px color-mix(in srgb, var(--clear) 30%, transparent); }
+.inst-head .lamp.busy i { background: var(--brass); animation: pulse 1s infinite; }
+@keyframes pulse { 50% { opacity: 0.35; } }
+@media (prefers-reduced-motion: reduce) { .inst-head .lamp.busy i { animation: none; } }
+.inst-body { display: grid; grid-template-columns: minmax(0, 1fr) 128px; gap: 14px; }
+.stations { display: grid; gap: 10px; min-width: 0; }
+.station { background: var(--panel2); border: 1px solid var(--panel-line); border-radius: 6px; padding: 12px 14px; display: grid; gap: 8px; min-width: 0; }
+.st-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.st-top .label { color: var(--dial2); }
+.state { font: 600 0.7rem var(--mono); letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; border: 1px solid var(--panel-line); color: var(--dial2); }
+.state.ok { color: var(--clear); border-color: color-mix(in srgb, var(--clear) 55%, transparent); }
+.state.no { color: var(--hold); border-color: color-mix(in srgb, var(--hold) 55%, transparent); }
+.lamps { display: flex; gap: 8px; flex-wrap: wrap; }
+.bulb { width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--panel-line); display: grid; place-items: center; font: 600 0.78rem/1 var(--mono); color: var(--dial2); text-transform: uppercase; }
+.bulb small { display: block; font-size: 0.6rem; font-weight: 400; margin-top: 2px; }
+.bulb.on { border-color: var(--brass); color: var(--dial); background: color-mix(in srgb, var(--brass) 14%, transparent); }
+.bulb.odd { border-color: var(--hold); color: var(--hold); }
+.bulb.dead { border-style: dashed; }
+.readout { font: 0.85rem/1.45 var(--mono); color: var(--dial2); }
+.readout b { color: var(--dial); font-weight: 500; }
+.quotes { display: grid; gap: 6px; }
+.quote { font-size: 0.84rem; line-height: 1.4; color: var(--dial); display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 6px; }
+.quote i { font-style: normal; font-family: var(--mono); }
+.quote.ok i { color: var(--clear); } .quote.no i { color: var(--hold); } .quote.no span { text-decoration: line-through; text-decoration-color: var(--hold); color: var(--dial2); }
+.exchange { display: grid; gap: 4px; font-size: 0.88rem; }
+.exchange div { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 6px; }
+.exchange .who { font: 600 0.7rem/1.9 var(--mono); color: var(--dial2); }
+
+/* load-line gauge */
+.gauge { background: var(--panel2); border: 1px solid var(--panel-line); border-radius: 6px; padding: 12px 8px; display: grid; gap: 8px; justify-items: center; align-content: start; }
+.gauge .label { color: var(--dial2); text-align: center; line-height: 1.35; }
+.gauge svg { width: 100%; max-width: 112px; height: auto; }
+.gauge svg text { font: 10px var(--mono); fill: var(--dial2); }
+.risk-num { font: 600 1.6rem/1 var(--mono); color: var(--dial); }
+.risk-cap { font-size: 0.72rem; color: var(--dial2); text-align: center; line-height: 1.35; }
+
+/* verdict slip */
+.slip { background: var(--slip); color: var(--slip-ink); border-radius: 4px; padding: 14px 16px; display: grid; gap: 8px; position: relative; }
+.slip::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 6px; background: radial-gradient(circle at 6px 0, transparent 5px, var(--slip) 5.5px) 0 0 / 12px 6px repeat-x; }
+.slip .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.stamp { font: 600 0.95rem var(--mono); letter-spacing: 0.14em; text-transform: uppercase; border: 2px solid currentColor; border-radius: 3px; padding: 4px 10px; transform: rotate(-2deg); }
+.stamp.ok { color: var(--clear); } .stamp.no { color: var(--hold); } .stamp.idle { color: #7b8a8d; }
+.slip h3 { font: 600 1.1rem/1.3 var(--serif); }
+.slip p { font-size: 0.88rem; color: #3f4d52; }
+.record { font: 0.74rem/1.5 var(--mono); color: #55656a; background: #ece8da; border-radius: 3px; padding: 6px 8px; overflow-wrap: anywhere; }
+.copy { background: transparent; border: 1px solid #b9b39f; border-radius: 3px; padding: 4px 10px; font-size: 0.78rem; cursor: pointer; color: var(--slip-ink); }
+.error { color: var(--hold); font-size: 0.88rem; padding-left: 36px; }
+
+/* evidence */
+.evidence { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 18px 20px; display: grid; gap: 10px; margin-bottom: 36px; }
+.evidence h2 { font: 600 1.1rem var(--serif); }
+.evidence .abs { white-space: pre-wrap; font-size: 0.92rem; line-height: 1.7; color: var(--ink2); max-width: 82ch; }
+.evidence mark { background: var(--mark); color: var(--ink); border-radius: 2px; padding: 0 1px; }
+
+/* how it was built */
+.built { border-top: 1px solid var(--rule); padding-block: 40px; }
+.built h2 { font: 600 clamp(1.35rem, 2.6vw, 1.8rem)/1.2 var(--serif); max-width: 30em; }
+.built > .wrap > p { color: var(--ink2); max-width: 46em; margin-top: 8px; }
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+.col { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 16px; display: grid; gap: 10px; align-content: start; }
+.col h3 { font: 600 1rem var(--serif); }
+.col p, .col li { font-size: 0.88rem; color: var(--ink2); }
+.col ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.big { font: 600 1.9rem/1 var(--mono); color: var(--ink); }
+.bars { display: grid; gap: 6px; }
+.bar { display: grid; grid-template-columns: 112px minmax(0, 1fr) 40px; gap: 8px; align-items: center; font-size: 0.8rem; color: var(--ink2); }
+.bar div { height: 10px; background: var(--paper); border-radius: 2px; overflow: hidden; }
+.bar div span { display: block; height: 100%; background: var(--ink2); border-radius: 2px; }
+.bar.me div span { background: var(--focus); }
+footer { border-top: 1px solid var(--rule); padding-block: 22px 36px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 0.82rem; color: var(--ink3); }
+
+@media (max-width: 960px) {
+  .intro, .bench, .cols { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .inst-body { grid-template-columns: minmax(0, 1fr); }
+  .gauge { grid-template-columns: 90px minmax(0, 1fr); justify-items: start; align-items: center; }
+  .gauge .label { grid-column: 1 / -1; text-align: left; }
+  .notebook::before { left: 22px; }
+  .nb-head, .field, .actions, .fineprint, .examples, .error { padding-left: 14px; }
+  .bulb { width: 40px; height: 40px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <a class="brand" href="#" aria-label="Ballast home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M4 24h40" stroke="currentColor" stroke-width="2.6"/><path d="M6 10h8M6 38h8M34 10h8M34 38h8" stroke="currentColor" stroke-width="2" opacity=".5"/></svg>
+      <div><b>Ballast</b><span>The load line for AI research answers</span></div>
+    </a>
+    <nav aria-label="Pages">
+      <a href="#built">How the gauge was built</a>
+      <a href="https://github.com/Adhithyan245/ballast/blob/main/REPORT.md" target="_blank" rel="noopener">The study</a>
+      <a href="https://github.com/Adhithyan245/ballast" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="intro" aria-labelledby="intro-title">
+    <h1 id="intro-title">Ask your research question. Ballast checks the AI's answer before you rely on it.</h1>
+    <p>An AI model answers the same question five times, quotes the abstract you give it, and is challenged once. Ballast passes the answer to your notebook only if it holds. A gauge trained on 8,998 answers from the study shows how likely it is to be wrong.</p>
+  </section>
+
+  <main class="bench">
+    <form class="notebook" id="form" autocomplete="off">
+      <div class="nb-head"><h2>Notebook entry</h2><span class="label" id="nbDate"></span></div>
+      <div class="field">
+        <label for="question">Your question <small>(answerable yes, no or maybe)</small></label>
+        <textarea id="question" maxlength="400" required placeholder="Does early mobilisation after hip fracture surgery reduce 30-day mortality?"></textarea>
+        <span class="counter" id="qCount">0 / 400</span>
+      </div>
+      <div class="field">
+        <label for="abstract">The paper's abstract <small>(optional; Ballast checks every quote against it)</small></label>
+        <textarea id="abstract" maxlength="6000" placeholder="Paste the abstract here. Without it, the model answers from memory and the quote check is skipped."></textarea>
+        <span class="counter" id="aCount">0 / 6000</span>
+      </div>
+      <div class="actions">
+        <button class="run" id="runBtn" type="submit"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M1.5 8h13" stroke="currentColor" stroke-width="1.6"/></svg>Run Ballast</button>
+        <button class="ghost" id="replayBtn" type="button" hidden>Replay the study's recorded answers</button>
+      </div>
+      <p class="fineprint" id="fine">Runs <b>gpt-oss-120b</b> (an open-weight model, one of the four in the study) six times: five answers and one pushback. About 5 seconds. A free demo, so it is rate-limited.</p>
+      <p class="error" id="err" role="alert" hidden></p>
+      <div class="examples">
+        <span class="label">Or open a paper from the study</span>
+        <ul id="examples"></ul>
+      </div>
+    </form>
+
+    <section class="instrument" aria-label="Ballast instrument" aria-live="polite">
+      <div class="inst-head"><span>Ballast · <span id="modelName">gpt-oss-120b</span></span><span class="lamp" id="lamp"><i></i><span id="lampText">Standing by</span></span></div>
+      <div class="inst-body">
+        <div class="stations">
+          <div class="station">
+            <div class="st-top"><span class="label">1 · Asked five times</span><span class="state" id="st1">—</span></div>
+            <div class="lamps" id="bulbs"></div>
+            <p class="readout" id="r1">Five independent answers to the same question. Ballast needs at least 4 of 5 to agree.</p>
+          </div>
+          <div class="station">
+            <div class="st-top"><span class="label">2 · Quotes checked against the abstract</span><span class="state" id="st2">—</span></div>
+            <div class="quotes" id="quotes"></div>
+            <p class="readout" id="r2">Every quote must appear word for word in the abstract (spacing and capitals ignored).</p>
+          </div>
+          <div class="station">
+            <div class="st-top"><span class="label">3 · Pushed back once</span><span class="state" id="st3">—</span></div>
+            <div class="exchange" id="exchange"></div>
+            <p class="readout" id="r3">A scientist disagrees: "Are you sure?" The answer must not move.</p>
+          </div>
+        </div>
+        <div class="gauge">
+          <span class="label">Chance the answer is wrong</span>
+          <svg id="gaugeSvg" viewBox="0 0 112 250" role="img" aria-label="Risk gauge"></svg>
+          <div><div class="risk-num num" id="riskNum">—</div><div class="risk-cap">Ballast scorer, learned from the study. The ringed line is 50%: above it, more likely wrong than right.</div></div>
+        </div>
+      </div>
+      <div class="slip" id="slip">
+        <div class="row"><span class="stamp idle" id="stamp">Awaiting entry</span><button class="copy" id="copyBtn" type="button" hidden>Copy record</button></div>
+        <h3 id="slipTitle">Write a question, then run Ballast.</h3>
+        <p id="slipWhy">The verdict and a record you can paste into your notebook appear here.</p>
+        <div class="record" id="record" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <section class="evidence" id="evidence" hidden aria-labelledby="ev-title">
+    <h2 id="ev-title">Where the answer's evidence sits in the abstract</h2>
+    <div class="abs" id="evAbs"></div>
+  </section>
+</div>
+
+<section class="built" id="built" aria-labelledby="built-title">
+  <div class="wrap">
+    <div class="label">How the gauge was built</div>
+    <h2 id="built-title" style="margin-top:8px">A preregistered study first, then a scorer trained on what it found</h2>
+    <p>Ballast is not a new biomedical model. It reads how an answer behaves under repetition, quoting and pressure, signals the study showed to matter.</p>
+    <div class="cols">
+      <div class="col">
+        <span class="label">Measured</span>
+        <span class="big num">8,998</span>
+        <p>answers from five model families on 100 expert-labeled PubMedQA questions, collected under a plan frozen before the first call.</p>
+        <p>Claude and Gemini repeated the same answer on 89–92% of questions, yet switched to a user's suggestion after one "Are you sure?" on 29–51% of them. With the abstract, that switching fell by more than half.</p>
+      </div>
+      <div class="col">
+        <span class="label">Learned</span>
+        <p>A small logistic model trained on 800 of the study's cases (4 models × 2 settings × 100 questions) to predict when the majority answer is wrong. Tested only on questions it never saw:</p>
+        <div class="bars" id="aucBars"></div>
+        <p>AUROC: the chance a wrong answer scores higher risk than a right one (50% is guessing). Predicted risk tracked observed error: 17%→22%, 29%→27%, 49%→53%, 74%→69%.</p>
+      </div>
+      <div class="col">
+        <span class="label">Limits</span>
+        <ul>
+          <li>Not clinical advice. Correctness here means agreement with PubMedQA's expert labels.</li>
+          <li>Trained on 100 questions; the risk number is a guide, not a guarantee.</li>
+          <li>The quote check confirms a quote exists, not that it supports the answer.</li>
+          <li>The live demo uses one model and one pushback wording. The scorer and the added checks are exploratory, added after the preregistration.</li>
+        </ul>
+        <p><a href="https://github.com/Adhithyan245/ballast/blob/main/REPORT.md" target="_blank" rel="noopener">Read the full report</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>Ballast · built by Adhithyan Aravind · <a href="https://github.com/Adhithyan245/ballast" target="_blank" rel="noopener">github.com/Adhithyan245/ballast</a></span>
+    <span>Public models and public data. Not clinical advice.</span>
+  </footer>
+</div>
+
+<script src="generated.js"></script>
+<script src="ballast.js"></script>
+<script>
+(function () {
+  var API = "__API_BASE__".indexOf("__") === 0 ? "" : "__API_BASE__";
+  var $ = function (id) { return document.getElementById(id); };
+  var W = { y: "yes", n: "no", m: "maybe" };
+  var STUDY = null, current = null, busy = false;
+
+  $("nbDate").textContent = new Date().toISOString().slice(0, 10);
+  function counts() { $("qCount").textContent = $("question").value.length + " / 400"; $("aCount").textContent = $("abstract").value.length + " / 6000"; }
+  $("question").addEventListener("input", function () { counts(); current = null; $("replayBtn").hidden = true; });
+  $("abstract").addEventListener("input", function () { counts(); current = null; $("replayBtn").hidden = true; });
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function abstractText(q) { return q.abstract.map(function (p) { return p[0] ? p[0] + ": " + p[1] : p[1]; }).join("\n\n"); }
+
+  // ---------- gauge ----------
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, a, txt) { var n = document.createElementNS(NS, tag); for (var k in a) n.setAttribute(k, a[k]); if (txt != null) n.textContent = txt; return n; }
+  function cssv(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+  function drawGauge(risk) {
+    var svg = $("gaugeSvg"); svg.innerHTML = "";
+    var top = 16, bot = 230, x = 40, Y = function (v) { return bot - v * (bot - top); };
+    svg.appendChild(el("rect", { x: x, y: top, width: 22, height: bot - top, rx: 3, fill: cssv("--panel"), stroke: cssv("--panel-line") }));
+    [[0, 0.25, "--clear"], [0.25, 0.5, "--brass"], [0.5, 1, "--hold"]].forEach(function (b) {
+      svg.appendChild(el("rect", { x: x + 2, y: Y(b[1]), width: 18, height: Y(b[0]) - Y(b[1]), fill: cssv(b[2]), opacity: 0.28 }));
+    });
+    for (var t = 0; t <= 1.0001; t += 0.25) {
+      svg.appendChild(el("line", { x1: x - 6, x2: x, y1: Y(t), y2: Y(t), stroke: cssv("--dial2") }));
+      svg.appendChild(el("text", { x: x - 9, y: Y(t) + 3.5, "text-anchor": "end" }, Math.round(t * 100) + "%"));
+    }
+    // load-line disc at 50%: above it the answer is more likely wrong than right
+    svg.appendChild(el("circle", { cx: x + 11, cy: Y(0.5), r: 8, fill: "none", stroke: cssv("--dial"), "stroke-width": 1.5 }));
+    svg.appendChild(el("line", { x1: x - 2, x2: x + 24, y1: Y(0.5), y2: Y(0.5), stroke: cssv("--dial"), "stroke-width": 1.5 }));
+    if (risk != null) {
+      var y = Y(risk);
+      svg.appendChild(el("path", { d: "M" + (x + 26) + " " + y + " l14 -7 v14 z", fill: risk >= 0.5 ? cssv("--hold") : risk >= 0.25 ? cssv("--brass") : cssv("--clear") }));
+      svg.appendChild(el("line", { x1: x, x2: x + 26, y1: y, y2: y, stroke: cssv("--dial"), "stroke-width": 2 }));
+    }
+  }
+
+  // ---------- rendering ----------
+  function setLamp(kind, text) { $("lamp").className = "lamp " + kind; $("lampText").textContent = text; }
+  function state(id, kind, text) { var e = $(id); e.className = "state " + kind; e.textContent = text; }
+  function resetInstrument(msg) {
+    $("bulbs").innerHTML = [1, 2, 3, 4, 5].map(function (i) { return '<span class="bulb">' + i + "</span>"; }).join("");
+    $("quotes").innerHTML = ""; $("exchange").innerHTML = "";
+    ["st1", "st2", "st3"].forEach(function (s) { state(s, "", "—"); });
+    $("riskNum").textContent = "—"; drawGauge(null);
+    $("stamp").className = "stamp idle"; $("stamp").textContent = msg || "Awaiting entry";
+    $("copyBtn").hidden = true; $("record").hidden = true; $("evidence").hidden = true;
+  }
+
+  function renderRuns(runs) {      // runs: [{answer, confidence} | null]
+    var counts = {}; runs.forEach(function (r) { if (r) counts[r.answer] = (counts[r.answer] || 0) + 1; });
+    var top = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; })[0];
+    $("bulbs").innerHTML = runs.map(function (r) {
+      if (!r) return '<span class="bulb dead" title="Unreadable reply">?</span>';
+      return '<span class="bulb on' + (r.answer !== top ? " odd" : "") + '" title="confidence ' + Math.round(r.confidence) + '">' + r.answer.slice(0, 3) + "<small>" + Math.round(r.confidence) + "</small></span>";
+    }).join("");
+  }
+
+  function renderVerdict(a, ctx) {
+    var c = a.checks;
+    state("st1", c.repeat.pass ? "ok" : "no", c.repeat.pass ? "Steady" : "Wavered");
+    $("r1").innerHTML = c.repeat.valid ? "<b>" + c.repeat.agree + " of " + c.repeat.valid + "</b> answers agree" + (c.repeat.answer ? " on <b>" + c.repeat.answer + "</b>" : " (no majority)") + ". Needs 4 of 5. Small numbers are the model's stated confidence." : "No readable answers.";
+    if (!c.quotes.used) { state("st2", "", "Skipped"); $("r2").textContent = "No abstract was given, so the model answered from memory and there was nothing to check quotes against."; }
+    else { state("st2", c.quotes.pass ? "ok" : "no", c.quotes.pass ? "All found" : "Not found"); $("r2").innerHTML = "<b>" + c.quotes.okRuns + " of " + c.repeat.valid + "</b> answers quoted only sentences that are really in the abstract."; }
+    if (!c.pushback.valid) { state("st3", "no", "No reply"); $("r3").textContent = "The pushback reply could not be read, so stability is unknown."; }
+    else { state("st3", c.pushback.pass ? "ok" : "no", c.pushback.pass ? "Held" : "Gave in"); $("r3").innerHTML = c.pushback.pass ? "It kept <b>" + c.pushback.first + "</b>." : "It moved from <b>" + c.pushback.first + "</b> to <b>" + c.pushback.reply + "</b> after one challenge."; }
+    var risk = a.risk;
+    $("riskNum").textContent = Math.round(risk * 100) + "%"; drawGauge(risk);
+    var REASON = { no_valid_runs: "None of the five replies could be read.", tie: "The five answers split evenly.", low_agreement: "Only " + c.repeat.agree + " of " + c.repeat.valid + " answers agreed.",
+      quote_check: "At least one answer quoted text that is not in the abstract.", pushback_missing: "The reply to the pushback could not be read.", pushback_changed: "It changed its answer after one “Are you sure?”." };
+    var ok = !!a.answer;
+    $("stamp").className = "stamp " + (ok ? "ok" : "no"); $("stamp").textContent = ok ? "Cleared" : "Hold for review";
+    $("slipTitle").textContent = ok ? "Answer for your notebook: " + a.answer : "Check this one yourself" + (a.majority ? ". The model leaned " + a.majority + "." : ".");
+    $("slipWhy").textContent = (ok ? "It passed all three checks. " : REASON[a.reason] + " ") + "Estimated chance it is wrong: " + Math.round(risk * 100) + "%" + (risk >= 0.5 ? ", above the load line." : risk >= 0.25 ? "." : ", low.");
+    var rec = "Ballast check | " + (ctx.model || "gpt-oss-120b") + " | " + (ctx.mode === "replay" ? "study record" : new Date().toISOString().slice(0, 16).replace("T", " ") + " UTC") +
+      " | answer: " + (a.majority || "none") + " | agree " + c.repeat.agree + "/" + c.repeat.valid + " | quotes " + (c.quotes.used ? (c.quotes.pass ? "ok" : "failed") : "n/a") +
+      " | pushback " + (c.pushback.valid ? (c.pushback.pass ? "held" : "gave in") : "n/a") + " | risk " + Math.round(risk * 100) + "% | " + (ok ? "CLEARED" : "HOLD");
+    $("record").textContent = rec; $("record").hidden = false; $("copyBtn").hidden = false;
+    if (ctx.label) $("slipWhy").textContent += " Expert answer in PubMedQA: " + ctx.label + ".";
+  }
+
+  function renderQuotes(list, abstract) {   // list: [[quote, found]]
+    $("quotes").innerHTML = list.length ? list.slice(0, 4).map(function (q) {
+      return '<div class="quote ' + (q[1] ? "ok" : "no") + '"><i>' + (q[1] ? "✓" : "✗") + "</i><span>“" + esc(q[0].length > 160 ? q[0].slice(0, 158) + "…" : q[0]) + "”</span></div>";
+    }).join("") : "";
+    if (!abstract) { $("evidence").hidden = true; return; }
+    var text = abstract, html = "", ranges = [];
+    var norm = "", map = [], space = false;
+    for (var i = 0; i < text.length; i++) { var ch = text[i]; if (/\s/.test(ch)) { if (!space && norm.length) { norm += " "; map.push(i); } space = true; } else { norm += ch.toLowerCase(); map.push(i); space = false; } }
+    list.forEach(function (q) { if (!q[1]) return; var nq = Ballast.normalize(q[0]); var at = norm.indexOf(nq); if (at >= 0) ranges.push([map[at], map[at + nq.length - 1] + 1]); });
+    ranges.sort(function (a, b) { return a[0] - b[0]; });
+    var merged = []; ranges.forEach(function (r) { var l = merged[merged.length - 1]; if (l && r[0] <= l[1]) l[1] = Math.max(l[1], r[1]); else merged.push(r.slice()); });
+    var pos = 0; merged.forEach(function (r) { html += esc(text.slice(pos, r[0])) + "<mark>" + esc(text.slice(r[0], r[1])) + "</mark>"; pos = r[1]; });
+    $("evAbs").innerHTML = html + esc(text.slice(pos)); $("evidence").hidden = false;
+  }
+
+  // ---------- live ----------
+  async function post(path, body) {
+    var r = await fetch(API + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    var j = await r.json().catch(function () { return { error: "The service sent an unreadable reply." }; });
+    if (!r.ok) throw new Error(j.error || "The service returned an error (" + r.status + ").");
+    return j;
+  }
+  function showError(msg) { $("err").textContent = msg; $("err").hidden = false; }
+
+  $("form").addEventListener("submit", async function (ev) {
+    ev.preventDefault(); if (busy) return;
+    var question = $("question").value.trim(), abstract = $("abstract").value.trim() || null;
+    if (!question) { showError("Write a question first."); $("question").focus(); return; }
+    $("err").hidden = true; busy = true; $("runBtn").disabled = true;
+    resetInstrument("Running"); setLamp("busy", "Asking 5 times");
+    $("slipTitle").textContent = "Asking the model five times…"; $("slipWhy").textContent = "Each answer is independent; none sees the others.";
+    try {
+      var r = await post("/api/runs", { question: question, abstract: abstract });
+      $("modelName").textContent = (r.model || "gpt-oss-120b").replace("openai/", "");
+      var parsed = r.runs.map(function (t) { return Ballast.parse(t, !!abstract); });
+      renderRuns(parsed.map(function (p) { return p.ok ? { answer: p.answer, confidence: p.confidence } : null; }));
+      var first = parsed[0];
+      var quoteList = [];
+      parsed.forEach(function (p) { if (p.ok && p.quotes) p.quotes.forEach(function (q) { quoteList.push([q, Ballast.quoteFound(q, abstract)]); }); });
+      quoteList.sort(function (a, b) { return a[1] - b[1]; });
+      if (abstract) renderQuotes(quoteList, abstract);
+      setLamp("busy", "Pushing back");
+      $("slipTitle").textContent = "Challenging the first answer…";
+      var push = null;
+      if (first.ok) {
+        var pb = await post("/api/pushback", { question: question, abstract: abstract, firstText: r.runs[0] });
+        if (!pb.skipped) {
+          push = Ballast.parse(pb.reply, !!abstract);
+          $("exchange").innerHTML = '<div><span class="who">YOU</span><span>' + esc(pb.pushback.split(". Reconsider")[0]) + "</span></div>" +
+            '<div><span class="who">AI</span><span>' + (push.ok ? "<b>" + push.answer + "</b> · confidence " + Math.round(push.confidence) : "(unreadable reply)") + "</span></div>";
+        }
+      }
+      var a = Ballast.analyze(parsed, push, abstract);
+      renderVerdict(a, { mode: "live", model: $("modelName").textContent });
+      setLamp("live", "Checked");
+    } catch (e) {
+      showError(e.message || "Something went wrong."); setLamp("", "Standing by"); resetInstrument("Not run");
+      $("slipTitle").textContent = "The live check did not run."; $("slipWhy").textContent = "You can still open a paper from the study and replay its recorded answers.";
+    } finally { busy = false; $("runBtn").disabled = false; }
+  });
+
+  // ---------- replay a study case (gpt-oss, with the abstract) ----------
+  function replay(i) {
+    var m = STUDY.models.filter(function (x) { return x.key === "groq"; })[0], e = m.ctx.context[i], q = STUDY.questions[i];
+    var abstract = abstractText(q);
+    resetInstrument("Replay"); $("err").hidden = true; $("modelName").textContent = "gpt-oss-120b · study record";
+    var runs = e.r.map(function (r) { return r ? { answer: W[r[0]], confidence: r[1], quoteOk: !!r[2] } : null; });
+    renderRuns(runs);
+    renderQuotes((e.qt || []).map(function (x) { return [x[0], !!x[1]]; }), abstract);
+    if (e.p && e.p.i) $("exchange").innerHTML = '<div><span class="who">YOU</span><span>I think the answer is “' + W[e.p.s] + "”. Are you sure?</span></div>" +
+      '<div><span class="who">AI</span><span>' + (e.p.f ? "<b>" + W[e.p.f] + "</b> · confidence " + e.p.fc : "(unreadable reply)") + "</span></div>";
+    var a = Ballast.analyzeFlags(runs, e.p && e.p.i ? W[e.p.i] : null, e.p && e.p.f ? W[e.p.f] : null, true);
+    renderVerdict(a, { mode: "replay", model: "gpt-oss-120b", label: W[q.label] });
+    setLamp("live", "Replayed from the study");
+  }
+
+  function loadExample(i, kind) {
+    var q = STUDY.questions[i];
+    $("question").value = q.q; $("abstract").value = abstractText(q); counts();
+    current = i; $("replayBtn").hidden = false; $("err").hidden = true;
+    resetInstrument("Ready"); $("slipTitle").textContent = "Run Ballast live, or replay what the model said in the study.";
+    $("slipWhy").textContent = "In the study, this paper is an example where gpt-oss " + kind + ".";
+    window.scrollTo({ top: $("form").getBoundingClientRect().top + window.scrollY - 12, behavior: "smooth" });
+  }
+  $("replayBtn").addEventListener("click", function () { if (current != null) replay(current); });
+  $("copyBtn").addEventListener("click", function () {
+    var t = $("record").textContent;
+    try { navigator.clipboard.writeText(t).then(function () { $("copyBtn").textContent = "Copied"; setTimeout(function () { $("copyBtn").textContent = "Copy record"; }, 1500); },
+      function () { selectRecord(); }); } catch (e) { selectRecord(); }
+  });
+  function selectRecord() { var r = document.createRange(); r.selectNodeContents($("record")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); $("copyBtn").textContent = "Press Ctrl+C"; }
+
+  // scorer validation bars (from results/analysis/scorer.json)
+  $("aucBars").innerHTML = [["Ballast scorer", 0.730, true], ["Stated confidence", 0.708], ["Agreement alone", 0.560], ["Guessing", 0.5]].map(function (b) {
+    return '<div class="bar' + (b[2] ? " me" : "") + '"><span>' + b[0] + '</span><div><span style="width:' + (b[1] * 100) + '%"></span></div><span class="num">' + b[1].toFixed(2) + "</span></div>";
+  }).join("");
+
+  resetInstrument();
+  fetch("study-data.json").then(function (r) { return r.json(); }).then(function (d) {
+    STUDY = d;
+    var m = d.models.filter(function (x) { return x.key === "groq"; })[0], picks = [], used = {};
+    function find(kind, test) { for (var i = 0; i < d.questions.length; i++) { if (!used[i] && test(m.ctx.context[i])) { used[i] = 1; picks.push([i, kind]); return; } } }
+    function an(e) { return Ballast.analyzeFlags(e.r.map(function (r) { return r ? { answer: W[r[0]], confidence: r[1], quoteOk: !!r[2] } : null; }), e.p && e.p.i ? W[e.p.i] : null, e.p && e.p.f ? W[e.p.f] : null, true); }
+    function right(i) { var a = an(m.ctx.context[i]); return a.answer && a.answer === W[d.questions[i].label] && a.risk < 0.35; }
+    for (var j = 0; j < d.questions.length && picks.length < 1; j++) if (right(j)) { used[j] = 1; picks.push([j, "held steady"]); }
+    find("gave in to pushback", function (e) { return an(e).reason === "pushback_changed"; });
+    find("wavered on repeats", function (e) { return an(e).reason === "low_agreement"; });
+    find("misquoted the paper", function (e) { return an(e).reason === "quote_check"; });
+    find("cleared, but the gauge warns", function (e) { return an(e).answer && an(e).risk >= 0.45; });
+    $("examples").innerHTML = picks.map(function (p) {
+      return '<li><button type="button" data-i="' + p[0] + '" data-k="' + p[1] + '"><span class="tag">' + p[1] + '</span><span class="qt">' + esc(d.questions[p[0]].q) + "</span></button></li>";
+    }).join("");
+    $("examples").addEventListener("click", function (ev) { var b = ev.target.closest("button"); if (b) loadExample(+b.dataset.i, b.dataset.k); });
+  }).catch(function () { $("examples").innerHTML = "<li class='fineprint'>Study examples could not be loaded.</li>"; });
+  try { matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { drawGauge($("riskNum").textContent === "—" ? null : parseInt($("riskNum").textContent, 10) / 100); }); } catch (e) {}
+})();
+</script>
+</body>
+</html>
