@@ -1,0 +1,678 @@
+<title>Ballast</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working instrument first (pick a question, watch the three checks), then the fleet-wide view, then the evidence. */
+:root {
+  --bg: #f2f5f5; --surface: #fbfcfc; --sunk: #e7eded; --line: #d3dcdd;
+  --ink: #0f2128; --ink2: #4a5d64; --ink3: #6f8187;
+  --accent: #0b6670; --accent-soft: #d8ebec;
+  --pass: #17784a; --pass-soft: #dcefe4; --back: #9a5b00; --back-soft: #f6e8cf;
+  --fold: #c94f1d; --fold-soft: #f8e1d6; --mark: #cfe6e8;
+  --closed: #263f49; --context: #0b8a95;
+  --display: "Literata", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0d171b; --surface: #132127; --sunk: #0f1b20; --line: #26373d;
+  --ink: #e5eef0; --ink2: #a3b5ba; --ink3: #7f9298;
+  --accent: #55b6bf; --accent-soft: #163a3f;
+  --pass: #4cc38a; --pass-soft: #163829; --back: #e3a64a; --back-soft: #3a2c14;
+  --fold: #f08257; --fold-soft: #3d2219; --mark: #1d4a50;
+  --closed: #b9cbd0; --context: #55b6bf; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0d171b; --surface: #132127; --sunk: #0f1b20; --line: #26373d;
+  --ink: #e5eef0; --ink2: #a3b5ba; --ink3: #7f9298;
+  --accent: #55b6bf; --accent-soft: #163a3f;
+  --pass: #4cc38a; --pass-soft: #163829; --back: #e3a64a; --back-soft: #3a2c14;
+  --fold: #f08257; --fold-soft: #3d2219; --mark: #1d4a50;
+  --closed: #b9cbd0; --context: #55b6bf; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 650; text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.45rem, 2.6vw, 1.9rem); line-height: 1.2; }
+h3 { font-size: 1.05rem; font-family: var(--body); font-weight: 600; letter-spacing: 0; }
+p { margin: 0; }
+.eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink3); }
+.muted { color: var(--ink2); }
+.num { font-variant-numeric: tabular-nums; }
+section { padding-block: 56px; border-top: 1px solid var(--line); }
+
+/* header */
+.top { padding-block: 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 1.3rem; font-weight: 650; color: var(--ink); text-decoration: none; }
+.brand svg { width: 26px; height: 26px; }
+.top nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.9rem; }
+.top nav a { color: var(--ink2); text-decoration: none; }
+.top nav a:hover { color: var(--accent); }
+
+/* hero */
+.hero { padding-block: 40px 56px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
+.hero h1 { font-size: clamp(2rem, 4.6vw, 3.3rem); line-height: 1.08; margin-top: 12px; }
+.hero .lede { font-size: 1.08rem; color: var(--ink2); max-width: 36em; margin-top: 18px; }
+.hero .cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { font: inherit; font-weight: 500; border-radius: 8px; padding: 10px 16px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.btn:hover { border-color: var(--accent); }
+.gauge { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: grid; gap: 18px; }
+.gauge .row { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: baseline; }
+.gauge .big { font-family: var(--display); font-size: 2.2rem; font-weight: 650; line-height: 1; font-variant-numeric: tabular-nums; }
+.gauge .row p { grid-column: 1 / -1; color: var(--ink2); font-size: 0.92rem; }
+.gauge .bar { grid-column: 1 / -1; height: 8px; border-radius: 4px; background: var(--sunk); overflow: hidden; display: flex; gap: 2px; }
+.gauge .bar span { display: block; height: 100%; border-radius: 4px; }
+.gauge small { color: var(--ink3); font-size: 0.78rem; }
+
+/* try it */
+.try-head { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; }
+.try-head p { color: var(--ink2); max-width: 38em; }
+.controls { margin-top: 28px; display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; }
+.ctl-row { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.ctl { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
+.ctl > .lab { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink3); }
+.qpick { display: flex; gap: 8px; align-items: center; flex: 1 1 420px; min-width: 0; }
+.qpick select { flex: 1; min-width: 0; font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.iconbtn { font: inherit; width: 38px; height: 38px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; display: grid; place-items: center; flex: none; }
+.iconbtn:hover { border-color: var(--accent); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; flex-wrap: wrap; }
+.seg button { font: inherit; font-size: 0.9rem; padding: 7px 12px; border: 0; background: var(--bg); color: var(--ink2); cursor: pointer; border-right: 1px solid var(--line); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--bg); }
+.toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; color: var(--ink2); cursor: pointer; }
+.toggle input { accent-color: var(--accent); width: 16px; height: 16px; }
+.finders { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chipbtn { font: inherit; font-size: 0.82rem; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink2); cursor: pointer; }
+.chipbtn:hover { border-color: var(--accent); color: var(--ink); }
+.finder-note { font-size: 0.82rem; color: var(--ink3); }
+
+.question { margin-top: 22px; display: grid; gap: 6px; }
+.question .q { font-family: var(--display); font-size: clamp(1.15rem, 2vw, 1.45rem); line-height: 1.3; font-weight: 500; }
+.question .meta { font-size: 0.85rem; color: var(--ink3); }
+
+.steps { margin-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.step.off { opacity: 0.55; }
+.step-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.step-top .eyebrow { color: var(--ink2); }
+.pill { font-size: 0.76rem; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.pill.ok { background: var(--pass-soft); color: var(--pass); }
+.pill.no { background: var(--back-soft); color: var(--back); }
+.pill.skip { background: var(--sunk); color: var(--ink3); }
+.runs { display: flex; flex-wrap: wrap; gap: 6px; }
+.run { font-family: var(--mono); font-size: 0.8rem; padding: 5px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); color: var(--ink2); }
+.run b { color: var(--ink); font-weight: 500; }
+.run.top { border-color: var(--accent); background: var(--accent-soft); }
+.run.bad { border-style: dashed; color: var(--ink3); }
+.meter { height: 6px; border-radius: 3px; background: var(--sunk); position: relative; overflow: visible; }
+.meter > span { position: absolute; inset: 0 auto 0 0; border-radius: 3px; background: var(--accent); }
+.meter > i { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--ink); }
+.step p.small, .small { font-size: 0.86rem; color: var(--ink2); }
+.bubble { border-radius: 10px; padding: 9px 12px; font-size: 0.9rem; max-width: 92%; }
+.bubble.user { background: var(--sunk); justify-self: end; border-bottom-right-radius: 3px; }
+.bubble.ai { background: var(--bg); border: 1px solid var(--line); border-bottom-left-radius: 3px; }
+.bubble .who { display: block; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink3); margin-bottom: 2px; }
+.ans { font-family: var(--mono); font-weight: 500; }
+.tag-fold { color: var(--fold); font-weight: 600; }
+
+.verdict { margin-top: 14px; border-radius: var(--r); padding: 18px; display: grid; grid-template-columns: 1fr auto; gap: 10px 20px; align-items: center; border: 1px solid var(--line); background: var(--surface); }
+.verdict.ok { border-color: var(--pass); }
+.verdict.no { border-color: var(--back); }
+.verdict .v-title { font-family: var(--display); font-size: 1.25rem; font-weight: 650; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.verdict .v-title .dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
+.verdict.ok .dot { background: var(--pass); } .verdict.no .dot { background: var(--back); }
+.verdict .why { color: var(--ink2); font-size: 0.92rem; grid-column: 1; }
+.verdict .reveal { grid-row: 1 / span 2; grid-column: 2; display: grid; gap: 6px; justify-items: end; text-align: right; }
+.expert { font-size: 0.9rem; color: var(--ink2); }
+.expert b { color: var(--ink); }
+
+.abstract { margin-top: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.abstract summary { cursor: pointer; padding: 14px 16px; font-weight: 500; list-style: none; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.abstract summary::-webkit-details-marker { display: none; }
+.abstract summary::after { content: "Show"; font-size: 0.85rem; color: var(--accent); }
+.abstract[open] summary::after { content: "Hide"; }
+.abstract .text { padding: 0 16px 16px; white-space: pre-wrap; font-size: 0.92rem; line-height: 1.65; color: var(--ink2); max-width: 75ch; }
+.abstract mark { background: var(--mark); color: var(--ink); border-radius: 3px; padding: 0 1px; }
+.missing { padding: 0 16px 16px; display: grid; gap: 6px; }
+.missing div { font-size: 0.88rem; color: var(--ink2); border-left: 3px solid var(--fold); padding-left: 10px; }
+
+/* at scale */
+.scale { display: grid; grid-template-columns: 1fr 1.15fr; gap: 28px; margin-top: 26px; align-items: start; }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: grid; gap: 4px; min-width: 0; }
+.tile .v { font-family: var(--display); font-size: 1.8rem; font-weight: 650; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tile .k { font-size: 0.8rem; color: var(--ink2); }
+.compare { margin-top: 14px; display: grid; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; }
+.cmp-row { display: grid; grid-template-columns: 110px 1fr 120px; gap: 10px; align-items: center; font-size: 0.88rem; }
+.cmp-bar { height: 14px; background: var(--sunk); border-radius: 4px; display: flex; overflow: hidden; gap: 2px; }
+.cmp-bar span { display: block; height: 100%; }
+.cmp-bar .c { background: var(--pass); } .cmp-bar .w { background: var(--fold); } .cmp-bar .h { background: transparent; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 0.8rem; color: var(--ink2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.chartbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; min-width: 0; }
+.chartbox svg { width: 100%; height: auto; display: block; }
+.chartbox text { fill: var(--ink2); font-family: var(--body); font-size: 11px; }
+
+/* findings */
+.findings { margin-top: 26px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.finding { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.finding p { color: var(--ink2); font-size: 0.92rem; }
+.finding svg { width: 100%; height: auto; display: block; }
+.finding svg text { fill: var(--ink2); font-family: var(--body); font-size: 11px; }
+
+.method { margin-top: 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.method div { display: grid; gap: 4px; align-content: start; }
+.method b { font-family: var(--display); font-size: 1.5rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.method span { font-size: 0.86rem; color: var(--ink2); }
+.limits { margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; font-size: 0.9rem; color: var(--ink2); padding: 0; list-style: none; }
+.limits li { padding-left: 14px; position: relative; }
+.limits li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 5px; height: 5px; border-radius: 50%; background: var(--ink3); }
+footer { padding-block: 28px 40px; border-top: 1px solid var(--line); font-size: 0.84rem; color: var(--ink3); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+@media (max-width: 900px) {
+  .hero, .try-head, .scale { grid-template-columns: 1fr; gap: 28px; }
+  .steps { grid-template-columns: 1fr; }
+  .findings, .limits { grid-template-columns: 1fr; }
+  .method { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .tiles { grid-template-columns: 1fr; }
+  .verdict { grid-template-columns: 1fr; }
+  .verdict .reveal { grid-row: auto; grid-column: 1; justify-items: start; text-align: left; }
+  .cmp-row { grid-template-columns: 82px 1fr; }
+  .cmp-row .n { grid-column: 2; }
+  section { padding-block: 40px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .meter > span, .cmp-bar span, .gauge .bar span { transition: width 0.35s ease; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top" aria-label="Ballast">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v19" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M8 16c0 6 3.6 10 8 10s8-4 8-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M11 12h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      Ballast
+    </a>
+    <nav aria-label="Sections">
+      <a href="#try">Try it</a><a href="#scale">At scale</a><a href="#findings">Findings</a><a href="#method">How it was tested</a>
+      <a href="https://github.com/Adhithyan245/ballast" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Adhithyan245/ballast/blob/main/REPORT.md" target="_blank" rel="noopener">Full report</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="top">
+    <div>
+      <div class="eyebrow">A reliability check for AI research assistants</div>
+      <h1>Before an AI's answer reaches a scientist, make sure it holds steady.</h1>
+      <p class="lede">Ballast asks the model the same question again, checks every quote against the source paper, and pushes back once. Answers that waver go back to a person instead of into the lab notebook.</p>
+      <div class="cta">
+        <a class="btn primary" href="#try">Try it on a real question</a>
+        <a class="btn" href="https://github.com/Adhithyan245/ballast/blob/main/REPORT.md" target="_blank" rel="noopener">Read the study</a>
+      </div>
+    </div>
+    <div class="gauge" aria-label="Key results">
+      <div class="row">
+        <div class="eyebrow">Asked the same question 5 times</div><div class="big num" id="g1">8–11%</div>
+        <div class="bar" aria-hidden="true"><span style="width:11%;background:var(--accent)"></span></div>
+        <p>of questions got a different answer from Claude and Gemini on a repeat. They look consistent.</p>
+      </div>
+      <div class="row">
+        <div class="eyebrow">Then one "Are you sure?"</div><div class="big num" id="g2">29–51%</div>
+        <div class="bar" aria-hidden="true"><span style="width:51%;background:var(--fold)"></span></div>
+        <p>of the same questions, they switched to the answer the user suggested.</p>
+      </div>
+      <div class="row">
+        <div class="eyebrow">With the source abstract in hand</div><div class="big num">≤ ½</div>
+        <div class="bar" aria-hidden="true"><span style="width:23%;background:var(--fold)"></span></div>
+        <p>as much switching, for every model tested.</p>
+      </div>
+      <small>From a preregistered study: 100 expert-labeled PubMedQA questions, 5 model families, 8,998 recorded answers. Closed-book unless noted.</small>
+    </div>
+  </div>
+</div>
+
+<section id="try">
+  <div class="wrap">
+    <div class="try-head">
+      <div>
+        <div class="eyebrow">Use case · literature check</div>
+        <h2 style="margin-top:8px">A scientist asks an AI assistant a yes/no question about a paper.</h2>
+      </div>
+      <p>Pick a question and a model. Every answer below is a real response recorded in the study; nothing is generated live. Ballast decides whether to pass the answer on or hand it back to a person.</p>
+    </div>
+
+    <div class="controls">
+      <div class="ctl-row">
+        <div class="qpick">
+          <button class="iconbtn" id="prev" aria-label="Previous question">‹</button>
+          <label class="sr" for="qsel" style="position:absolute;left:-9999px">Question</label>
+          <select id="qsel"></select>
+          <button class="iconbtn" id="next" aria-label="Next question">›</button>
+          <button class="iconbtn" id="rand" aria-label="Random question" title="Random question">⤨</button>
+        </div>
+      </div>
+      <div class="ctl-row">
+        <div class="ctl"><span class="lab">Model</span><div class="seg" id="models" role="group" aria-label="Model"></div></div>
+        <div class="ctl"><span class="lab">Source</span><div class="seg" id="ctx" role="group" aria-label="Source given to the model">
+          <button data-v="closed">Question only</button><button data-v="context">With abstract</button></div></div>
+      </div>
+      <div class="ctl-row">
+        <div class="ctl"><span class="lab">Agreement needed</span><div class="seg" id="tau" role="group" aria-label="Runs that must agree">
+          <button data-v="0.6">3 of 5</button><button data-v="0.8">4 of 5</button><button data-v="1">5 of 5</button></div></div>
+        <label class="toggle"><input type="checkbox" id="useQuotes" checked> Quote check</label>
+        <label class="toggle"><input type="checkbox" id="usePush" checked> Pushback check</label>
+      </div>
+      <div class="ctl-row">
+        <div class="finders"><span class="lab eyebrow">Jump to a question where it</span>
+          <button class="chipbtn" data-find="pass">passed every check</button>
+          <button class="chipbtn" data-find="waver">wavered on repeats</button>
+          <button class="chipbtn" data-find="fold">switched under pushback</button>
+          <button class="chipbtn" data-find="quote">misquoted the paper</button>
+          <span class="finder-note" id="finderNote" aria-live="polite"></span></div>
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="meta" id="qmeta"></div>
+      <div class="q" id="qtext"></div>
+    </div>
+
+    <div class="steps">
+      <div class="step" id="s1">
+        <div class="step-top"><div class="eyebrow">1 · Ask again</div><span class="pill" id="s1pill"></span></div>
+        <div class="runs" id="runs"></div>
+        <div class="meter" aria-hidden="true"><span id="agreeBar"></span><i id="agreeMark"></i></div>
+        <p class="small" id="s1text"></p>
+      </div>
+      <div class="step" id="s2">
+        <div class="step-top"><div class="eyebrow">2 · Check the quotes</div><span class="pill" id="s2pill"></span></div>
+        <p class="small" id="s2text"></p>
+      </div>
+      <div class="step" id="s3">
+        <div class="step-top"><div class="eyebrow">3 · Push back once</div><span class="pill" id="s3pill"></span></div>
+        <div class="bubble user" id="pushQ"></div>
+        <div class="bubble ai" id="pushA"></div>
+        <p class="small" id="s3text"></p>
+      </div>
+    </div>
+
+    <div class="verdict" id="verdict" aria-live="polite">
+      <div class="v-title"><span class="dot"></span><span id="vtitle"></span></div>
+      <div class="why" id="vwhy"></div>
+      <div class="reveal"><button class="btn" id="revealBtn">Show the expert answer</button><div class="expert" id="expert" hidden></div></div>
+    </div>
+
+    <details class="abstract" id="abs">
+      <summary><span id="absTitle">The paper's abstract</span></summary>
+      <div class="text" id="absText"></div>
+      <div class="missing" id="missing"></div>
+    </details>
+  </div>
+</section>
+
+<section id="scale">
+  <div class="wrap">
+    <div class="try-head">
+      <div><div class="eyebrow">At scale</div><h2 style="margin-top:8px">The same checks on all 100 questions</h2></div>
+      <p>The settings above apply here. "No checks" means taking the model's majority answer every time. Ballast answers fewer questions and lets fewer wrong answers through.</p>
+    </div>
+    <div class="scale">
+      <div>
+        <div class="tiles">
+          <div class="tile"><span class="v" id="tAns"></span><span class="k">questions answered (the rest go to a person)</span></div>
+          <div class="tile"><span class="v" id="tAcc"></span><span class="k">accuracy on the answers it passes</span></div>
+          <div class="tile"><span class="v" id="tWrong"></span><span class="k">wrong answers that reach the scientist</span></div>
+        </div>
+        <div class="compare" id="compare"></div>
+      </div>
+      <div class="chartbox">
+        <div class="eyebrow" style="margin-bottom:6px">Every model, current settings: coverage vs accuracy</div>
+        <svg id="scatter" viewBox="0 0 520 330" role="img" aria-label="Coverage versus accuracy for each model, with and without Ballast"></svg>
+        <div class="legend" style="margin-top:6px"><span><i style="border:1.5px solid var(--ink3);border-radius:50%;background:transparent"></i>No checks</span><span><i style="background:var(--accent);border-radius:50%"></i>With Ballast</span><span>† exploratory</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="findings">
+  <div class="wrap">
+    <div class="eyebrow">What the study found</div>
+    <h2 style="margin-top:8px;max-width:24em">Consistency is not the same as holding firm</h2>
+    <div class="findings">
+      <div class="finding">
+        <h3>Asking again catches some wobble</h3>
+        <p>Share of questions whose 5 answers were not all the same. Qwen and DeepSeek wavered on about half of closed-book questions.</p>
+        <svg id="fFlip" viewBox="0 0 520 220" role="img" aria-label="Flip rate by model"></svg>
+      </div>
+      <div class="finding">
+        <h3>One pushback moves far more</h3>
+        <p>Share of questions where the model switched to the user's suggested answer. Bars are 95% intervals.</p>
+        <svg id="fCap" viewBox="0 0 520 220" role="img" aria-label="Capitulation rate by model"></svg>
+      </div>
+      <div class="finding">
+        <h3>Confidence is not a safety signal</h3>
+        <p id="fConf"></p>
+      </div>
+      <div class="finding">
+        <h3>Quotes mostly check out</h3>
+        <p id="fQuote"></p>
+      </div>
+    </div>
+    <div class="legend" style="margin-top:12px"><span><i style="background:var(--closed);border-radius:50%"></i>Question only</span><span><i style="background:var(--context)"></i>With abstract</span><span>Bars: 95% intervals · † exploratory (added after preregistration)</span></div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="eyebrow">How it was tested</div>
+    <h2 style="margin-top:8px;max-width:26em">Preregistered before a single main-study call</h2>
+    <div class="method">
+      <div><b>100</b><span>expert-labeled questions from PubMedQA (yes / no / maybe), each with its source abstract</span></div>
+      <div><b>5</b><span>model families: Claude, Gemini, gpt-oss, Qwen, and DeepSeek (exploratory)</span></div>
+      <div><b>8,998</b><span>recorded answers, every one cached and published; no LLM judge in any metric</span></div>
+      <div><b>108</b><span>automated tests; one command regenerates every number and chart</span></div>
+    </div>
+    <ul class="limits">
+      <li>Not a medical evaluation. Accuracy means agreement with PubMedQA's expert labels.</li>
+      <li>Claude and DeepSeek ran through agent tools (Claude Code, Kiro), which add context and fix the temperature.</li>
+      <li>100 questions and one pushback wording: intervals are wide, about ±10 points.</li>
+      <li>The quote check confirms a quote exists in the abstract, not that it supports the answer.</li>
+      <li>At equal coverage, the pushback check beat agreement alone only for Claude; for the other models the gain mostly came from answering fewer questions.</li>
+      <li>Models were tested between 30 Oct and 5 Nov 2026; hosted models can change behind the same name.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>Ballast · built by Adhithyan Aravind · <a href="https://github.com/Adhithyan245/ballast" target="_blank" rel="noopener">github.com/Adhithyan245/ballast</a></span>
+    <span>Research exercise on public models and public data. Not clinical advice.</span>
+  </footer>
+</div>
+
+<script>
+/*__CORE__*/
+</script>
+<script>
+var DATA = /*__DATA__*/;
+var SUMMARY = /*__SUMMARY__*/;
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var WORD = { y: "yes", n: "no", m: "maybe" };
+  var LABELS = DATA.questions.map(function (q) { return q.label; });
+  var state = { qi: 0, model: "claude", ctx: "closed", tau: 0.8, quotes: true, push: true, reveal: false };
+  try { var saved = JSON.parse(localStorage.getItem("ballast-state") || "null"); if (saved) Object.assign(state, saved, { reveal: false }); } catch (e) {}
+  function save() { try { localStorage.setItem("ballast-state", JSON.stringify(state)); } catch (e) {} }
+  function model() { return DATA.models.filter(function (m) { return m.key === state.model; })[0]; }
+  function opt() { return { tau: state.tau, quotes: state.quotes, pushback: state.push }; }
+  function pct(x, d) { return isNaN(x) ? "–" : (x * 100).toFixed(d == null ? 0 : d) + "%"; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  // controls
+  var qsel = $("qsel");
+  DATA.questions.forEach(function (q, i) {
+    var o = document.createElement("option");
+    o.value = i;
+    o.textContent = "Q" + (i + 1) + " · " + (q.q.length > 96 ? q.q.slice(0, 94) + "…" : q.q);
+    qsel.appendChild(o);
+  });
+  var mseg = $("models");
+  DATA.models.forEach(function (m) {
+    var b = document.createElement("button");
+    b.dataset.v = m.key; b.textContent = m.name + (m.exploratory ? "†" : "");
+    mseg.appendChild(b);
+  });
+  function bindSeg(id, key, parse) {
+    $(id).addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      state[key] = parse ? parse(b.dataset.v) : b.dataset.v; state.reveal = false; render();
+    });
+  }
+  bindSeg("models", "model"); bindSeg("ctx", "ctx"); bindSeg("tau", "tau", parseFloat);
+  qsel.addEventListener("change", function () { state.qi = +qsel.value; state.reveal = false; render(); });
+  $("prev").onclick = function () { state.qi = (state.qi + 99) % 100; state.reveal = false; render(); };
+  $("next").onclick = function () { state.qi = (state.qi + 1) % 100; state.reveal = false; render(); };
+  $("rand").onclick = function () { state.qi = Math.floor(Math.random() * 100); state.reveal = false; render(); };
+  $("useQuotes").onchange = function (e) { state.quotes = e.target.checked; render(); };
+  $("usePush").onchange = function (e) { state.push = e.target.checked; render(); };
+  $("revealBtn").onclick = function () { state.reveal = !state.reveal; renderVerdict(); };
+
+  // jump-to finders: next question (after the current one) matching the pattern
+  var FIND_TEXT = { pass: "passed every check", waver: "wavered on repeats", fold: "switched under pushback", quote: "misquoted the paper" };
+  function matches(kind, e) {
+    var m = BallastCore.modal(e.r);
+    if (kind === "pass") return BallastCore.decide(e, state.ctx, { tau: state.tau, quotes: true, pushback: true }).answer !== null;
+    if (kind === "waver") return m.n > 0 && m.k < m.n;
+    if (kind === "fold") return e.p && e.p.i && e.p.f && e.p.f === e.p.s;
+    if (kind === "quote") return state.ctx === "context" && e.r.some(function (r) { return r && !r[2]; });
+  }
+  document.querySelectorAll("[data-find]").forEach(function (b) {
+    b.onclick = function () {
+      var kind = b.dataset.find, entries = model().ctx[state.ctx], count = 0, first = -1;
+      for (var k = 1; k <= 100; k++) { var i = (state.qi + k) % 100; if (matches(kind, entries[i])) { count++; if (first < 0) first = i; } }
+      if (matches(kind, entries[state.qi])) count++;
+      var note = $("finderNote");
+      if (kind === "quote" && state.ctx !== "context") { note.textContent = "The quote check needs the abstract. Switch the source to “With abstract”."; return; }
+      if (first < 0) { note.textContent = model().name + " never " + FIND_TEXT[kind] + " in this setting."; return; }
+      state.qi = first; state.reveal = false; render();
+      note.textContent = model().name + " " + FIND_TEXT[kind] + " on " + count + " of 100 questions here.";
+    };
+  });
+
+  // highlighting quotes in the abstract with the study's normalisation (whitespace collapsed, casefolded)
+  function abstractText(q) { return q.abstract.map(function (p) { return p[0] ? p[0] + ": " + p[1] : p[1]; }).join("\n\n"); }
+  function normMap(s) {
+    var out = "", map = [], space = false;
+    for (var i = 0; i < s.length; i++) {
+      var c = s[i];
+      if (/\s/.test(c)) { if (!space && out.length) { out += " "; map.push(i); } space = true; }
+      else { out += c.toLowerCase(); map.push(i); space = false; }
+    }
+    return { s: out, map: map };
+  }
+  function highlight(text, quotes) {
+    var nm = normMap(text), ranges = [];
+    quotes.forEach(function (qt) {
+      var nq = qt[0].replace(/\s+/g, " ").trim().toLowerCase(); if (!nq) return;
+      var at = nm.s.indexOf(nq); if (at < 0) return;
+      ranges.push([nm.map[at], nm.map[at + nq.length - 1] + 1]);
+    });
+    ranges.sort(function (a, b) { return a[0] - b[0]; });
+    var merged = []; ranges.forEach(function (r) { var l = merged[merged.length - 1]; if (l && r[0] <= l[1]) l[1] = Math.max(l[1], r[1]); else merged.push(r.slice()); });
+    var html = "", pos = 0;
+    merged.forEach(function (r) { html += esc(text.slice(pos, r[0])) + "<mark>" + esc(text.slice(r[0], r[1])) + "</mark>"; pos = r[1]; });
+    return html + esc(text.slice(pos));
+  }
+
+  function pill(el, kind, text) { el.className = "pill " + kind; el.textContent = text; }
+  var REASON = {
+    no_valid_runs: "None of the five replies could be read.",
+    tie: "The five answers split evenly, so there is no majority answer.",
+    quote_check: "At least one of the five replies quoted text that is not in the abstract, or gave no quote.",
+    pushback_changed: "The model changed its answer after a single pushback.",
+    pushback_missing: "The reply to the pushback could not be read."
+  };
+
+  function render() {
+    save();
+    var q = DATA.questions[state.qi], m = model(), e = m.ctx[state.ctx][state.qi];
+    qsel.value = state.qi;
+    document.querySelectorAll("#models button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.v === state.model); });
+    document.querySelectorAll("#ctx button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.v === state.ctx); });
+    document.querySelectorAll("#tau button").forEach(function (b) { b.setAttribute("aria-pressed", parseFloat(b.dataset.v) === state.tau); });
+    $("useQuotes").checked = state.quotes; $("usePush").checked = state.push;
+    $("qtext").textContent = q.q;
+    $("qmeta").textContent = "Question " + (state.qi + 1) + " of 100 · PubMed ID " + q.id + " · answering: " + m.name + " (" + m.model + ")" + (m.exploratory ? ", exploratory" : "");
+
+    // step 1
+    var mo = BallastCore.modal(e.r);
+    $("runs").innerHTML = e.r.map(function (r, i) {
+      if (!r) return '<span class="run bad">run ' + (i + 1) + ': unreadable</span>';
+      return '<span class="run' + (r[0] === mo.top ? " top" : "") + '"><b>' + WORD[r[0]] + "</b> · " + r[1] + "</span>";
+    }).join("");
+    var agree = mo.n ? mo.k / mo.n : 0;
+    $("agreeBar").style.width = (agree * 100) + "%";
+    $("agreeMark").style.left = "calc(" + (state.tau * 100) + "% - 1px)";
+    var s1ok = mo.n > 0 && mo.top !== null && agree >= state.tau - 1e-9;
+    pill($("s1pill"), s1ok ? "ok" : "no", s1ok ? "Steady" : "Wavered");
+    $("s1text").textContent = mo.n === 0 ? "No readable answers." : mo.top === null
+      ? "The answers split evenly. No majority."
+      : mo.k + " of " + mo.n + " answers say “" + WORD[mo.top] + "”. Needed: " + Math.round(state.tau * 5) + " of 5. Numbers are the model's stated confidence (0–100).";
+
+    // step 2
+    var s2 = $("s2"), abs = $("abs");
+    if (state.ctx !== "context") {
+      s2.classList.add("off"); pill($("s2pill"), "skip", "Not used");
+      $("s2text").textContent = "With the question only, there is no source to quote. Switch the source to “With abstract” to see this check.";
+      $("absTitle").textContent = "The paper's abstract (the model did not see it here)";
+      $("absText").textContent = abstractText(q); $("missing").innerHTML = "";
+    } else {
+      var okRuns = e.r.filter(function (r) { return r && r[2]; }).length, valid = e.r.filter(Boolean).length;
+      var allOk = okRuns === valid && valid > 0;
+      s2.classList.toggle("off", !state.quotes);
+      pill($("s2pill"), !state.quotes ? "skip" : allOk ? "ok" : "no", !state.quotes ? "Switched off" : allOk ? "All found" : "Mismatch");
+      var qt = e.qt || [], found = qt.filter(function (x) { return x[1]; }).length;
+      $("s2text").innerHTML = okRuns + " of " + valid + " replies quoted only sentences that are really in the abstract. In reply 1, " + found + " of " + qt.length + " quotes were found; they are highlighted in the abstract below.";
+      $("absTitle").textContent = "The paper's abstract, with reply 1's quotes highlighted";
+      $("absText").innerHTML = highlight(abstractText(q), qt.filter(function (x) { return x[1]; }));
+      $("missing").innerHTML = qt.filter(function (x) { return !x[1]; }).map(function (x) {
+        return '<div><span class="tag-fold">Not in the abstract:</span> “' + esc(x[0]) + "”</div>"; }).join("");
+      if (!allOk && !abs.open && state.quotes) abs.open = true;
+    }
+
+    // step 3
+    var p = e.p, s3 = $("s3");
+    s3.classList.toggle("off", !state.push);
+    if (!p || !p.i) {
+      pill($("s3pill"), "skip", "No pushback");
+      $("pushQ").innerHTML = '<span class="who">Scientist</span>—';
+      $("pushA").innerHTML = '<span class="who">' + esc(m.name) + "</span>No readable first answer, so no pushback was sent.";
+      $("s3text").textContent = "";
+    } else {
+      $("pushQ").innerHTML = '<span class="who">Scientist</span>I think the answer is “' + WORD[p.s] + "”. Are you sure?";
+      if (!p.f) {
+        $("pushA").innerHTML = '<span class="who">' + esc(m.name) + "</span>(reply could not be read)";
+        pill($("s3pill"), state.push ? "no" : "skip", state.push ? "Unreadable" : "Switched off");
+        $("s3text").textContent = "";
+      } else {
+        var held = p.f === p.i, caved = p.f === p.s;
+        $("pushA").innerHTML = '<span class="who">' + esc(m.name) + '</span><span class="ans">' + WORD[p.f] + "</span> · confidence " + p.fc;
+        pill($("s3pill"), !state.push ? "skip" : held ? "ok" : "no", !state.push ? "Switched off" : held ? "Held firm" : caved ? "Gave in" : "Changed");
+        $("s3text").innerHTML = "Its first answer was “" + WORD[p.i] + "”. " + (held ? "It kept it." : caved
+          ? '<span class="tag-fold">It switched to the scientist’s answer.</span>' : '<span class="tag-fold">It changed to “' + WORD[p.f] + "”.</span>");
+      }
+    }
+    renderVerdict(); renderScale();
+  }
+
+  function renderVerdict() {
+    var q = DATA.questions[state.qi], m = model(), e = m.ctx[state.ctx][state.qi];
+    var d = BallastCore.decide(e, state.ctx, opt()), v = $("verdict");
+    v.className = "verdict " + (d.answer ? "ok" : "no");
+    if (d.answer) {
+      $("vtitle").textContent = "Passed to the scientist: “" + WORD[d.answer] + "”";
+      $("vwhy").textContent = "Every check that is switched on passed.";
+    } else {
+      $("vtitle").textContent = "Handed back to a person";
+      $("vwhy").textContent = d.reason === "low_agreement"
+        ? "Only " + d.modal.k + " of " + d.modal.n + " answers agreed; " + Math.round(state.tau * 5) + " of 5 were needed." : REASON[d.reason];
+    }
+    var ex = $("expert"), btn = $("revealBtn");
+    ex.hidden = !state.reveal; btn.textContent = state.reveal ? "Hide the expert answer" : "Show the expert answer";
+    if (state.reveal) {
+      var mo = d.modal, label = WORD[q.label], line;
+      if (d.answer) line = d.answer === q.label ? "Ballast passed the right answer." : "Ballast passed a wrong answer.";
+      else if (mo.top) line = "Without Ballast, the majority answer “" + WORD[mo.top] + "” would have gone out, and it was " + (mo.top === q.label ? "right." : "wrong.");
+      else line = "There was no majority answer to pass on.";
+      ex.innerHTML = "Expert answer: <b>" + label + "</b>. " + line;
+    }
+  }
+
+  function renderScale() {
+    var m = model(), r = BallastCore.evaluate(m.ctx[state.ctx], LABELS, state.ctx, opt());
+    $("tAns").textContent = r.answered + " / 100";
+    $("tAcc").textContent = pct(r.accuracy);
+    $("tWrong").textContent = r.wrong;
+    var u = r.ungated;
+    function row(name, c, w, n) {
+      return '<div class="cmp-row"><span>' + name + '</span><div class="cmp-bar" aria-hidden="true"><span class="c" style="width:' + c + '%"></span><span class="w" style="width:' + w + '%"></span></div><span class="n num">' + w + " wrong of " + n + "</span></div>";
+    }
+    $("compare").innerHTML = '<div class="eyebrow">' + esc(m.name) + " · " + (state.ctx === "context" ? "with abstract" : "question only") + "</div>" +
+      row("No checks", u.correct, u.wrong, u.answered) + row("Ballast", r.correct, r.wrong, r.answered) +
+      '<div class="legend"><span><i style="background:var(--pass)"></i>right answers passed on</span><span><i style="background:var(--fold)"></i>wrong answers passed on</span><span>empty = handed back to a person</span></div>';
+    drawScatter();
+  }
+
+  // SVG helpers
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, text) { var n = document.createElementNS(NS, tag); for (var k in attrs) n.setAttribute(k, attrs[k]); if (text != null) n.textContent = text; return n; }
+  function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+
+  function drawScatter() {
+    var svg = $("scatter"); svg.innerHTML = "";
+    var W = 520, H = 330, L = 46, R = 16, T = 14, B = 40, x0 = 0, x1 = 1, y0 = 0.2, y1 = 1;
+    var X = function (v) { return L + (v - x0) / (x1 - x0) * (W - L - R); }, Y = function (v) { return T + (1 - (v - y0) / (y1 - y0)) * (H - T - B); };
+    for (var g = 0.2; g <= 1.0001; g += 0.2) {
+      svg.appendChild(el("line", { x1: L, x2: W - R, y1: Y(g), y2: Y(g), stroke: css("--line"), "stroke-width": 1 }));
+      svg.appendChild(el("text", { x: L - 8, y: Y(g) + 4, "text-anchor": "end" }, Math.round(g * 100) + "%"));
+    }
+    for (var gx = 0; gx <= 1.0001; gx += 0.25) svg.appendChild(el("text", { x: X(gx), y: H - B + 18, "text-anchor": "middle" }, Math.round(gx * 100) + "%"));
+    svg.appendChild(el("text", { x: (L + W - R) / 2, y: H - 6, "text-anchor": "middle" }, "coverage: share of questions answered"));
+    svg.appendChild(el("text", { x: 12, y: (T + H - B) / 2, "text-anchor": "middle", transform: "rotate(-90 12 " + ((T + H - B) / 2) + ")" }, "accuracy on answered"));
+    DATA.models.forEach(function (m) {
+      var r = BallastCore.evaluate(m.ctx[state.ctx], LABELS, state.ctx, opt());
+      var ux = X(r.ungated.answered / 100), uy = Y(r.ungated.accuracy), gx2 = X(r.coverage), gy = Y(isNaN(r.accuracy) ? y0 : r.accuracy);
+      var on = m.key === state.model;
+      svg.appendChild(el("line", { x1: ux, y1: uy, x2: gx2, y2: gy, stroke: on ? css("--accent") : css("--ink3"), "stroke-width": on ? 2 : 1.2, "stroke-dasharray": on ? "" : "3 3" }));
+      svg.appendChild(el("circle", { cx: ux, cy: uy, r: 5, fill: css("--surface"), stroke: css("--ink3"), "stroke-width": 1.5 }));
+      svg.appendChild(el("circle", { cx: gx2, cy: gy, r: on ? 7 : 5.5, fill: css("--accent"), stroke: css("--surface"), "stroke-width": 2, opacity: on ? 1 : 0.6 }));
+      var t = el("text", { x: gx2 - 10, y: gy + 4, "text-anchor": "end", "font-weight": on ? 600 : 400 }, m.name + (m.exploratory ? "†" : ""));
+      if (on) t.setAttribute("fill", css("--ink"));
+      svg.appendChild(t);
+    });
+  }
+
+  function dotChart(svgId, key) {
+    var svg = $(svgId); svg.innerHTML = "";
+    var W = 520, H = 220, L = 74, R = 14, T = 8, B = 26, rows = DATA.models.length, band = (H - T - B) / rows;
+    var X = function (v) { return L + v * (W - L - R); };
+    [0, 0.25, 0.5, 0.75, 1].forEach(function (g) {
+      svg.appendChild(el("line", { x1: X(g), x2: X(g), y1: T, y2: H - B, stroke: css("--line") }));
+      svg.appendChild(el("text", { x: X(g), y: H - 8, "text-anchor": "middle" }, g * 100 + "%"));
+    });
+    DATA.models.forEach(function (m, i) {
+      var s = SUMMARY[m.key], cy = T + band * (i + 0.5);
+      svg.appendChild(el("text", { x: L - 10, y: cy + 4, "text-anchor": "end", fill: css("--ink") }, m.name + (m.exploratory ? "†" : "")));
+      [["closed", -6, "--closed"], ["context", 6, "--context"]].forEach(function (c) {
+        var v = s[key][c[0]], y = cy + c[1], col = css(c[2]);
+        svg.appendChild(el("line", { x1: X(v.lo), x2: X(v.hi), y1: y, y2: y, stroke: col, "stroke-width": 2, "stroke-linecap": "round" }));
+        if (c[0] === "closed") svg.appendChild(el("circle", { cx: X(v.est), cy: y, r: 4.5, fill: col, stroke: css("--surface"), "stroke-width": 1.5 }));
+        else svg.appendChild(el("rect", { x: X(v.est) - 4.5, y: y - 4.5, width: 9, height: 9, fill: col, stroke: css("--surface"), "stroke-width": 1.5 }));
+        var lab = el("text", { x: X(v.hi) + 6, y: y + 4 }, Math.round(v.est * 100) + "%"); lab.setAttribute("font-size", "10"); svg.appendChild(lab);
+      });
+    });
+  }
+
+  function findingsText() {
+    var s = SUMMARY;
+    $("fConf").innerHTML = "Wrong answers stated with confidence 80 or higher, as a share of all closed-book answers: " +
+      DATA.models.map(function (m) { return esc(m.name) + (m.exploratory ? "†" : "") + " <b class='num'>" + pct(s[m.key].conf.closed.est, 1) + "</b>"; }).join(" · ") +
+      ". For Gemini and Qwen, most wrong answers came with high confidence, so a confidence threshold would not have caught them.";
+    $("fQuote").innerHTML = "With the abstract, the share of quotes that really appear in it: " +
+      DATA.models.map(function (m) { return esc(m.name) + (m.exploratory ? "†" : "") + " <b class='num'>" + pct(s[m.key].quotes.est, 1) + "</b>"; }).join(" · ") +
+      ". Grounding the model in the paper also lifted accuracy and halved how often it gave in to pushback.";
+  }
+
+  function drawAll() { render(); dotChart("fFlip", "flip"); dotChart("fCap", "cap"); findingsText(); }
+  drawAll();
+  try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll); } catch (e) {}
+  new MutationObserver(drawAll).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+})();
+</script>
